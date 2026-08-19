@@ -18,7 +18,7 @@
     "href": "index.html#liste-des-guides",
     "title": "Guides de démarrage",
     "section": "Liste des guides",
-    "text": "Liste des guides\n\nR et RStudio — guide d’installation de R et RStudio et premiers pas d’utilisation de RStudio.\nGoogle Colab — se familiariser avec Google Colab et exécuter un premier programme en Python dans le navigateur.\nGitHub Codespaces — introduction à l’utilisation de GitHub Codespaces. &lt;!–\nOutil 4 — à compléter.\nOutil 5 — à compléter. –&gt;"
+    "text": "Liste des guides\n\nR et RStudio — guide d’installation de R et RStudio et premiers pas d’utilisation de RStudio.\nGoogle Colab — se familiariser avec Google Colab et exécuter un premier programme en Python dans le navigateur.\nGitHub Codespaces — introduction à l’utilisation de GitHub Codespaces.\nAnaconda et Miniconda — à compléter. &lt;!–\nOutil 5 — à compléter. –&gt;"
   },
   {
     "objectID": "index.html#comment-utiliser-ces-guides",
@@ -28,109 +28,116 @@
     "text": "Comment utiliser ces guides\n\nCliquez sur le nom de l’outil qui vous intéresse dans la liste ci-dessus ou dans le menu de navigation, en haut de la page.\nSuivez les étapes dans l’ordre, sans en sauter.\nSi un terme n’est pas clair, il est généralement expliqué dès sa première apparition dans le guide.\nEn cas de problème, notez l’étape où vous êtes bloqué avant de demander de l’aide.\n\n\n\n\n\n\n\nAstuce\n\n\n\nCes guides sont mis à jour au besoin. Le lien de cette page reste toujours le même, même après une mise à jour du contenu."
   },
   {
-    "objectID": "02_github-codespaces.html",
-    "href": "02_github-codespaces.html",
-    "title": "Guide de démarrage avec GitHub Codespaces",
+    "objectID": "03_google_colab.html",
+    "href": "03_google_colab.html",
+    "title": "Guide de démarrage avec Google Colab",
     "section": "",
-    "text": "Ce guide explique ce qu’est GitHub Codespaces, comment créer un codespace pour un dépôt existant, et comment commencer à travailler avec. Il s’adresse aux personnes qui commencent totalement avec cet outil.\n\n\n\n\n\n\nNoteMots importants\n\n\n\n\nCodespace : un environnement de développement complet, hébergé dans le cloud par GitHub, accessible depuis un navigateur ou Visual Studio Code.\nDépôt (repository) : le dossier de projet hébergé sur GitHub, contenant le code et son historique de versions.\nConteneur : l’environnement isolé dans lequel le codespace s’exécute, avec ses propres outils déjà installés.\nDevcontainer : un fichier de configuration optionnel qui définit précisément quels outils et paramètres un codespace doit contenir.\nVS Code : l’éditeur de code qui s’affiche à l’intérieur du codespace, que ce soit dans le navigateur ou en application locale."
+    "text": "Ce guide explique comment créer un compte Google, ouvrir Google Colab et exécuter un premier programme en Python. Il s’adresse aux personnes qui commencent totalement en programmation."
   },
   {
-    "objectID": "02_github-codespaces.html#objectif",
-    "href": "02_github-codespaces.html#objectif",
-    "title": "Guide de démarrage avec GitHub Codespaces",
+    "objectID": "03_google_colab.html#objectif",
+    "href": "03_google_colab.html#objectif",
+    "title": "Guide de démarrage avec Google Colab",
     "section": "",
-    "text": "Ce guide explique ce qu’est GitHub Codespaces, comment créer un codespace pour un dépôt existant, et comment commencer à travailler avec. Il s’adresse aux personnes qui commencent totalement avec cet outil.\n\n\n\n\n\n\nNoteMots importants\n\n\n\n\nCodespace : un environnement de développement complet, hébergé dans le cloud par GitHub, accessible depuis un navigateur ou Visual Studio Code.\nDépôt (repository) : le dossier de projet hébergé sur GitHub, contenant le code et son historique de versions.\nConteneur : l’environnement isolé dans lequel le codespace s’exécute, avec ses propres outils déjà installés.\nDevcontainer : un fichier de configuration optionnel qui définit précisément quels outils et paramètres un codespace doit contenir.\nVS Code : l’éditeur de code qui s’affiche à l’intérieur du codespace, que ce soit dans le navigateur ou en application locale."
+    "text": "Ce guide explique comment créer un compte Google, ouvrir Google Colab et exécuter un premier programme en Python. Il s’adresse aux personnes qui commencent totalement en programmation."
   },
   {
-    "objectID": "02_github-codespaces.html#quest-ce-quun-codespace",
-    "href": "02_github-codespaces.html#quest-ce-quun-codespace",
-    "title": "Guide de démarrage avec GitHub Codespaces",
-    "section": "Qu’est-ce qu’un codespace ?",
-    "text": "Qu’est-ce qu’un codespace ?\nUn codespace est un ordinateur virtuel, préconfiguré, qui contient déjà Git, un terminal et souvent un langage de programmation comme Python. Il permet de coder sans rien installer sur son propre ordinateur : tout se passe dans le navigateur ou dans Visual Studio Code connecté à distance [web:118][web:128].\n\n\n\n\n\n\nAstuce\n\n\n\nUn codespace est particulièrement utile si votre ordinateur est peu puissant, si vous changez souvent d’appareil, ou si vous voulez essayer un projet sans configurer un environnement local complet."
+    "objectID": "03_google_colab.html#quest-ce-que-google-colab",
+    "href": "03_google_colab.html#quest-ce-que-google-colab",
+    "title": "Guide de démarrage avec Google Colab",
+    "section": "Qu’est-ce que Google Colab ?",
+    "text": "Qu’est-ce que Google Colab ?\nGoogle Colab, aussi appelé Colaboratory, est un outil en ligne qui permet d’écrire et d’exécuter du code Python directement dans un navigateur Internet.\nAucune installation de Python n’est nécessaire sur votre ordinateur. Les fichiers créés dans Colab sont appelés des notebooks et sont enregistrés dans Google Drive, au format .ipynb.\n\n\n\n\n\n\nNoteMots importants\n\n\n\n\nNavigateur : application pour accéder à Internet, par exemple Google Chrome, Firefox, Edge ou Safari.\nCompte Google : compte utilisé notamment pour Gmail, Google Drive et Google Colab.\nNotebook : document de travail qui peut contenir du texte, du code et des résultats.\nCellule : petite zone dans un notebook. Une cellule peut contenir du code ou du texte.\nPython : langage de programmation couramment utilisé pour l’analyse de données, l’automatisation et l’intelligence artificielle."
   },
   {
-    "objectID": "02_github-codespaces.html#ce-dont-vous-avez-besoin",
-    "href": "02_github-codespaces.html#ce-dont-vous-avez-besoin",
-    "title": "Guide de démarrage avec GitHub Codespaces",
+    "objectID": "03_google_colab.html#ce-dont-vous-avez-besoin",
+    "href": "03_google_colab.html#ce-dont-vous-avez-besoin",
+    "title": "Guide de démarrage avec Google Colab",
     "section": "Ce dont vous avez besoin",
-    "text": "Ce dont vous avez besoin\n\nUn compte GitHub actif.\nUn navigateur Internet récent.\nUne connexion Internet stable pendant l’utilisation du codespace.\nOptionnel : Visual Studio Code installé localement, si vous préférez travailler depuis l’application plutôt que depuis le navigateur.\n\n\n\n\n\n\n\nImportant\n\n\n\nGitHub Codespaces offre un quota d’utilisation gratuit limité chaque mois pour les comptes personnels. Au-delà de ce quota, l’utilisation est facturée. Vérifiez votre utilisation dans les paramètres de votre compte si vous l’utilisez régulièrement."
+    "text": "Ce dont vous avez besoin\nAvant de commencer, vérifiez que vous avez :\n\nUn ordinateur connecté à Internet.\nUn navigateur Internet récent.\nUne adresse courriel ou un numéro de téléphone pour créer un compte Google, si nécessaire.\nEnviron 15 minutes pour effectuer les premières étapes.\n\n\n\n\n\n\n\nAvertissement\n\n\n\nNe communiquez jamais votre mot de passe à une autre personne."
   },
   {
-    "objectID": "02_github-codespaces.html#étape-1-accéder-à-un-dépôt",
-    "href": "02_github-codespaces.html#étape-1-accéder-à-un-dépôt",
-    "title": "Guide de démarrage avec GitHub Codespaces",
-    "section": "Étape 1 : accéder à un dépôt",
-    "text": "Étape 1 : accéder à un dépôt\nUn codespace se crée toujours à partir d’un dépôt GitHub existant.\n\nConnectez-vous à votre compte sur github.com.\nOuvrez le dépôt que vous voulez utiliser, ou créez-en un nouveau si nécessaire (+ &gt; New repository).\n\nSi vous n’avez pas encore de projet, GitHub propose aussi des modèles de démarrage rapide pensés spécifiquement pour Codespaces [web:116]."
+    "objectID": "03_google_colab.html#étape-1-créer-un-compte-google",
+    "href": "03_google_colab.html#étape-1-créer-un-compte-google",
+    "title": "Guide de démarrage avec Google Colab",
+    "section": "Étape 1 : créer un compte Google",
+    "text": "Étape 1 : créer un compte Google\nSi vous possédez déjà une adresse Gmail ou un compte Google professionnel ou institutionnel, passez directement à l’étape suivante.\n\nOuvrez votre navigateur Internet.\nAccédez à l’adresse suivante : accounts.google.com/signup\nEntrez votre prénom et votre nom.\nChoisissez un nom d’utilisateur. Il formera généralement votre adresse Gmail.\nCréez un mot de passe robuste et conservez-le dans un endroit sûr.\nSuivez les étapes de vérification demandées par Google.\nUne fois le compte créé, connectez-vous à ce compte dans votre navigateur."
   },
   {
-    "objectID": "02_github-codespaces.html#étape-2-créer-un-codespace",
-    "href": "02_github-codespaces.html#étape-2-créer-un-codespace",
-    "title": "Guide de démarrage avec GitHub Codespaces",
-    "section": "Étape 2 : créer un codespace",
-    "text": "Étape 2 : créer un codespace\n\nSur la page principale du dépôt, cliquez sur le bouton vert Code.\nSélectionnez l’onglet Codespaces.\nCliquez sur Create codespace on main (ou le nom de la branche affichée).\n\nGitHub effectue alors quatre opérations automatiquement [web:124] :\n\nUne machine virtuelle et un espace de stockage sont attribués.\nUn conteneur est créé.\nUne connexion à ce conteneur est établie.\nUne configuration finale s’exécute si le dépôt en définit une.\n\nCe processus prend généralement entre quelques secondes et une ou deux minutes.\n\n\n\n\n\n\nAstuce\n\n\n\nPour créer un dépôt et un codespace en une seule fois, comme point de départ le plus simple, allez directement sur github.com/codespaces et cliquez sur New codespace. GitHub crée alors un codespace vide sans dépôt existant, que vous pourrez publier plus tard [web:121]."
+    "objectID": "03_google_colab.html#étape-2-ouvrir-google-colab",
+    "href": "03_google_colab.html#étape-2-ouvrir-google-colab",
+    "title": "Guide de démarrage avec Google Colab",
+    "section": "Étape 2 : ouvrir Google Colab",
+    "text": "Étape 2 : ouvrir Google Colab\n\nDans votre navigateur, ouvrez le lien suivant : colab.research.google.com\nConnectez-vous avec votre compte Google si Google le demande.\nLa page d’accueil de Colab s’affiche.\nCliquez sur Nouveau notebook.\n\nUn nouveau document s’ouvre dans un nouvel onglet du navigateur.\n\n\n\n\n\n\nAstuce\n\n\n\nUn notebook Colab est un fichier de travail. Il peut être recherché dans Google Drive, partagé comme un document Google et téléchargé depuis le menu Fichier."
   },
   {
-    "objectID": "02_github-codespaces.html#étape-3-découvrir-linterface",
-    "href": "02_github-codespaces.html#étape-3-découvrir-linterface",
-    "title": "Guide de démarrage avec GitHub Codespaces",
-    "section": "Étape 3 : découvrir l’interface",
-    "text": "Étape 3 : découvrir l’interface\nUne fois le codespace prêt, une interface Visual Studio Code s’ouvre, directement dans votre navigateur.\n\nExplorateur de fichiers (à gauche) : affiche tous les fichiers du dépôt.\nZone d’édition (au centre) : pour ouvrir et modifier les fichiers.\nTerminal (en bas) : une ligne de commande déjà connectée à l’environnement du codespace, avec Git préinstallé.\nBarre d’activité (tout à gauche) : icônes pour accéder à la recherche, au contrôle de version Git, aux extensions, etc.\n\nPour ouvrir le terminal s’il n’est pas visible, utilisez le menu Terminal &gt; New Terminal."
+    "objectID": "03_google_colab.html#étape-3-renommer-le-notebook",
+    "href": "03_google_colab.html#étape-3-renommer-le-notebook",
+    "title": "Guide de démarrage avec Google Colab",
+    "section": "Étape 3 : renommer le notebook",
+    "text": "Étape 3 : renommer le notebook\nIl est recommandé de donner un nom clair à chaque notebook.\n\nEn haut à gauche de la page, cliquez sur le nom par défaut, par exemple Untitled0.ipynb.\nRemplacez-le par un nom significatif, par exemple : premiers_pas_colab.ipynb\nAppuyez sur la touche Entrée.\n\nLe notebook est enregistré dans Google Drive."
   },
   {
-    "objectID": "02_github-codespaces.html#étape-4-exécuter-une-première-commande",
-    "href": "02_github-codespaces.html#étape-4-exécuter-une-première-commande",
-    "title": "Guide de démarrage avec GitHub Codespaces",
-    "section": "Étape 4 : exécuter une première commande",
-    "text": "Étape 4 : exécuter une première commande\nDans le terminal, écrivez :\necho \"Bonjour depuis mon codespace\"\nAppuyez sur Entrée. Le message s’affiche directement dans le terminal, confirmant que l’environnement fonctionne.\nSi le codespace contient Python, vous pouvez aussi tester :\npython3 --version"
+    "objectID": "03_google_colab.html#étape-4-comprendre-lécran",
+    "href": "03_google_colab.html#étape-4-comprendre-lécran",
+    "title": "Guide de démarrage avec Google Colab",
+    "section": "Étape 4 : comprendre l’écran",
+    "text": "Étape 4 : comprendre l’écran\nUn notebook contient plusieurs cellules.\n\nCellule de code\nUne cellule de code sert à écrire des instructions en Python. Elle possède habituellement un bouton triangulaire à gauche. Ce bouton permet d’exécuter le code.\n\n\nCellule de texte\nUne cellule de texte sert à ajouter des titres, des explications ou des notes. Pour ajouter une cellule de texte, cliquez sur le bouton + Texte situé dans la partie supérieure de la page.\n\n\nAjouter une cellule de code\nPour ajouter une nouvelle cellule de code, cliquez sur le bouton + Code."
   },
   {
-    "objectID": "02_github-codespaces.html#étape-5-modifier-un-fichier-et-enregistrer-les-changements",
-    "href": "02_github-codespaces.html#étape-5-modifier-un-fichier-et-enregistrer-les-changements",
-    "title": "Guide de démarrage avec GitHub Codespaces",
-    "section": "Étape 5 : modifier un fichier et enregistrer les changements",
-    "text": "Étape 5 : modifier un fichier et enregistrer les changements\n\nDans l’explorateur de fichiers, ouvrez un fichier existant, ou créez-en un nouveau avec le bouton New File.\nFaites une petite modification, par exemple ajouter une ligne de texte.\nEnregistrez avec Ctrl + S (Windows/Linux) ou Cmd + S (Mac).\n\nLe fichier est modifié dans le codespace, mais pas encore renvoyé vers GitHub. C’est l’objectif de l’étape suivante."
+    "objectID": "03_google_colab.html#étape-5-exécuter-votre-premier-programme",
+    "href": "03_google_colab.html#étape-5-exécuter-votre-premier-programme",
+    "title": "Guide de démarrage avec Google Colab",
+    "section": "Étape 5 : exécuter votre premier programme",
+    "text": "Étape 5 : exécuter votre premier programme\nDans la première cellule de code, écrivez :\nprint(\"Bonjour, Google Colab !\")\nEnsuite :\n\nCliquez sur le bouton triangulaire situé à gauche de la cellule.\nAttendez quelques secondes.\nLe résultat apparaît sous la cellule.\n\nVous devriez voir :\nBonjour, Google Colab !\nVous venez d’exécuter votre premier programme Python.\n\n\n\n\n\n\nAstuce\n\n\n\nVous pouvez aussi exécuter une cellule avec le raccourci clavier Maj + Entrée. Pour débuter, utilisez d’abord le bouton triangulaire : il est plus facile à identifier."
   },
   {
-    "objectID": "02_github-codespaces.html#étape-6-enregistrer-les-changements-sur-github",
-    "href": "02_github-codespaces.html#étape-6-enregistrer-les-changements-sur-github",
-    "title": "Guide de démarrage avec GitHub Codespaces",
-    "section": "Étape 6 : enregistrer les changements sur GitHub",
-    "text": "Étape 6 : enregistrer les changements sur GitHub\nLe contrôle de version fonctionne de la même façon que sur un ordinateur local, avec Git déjà installé et configuré dans le codespace.\nDans le terminal :\ngit add .\ngit commit -m \"Premier essai dans Codespaces\"\ngit push\n\n\n\n\n\n\nNote\n\n\n\nPuisque le codespace est déjà connecté à votre compte GitHub, aucune configuration supplémentaire d’identifiants n’est généralement nécessaire pour git push, contrairement à un dépôt cloné localement."
+    "objectID": "03_google_colab.html#étape-6-faire-un-premier-exercice",
+    "href": "03_google_colab.html#étape-6-faire-un-premier-exercice",
+    "title": "Guide de démarrage avec Google Colab",
+    "section": "Étape 6 : faire un premier exercice",
+    "text": "Étape 6 : faire un premier exercice\nModifiez le texte entre les guillemets pour y écrire votre prénom :\nprint(\"Bonjour, je m'appelle votre_prénom !\")\nPar exemple :\nprint(\"Bonjour, je m'appelle Léa !\")\nExécutez de nouveau la cellule avec le bouton triangulaire."
   },
   {
-    "objectID": "02_github-codespaces.html#étape-7-suspendre-ou-arrêter-le-codespace",
-    "href": "02_github-codespaces.html#étape-7-suspendre-ou-arrêter-le-codespace",
-    "title": "Guide de démarrage avec GitHub Codespaces",
-    "section": "Étape 7 : suspendre ou arrêter le codespace",
-    "text": "Étape 7 : suspendre ou arrêter le codespace\nUn codespace continue de consommer des ressources tant qu’il reste actif.\n\nFermer l’onglet du navigateur met le codespace en pause automatiquement après une période d’inactivité.\nPour l’arrêter manuellement : allez sur github.com/codespaces, trouvez votre codespace dans la liste, cliquez sur les trois points …, puis choisissez Stop codespace.\n\n\n\n\n\n\n\nAstuce\n\n\n\nArrêter un codespace ne supprime pas votre travail. Vos fichiers restent disponibles au prochain démarrage, à condition que les changements aient bien été enregistrés avec git commit, ou simplement sauvegardés dans le système de fichiers du codespace."
+    "objectID": "03_google_colab.html#étape-7-ajouter-du-texte-explicatif",
+    "href": "03_google_colab.html#étape-7-ajouter-du-texte-explicatif",
+    "title": "Guide de démarrage avec Google Colab",
+    "section": "Étape 7 : ajouter du texte explicatif",
+    "text": "Étape 7 : ajouter du texte explicatif\nUn bon notebook contient du code, mais aussi des explications.\n\nCliquez sur + Texte.\nÉcrivez un titre, par exemple :\n\n# Mon premier notebook\n\nCe notebook contient mes premiers essais avec Python.\n\nCliquez en dehors de la cellule ou utilisez le bouton d’exécution pour afficher le texte mis en forme.\n\nLe symbole # crée un titre principal dans une cellule de texte."
   },
   {
-    "objectID": "02_github-codespaces.html#étape-8-reprendre-un-codespace-existant",
-    "href": "02_github-codespaces.html#étape-8-reprendre-un-codespace-existant",
-    "title": "Guide de démarrage avec GitHub Codespaces",
-    "section": "Étape 8 : reprendre un codespace existant",
-    "text": "Étape 8 : reprendre un codespace existant\n\nAllez sur github.com/codespaces.\nCliquez sur le nom du codespace que vous voulez reprendre.\nL’environnement se relance avec les fichiers tels que vous les aviez laissés."
+    "objectID": "03_google_colab.html#étape-8-enregistrer-et-retrouver-son-travail",
+    "href": "03_google_colab.html#étape-8-enregistrer-et-retrouver-son-travail",
+    "title": "Guide de démarrage avec Google Colab",
+    "section": "Étape 8 : enregistrer et retrouver son travail",
+    "text": "Étape 8 : enregistrer et retrouver son travail\nColab enregistre habituellement les modifications dans Google Drive.\nPour retrouver un notebook plus tard :\n\nOuvrez Google Drive : drive.google.com\nUtilisez la barre de recherche et saisissez le nom de votre notebook.\nVous pouvez aussi ouvrir Colab, puis utiliser Fichier &gt; Ouvrir le notebook ou Fichier &gt; Rechercher des notebooks dans Drive."
   },
   {
-    "objectID": "02_github-codespaces.html#étape-9-supprimer-un-codespace",
-    "href": "02_github-codespaces.html#étape-9-supprimer-un-codespace",
-    "title": "Guide de démarrage avec GitHub Codespaces",
-    "section": "Étape 9 : supprimer un codespace",
-    "text": "Étape 9 : supprimer un codespace\nLorsque vous n’avez plus besoin d’un codespace, il est recommandé de le supprimer pour libérer votre quota.\n\nAllez sur github.com/codespaces.\nCliquez sur les trois points … à côté du codespace concerné.\nChoisissez Delete.\n\n\n\n\n\n\n\nImportant\n\n\n\nSupprimer un codespace efface l’environnement, mais pas le dépôt GitHub associé. Si vos changements ont déjà été envoyés avec git push, ils restent conservés dans le dépôt. Si des changements n’ont pas été envoyés, ils sont perdus définitivement."
+    "objectID": "03_google_colab.html#étape-9-télécharger-une-copie",
+    "href": "03_google_colab.html#étape-9-télécharger-une-copie",
+    "title": "Guide de démarrage avec Google Colab",
+    "section": "Étape 9 : télécharger une copie",
+    "text": "Étape 9 : télécharger une copie\nIl est utile de conserver une copie de son travail sur son ordinateur.\n\nDans Colab, cliquez sur Fichier.\nChoisissez l’option pour télécharger le notebook.\nEnregistrez le fichier sur votre ordinateur.\n\nLe fichier téléchargé aura généralement l’extension .ipynb, qui est le format standard des notebooks Jupyter."
   },
   {
-    "objectID": "02_github-codespaces.html#bonnes-pratiques-pour-débuter",
-    "href": "02_github-codespaces.html#bonnes-pratiques-pour-débuter",
-    "title": "Guide de démarrage avec GitHub Codespaces",
+    "objectID": "03_google_colab.html#étape-10-partager-un-notebook",
+    "href": "03_google_colab.html#étape-10-partager-un-notebook",
+    "title": "Guide de démarrage avec Google Colab",
+    "section": "Étape 10 : partager un notebook",
+    "text": "Étape 10 : partager un notebook\nUn notebook Colab peut être partagé de façon similaire à un document Google.\n\nCliquez sur le bouton Partager, en haut à droite.\nAjoutez l’adresse courriel des personnes concernées.\nChoisissez leur niveau d’accès :\n\nLecteur : peut consulter le notebook.\nCommentateur : peut consulter et ajouter des commentaires.\nÉditeur : peut modifier le notebook.\n\nCliquez sur Envoyer.\n\n\n\n\n\n\n\nImportant\n\n\n\nVérifiez toujours que vous partagez le bon fichier et avec les bonnes personnes."
+  },
+  {
+    "objectID": "03_google_colab.html#bonnes-pratiques-pour-débuter",
+    "href": "03_google_colab.html#bonnes-pratiques-pour-débuter",
+    "title": "Guide de démarrage avec Google Colab",
     "section": "Bonnes pratiques pour débuter",
-    "text": "Bonnes pratiques pour débuter\n\nEnvoyez régulièrement vos changements avec git push, plutôt que de compter uniquement sur le codespace pour conserver votre travail.\nArrêtez les codespaces inutilisés pour éviter de consommer votre quota gratuit inutilement.\nDonnez un nom clair à vos dépôts avant de créer un codespace, car le nom du codespace en dépend.\nSupprimez les codespaces devenus inutiles plutôt que de les laisser s’accumuler."
+    "text": "Bonnes pratiques pour débuter\n\nDonnez un nom clair à chaque notebook.\nAjoutez un titre et une courte explication au début du document.\nExécutez les cellules de code dans l’ordre, de haut en bas.\nLisez attentivement les messages d’erreur : ils indiquent souvent la ligne à corriger.\nConservez une copie importante de votre notebook sur votre ordinateur.\nÉvitez de partager des données personnelles, confidentielles ou sensibles.\nFermez les onglets Colab inutilisés lorsque vous avez terminé."
   },
   {
-    "objectID": "02_github-codespaces.html#vérification-des-acquis",
-    "href": "02_github-codespaces.html#vérification-des-acquis",
-    "title": "Guide de démarrage avec GitHub Codespaces",
+    "objectID": "03_google_colab.html#vérification-des-acquis",
+    "href": "03_google_colab.html#vérification-des-acquis",
+    "title": "Guide de démarrage avec Google Colab",
     "section": "Vérification des acquis",
-    "text": "Vérification des acquis\nÀ ce stade, vous devriez être capable de :\n\nExpliquer ce qu’est un codespace, en une phrase simple.\nCréer un codespace à partir d’un dépôt existant.\nReconnaître les éléments principaux de l’interface Visual Studio Code dans le navigateur.\nModifier un fichier et envoyer les changements vers GitHub avec git push.\nArrêter, reprendre et supprimer un codespace.\n\n\n\n\n\n\n\nAstuceProchaine étape\n\n\n\nCréez un nouveau dépôt vide sur GitHub, ouvrez-y un codespace, créez un fichier essai.md, écrivez-y une phrase, puis envoyez ce changement vers GitHub avec git add, git commit et git push."
+    "text": "Vérification des acquis\nÀ ce stade, vous devriez être capable de :\n\nCréer ou utiliser un compte Google.\nAccéder à Google Colab.\nCréer et renommer un notebook.\nÉcrire et exécuter une cellule Python.\nAjouter une cellule de texte.\nRetrouver, télécharger et partager un notebook.\n\n\n\n\n\n\n\nAstuceProchaine étape\n\n\n\nEssayez de créer un notebook appelé essai_python.ipynb, ajoutez un titre, puis exécutez une cellule qui affiche une phrase de votre choix."
   },
   {
     "objectID": "01_r_et_rstudio.html",
@@ -231,115 +238,192 @@
     "text": "Vérification des acquis\nÀ ce stade, vous devriez être capable de :\n\nInstaller R, puis RStudio, dans le bon ordre.\nReconnaître les quatre panneaux principaux de RStudio.\nCréer, exécuter et enregistrer un script R.\nCréer un projet RStudio pour organiser votre travail.\nInstaller et charger un module.\n\n\n\n\n\n\n\nAstuceProchaine étape\n\n\n\nEssayez de créer un nouveau projet RStudio, d’y créer un script nommé essai_r.R, d’installer le module ggplot2, puis d’exécuter une ligne de code qui affiche une phrase de votre choix."
   },
   {
-    "objectID": "03_google_colab.html",
-    "href": "03_google_colab.html",
-    "title": "Guide de démarrage avec Google Colab",
+    "objectID": "02_github-codespaces.html",
+    "href": "02_github-codespaces.html",
+    "title": "Guide de démarrage avec GitHub Codespaces",
     "section": "",
-    "text": "Ce guide explique comment créer un compte Google, ouvrir Google Colab et exécuter un premier programme en Python. Il s’adresse aux personnes qui commencent totalement en programmation."
+    "text": "Ce guide explique ce qu’est GitHub Codespaces, comment créer un codespace pour un dépôt existant, et comment commencer à travailler avec. Il s’adresse aux personnes qui commencent totalement avec cet outil.\n\n\n\n\n\n\nNoteMots importants\n\n\n\n\nCodespace : un environnement de développement complet, hébergé dans le cloud par GitHub, accessible depuis un navigateur ou Visual Studio Code.\nDépôt (repository) : le dossier de projet hébergé sur GitHub, contenant le code et son historique de versions.\nConteneur : l’environnement isolé dans lequel le codespace s’exécute, avec ses propres outils déjà installés.\nDevcontainer : un fichier de configuration optionnel qui définit précisément quels outils et paramètres un codespace doit contenir.\nVS Code : l’éditeur de code qui s’affiche à l’intérieur du codespace, que ce soit dans le navigateur ou en application locale."
   },
   {
-    "objectID": "03_google_colab.html#objectif",
-    "href": "03_google_colab.html#objectif",
-    "title": "Guide de démarrage avec Google Colab",
+    "objectID": "02_github-codespaces.html#objectif",
+    "href": "02_github-codespaces.html#objectif",
+    "title": "Guide de démarrage avec GitHub Codespaces",
     "section": "",
-    "text": "Ce guide explique comment créer un compte Google, ouvrir Google Colab et exécuter un premier programme en Python. Il s’adresse aux personnes qui commencent totalement en programmation."
+    "text": "Ce guide explique ce qu’est GitHub Codespaces, comment créer un codespace pour un dépôt existant, et comment commencer à travailler avec. Il s’adresse aux personnes qui commencent totalement avec cet outil.\n\n\n\n\n\n\nNoteMots importants\n\n\n\n\nCodespace : un environnement de développement complet, hébergé dans le cloud par GitHub, accessible depuis un navigateur ou Visual Studio Code.\nDépôt (repository) : le dossier de projet hébergé sur GitHub, contenant le code et son historique de versions.\nConteneur : l’environnement isolé dans lequel le codespace s’exécute, avec ses propres outils déjà installés.\nDevcontainer : un fichier de configuration optionnel qui définit précisément quels outils et paramètres un codespace doit contenir.\nVS Code : l’éditeur de code qui s’affiche à l’intérieur du codespace, que ce soit dans le navigateur ou en application locale."
   },
   {
-    "objectID": "03_google_colab.html#quest-ce-que-google-colab",
-    "href": "03_google_colab.html#quest-ce-que-google-colab",
-    "title": "Guide de démarrage avec Google Colab",
-    "section": "Qu’est-ce que Google Colab ?",
-    "text": "Qu’est-ce que Google Colab ?\nGoogle Colab, aussi appelé Colaboratory, est un outil en ligne qui permet d’écrire et d’exécuter du code Python directement dans un navigateur Internet.\nAucune installation de Python n’est nécessaire sur votre ordinateur. Les fichiers créés dans Colab sont appelés des notebooks et sont enregistrés dans Google Drive, au format .ipynb.\n\n\n\n\n\n\nNoteMots importants\n\n\n\n\nNavigateur : application pour accéder à Internet, par exemple Google Chrome, Firefox, Edge ou Safari.\nCompte Google : compte utilisé notamment pour Gmail, Google Drive et Google Colab.\nNotebook : document de travail qui peut contenir du texte, du code et des résultats.\nCellule : petite zone dans un notebook. Une cellule peut contenir du code ou du texte.\nPython : langage de programmation couramment utilisé pour l’analyse de données, l’automatisation et l’intelligence artificielle."
+    "objectID": "02_github-codespaces.html#quest-ce-quun-codespace",
+    "href": "02_github-codespaces.html#quest-ce-quun-codespace",
+    "title": "Guide de démarrage avec GitHub Codespaces",
+    "section": "Qu’est-ce qu’un codespace ?",
+    "text": "Qu’est-ce qu’un codespace ?\nUn codespace est un ordinateur virtuel, préconfiguré, qui contient déjà Git, un terminal et souvent un langage de programmation comme Python. Il permet de coder sans rien installer sur son propre ordinateur : tout se passe dans le navigateur ou dans Visual Studio Code connecté à distance.\n\n\n\n\n\n\nAstuce\n\n\n\nUn codespace est particulièrement utile si votre ordinateur est peu puissant, si vous changez souvent d’appareil, ou si vous voulez essayer un projet sans configurer un environnement local complet."
   },
   {
-    "objectID": "03_google_colab.html#ce-dont-vous-avez-besoin",
-    "href": "03_google_colab.html#ce-dont-vous-avez-besoin",
-    "title": "Guide de démarrage avec Google Colab",
+    "objectID": "02_github-codespaces.html#ce-dont-vous-avez-besoin",
+    "href": "02_github-codespaces.html#ce-dont-vous-avez-besoin",
+    "title": "Guide de démarrage avec GitHub Codespaces",
     "section": "Ce dont vous avez besoin",
-    "text": "Ce dont vous avez besoin\nAvant de commencer, vérifiez que vous avez :\n\nUn ordinateur connecté à Internet.\nUn navigateur Internet récent.\nUne adresse courriel ou un numéro de téléphone pour créer un compte Google, si nécessaire.\nEnviron 15 minutes pour effectuer les premières étapes.\n\n\n\n\n\n\n\nAvertissement\n\n\n\nNe communiquez jamais votre mot de passe à une autre personne."
+    "text": "Ce dont vous avez besoin\n\nUn compte GitHub actif.\nUn navigateur Internet récent.\nUne connexion Internet stable pendant l’utilisation du codespace.\nOptionnel : Visual Studio Code installé localement, si vous préférez travailler depuis l’application plutôt que depuis le navigateur.\n\n\n\n\n\n\n\nImportant\n\n\n\nGitHub Codespaces offre un quota d’utilisation gratuit limité chaque mois pour les comptes personnels. Au-delà de ce quota, l’utilisation est facturée. Vérifiez votre utilisation dans les paramètres de votre compte si vous l’utilisez régulièrement."
   },
   {
-    "objectID": "03_google_colab.html#créer-un-compte-google",
-    "href": "03_google_colab.html#créer-un-compte-google",
-    "title": "Guide de démarrage avec Google Colab",
-    "section": "Créer un compte Google",
-    "text": "Créer un compte Google\nSi vous possédez déjà une adresse Gmail ou un compte Google professionnel ou institutionnel, passez directement à la section suivante.\n\nOuvrez votre navigateur Internet.\nAccédez à l’adresse suivante : accounts.google.com/signup\nEntrez votre prénom et votre nom.\nChoisissez un nom d’utilisateur. Il formera généralement votre adresse Gmail.\nCréez un mot de passe robuste et conservez-le dans un endroit sûr.\nSuivez les étapes de vérification demandées par Google.\nUne fois le compte créé, connectez-vous à ce compte dans votre navigateur."
+    "objectID": "02_github-codespaces.html#étape-1-accéder-à-un-dépôt",
+    "href": "02_github-codespaces.html#étape-1-accéder-à-un-dépôt",
+    "title": "Guide de démarrage avec GitHub Codespaces",
+    "section": "Étape 1 : accéder à un dépôt",
+    "text": "Étape 1 : accéder à un dépôt\nUn codespace se crée toujours à partir d’un dépôt GitHub existant.\n\nConnectez-vous à votre compte sur github.com.\nOuvrez le dépôt que vous voulez utiliser, ou créez-en un nouveau si nécessaire (+ &gt; New repository).\n\nSi vous n’avez pas encore de projet, GitHub propose aussi des modèles de démarrage rapide pensés spécifiquement pour Codespaces."
   },
   {
-    "objectID": "03_google_colab.html#ouvrir-google-colab",
-    "href": "03_google_colab.html#ouvrir-google-colab",
-    "title": "Guide de démarrage avec Google Colab",
-    "section": "Ouvrir Google Colab",
-    "text": "Ouvrir Google Colab\n\nDans votre navigateur, ouvrez le lien suivant : colab.research.google.com\nConnectez-vous avec votre compte Google si Google le demande.\nLa page d’accueil de Colab s’affiche.\nCliquez sur Nouveau notebook.\n\nUn nouveau document s’ouvre dans un nouvel onglet du navigateur.\n\n\n\n\n\n\nAstuce\n\n\n\nUn notebook Colab est un fichier de travail. Il peut être recherché dans Google Drive, partagé comme un document Google et téléchargé depuis le menu Fichier."
+    "objectID": "02_github-codespaces.html#étape-2-créer-un-codespace",
+    "href": "02_github-codespaces.html#étape-2-créer-un-codespace",
+    "title": "Guide de démarrage avec GitHub Codespaces",
+    "section": "Étape 2 : créer un codespace",
+    "text": "Étape 2 : créer un codespace\n\nSur la page principale du dépôt, cliquez sur le bouton vert Code.\nSélectionnez l’onglet Codespaces.\nCliquez sur Create codespace on main (ou le nom de la branche affichée).\n\nGitHub effectue alors quatre opérations automatiquement :\n\nUne machine virtuelle et un espace de stockage sont attribués.\nUn conteneur est créé.\nUne connexion à ce conteneur est établie.\nUne configuration finale s’exécute si le dépôt en définit une.\n\nCe processus prend généralement entre quelques secondes et une ou deux minutes.\n\n\n\n\n\n\nAstuce\n\n\n\nPour créer un dépôt et un codespace en une seule fois, comme point de départ le plus simple, allez directement sur github.com/codespaces et cliquez sur New codespace. GitHub crée alors un codespace vide sans dépôt existant, que vous pourrez publier plus tard."
   },
   {
-    "objectID": "03_google_colab.html#renommer-le-notebook",
-    "href": "03_google_colab.html#renommer-le-notebook",
-    "title": "Guide de démarrage avec Google Colab",
-    "section": "Renommer le notebook",
-    "text": "Renommer le notebook\nIl est recommandé de donner un nom clair à chaque notebook.\n\nEn haut à gauche de la page, cliquez sur le nom par défaut, par exemple Untitled0.ipynb.\nRemplacez-le par un nom significatif, par exemple : premiers_pas_colab.ipynb\nAppuyez sur la touche Entrée.\n\nLe notebook est enregistré dans Google Drive."
+    "objectID": "02_github-codespaces.html#étape-3-découvrir-linterface",
+    "href": "02_github-codespaces.html#étape-3-découvrir-linterface",
+    "title": "Guide de démarrage avec GitHub Codespaces",
+    "section": "Étape 3 : découvrir l’interface",
+    "text": "Étape 3 : découvrir l’interface\nUne fois le codespace prêt, une interface Visual Studio Code s’ouvre, directement dans votre navigateur.\n\nExplorateur de fichiers (à gauche) : affiche tous les fichiers du dépôt.\nZone d’édition (au centre) : pour ouvrir et modifier les fichiers.\nTerminal (en bas) : une ligne de commande déjà connectée à l’environnement du codespace, avec Git préinstallé.\nBarre d’activité (tout à gauche) : icônes pour accéder à la recherche, au contrôle de version Git, aux extensions, etc.\n\nPour ouvrir le terminal s’il n’est pas visible, utilisez le menu Terminal &gt; New Terminal."
   },
   {
-    "objectID": "03_google_colab.html#comprendre-lécran",
-    "href": "03_google_colab.html#comprendre-lécran",
-    "title": "Guide de démarrage avec Google Colab",
-    "section": "Comprendre l’écran",
-    "text": "Comprendre l’écran\nUn notebook contient plusieurs cellules.\n\nCellule de code\nUne cellule de code sert à écrire des instructions en Python. Elle possède habituellement un bouton triangulaire à gauche. Ce bouton permet d’exécuter le code.\n\n\nCellule de texte\nUne cellule de texte sert à ajouter des titres, des explications ou des notes. Pour ajouter une cellule de texte, cliquez sur le bouton + Texte situé dans la partie supérieure de la page.\n\n\nAjouter une cellule de code\nPour ajouter une nouvelle cellule de code, cliquez sur le bouton + Code."
+    "objectID": "02_github-codespaces.html#étape-4-exécuter-une-première-commande",
+    "href": "02_github-codespaces.html#étape-4-exécuter-une-première-commande",
+    "title": "Guide de démarrage avec GitHub Codespaces",
+    "section": "Étape 4 : exécuter une première commande",
+    "text": "Étape 4 : exécuter une première commande\nDans le terminal, écrivez :\necho \"Bonjour depuis mon codespace\"\nAppuyez sur Entrée. Le message s’affiche directement dans le terminal, confirmant que l’environnement fonctionne.\nSi le codespace contient Python, vous pouvez aussi tester :\npython3 --version"
   },
   {
-    "objectID": "03_google_colab.html#exécuter-votre-premier-programme",
-    "href": "03_google_colab.html#exécuter-votre-premier-programme",
-    "title": "Guide de démarrage avec Google Colab",
-    "section": "Exécuter votre premier programme",
-    "text": "Exécuter votre premier programme\nDans la première cellule de code, écrivez :\nprint(\"Bonjour, Google Colab !\")\nEnsuite :\n\nCliquez sur le bouton triangulaire situé à gauche de la cellule.\nAttendez quelques secondes.\nLe résultat apparaît sous la cellule.\n\nVous devriez voir :\nBonjour, Google Colab !\nVous venez d’exécuter votre premier programme Python.\n\n\n\n\n\n\nAstuce\n\n\n\nVous pouvez aussi exécuter une cellule avec le raccourci clavier Maj + Entrée. Pour débuter, utilisez d’abord le bouton triangulaire : il est plus facile à identifier."
+    "objectID": "02_github-codespaces.html#étape-5-modifier-un-fichier-et-enregistrer-les-changements",
+    "href": "02_github-codespaces.html#étape-5-modifier-un-fichier-et-enregistrer-les-changements",
+    "title": "Guide de démarrage avec GitHub Codespaces",
+    "section": "Étape 5 : modifier un fichier et enregistrer les changements",
+    "text": "Étape 5 : modifier un fichier et enregistrer les changements\n\nDans l’explorateur de fichiers, ouvrez un fichier existant, ou créez-en un nouveau avec le bouton New File.\nFaites une petite modification, par exemple ajouter une ligne de texte.\nEnregistrez avec Ctrl + S (Windows/Linux) ou Cmd + S (Mac).\n\nLe fichier est modifié dans le codespace, mais pas encore renvoyé vers GitHub. C’est l’objectif de l’étape suivante."
   },
   {
-    "objectID": "03_google_colab.html#faire-un-premier-exercice",
-    "href": "03_google_colab.html#faire-un-premier-exercice",
-    "title": "Guide de démarrage avec Google Colab",
-    "section": "Faire un premier exercice",
-    "text": "Faire un premier exercice\nModifiez le texte entre les guillemets pour y écrire votre prénom :\nprint(\"Bonjour, je m'appelle votre_prénom !\")\nPar exemple :\nprint(\"Bonjour, je m'appelle Léa !\")\nExécutez de nouveau la cellule avec le bouton triangulaire."
+    "objectID": "02_github-codespaces.html#étape-6-enregistrer-les-changements-sur-github",
+    "href": "02_github-codespaces.html#étape-6-enregistrer-les-changements-sur-github",
+    "title": "Guide de démarrage avec GitHub Codespaces",
+    "section": "Étape 6 : enregistrer les changements sur GitHub",
+    "text": "Étape 6 : enregistrer les changements sur GitHub\nLe contrôle de version fonctionne de la même façon que sur un ordinateur local, avec Git déjà installé et configuré dans le codespace.\nDans le terminal :\ngit add .\ngit commit -m \"Premier essai dans Codespaces\"\ngit push\n\n\n\n\n\n\nNote\n\n\n\nPuisque le codespace est déjà connecté à votre compte GitHub, aucune configuration supplémentaire d’identifiants n’est généralement nécessaire pour git push, contrairement à un dépôt cloné localement."
   },
   {
-    "objectID": "03_google_colab.html#ajouter-du-texte-explicatif",
-    "href": "03_google_colab.html#ajouter-du-texte-explicatif",
-    "title": "Guide de démarrage avec Google Colab",
-    "section": "Ajouter du texte explicatif",
-    "text": "Ajouter du texte explicatif\nUn bon notebook contient du code, mais aussi des explications.\n\nCliquez sur + Texte.\nÉcrivez un titre, par exemple :\n\n# Mon premier notebook\n\nCe notebook contient mes premiers essais avec Python.\n\nCliquez en dehors de la cellule ou utilisez le bouton d’exécution pour afficher le texte mis en forme.\n\nLe symbole # crée un titre principal dans une cellule de texte."
+    "objectID": "02_github-codespaces.html#étape-7-suspendre-ou-arrêter-le-codespace",
+    "href": "02_github-codespaces.html#étape-7-suspendre-ou-arrêter-le-codespace",
+    "title": "Guide de démarrage avec GitHub Codespaces",
+    "section": "Étape 7 : suspendre ou arrêter le codespace",
+    "text": "Étape 7 : suspendre ou arrêter le codespace\nUn codespace continue de consommer des ressources tant qu’il reste actif.\n\nFermer l’onglet du navigateur met le codespace en pause automatiquement après une période d’inactivité.\nPour l’arrêter manuellement : allez sur github.com/codespaces, trouvez votre codespace dans la liste, cliquez sur les trois points …, puis choisissez Stop codespace.\n\n\n\n\n\n\n\nAstuce\n\n\n\nArrêter un codespace ne supprime pas votre travail. Vos fichiers restent disponibles au prochain démarrage, à condition que les changements aient bien été enregistrés avec git commit, ou simplement sauvegardés dans le système de fichiers du codespace."
   },
   {
-    "objectID": "03_google_colab.html#enregistrer-et-retrouver-son-travail",
-    "href": "03_google_colab.html#enregistrer-et-retrouver-son-travail",
-    "title": "Guide de démarrage avec Google Colab",
-    "section": "Enregistrer et retrouver son travail",
-    "text": "Enregistrer et retrouver son travail\nColab enregistre habituellement les modifications dans Google Drive.\nPour retrouver un notebook plus tard :\n\nOuvrez Google Drive : drive.google.com\nUtilisez la barre de recherche et saisissez le nom de votre notebook.\nVous pouvez aussi ouvrir Colab, puis utiliser Fichier &gt; Ouvrir le notebook ou Fichier &gt; Rechercher des notebooks dans Drive."
+    "objectID": "02_github-codespaces.html#étape-8-reprendre-un-codespace-existant",
+    "href": "02_github-codespaces.html#étape-8-reprendre-un-codespace-existant",
+    "title": "Guide de démarrage avec GitHub Codespaces",
+    "section": "Étape 8 : reprendre un codespace existant",
+    "text": "Étape 8 : reprendre un codespace existant\n\nAllez sur github.com/codespaces.\nCliquez sur le nom du codespace que vous voulez reprendre.\nL’environnement se relance avec les fichiers tels que vous les aviez laissés."
   },
   {
-    "objectID": "03_google_colab.html#télécharger-une-copie",
-    "href": "03_google_colab.html#télécharger-une-copie",
-    "title": "Guide de démarrage avec Google Colab",
-    "section": "Télécharger une copie",
-    "text": "Télécharger une copie\nIl est utile de conserver une copie de son travail sur son ordinateur.\n\nDans Colab, cliquez sur Fichier.\nChoisissez l’option pour télécharger le notebook.\nEnregistrez le fichier sur votre ordinateur.\n\nLe fichier téléchargé aura généralement l’extension .ipynb, qui est le format standard des notebooks Jupyter."
+    "objectID": "02_github-codespaces.html#étape-9-supprimer-un-codespace",
+    "href": "02_github-codespaces.html#étape-9-supprimer-un-codespace",
+    "title": "Guide de démarrage avec GitHub Codespaces",
+    "section": "Étape 9 : supprimer un codespace",
+    "text": "Étape 9 : supprimer un codespace\nLorsque vous n’avez plus besoin d’un codespace, il est recommandé de le supprimer pour libérer votre quota.\n\nAllez sur github.com/codespaces.\nCliquez sur les trois points … à côté du codespace concerné.\nChoisissez Delete.\n\n\n\n\n\n\n\nImportant\n\n\n\nSupprimer un codespace efface l’environnement, mais pas le dépôt GitHub associé. Si vos changements ont déjà été envoyés avec git push, ils restent conservés dans le dépôt. Si des changements n’ont pas été envoyés, ils sont perdus définitivement."
   },
   {
-    "objectID": "03_google_colab.html#partager-un-notebook",
-    "href": "03_google_colab.html#partager-un-notebook",
-    "title": "Guide de démarrage avec Google Colab",
-    "section": "Partager un notebook",
-    "text": "Partager un notebook\nUn notebook Colab peut être partagé de façon similaire à un document Google.\n\nCliquez sur le bouton Partager, en haut à droite.\nAjoutez l’adresse courriel des personnes concernées.\nChoisissez leur niveau d’accès :\n\nLecteur : peut consulter le notebook.\nCommentateur : peut consulter et ajouter des commentaires.\nÉditeur : peut modifier le notebook.\n\nCliquez sur Envoyer.\n\n\n\n\n\n\n\nImportant\n\n\n\nVérifiez toujours que vous partagez le bon fichier et avec les bonnes personnes."
-  },
-  {
-    "objectID": "03_google_colab.html#bonnes-pratiques-pour-débuter",
-    "href": "03_google_colab.html#bonnes-pratiques-pour-débuter",
-    "title": "Guide de démarrage avec Google Colab",
+    "objectID": "02_github-codespaces.html#bonnes-pratiques-pour-débuter",
+    "href": "02_github-codespaces.html#bonnes-pratiques-pour-débuter",
+    "title": "Guide de démarrage avec GitHub Codespaces",
     "section": "Bonnes pratiques pour débuter",
-    "text": "Bonnes pratiques pour débuter\n\nDonnez un nom clair à chaque notebook.\nAjoutez un titre et une courte explication au début du document.\nExécutez les cellules de code dans l’ordre, de haut en bas.\nLisez attentivement les messages d’erreur : ils indiquent souvent la ligne à corriger.\nConservez une copie importante de votre notebook sur votre ordinateur.\nÉvitez de partager des données personnelles, confidentielles ou sensibles.\nFermez les onglets Colab inutilisés lorsque vous avez terminé."
+    "text": "Bonnes pratiques pour débuter\n\nEnvoyez régulièrement vos changements avec git push, plutôt que de compter uniquement sur le codespace pour conserver votre travail.\nArrêtez les codespaces inutilisés pour éviter de consommer votre quota gratuit inutilement.\nDonnez un nom clair à vos dépôts avant de créer un codespace, car le nom du codespace en dépend.\nSupprimez les codespaces devenus inutiles plutôt que de les laisser s’accumuler."
   },
   {
-    "objectID": "03_google_colab.html#vérification-des-acquis",
-    "href": "03_google_colab.html#vérification-des-acquis",
-    "title": "Guide de démarrage avec Google Colab",
+    "objectID": "02_github-codespaces.html#vérification-des-acquis",
+    "href": "02_github-codespaces.html#vérification-des-acquis",
+    "title": "Guide de démarrage avec GitHub Codespaces",
     "section": "Vérification des acquis",
-    "text": "Vérification des acquis\nÀ ce stade, vous devriez être capable de :\n\nCréer ou utiliser un compte Google.\nAccéder à Google Colab.\nCréer et renommer un notebook.\nÉcrire et exécuter une cellule Python.\nAjouter une cellule de texte.\nRetrouver, télécharger et partager un notebook.\n\n\n\n\n\n\n\nAstuceProchaine étape\n\n\n\nEssayez de créer un notebook appelé essai_python.ipynb, ajoutez un titre, puis exécutez une cellule qui affiche une phrase de votre choix."
+    "text": "Vérification des acquis\nÀ ce stade, vous devriez être capable de :\n\nExpliquer ce qu’est un codespace, en une phrase simple.\nCréer un codespace à partir d’un dépôt existant.\nReconnaître les éléments principaux de l’interface Visual Studio Code dans le navigateur.\nModifier un fichier et envoyer les changements vers GitHub avec git push.\nArrêter, reprendre et supprimer un codespace.\n\n\n\n\n\n\n\nAstuceProchaine étape\n\n\n\nCréez un nouveau dépôt vide sur GitHub, ouvrez-y un codespace, créez un fichier essai.md, écrivez-y une phrase, puis envoyez ce changement vers GitHub avec git add, git commit et git push."
+  },
+  {
+    "objectID": "04_anaconda_miniconda.html",
+    "href": "04_anaconda_miniconda.html",
+    "title": "Guide de démarrage avec Anaconda et Miniconda",
+    "section": "",
+    "text": "Ce guide explique ce que sont Anaconda et Miniconda, comment installer chacun d’eux, puis pourquoi ce guide recommande finalement Miniconda pour la plupart des usages. Il s’adresse aux personnes qui commencent totalement avec ces outils.\n\n\n\n\n\n\nNoteMots importants\n\n\n\n\nConda : un gestionnaire de paquets et d’environnements, capable d’installer Python lui-même ainsi que des milliers de bibliothèques scientifiques.\nEnvironnement : un espace isolé contenant une version de Python et des paquets spécifiques, séparé des autres environnements sur le même ordinateur.\nPaquet (package) : une bibliothèque ajoutant des fonctionnalités à Python, par exemple pour l’analyse de données ou les graphiques.\nDistribution : un ensemble regroupant Python, conda et, parfois, des paquets préinstallés.\nTerminal : la ligne de commande utilisée pour lancer les commandes conda."
+  },
+  {
+    "objectID": "04_anaconda_miniconda.html#objectif",
+    "href": "04_anaconda_miniconda.html#objectif",
+    "title": "Guide de démarrage avec Anaconda et Miniconda",
+    "section": "",
+    "text": "Ce guide explique ce que sont Anaconda et Miniconda, comment installer chacun d’eux, puis pourquoi ce guide recommande finalement Miniconda pour la plupart des usages. Il s’adresse aux personnes qui commencent totalement avec ces outils.\n\n\n\n\n\n\nNoteMots importants\n\n\n\n\nConda : un gestionnaire de paquets et d’environnements, capable d’installer Python lui-même ainsi que des milliers de bibliothèques scientifiques.\nEnvironnement : un espace isolé contenant une version de Python et des paquets spécifiques, séparé des autres environnements sur le même ordinateur.\nPaquet (package) : une bibliothèque ajoutant des fonctionnalités à Python, par exemple pour l’analyse de données ou les graphiques.\nDistribution : un ensemble regroupant Python, conda et, parfois, des paquets préinstallés.\nTerminal : la ligne de commande utilisée pour lancer les commandes conda."
+  },
+  {
+    "objectID": "04_anaconda_miniconda.html#ce-dont-vous-avez-besoin",
+    "href": "04_anaconda_miniconda.html#ce-dont-vous-avez-besoin",
+    "title": "Guide de démarrage avec Anaconda et Miniconda",
+    "section": "Ce dont vous avez besoin",
+    "text": "Ce dont vous avez besoin\n\nUn ordinateur avec Windows, macOS ou Linux.\nUne connexion Internet pour le téléchargement.\nAu moins 10 Go d’espace disque libre si vous installez Anaconda, ou environ 1 Go pour Miniconda.\nEnviron 15 à 20 minutes pour l’installation d’Anaconda, ou environ 10 minutes pour Miniconda."
+  },
+  {
+    "objectID": "04_anaconda_miniconda.html#partie-1-installer-anaconda",
+    "href": "04_anaconda_miniconda.html#partie-1-installer-anaconda",
+    "title": "Guide de démarrage avec Anaconda et Miniconda",
+    "section": "Partie 1 : installer Anaconda",
+    "text": "Partie 1 : installer Anaconda\nAnaconda Distribution est une installation complète, qui inclut conda, Python et plus de 1 500 paquets scientifiques préinstallés, ainsi qu’une interface graphique appelée Anaconda Navigator.\n\nÉtape 1 : télécharger Anaconda\n\nOuvrez votre navigateur et allez à l’adresse suivante : https://www.anaconda.com/docs/getting-started/installation\nSélectionnez votre système d’exploitation (Windows, macOS ou Linux).\nChoisissez Anaconda Distribution dans la liste des installateurs.\nSur Mac, vérifiez le type de puce de votre ordinateur avant de télécharger :\n\nApple Silicon (M1, M2, M3, la plupart des modèles depuis fin 2020) : choisissez la version arm64.\nIntel (modèles plus anciens) : choisissez la version x86_64.\n\nTéléchargez l’installateur graphique correspondant à votre système.\n\n\n\nÉtape 2 : installer Anaconda\n\nSur Windows\n\nDouble-cliquez sur le fichier .exe téléchargé.\nCliquez sur Next, acceptez les termes de la licence.\nChoisissez Just Me (recommended) plutôt que All Users.\nConservez le dossier d’installation proposé par défaut.\nCliquez sur Install. Cette étape peut prendre plusieurs minutes, puisque plus de 1 500 paquets sont installés.\nCliquez sur Finish une fois terminé.\n\n\n\nSur macOS\n\nDouble-cliquez sur le fichier .pkg téléchargé.\nCliquez sur Continue, acceptez les termes de la licence.\nConservez l’emplacement d’installation proposé par défaut.\nAttendez la fin de l’installation, ce qui peut prendre plusieurs minutes, puis cliquez sur Close.\n\n\n\nSur Linux\nDans un terminal, exécutez :\nbash ~/Anaconda3-latest-Linux-x86_64.sh\nSuivez les instructions affichées, en acceptant les valeurs par défaut si vous n’êtes pas certain d’un réglage.\n\n\n\nÉtape 3 : vérifier l’installation d’Anaconda\n\nOuvrez Anaconda Navigator depuis le menu Démarrer (Windows) ou le dossier Applications (macOS).\nL’interface graphique d’Anaconda Navigator devrait s’afficher, avec une liste d’applications comme Jupyter Notebook, Spyder et JupyterLab déjà installées.\n\n\n\n\nAnaconda navigator. Source :\n\n\n\n\n\n\n\n\nNote\n\n\n\nL’image ci-dessus montre l’interface d’Anaconda Navigator telle qu’elle apparaît après une installation réussie. Si vous obtenez un écran similaire, l’installation a fonctionné correctement."
+  },
+  {
+    "objectID": "04_anaconda_miniconda.html#partie-2-installer-miniconda",
+    "href": "04_anaconda_miniconda.html#partie-2-installer-miniconda",
+    "title": "Guide de démarrage avec Anaconda et Miniconda",
+    "section": "Partie 2 : installer Miniconda",
+    "text": "Partie 2 : installer Miniconda\nMiniconda installe uniquement conda et Python, sans paquet préinstallé ni interface graphique. Chaque paquet est ensuite ajouté à la demande, selon les besoins réels du projet.\n\nÉtape 1 : télécharger Miniconda\n\nOuvrez votre navigateur et allez à l’adresse suivante : https://www.anaconda.com/docs/getting-started/installation\nSélectionnez votre système d’exploitation (Windows, macOS ou Linux).\nChoisissez Miniconda plutôt qu’Anaconda Distribution dans la liste des installateurs.\nSur Mac, choisissez la version correspondant à votre puce, arm64 ou x86_64, comme pour Anaconda.\nTéléchargez l’installateur graphique correspondant à votre système.\n\n\n\nÉtape 2 : installer Miniconda\n\nSur Windows\n\nDouble-cliquez sur le fichier .exe téléchargé.\nCliquez sur Next, acceptez les termes de la licence.\nChoisissez Just Me (recommended) plutôt que All Users.\nConservez le dossier d’installation proposé par défaut.\nDans les options avancées, cochez Add Miniconda3 to my PATH environment variable si vous voulez utiliser conda directement depuis n’importe quel terminal.\nCliquez sur Install, puis sur Finish une fois terminé.\n\n\n\nSur macOS\n\nDouble-cliquez sur le fichier .pkg téléchargé.\nCliquez sur Continue, acceptez les termes de la licence.\nConservez l’emplacement d’installation proposé par défaut (install for me only).\nAttendez la fin de l’installation, puis cliquez sur Close.\n\n\n\nSur Linux\nDans un terminal, exécutez :\nbash ~/Miniconda3-latest-Linux-x86_64.sh\nSuivez les instructions affichées, en acceptant les valeurs par défaut si vous n’êtes pas certain d’un réglage.\n\n\n\nÉtape 3 : vérifier l’installation de Miniconda\n\nOuvrez un nouveau terminal (fermez l’ancien s’il était déjà ouvert avant l’installation).\nSur Windows, utilisez Anaconda Prompt ou Anaconda Powershell Prompt, disponible dans le menu Démarrer.\nTapez la commande suivante :\n\nconda --version\nVous devriez voir s’afficher un numéro de version, par exemple conda 24.x.x. Cela confirme que l’installation a réussi. Contrairement à Anaconda, aucune interface graphique ne s’ouvre : tout se passe dans le terminal.\n\n\n\n\n\n\nImportant\n\n\n\nN’installez pas Anaconda et Miniconda en même temps sur le même ordinateur, sauf si vous savez précisément gérer plusieurs installations de conda en parallèle. Pour la suite de ce guide, une seule des deux installations est nécessaire."
+  },
+  {
+    "objectID": "04_anaconda_miniconda.html#pourquoi-ce-guide-recommande-miniconda",
+    "href": "04_anaconda_miniconda.html#pourquoi-ce-guide-recommande-miniconda",
+    "title": "Guide de démarrage avec Anaconda et Miniconda",
+    "section": "Pourquoi ce guide recommande Miniconda",
+    "text": "Pourquoi ce guide recommande Miniconda\nAnaconda et Miniconda installent tous les deux conda et Python, avec accès aux mêmes dépôts de paquets. La différence essentielle est la quantité de paquets préinstallés, ce qui a un effet direct sur l’espace disque utilisé.\n\n\n\n\n\n\n\n\nCritère\nAnaconda\nMiniconda\n\n\n\n\nEspace disque requis\nEnviron 9,7 Go\nEnviron 900 Mo\n\n\nPaquets préinstallés\nPlus de 1 500 paquets scientifiques\nAucun, sauf conda et Python\n\n\nInterface graphique (Anaconda Navigator)\nIncluse\nNon incluse\n\n\nTemps d’installation\nPlus long\nBeaucoup plus rapide\n\n\nContrôle sur les paquets installés\nFaible au départ, tout est déjà là\nTotal : vous choisissez chaque paquet\n\n\n\n\n\n\n\n\n\nAstuceRecommandation de ce guide\n\n\n\nCe guide recommande Miniconda plutôt qu’Anaconda. Miniconda installe uniquement conda, Python et leurs dépendances minimales, ce qui représente environ 900 Mo contre près de 9,7 Go pour Anaconda. Les paquets dont vous avez réellement besoin (par exemple numpy, pandas ou matplotlib) s’installent ensuite en quelques secondes avec conda install, uniquement lorsque c’est nécessaire. Cela évite d’occuper plusieurs gigaoctets avec des centaines de paquets qui resteront probablement inutilisés.\n\n\nSi vous avez déjà installé Anaconda à l’étape précédente et que vous souhaitez basculer vers une approche plus légère, il est possible de désinstaller Anaconda plus tard et de repartir avec Miniconda seul, sans perdre vos projets, à condition d’avoir sauvegardé le code source de vos projets séparément (par exemple avec Git)."
+  },
+  {
+    "objectID": "04_anaconda_miniconda.html#comprendre-les-environnements-conda",
+    "href": "04_anaconda_miniconda.html#comprendre-les-environnements-conda",
+    "title": "Guide de démarrage avec Anaconda et Miniconda",
+    "section": "Comprendre les environnements conda",
+    "text": "Comprendre les environnements conda\nQu’il s’agisse d’Anaconda ou de Miniconda, la logique des environnements est identique une fois l’installation terminée.\nUn environnement conda est un espace isolé, avec sa propre version de Python et ses propres paquets. Travailler avec des environnements séparés évite qu’un projet n’entre en conflit avec un autre.\nPour lister les environnements existants :\nconda env list\nAprès une installation fraîche, vous devriez voir un environnement nommé base."
+  },
+  {
+    "objectID": "04_anaconda_miniconda.html#créer-et-utiliser-un-environnement",
+    "href": "04_anaconda_miniconda.html#créer-et-utiliser-un-environnement",
+    "title": "Guide de démarrage avec Anaconda et Miniconda",
+    "section": "Créer et utiliser un environnement",
+    "text": "Créer et utiliser un environnement\nIl est recommandé de ne jamais installer de paquets directement dans l’environnement base, pour le garder simple et stable.\nCréez un nouvel environnement nommé mon_projet, avec une version spécifique de Python :\nconda create --name mon_projet python=3.11\nRépondez y lorsque conda demande une confirmation.\nPour l’activer :\nconda activate mon_projet\nLe nom de l’environnement actif apparaît généralement entre parenthèses au début de la ligne de commande, par exemple (mon_projet).\nPour revenir à l’environnement de base :\nconda deactivate"
+  },
+  {
+    "objectID": "04_anaconda_miniconda.html#installer-et-lister-des-paquets",
+    "href": "04_anaconda_miniconda.html#installer-et-lister-des-paquets",
+    "title": "Guide de démarrage avec Anaconda et Miniconda",
+    "section": "Installer et lister des paquets",
+    "text": "Installer et lister des paquets\nUne fois l’environnement activé, installez un paquet à la demande. Par exemple, pour installer numpy :\nconda install numpy\nPour voir tous les paquets présents dans l’environnement actif :\nconda list"
+  },
+  {
+    "objectID": "04_anaconda_miniconda.html#supprimer-un-environnement-inutile",
+    "href": "04_anaconda_miniconda.html#supprimer-un-environnement-inutile",
+    "title": "Guide de démarrage avec Anaconda et Miniconda",
+    "section": "Supprimer un environnement inutile",
+    "text": "Supprimer un environnement inutile\nSi un environnement n’est plus nécessaire, vous pouvez le retirer pour libérer de l’espace disque :\nconda env remove --name mon_projet"
+  },
+  {
+    "objectID": "04_anaconda_miniconda.html#bonnes-pratiques-pour-débuter",
+    "href": "04_anaconda_miniconda.html#bonnes-pratiques-pour-débuter",
+    "title": "Guide de démarrage avec Anaconda et Miniconda",
+    "section": "Bonnes pratiques pour débuter",
+    "text": "Bonnes pratiques pour débuter\n\nPréférez Miniconda à Anaconda si l’espace disque ou la rapidité d’installation vous importent.\nCréez un environnement distinct pour chaque projet, plutôt que de tout installer dans base.\nDonnez des noms d’environnement clairs, liés au projet concerné.\nInstallez uniquement les paquets dont vous avez besoin, plutôt que d’installer par précaution.\nUtilisez toujours conda deactivate avant de fermer un terminal, par bonne habitude.\nDocumentez les paquets nécessaires à un projet avec conda list --export pour pouvoir recréer l’environnement plus tard."
+  },
+  {
+    "objectID": "04_anaconda_miniconda.html#vérification-des-acquis",
+    "href": "04_anaconda_miniconda.html#vérification-des-acquis",
+    "title": "Guide de démarrage avec Anaconda et Miniconda",
+    "section": "Vérification des acquis",
+    "text": "Vérification des acquis\nÀ ce stade, vous devriez être capable de :\n\nInstaller Anaconda et reconnaître son interface Anaconda Navigator.\nInstaller Miniconda et vérifier son installation avec conda --version.\nExpliquer la différence principale entre Anaconda et Miniconda, en particulier au niveau de l’espace disque.\nCréer, activer et désactiver un environnement conda.\nInstaller un paquet dans un environnement actif.\nSupprimer un environnement devenu inutile.\n\n\n\n\n\n\n\nAstuceProchaine étape\n\n\n\nCréez un environnement nommé essai_conda avec Python 3.11, activez-le, installez le paquet pandas, puis vérifiez qu’il apparaît bien avec la commande conda list."
   }
 ]

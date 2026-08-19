@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Guides de démarrage</title>
+<title>Guide de démarrage avec Anaconda et Miniconda – Guides de démarrage</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -22,6 +22,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -258,7 +293,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Accueil</span></a>
   </li>  
   <li class="nav-item">
@@ -274,7 +309,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Google Colab</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./04_anaconda_miniconda.html"> 
+    <a class="nav-link active" href="./04_anaconda_miniconda.html" aria-current="page"> 
 <span class="menu-text">Anaconda et Miniconda</span></a>
   </li>  
 </ul>
@@ -294,9 +329,27 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Sur cette page</h2>
    
   <ul>
-  <li><a href="#bienvenue" id="toc-bienvenue" class="nav-link active" data-scroll-target="#bienvenue">Bienvenue</a></li>
-  <li><a href="#liste-des-guides" id="toc-liste-des-guides" class="nav-link" data-scroll-target="#liste-des-guides">Liste des guides</a></li>
-  <li><a href="#comment-utiliser-ces-guides" id="toc-comment-utiliser-ces-guides" class="nav-link" data-scroll-target="#comment-utiliser-ces-guides">Comment utiliser ces guides</a></li>
+  <li><a href="#objectif" id="toc-objectif" class="nav-link active" data-scroll-target="#objectif">Objectif</a></li>
+  <li><a href="#ce-dont-vous-avez-besoin" id="toc-ce-dont-vous-avez-besoin" class="nav-link" data-scroll-target="#ce-dont-vous-avez-besoin">Ce dont vous avez besoin</a></li>
+  <li><a href="#partie-1-installer-anaconda" id="toc-partie-1-installer-anaconda" class="nav-link" data-scroll-target="#partie-1-installer-anaconda">Partie 1 : installer Anaconda</a>
+  <ul class="collapse">
+  <li><a href="#étape-1-télécharger-anaconda" id="toc-étape-1-télécharger-anaconda" class="nav-link" data-scroll-target="#étape-1-télécharger-anaconda">Étape 1 : télécharger Anaconda</a></li>
+  <li><a href="#étape-2-installer-anaconda" id="toc-étape-2-installer-anaconda" class="nav-link" data-scroll-target="#étape-2-installer-anaconda">Étape 2 : installer Anaconda</a></li>
+  <li><a href="#étape-3-vérifier-linstallation-danaconda" id="toc-étape-3-vérifier-linstallation-danaconda" class="nav-link" data-scroll-target="#étape-3-vérifier-linstallation-danaconda">Étape 3 : vérifier l’installation d’Anaconda</a></li>
+  </ul></li>
+  <li><a href="#partie-2-installer-miniconda" id="toc-partie-2-installer-miniconda" class="nav-link" data-scroll-target="#partie-2-installer-miniconda">Partie 2 : installer Miniconda</a>
+  <ul class="collapse">
+  <li><a href="#étape-1-télécharger-miniconda" id="toc-étape-1-télécharger-miniconda" class="nav-link" data-scroll-target="#étape-1-télécharger-miniconda">Étape 1 : télécharger Miniconda</a></li>
+  <li><a href="#étape-2-installer-miniconda" id="toc-étape-2-installer-miniconda" class="nav-link" data-scroll-target="#étape-2-installer-miniconda">Étape 2 : installer Miniconda</a></li>
+  <li><a href="#étape-3-vérifier-linstallation-de-miniconda" id="toc-étape-3-vérifier-linstallation-de-miniconda" class="nav-link" data-scroll-target="#étape-3-vérifier-linstallation-de-miniconda">Étape 3 : vérifier l’installation de Miniconda</a></li>
+  </ul></li>
+  <li><a href="#pourquoi-ce-guide-recommande-miniconda" id="toc-pourquoi-ce-guide-recommande-miniconda" class="nav-link" data-scroll-target="#pourquoi-ce-guide-recommande-miniconda">Pourquoi ce guide recommande Miniconda</a></li>
+  <li><a href="#comprendre-les-environnements-conda" id="toc-comprendre-les-environnements-conda" class="nav-link" data-scroll-target="#comprendre-les-environnements-conda">Comprendre les environnements conda</a></li>
+  <li><a href="#créer-et-utiliser-un-environnement" id="toc-créer-et-utiliser-un-environnement" class="nav-link" data-scroll-target="#créer-et-utiliser-un-environnement">Créer et utiliser un environnement</a></li>
+  <li><a href="#installer-et-lister-des-paquets" id="toc-installer-et-lister-des-paquets" class="nav-link" data-scroll-target="#installer-et-lister-des-paquets">Installer et lister des paquets</a></li>
+  <li><a href="#supprimer-un-environnement-inutile" id="toc-supprimer-un-environnement-inutile" class="nav-link" data-scroll-target="#supprimer-un-environnement-inutile">Supprimer un environnement inutile</a></li>
+  <li><a href="#bonnes-pratiques-pour-débuter" id="toc-bonnes-pratiques-pour-débuter" class="nav-link" data-scroll-target="#bonnes-pratiques-pour-débuter">Bonnes pratiques pour débuter</a></li>
+  <li><a href="#vérification-des-acquis" id="toc-vérification-des-acquis" class="nav-link" data-scroll-target="#vérification-des-acquis">Vérification des acquis</a></li>
   </ul>
 </nav>
     </div>
@@ -306,7 +359,8 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Guides de démarrage</h1>
+<h1 class="title">Guide de démarrage avec Anaconda et Miniconda</h1>
+<p class="subtitle lead">Installer un environnement Python scientifique avec conda</p>
 </div>
 
 
@@ -323,39 +377,301 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="bienvenue" class="level2">
-<h2 class="anchored" data-anchor-id="bienvenue">Bienvenue</h2>
-<p>Cette page regroupe des guides de démarrage simples pour les outils utilisés dans le cadre de la formation du RQRAD sur la gestion et le traitement des données agricoles (24–26 août 2026). Chaque guide est pensé pour des personnes qui commencent totalement avec l’outil concerné : aucune expérience préalable n’est requise.</p>
-</section>
-<section id="liste-des-guides" class="level2">
-<h2 class="anchored" data-anchor-id="liste-des-guides">Liste des guides</h2>
+<section id="objectif" class="level2">
+<h2 class="anchored" data-anchor-id="objectif">Objectif</h2>
+<p>Ce guide explique ce que sont Anaconda et Miniconda, comment installer chacun d’eux, puis pourquoi ce guide recommande finalement Miniconda pour la plupart des usages. Il s’adresse aux personnes qui commencent totalement avec ces outils.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Mots importants
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <ul>
-<li><a href="./01_r_et_rstudio.html">R et RStudio</a> — guide d’installation de R et RStudio et premiers pas d’utilisation de RStudio.</li>
-<li><a href="./03_google_colab.html">Google Colab</a> — se familiariser avec Google Colab et exécuter un premier programme en Python dans le navigateur.</li>
-<li><a href="./02_github-codespaces.html">GitHub Codespaces</a> — introduction à l’utilisation de GitHub Codespaces.</li>
-<li><a href="./04_anaconda_miniconda.html">Anaconda et Miniconda</a> — à compléter. &lt;!–</li>
-<li><a href="outil5.qmd">Outil 5</a> — à compléter. –&gt;</li>
+<li><strong>Conda</strong> : un gestionnaire de paquets et d’environnements, capable d’installer Python lui-même ainsi que des milliers de bibliothèques scientifiques.</li>
+<li><strong>Environnement</strong> : un espace isolé contenant une version de Python et des paquets spécifiques, séparé des autres environnements sur le même ordinateur.</li>
+<li><strong>Paquet (package)</strong> : une bibliothèque ajoutant des fonctionnalités à Python, par exemple pour l’analyse de données ou les graphiques.</li>
+<li><strong>Distribution</strong> : un ensemble regroupant Python, conda et, parfois, des paquets préinstallés.</li>
+<li><strong>Terminal</strong> : la ligne de commande utilisée pour lancer les commandes <code>conda</code>.</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="ce-dont-vous-avez-besoin" class="level2">
+<h2 class="anchored" data-anchor-id="ce-dont-vous-avez-besoin">Ce dont vous avez besoin</h2>
+<ul>
+<li>Un ordinateur avec Windows, macOS ou Linux.</li>
+<li>Une connexion Internet pour le téléchargement.</li>
+<li>Au moins 10 Go d’espace disque libre si vous installez Anaconda, ou environ 1 Go pour Miniconda.</li>
+<li>Environ 15 à 20 minutes pour l’installation d’Anaconda, ou environ 10 minutes pour Miniconda.</li>
 </ul>
 </section>
-<section id="comment-utiliser-ces-guides" class="level2">
-<h2 class="anchored" data-anchor-id="comment-utiliser-ces-guides">Comment utiliser ces guides</h2>
+<section id="partie-1-installer-anaconda" class="level2">
+<h2 class="anchored" data-anchor-id="partie-1-installer-anaconda">Partie 1 : installer Anaconda</h2>
+<p>Anaconda Distribution est une installation complète, qui inclut conda, Python et plus de 1 500 paquets scientifiques préinstallés, ainsi qu’une interface graphique appelée Anaconda Navigator.</p>
+<section id="étape-1-télécharger-anaconda" class="level3">
+<h3 class="anchored" data-anchor-id="étape-1-télécharger-anaconda">Étape 1 : télécharger Anaconda</h3>
 <ol type="1">
-<li>Cliquez sur le nom de l’outil qui vous intéresse dans la liste ci-dessus ou dans le menu de navigation, en haut de la page.</li>
-<li>Suivez les étapes dans l’ordre, sans en sauter.</li>
-<li>Si un terme n’est pas clair, il est généralement expliqué dès sa première apparition dans le guide.</li>
-<li>En cas de problème, notez l’étape où vous êtes bloqué avant de demander de l’aide.</li>
+<li>Ouvrez votre navigateur et allez à l’adresse suivante : <a href="https://www.anaconda.com/docs/getting-started/installation" class="uri">https://www.anaconda.com/docs/getting-started/installation</a></li>
+<li>Sélectionnez votre système d’exploitation (Windows, macOS ou Linux).</li>
+<li>Choisissez <strong>Anaconda Distribution</strong> dans la liste des installateurs.</li>
+<li>Sur Mac, vérifiez le type de puce de votre ordinateur avant de télécharger :
+<ul>
+<li><strong>Apple Silicon</strong> (M1, M2, M3, la plupart des modèles depuis fin 2020) : choisissez la version <strong>arm64</strong>.</li>
+<li><strong>Intel</strong> (modèles plus anciens) : choisissez la version <strong>x86_64</strong>.</li>
+</ul></li>
+<li>Téléchargez l’installateur graphique correspondant à votre système.</li>
 </ol>
+</section>
+<section id="étape-2-installer-anaconda" class="level3">
+<h3 class="anchored" data-anchor-id="étape-2-installer-anaconda">Étape 2 : installer Anaconda</h3>
+<section id="sur-windows" class="level4">
+<h4 class="anchored" data-anchor-id="sur-windows">Sur Windows</h4>
+<ol type="1">
+<li>Double-cliquez sur le fichier <code>.exe</code> téléchargé.</li>
+<li>Cliquez sur <strong>Next</strong>, acceptez les termes de la licence.</li>
+<li>Choisissez <strong>Just Me (recommended)</strong> plutôt que <strong>All Users</strong>.</li>
+<li>Conservez le dossier d’installation proposé par défaut.</li>
+<li>Cliquez sur <strong>Install</strong>. Cette étape peut prendre plusieurs minutes, puisque plus de 1 500 paquets sont installés.</li>
+<li>Cliquez sur <strong>Finish</strong> une fois terminé.</li>
+</ol>
+</section>
+<section id="sur-macos" class="level4">
+<h4 class="anchored" data-anchor-id="sur-macos">Sur macOS</h4>
+<ol type="1">
+<li>Double-cliquez sur le fichier <code>.pkg</code> téléchargé.</li>
+<li>Cliquez sur <strong>Continue</strong>, acceptez les termes de la licence.</li>
+<li>Conservez l’emplacement d’installation proposé par défaut.</li>
+<li>Attendez la fin de l’installation, ce qui peut prendre plusieurs minutes, puis cliquez sur <strong>Close</strong>.</li>
+</ol>
+</section>
+<section id="sur-linux" class="level4">
+<h4 class="anchored" data-anchor-id="sur-linux">Sur Linux</h4>
+<p>Dans un terminal, exécutez :</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">bash</span> ~/Anaconda3-latest-Linux-x86_64.sh</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Suivez les instructions affichées, en acceptant les valeurs par défaut si vous n’êtes pas certain d’un réglage.</p>
+</section>
+</section>
+<section id="étape-3-vérifier-linstallation-danaconda" class="level3">
+<h3 class="anchored" data-anchor-id="étape-3-vérifier-linstallation-danaconda">Étape 3 : vérifier l’installation d’Anaconda</h3>
+<ol type="1">
+<li>Ouvrez <strong>Anaconda Navigator</strong> depuis le menu Démarrer (Windows) ou le dossier Applications (macOS).</li>
+<li>L’interface graphique d’Anaconda Navigator devrait s’afficher, avec une liste d’applications comme Jupyter Notebook, Spyder et JupyterLab déjà installées.</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/conda_navigator.webp" class="img-fluid figure-img"></p>
+<figcaption>Anaconda navigator. Source :</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>L’image ci-dessus montre l’interface d’Anaconda Navigator telle qu’elle apparaît après une installation réussie. Si vous obtenez un écran similaire, l’installation a fonctionné correctement.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="partie-2-installer-miniconda" class="level2">
+<h2 class="anchored" data-anchor-id="partie-2-installer-miniconda">Partie 2 : installer Miniconda</h2>
+<p>Miniconda installe uniquement conda et Python, sans paquet préinstallé ni interface graphique. Chaque paquet est ensuite ajouté à la demande, selon les besoins réels du projet.</p>
+<section id="étape-1-télécharger-miniconda" class="level3">
+<h3 class="anchored" data-anchor-id="étape-1-télécharger-miniconda">Étape 1 : télécharger Miniconda</h3>
+<ol type="1">
+<li>Ouvrez votre navigateur et allez à l’adresse suivante : <a href="https://www.anaconda.com/docs/getting-started/installation" class="uri">https://www.anaconda.com/docs/getting-started/installation</a></li>
+<li>Sélectionnez votre système d’exploitation (Windows, macOS ou Linux).</li>
+<li>Choisissez <strong>Miniconda</strong> plutôt qu’Anaconda Distribution dans la liste des installateurs.</li>
+<li>Sur Mac, choisissez la version correspondant à votre puce, <strong>arm64</strong> ou <strong>x86_64</strong>, comme pour Anaconda.</li>
+<li>Téléchargez l’installateur graphique correspondant à votre système.</li>
+</ol>
+</section>
+<section id="étape-2-installer-miniconda" class="level3">
+<h3 class="anchored" data-anchor-id="étape-2-installer-miniconda">Étape 2 : installer Miniconda</h3>
+<section id="sur-windows-1" class="level4">
+<h4 class="anchored" data-anchor-id="sur-windows-1">Sur Windows</h4>
+<ol type="1">
+<li>Double-cliquez sur le fichier <code>.exe</code> téléchargé.</li>
+<li>Cliquez sur <strong>Next</strong>, acceptez les termes de la licence.</li>
+<li>Choisissez <strong>Just Me (recommended)</strong> plutôt que <strong>All Users</strong>.</li>
+<li>Conservez le dossier d’installation proposé par défaut.</li>
+<li>Dans les options avancées, cochez <strong>Add Miniconda3 to my PATH environment variable</strong> si vous voulez utiliser <code>conda</code> directement depuis n’importe quel terminal.</li>
+<li>Cliquez sur <strong>Install</strong>, puis sur <strong>Finish</strong> une fois terminé.</li>
+</ol>
+</section>
+<section id="sur-macos-1" class="level4">
+<h4 class="anchored" data-anchor-id="sur-macos-1">Sur macOS</h4>
+<ol type="1">
+<li>Double-cliquez sur le fichier <code>.pkg</code> téléchargé.</li>
+<li>Cliquez sur <strong>Continue</strong>, acceptez les termes de la licence.</li>
+<li>Conservez l’emplacement d’installation proposé par défaut (<strong>install for me only</strong>).</li>
+<li>Attendez la fin de l’installation, puis cliquez sur <strong>Close</strong>.</li>
+</ol>
+</section>
+<section id="sur-linux-1" class="level4">
+<h4 class="anchored" data-anchor-id="sur-linux-1">Sur Linux</h4>
+<p>Dans un terminal, exécutez :</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">bash</span> ~/Miniconda3-latest-Linux-x86_64.sh</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Suivez les instructions affichées, en acceptant les valeurs par défaut si vous n’êtes pas certain d’un réglage.</p>
+</section>
+</section>
+<section id="étape-3-vérifier-linstallation-de-miniconda" class="level3">
+<h3 class="anchored" data-anchor-id="étape-3-vérifier-linstallation-de-miniconda">Étape 3 : vérifier l’installation de Miniconda</h3>
+<ol type="1">
+<li>Ouvrez un nouveau terminal (fermez l’ancien s’il était déjà ouvert avant l’installation).</li>
+<li>Sur Windows, utilisez <strong>Anaconda Prompt</strong> ou <strong>Anaconda Powershell Prompt</strong>, disponible dans le menu Démarrer.</li>
+<li>Tapez la commande suivante :</li>
+</ol>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> <span class="at">--version</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Vous devriez voir s’afficher un numéro de version, par exemple <code>conda 24.x.x</code>. Cela confirme que l’installation a réussi. Contrairement à Anaconda, aucune interface graphique ne s’ouvre : tout se passe dans le terminal.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>N’installez pas Anaconda et Miniconda en même temps sur le même ordinateur, sauf si vous savez précisément gérer plusieurs installations de conda en parallèle. Pour la suite de ce guide, une seule des deux installations est nécessaire.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="pourquoi-ce-guide-recommande-miniconda" class="level2">
+<h2 class="anchored" data-anchor-id="pourquoi-ce-guide-recommande-miniconda">Pourquoi ce guide recommande Miniconda</h2>
+<p>Anaconda et Miniconda installent tous les deux conda et Python, avec accès aux mêmes dépôts de paquets. La différence essentielle est la quantité de paquets préinstallés, ce qui a un effet direct sur l’espace disque utilisé.</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Critère</th>
+<th>Anaconda</th>
+<th>Miniconda</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Espace disque requis</td>
+<td>Environ 9,7 Go</td>
+<td>Environ 900 Mo</td>
+</tr>
+<tr class="even">
+<td>Paquets préinstallés</td>
+<td>Plus de 1 500 paquets scientifiques</td>
+<td>Aucun, sauf conda et Python</td>
+</tr>
+<tr class="odd">
+<td>Interface graphique (Anaconda Navigator)</td>
+<td>Incluse</td>
+<td>Non incluse</td>
+</tr>
+<tr class="even">
+<td>Temps d’installation</td>
+<td>Plus long</td>
+<td>Beaucoup plus rapide</td>
+</tr>
+<tr class="odd">
+<td>Contrôle sur les paquets installés</td>
+<td>Faible au départ, tout est déjà là</td>
+<td>Total : vous choisissez chaque paquet</td>
+</tr>
+</tbody>
+</table>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Astuce
+<span class="screen-reader-only">Astuce</span>Recommandation de ce guide
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Ces guides sont mis à jour au besoin. Le lien de cette page reste toujours le même, même après une mise à jour du contenu.</p>
+<p>Ce guide recommande <strong>Miniconda</strong> plutôt qu’Anaconda. Miniconda installe uniquement conda, Python et leurs dépendances minimales, ce qui représente environ 900 Mo contre près de 9,7 Go pour Anaconda. Les paquets dont vous avez réellement besoin (par exemple <code>numpy</code>, <code>pandas</code> ou <code>matplotlib</code>) s’installent ensuite en quelques secondes avec <code>conda install</code>, uniquement lorsque c’est nécessaire. Cela évite d’occuper plusieurs gigaoctets avec des centaines de paquets qui resteront probablement inutilisés.</p>
+</div>
+</div>
+<p>Si vous avez déjà installé Anaconda à l’étape précédente et que vous souhaitez basculer vers une approche plus légère, il est possible de désinstaller Anaconda plus tard et de repartir avec Miniconda seul, sans perdre vos projets, à condition d’avoir sauvegardé le code source de vos projets séparément (par exemple avec Git).</p>
+</section>
+<section id="comprendre-les-environnements-conda" class="level2">
+<h2 class="anchored" data-anchor-id="comprendre-les-environnements-conda">Comprendre les environnements conda</h2>
+<p>Qu’il s’agisse d’Anaconda ou de Miniconda, la logique des environnements est identique une fois l’installation terminée.</p>
+<p>Un <strong>environnement</strong> conda est un espace isolé, avec sa propre version de Python et ses propres paquets. Travailler avec des environnements séparés évite qu’un projet n’entre en conflit avec un autre.</p>
+<p>Pour lister les environnements existants :</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> env list</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Après une installation fraîche, vous devriez voir un environnement nommé <code>base</code>.</p>
+</section>
+<section id="créer-et-utiliser-un-environnement" class="level2">
+<h2 class="anchored" data-anchor-id="créer-et-utiliser-un-environnement">Créer et utiliser un environnement</h2>
+<p>Il est recommandé de ne jamais installer de paquets directement dans l’environnement <code>base</code>, pour le garder simple et stable.</p>
+<p>Créez un nouvel environnement nommé <code>mon_projet</code>, avec une version spécifique de Python :</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> create <span class="at">--name</span> mon_projet python=3.11</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Répondez <code>y</code> lorsque conda demande une confirmation.</p>
+<p>Pour l’activer :</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate mon_projet</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Le nom de l’environnement actif apparaît généralement entre parenthèses au début de la ligne de commande, par exemple <code>(mon_projet)</code>.</p>
+<p>Pour revenir à l’environnement de base :</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> deactivate</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="installer-et-lister-des-paquets" class="level2">
+<h2 class="anchored" data-anchor-id="installer-et-lister-des-paquets">Installer et lister des paquets</h2>
+<p>Une fois l’environnement activé, installez un paquet à la demande. Par exemple, pour installer <code>numpy</code> :</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> install numpy</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Pour voir tous les paquets présents dans l’environnement actif :</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> list</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="supprimer-un-environnement-inutile" class="level2">
+<h2 class="anchored" data-anchor-id="supprimer-un-environnement-inutile">Supprimer un environnement inutile</h2>
+<p>Si un environnement n’est plus nécessaire, vous pouvez le retirer pour libérer de l’espace disque :</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> env remove <span class="at">--name</span> mon_projet</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="bonnes-pratiques-pour-débuter" class="level2">
+<h2 class="anchored" data-anchor-id="bonnes-pratiques-pour-débuter">Bonnes pratiques pour débuter</h2>
+<ul>
+<li>Préférez Miniconda à Anaconda si l’espace disque ou la rapidité d’installation vous importent.</li>
+<li>Créez un environnement distinct pour chaque projet, plutôt que de tout installer dans <code>base</code>.</li>
+<li>Donnez des noms d’environnement clairs, liés au projet concerné.</li>
+<li>Installez uniquement les paquets dont vous avez besoin, plutôt que d’installer par précaution.</li>
+<li>Utilisez toujours <code>conda deactivate</code> avant de fermer un terminal, par bonne habitude.</li>
+<li>Documentez les paquets nécessaires à un projet avec <code>conda list --export</code> pour pouvoir recréer l’environnement plus tard.</li>
+</ul>
+</section>
+<section id="vérification-des-acquis" class="level2">
+<h2 class="anchored" data-anchor-id="vérification-des-acquis">Vérification des acquis</h2>
+<p>À ce stade, vous devriez être capable de :</p>
+<ul>
+<li>Installer Anaconda et reconnaître son interface Anaconda Navigator.</li>
+<li>Installer Miniconda et vérifier son installation avec <code>conda --version</code>.</li>
+<li>Expliquer la différence principale entre Anaconda et Miniconda, en particulier au niveau de l’espace disque.</li>
+<li>Créer, activer et désactiver un environnement conda.</li>
+<li>Installer un paquet dans un environnement actif.</li>
+<li>Supprimer un environnement devenu inutile.</li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Astuce</span>Prochaine étape
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Créez un environnement nommé <code>essai_conda</code> avec Python 3.11, activez-le, installez le paquet <code>pandas</code>, puis vérifiez qu’il apparaît bien avec la commande <code>conda list</code>.</p>
 </div>
 </div>
 

@@ -2,18 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://afsilvad.github.io/guides_rqrad/index.html</loc>
-    <lastmod>2026-08-19T04:16:53.680Z</lastmod>
+    <lastmod>2026-08-19T04:43:42.899Z</lastmod>
   </url>
   <url>
-    <loc>https://afsilvad.github.io/guides_rqrad/02_github-codespaces.html</loc>
-    <lastmod>2026-08-19T04:08:51.095Z</lastmod>
+    <loc>https://afsilvad.github.io/guides_rqrad/03_google_colab.html</loc>
+    <lastmod>2026-08-19T04:29:49.313Z</lastmod>
   </url>
   <url>
     <loc>https://afsilvad.github.io/guides_rqrad/01_r_et_rstudio.html</loc>
     <lastmod>2026-08-19T03:31:37.549Z</lastmod>
   </url>
   <url>
-    <loc>https://afsilvad.github.io/guides_rqrad/03_google_colab.html</loc>
-    <lastmod>2026-08-19T03:11:17.979Z</lastmod>
+    <loc>https://afsilvad.github.io/guides_rqrad/02_github-codespaces.html</loc>
+    <lastmod>2026-08-19T04:43:49.356Z</lastmod>
+  </url>
+  <url>
+    <loc>https://afsilvad.github.io/guides_rqrad/04_anaconda_miniconda.html</loc>
+    <lastmod>2026-08-19T04:50:46.266Z</lastmod>
   </url>
 </urlset>
