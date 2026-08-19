@@ -9,14 +9,16 @@ website:
         text: Accueil
       - href: 01_r_et_rstudio.qmd
         text: R et RStudio
+      - href: 02_github-codespaces.qmd
+        text: GitHub Codespaces
       - href: 03_google_colab.qmd
         text: Google Colab
 
 format:
   html:
     theme:
-      dark: darkly
       light: flatly
+      dark: darkly
     toc: true
     lang: fr
     link-external-newwindow: true
