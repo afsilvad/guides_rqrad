@@ -5,16 +5,24 @@ subtitle: "Installer un environnement Python scientifique avec conda"
 
 ## Objectif
 
-Ce guide explique ce que sont Anaconda et Miniconda, comment installer chacun d'eux, puis pourquoi ce guide recommande finalement Miniconda pour la plupart des usages. Il s'adresse aux personnes qui commencent totalement avec ces outils.
+Ce guide explique ce que sont Anaconda et Miniconda, comment installer chacun d'eux, puis pourquoi ce guide recommande finalement Miniconda pour la plupart des usages.
+
+::: {.callout-important}
+
+Si vous êtes débutant et que c'est la première fois que vous travaillez avec ces outils, il est fortement recommandé d'installer **seulement un des deux**, Anaconda **ou** Miniconda, et non les deux à la fois. Installer les deux en parallèle peut créer des conflits entre les installations de conda et compliquer inutilement vos premiers pas. Choisissez l'option qui correspond le mieux à vos besoins, en vous référant à la comparaison présentée plus bas dans ce guide, puis suivez uniquement les étapes correspondantes.
+
+:::
 
 ::: {.callout-note}
+
 ## Mots importants
 
-- **Conda** : un gestionnaire de paquets et d'environnements, capable d'installer Python lui-même ainsi que des milliers de bibliothèques scientifiques.
-- **Environnement** : un espace isolé contenant une version de Python et des paquets spécifiques, séparé des autres environnements sur le même ordinateur.
-- **Paquet (package)** : une bibliothèque ajoutant des fonctionnalités à Python, par exemple pour l'analyse de données ou les graphiques.
-- **Distribution** : un ensemble regroupant Python, conda et, parfois, des paquets préinstallés.
+- **Conda** : un gestionnaire de modules et d'environnements, capable d'installer Python lui-même ainsi que des milliers de bibliothèques scientifiques.
+- **Environnement** : un espace isolé contenant une version de Python et des modules spécifiques, séparé des autres environnements sur le même ordinateur.
+- **Module (package)** : une bibliothèque ajoutant des fonctionnalités à Python, par exemple pour l'analyse de données ou les graphiques.
+- **Distribution** : un ensemble regroupant Python, conda et, parfois, des modules préinstallés.
 - **Terminal** : la ligne de commande utilisée pour lancer les commandes `conda`.
+
 :::
 
 ## Ce dont vous avez besoin
@@ -26,7 +34,7 @@ Ce guide explique ce que sont Anaconda et Miniconda, comment installer chacun d'
 
 ## Partie 1 : installer Anaconda
 
-Anaconda Distribution est une installation complète, qui inclut conda, Python et plus de 1 500 paquets scientifiques préinstallés, ainsi qu'une interface graphique appelée Anaconda Navigator.
+Anaconda Distribution est une installation complète, qui inclut conda, Python et plus de 1 500 modules scientifiques préinstallés, ainsi qu'une interface graphique appelée Anaconda Navigator [web:134][web:142].
 
 ### Étape 1 : télécharger Anaconda
 
@@ -46,7 +54,7 @@ Anaconda Distribution est une installation complète, qui inclut conda, Python e
 2. Cliquez sur **Next**, acceptez les termes de la licence.
 3. Choisissez **Just Me (recommended)** plutôt que **All Users**.
 4. Conservez le dossier d'installation proposé par défaut.
-5. Cliquez sur **Install**. Cette étape peut prendre plusieurs minutes, puisque plus de 1 500 paquets sont installés.
+5. Cliquez sur **Install**. Cette étape peut prendre plusieurs minutes, puisque plus de 1 500 modules sont installés.
 6. Cliquez sur **Finish** une fois terminé.
 
 #### Sur macOS
@@ -71,7 +79,7 @@ Suivez les instructions affichées, en acceptant les valeurs par défaut si vous
 1. Ouvrez **Anaconda Navigator** depuis le menu Démarrer (Windows) ou le dossier Applications (macOS).
 2. L'interface graphique d'Anaconda Navigator devrait s'afficher, avec une liste d'applications comme Jupyter Notebook, Spyder et JupyterLab déjà installées.
 
-![Anaconda navigator. Source : ](images/conda_navigator.webp)
+![Anaconda navigator. Source :[Site web Anaconda](https://www.anaconda.com/docs/legacy/anaconda-navigator/main)](images/conda_navigator.webp){width=80%}
 
 ::: {.callout-note}
 L'image ci-dessus montre l'interface d'Anaconda Navigator telle qu'elle apparaît après une installation réussie. Si vous obtenez un écran similaire, l'installation a fonctionné correctement.
@@ -79,7 +87,7 @@ L'image ci-dessus montre l'interface d'Anaconda Navigator telle qu'elle apparaî
 
 ## Partie 2 : installer Miniconda
 
-Miniconda installe uniquement conda et Python, sans paquet préinstallé ni interface graphique. Chaque paquet est ensuite ajouté à la demande, selon les besoins réels du projet.
+Miniconda installe uniquement conda et Python, sans module préinstallé ni interface graphique. Chaque module est ensuite ajouté à la demande, selon les besoins réels du projet [web:146].
 
 ### Étape 1 : télécharger Miniconda
 
@@ -97,7 +105,7 @@ Miniconda installe uniquement conda et Python, sans paquet préinstallé ni inte
 2. Cliquez sur **Next**, acceptez les termes de la licence.
 3. Choisissez **Just Me (recommended)** plutôt que **All Users**.
 4. Conservez le dossier d'installation proposé par défaut.
-5. Dans les options avancées, cochez **Add Miniconda3 to my PATH environment variable** si vous voulez utiliser `conda` directement depuis n'importe quel terminal.
+5. Dans les options avancées, cochez **Add Miniconda3 to my PATH environment variable** si vous voulez utiliser `conda` directement depuis n'importe quel terminal [web:146].
 6. Cliquez sur **Install**, puis sur **Finish** une fois terminé.
 
 #### Sur macOS
@@ -129,26 +137,22 @@ conda --version
 
 Vous devriez voir s'afficher un numéro de version, par exemple `conda 24.x.x`. Cela confirme que l'installation a réussi. Contrairement à Anaconda, aucune interface graphique ne s'ouvre : tout se passe dans le terminal.
 
-::: {.callout-important}
-N'installez pas Anaconda et Miniconda en même temps sur le même ordinateur, sauf si vous savez précisément gérer plusieurs installations de conda en parallèle. Pour la suite de ce guide, une seule des deux installations est nécessaire.
-:::
-
 ## Pourquoi ce guide recommande Miniconda
 
-Anaconda et Miniconda installent tous les deux conda et Python, avec accès aux mêmes dépôts de paquets. La différence essentielle est la quantité de paquets préinstallés, ce qui a un effet direct sur l'espace disque utilisé.
+Anaconda et Miniconda installent tous les deux conda et Python, avec accès aux mêmes dépôts de modules. La différence essentielle est la quantité de modules préinstallés, ce qui a un effet direct sur l'espace disque utilisé [web:134].
 
 | Critère | Anaconda | Miniconda |
 |---|---|---|
-| Espace disque requis | Environ 9,7 Go | Environ 900 Mo |
-| Paquets préinstallés | Plus de 1 500 paquets scientifiques | Aucun, sauf conda et Python |
+| Espace disque requis | Environ 9,7 Go | Environ 900 Mo [web:134] |
+| Modules préinstallés | Plus de 1 500 modules scientifiques | Aucun, sauf conda et Python |
 | Interface graphique (Anaconda Navigator) | Incluse | Non incluse |
 | Temps d'installation | Plus long | Beaucoup plus rapide |
-| Contrôle sur les paquets installés | Faible au départ, tout est déjà là | Total : vous choisissez chaque paquet |
+| Contrôle sur les modules installés | Faible au départ, tout est déjà là | Total : vous choisissez chaque module |
 
 ::: {.callout-tip}
 ## Recommandation de ce guide
 
-Ce guide recommande **Miniconda** plutôt qu'Anaconda. Miniconda installe uniquement conda, Python et leurs dépendances minimales, ce qui représente environ 900 Mo contre près de 9,7 Go pour Anaconda. Les paquets dont vous avez réellement besoin (par exemple `numpy`, `pandas` ou `matplotlib`) s'installent ensuite en quelques secondes avec `conda install`, uniquement lorsque c'est nécessaire. Cela évite d'occuper plusieurs gigaoctets avec des centaines de paquets qui resteront probablement inutilisés.
+Ce guide recommande **Miniconda** plutôt qu'Anaconda. Miniconda installe uniquement conda, Python et leurs dépendances minimales, ce qui représente environ 900 Mo contre près de 9,7 Go pour Anaconda [web:134]. Les modules dont vous avez réellement besoin (par exemple `numpy`, `pandas` ou `matplotlib`) s'installent ensuite en quelques secondes avec `conda install`, uniquement lorsque c'est nécessaire. Cela évite d'occuper plusieurs gigaoctets avec des centaines de modules qui resteront probablement inutilisés.
 :::
 
 Si vous avez déjà installé Anaconda à l'étape précédente et que vous souhaitez basculer vers une approche plus légère, il est possible de désinstaller Anaconda plus tard et de repartir avec Miniconda seul, sans perdre vos projets, à condition d'avoir sauvegardé le code source de vos projets séparément (par exemple avec Git).
@@ -157,7 +161,7 @@ Si vous avez déjà installé Anaconda à l'étape précédente et que vous souh
 
 Qu'il s'agisse d'Anaconda ou de Miniconda, la logique des environnements est identique une fois l'installation terminée.
 
-Un **environnement** conda est un espace isolé, avec sa propre version de Python et ses propres paquets. Travailler avec des environnements séparés évite qu'un projet n'entre en conflit avec un autre.
+Un **environnement** conda est un espace isolé, avec sa propre version de Python et ses propres modules. Travailler avec des environnements séparés évite qu'un projet n'entre en conflit avec un autre.
 
 Pour lister les environnements existants :
 
@@ -169,7 +173,7 @@ Après une installation fraîche, vous devriez voir un environnement nommé `bas
 
 ## Créer et utiliser un environnement
 
-Il est recommandé de ne jamais installer de paquets directement dans l'environnement `base`, pour le garder simple et stable.
+Il est recommandé de ne jamais installer de modules directement dans l'environnement `base`, pour le garder simple et stable.
 
 Créez un nouvel environnement nommé `mon_projet`, avec une version spécifique de Python :
 
@@ -193,15 +197,15 @@ Pour revenir à l'environnement de base :
 conda deactivate
 ```
 
-## Installer et lister des paquets
+## Installer et lister des modules
 
-Une fois l'environnement activé, installez un paquet à la demande. Par exemple, pour installer `numpy` :
+Une fois l'environnement activé, installez un module à la demande. Par exemple, pour installer `numpy` :
 
 ```bash
 conda install numpy
 ```
 
-Pour voir tous les paquets présents dans l'environnement actif :
+Pour voir tous les modules présents dans l'environnement actif :
 
 ```bash
 conda list
@@ -220,9 +224,9 @@ conda env remove --name mon_projet
 - Préférez Miniconda à Anaconda si l'espace disque ou la rapidité d'installation vous importent.
 - Créez un environnement distinct pour chaque projet, plutôt que de tout installer dans `base`.
 - Donnez des noms d'environnement clairs, liés au projet concerné.
-- Installez uniquement les paquets dont vous avez besoin, plutôt que d'installer par précaution.
+- Installez uniquement les modules dont vous avez besoin, plutôt que d'installer par précaution.
 - Utilisez toujours `conda deactivate` avant de fermer un terminal, par bonne habitude.
-- Documentez les paquets nécessaires à un projet avec `conda list --export` pour pouvoir recréer l'environnement plus tard.
+- Documentez les modules nécessaires à un projet avec `conda list --export` pour pouvoir recréer l'environnement plus tard.
 
 ## Vérification des acquis
 
@@ -232,10 +236,10 @@ conda env remove --name mon_projet
 - Installer Miniconda et vérifier son installation avec `conda --version`.
 - Expliquer la différence principale entre Anaconda et Miniconda, en particulier au niveau de l'espace disque.
 - Créer, activer et désactiver un environnement conda.
-- Installer un paquet dans un environnement actif.
+- Installer un module dans un environnement actif.
 - Supprimer un environnement devenu inutile.
 
 ::: {.callout-tip}
 ## Prochaine étape
-Créez un environnement nommé `essai_conda` avec Python 3.11, activez-le, installez le paquet `pandas`, puis vérifiez qu'il apparaît bien avec la commande `conda list`.
+Créez un environnement nommé `essai_conda` avec Python 3.11, activez-le, installez le module `pandas`, puis vérifiez qu'il apparaît bien avec la commande `conda list`.
 :::

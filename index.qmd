@@ -11,9 +11,7 @@ Cette page regroupe des guides de démarrage simples pour les outils utilisés d
 - [Google Colab](03_google_colab.qmd) — se familiariser avec Google Colab et exécuter un premier programme en Python dans le navigateur.
 - [GitHub Codespaces](02_github-codespaces.qmd) — introduction à l'utilisation de GitHub Codespaces.
 - [Anaconda et Miniconda](04_anaconda_miniconda.qmd) — à compléter.
-<!--
-- [Outil 5](outil5.qmd) — à compléter.
--->
+- [Spyder](05_spyder.qmd) — à compléter.
 
 ## Comment utiliser ces guides
 
