@@ -1,0 +1,17 @@
+project:
+  type: website
+
+website:
+  title: "Guides de démarrage"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Accueil
+      - href: 03_google_colab.qmd
+        text: Google Colab
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    lang: fr

@@ -1,0 +1,28 @@
+---
+title: "Guides de démarrage"
+---
+
+## Bienvenue
+
+Cette page regroupe des guides de démarrage simples pour les outils utilisés dans le cadre de la formation du RQRAD sur la gestion et le traitement des données agricoles (24--26 août 2026). Chaque guide est pensé pour des personnes qui commencent totalement avec l'outil concerné : aucune expérience préalable n'est requise.
+
+## Liste des guides
+
+- [Google Colab](03_google_colab.qmd) — créer un compte Google et exécuter un premier programme en Python dans le navigateur.
+<!--
+- [Outil 2](outil2.qmd) — à compléter.
+- [Outil 3](outil3.qmd) — à compléter.
+- [Outil 4](outil4.qmd) — à compléter.
+- [Outil 5](outil5.qmd) — à compléter.
+-->
+
+## Comment utiliser ces guides
+
+1. Cliquez sur le nom de l'outil qui vous intéresse dans la liste ci-dessus ou dans le menu de navigation, en haut de la page.
+2. Suivez les étapes dans l'ordre, sans en sauter.
+3. Si un terme n'est pas clair, il est généralement expliqué dès sa première apparition dans le guide.
+4. En cas de problème, notez l'étape où vous êtes bloqué avant de demander de l'aide.
+
+::: {.callout-tip}
+Ces guides sont mis à jour au besoin. Le lien de cette page reste toujours le même, même après une mise à jour du contenu.
+:::
