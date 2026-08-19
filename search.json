@@ -18,7 +18,7 @@
     "href": "index.html#liste-des-guides",
     "title": "Guides de démarrage",
     "section": "Liste des guides",
-    "text": "Liste des guides\n\nR et RStudio — guide d’installation de R et RStudio et premiers pas d’utilisation de RStudio.\nGoogle Colab — se familiariser avec Google Colab et exécuter un premier programme en Python dans le navigateur.\nGitHub Codespaces — introduction à l’utilisation de GitHub Codespaces.\nAnaconda et Miniconda — à compléter. &lt;!–\nOutil 5 — à compléter. –&gt;"
+    "text": "Liste des guides\n\nR et RStudio — guide d’installation de R et RStudio et premiers pas d’utilisation de RStudio.\nGoogle Colab — se familiariser avec Google Colab et exécuter un premier programme en Python dans le navigateur.\nGitHub Codespaces — introduction à l’utilisation de GitHub Codespaces.\nAnaconda et Miniconda — à compléter.\nSpyder — à compléter."
   },
   {
     "objectID": "index.html#comment-utiliser-ces-guides",
@@ -26,6 +26,293 @@
     "title": "Guides de démarrage",
     "section": "Comment utiliser ces guides",
     "text": "Comment utiliser ces guides\n\nCliquez sur le nom de l’outil qui vous intéresse dans la liste ci-dessus ou dans le menu de navigation, en haut de la page.\nSuivez les étapes dans l’ordre, sans en sauter.\nSi un terme n’est pas clair, il est généralement expliqué dès sa première apparition dans le guide.\nEn cas de problème, notez l’étape où vous êtes bloqué avant de demander de l’aide.\n\n\n\n\n\n\n\nAstuce\n\n\n\nCes guides sont mis à jour au besoin. Le lien de cette page reste toujours le même, même après une mise à jour du contenu."
+  },
+  {
+    "objectID": "04_anaconda_miniconda.html",
+    "href": "04_anaconda_miniconda.html",
+    "title": "Guide de démarrage avec Anaconda et Miniconda",
+    "section": "",
+    "text": "Ce guide explique ce que sont Anaconda et Miniconda, comment installer chacun d’eux, puis pourquoi ce guide recommande finalement Miniconda pour la plupart des usages.\n\n\n\n\n\n\nImportant\n\n\n\nSi vous êtes débutant et que c’est la première fois que vous travaillez avec ces outils, il est fortement recommandé d’installer seulement un des deux, Anaconda ou Miniconda, et non les deux à la fois. Installer les deux en parallèle peut créer des conflits entre les installations de conda et compliquer inutilement vos premiers pas. Choisissez l’option qui correspond le mieux à vos besoins, en vous référant à la comparaison présentée plus bas dans ce guide, puis suivez uniquement les étapes correspondantes.\n\n\n\n\n\n\n\n\nNoteMots importants\n\n\n\n\nConda : un gestionnaire de modules et d’environnements, capable d’installer Python lui-même ainsi que des milliers de bibliothèques scientifiques.\nEnvironnement : un espace isolé contenant une version de Python et des modules spécifiques, séparé des autres environnements sur le même ordinateur.\nModule (package) : une bibliothèque ajoutant des fonctionnalités à Python, par exemple pour l’analyse de données ou les graphiques.\nDistribution : un ensemble regroupant Python, conda et, parfois, des modules préinstallés.\nTerminal : la ligne de commande utilisée pour lancer les commandes conda."
+  },
+  {
+    "objectID": "04_anaconda_miniconda.html#objectif",
+    "href": "04_anaconda_miniconda.html#objectif",
+    "title": "Guide de démarrage avec Anaconda et Miniconda",
+    "section": "",
+    "text": "Ce guide explique ce que sont Anaconda et Miniconda, comment installer chacun d’eux, puis pourquoi ce guide recommande finalement Miniconda pour la plupart des usages.\n\n\n\n\n\n\nImportant\n\n\n\nSi vous êtes débutant et que c’est la première fois que vous travaillez avec ces outils, il est fortement recommandé d’installer seulement un des deux, Anaconda ou Miniconda, et non les deux à la fois. Installer les deux en parallèle peut créer des conflits entre les installations de conda et compliquer inutilement vos premiers pas. Choisissez l’option qui correspond le mieux à vos besoins, en vous référant à la comparaison présentée plus bas dans ce guide, puis suivez uniquement les étapes correspondantes.\n\n\n\n\n\n\n\n\nNoteMots importants\n\n\n\n\nConda : un gestionnaire de modules et d’environnements, capable d’installer Python lui-même ainsi que des milliers de bibliothèques scientifiques.\nEnvironnement : un espace isolé contenant une version de Python et des modules spécifiques, séparé des autres environnements sur le même ordinateur.\nModule (package) : une bibliothèque ajoutant des fonctionnalités à Python, par exemple pour l’analyse de données ou les graphiques.\nDistribution : un ensemble regroupant Python, conda et, parfois, des modules préinstallés.\nTerminal : la ligne de commande utilisée pour lancer les commandes conda."
+  },
+  {
+    "objectID": "04_anaconda_miniconda.html#ce-dont-vous-avez-besoin",
+    "href": "04_anaconda_miniconda.html#ce-dont-vous-avez-besoin",
+    "title": "Guide de démarrage avec Anaconda et Miniconda",
+    "section": "Ce dont vous avez besoin",
+    "text": "Ce dont vous avez besoin\n\nUn ordinateur avec Windows, macOS ou Linux.\nUne connexion Internet pour le téléchargement.\nAu moins 10 Go d’espace disque libre si vous installez Anaconda, ou environ 1 Go pour Miniconda.\nEnviron 15 à 20 minutes pour l’installation d’Anaconda, ou environ 10 minutes pour Miniconda."
+  },
+  {
+    "objectID": "04_anaconda_miniconda.html#partie-1-installer-anaconda",
+    "href": "04_anaconda_miniconda.html#partie-1-installer-anaconda",
+    "title": "Guide de démarrage avec Anaconda et Miniconda",
+    "section": "Partie 1 : installer Anaconda",
+    "text": "Partie 1 : installer Anaconda\nAnaconda Distribution est une installation complète, qui inclut conda, Python et plus de 1 500 modules scientifiques préinstallés, ainsi qu’une interface graphique appelée Anaconda Navigator [web:134][web:142].\n\nÉtape 1 : télécharger Anaconda\n\nOuvrez votre navigateur et allez à l’adresse suivante : https://www.anaconda.com/docs/getting-started/installation\nSélectionnez votre système d’exploitation (Windows, macOS ou Linux).\nChoisissez Anaconda Distribution dans la liste des installateurs.\nSur Mac, vérifiez le type de puce de votre ordinateur avant de télécharger :\n\nApple Silicon (M1, M2, M3, la plupart des modèles depuis fin 2020) : choisissez la version arm64.\nIntel (modèles plus anciens) : choisissez la version x86_64.\n\nTéléchargez l’installateur graphique correspondant à votre système.\n\n\n\nÉtape 2 : installer Anaconda\n\nSur Windows\n\nDouble-cliquez sur le fichier .exe téléchargé.\nCliquez sur Next, acceptez les termes de la licence.\nChoisissez Just Me (recommended) plutôt que All Users.\nConservez le dossier d’installation proposé par défaut.\nCliquez sur Install. Cette étape peut prendre plusieurs minutes, puisque plus de 1 500 modules sont installés.\nCliquez sur Finish une fois terminé.\n\n\n\nSur macOS\n\nDouble-cliquez sur le fichier .pkg téléchargé.\nCliquez sur Continue, acceptez les termes de la licence.\nConservez l’emplacement d’installation proposé par défaut.\nAttendez la fin de l’installation, ce qui peut prendre plusieurs minutes, puis cliquez sur Close.\n\n\n\nSur Linux\nDans un terminal, exécutez :\nbash ~/Anaconda3-latest-Linux-x86_64.sh\nSuivez les instructions affichées, en acceptant les valeurs par défaut si vous n’êtes pas certain d’un réglage.\n\n\n\nÉtape 3 : vérifier l’installation d’Anaconda\n\nOuvrez Anaconda Navigator depuis le menu Démarrer (Windows) ou le dossier Applications (macOS).\nL’interface graphique d’Anaconda Navigator devrait s’afficher, avec une liste d’applications comme Jupyter Notebook, Spyder et JupyterLab déjà installées.\n\n\n\n\nAnaconda navigator. Source :Site web Anaconda\n\n\n\n\n\n\n\n\nNote\n\n\n\nL’image ci-dessus montre l’interface d’Anaconda Navigator telle qu’elle apparaît après une installation réussie. Si vous obtenez un écran similaire, l’installation a fonctionné correctement."
+  },
+  {
+    "objectID": "04_anaconda_miniconda.html#partie-2-installer-miniconda",
+    "href": "04_anaconda_miniconda.html#partie-2-installer-miniconda",
+    "title": "Guide de démarrage avec Anaconda et Miniconda",
+    "section": "Partie 2 : installer Miniconda",
+    "text": "Partie 2 : installer Miniconda\nMiniconda installe uniquement conda et Python, sans module préinstallé ni interface graphique. Chaque module est ensuite ajouté à la demande, selon les besoins réels du projet [web:146].\n\nÉtape 1 : télécharger Miniconda\n\nOuvrez votre navigateur et allez à l’adresse suivante : https://www.anaconda.com/docs/getting-started/installation\nSélectionnez votre système d’exploitation (Windows, macOS ou Linux).\nChoisissez Miniconda plutôt qu’Anaconda Distribution dans la liste des installateurs.\nSur Mac, choisissez la version correspondant à votre puce, arm64 ou x86_64, comme pour Anaconda.\nTéléchargez l’installateur graphique correspondant à votre système.\n\n\n\nÉtape 2 : installer Miniconda\n\nSur Windows\n\nDouble-cliquez sur le fichier .exe téléchargé.\nCliquez sur Next, acceptez les termes de la licence.\nChoisissez Just Me (recommended) plutôt que All Users.\nConservez le dossier d’installation proposé par défaut.\nDans les options avancées, cochez Add Miniconda3 to my PATH environment variable si vous voulez utiliser conda directement depuis n’importe quel terminal [web:146].\nCliquez sur Install, puis sur Finish une fois terminé.\n\n\n\nSur macOS\n\nDouble-cliquez sur le fichier .pkg téléchargé.\nCliquez sur Continue, acceptez les termes de la licence.\nConservez l’emplacement d’installation proposé par défaut (install for me only).\nAttendez la fin de l’installation, puis cliquez sur Close.\n\n\n\nSur Linux\nDans un terminal, exécutez :\nbash ~/Miniconda3-latest-Linux-x86_64.sh\nSuivez les instructions affichées, en acceptant les valeurs par défaut si vous n’êtes pas certain d’un réglage.\n\n\n\nÉtape 3 : vérifier l’installation de Miniconda\n\nOuvrez un nouveau terminal (fermez l’ancien s’il était déjà ouvert avant l’installation).\nSur Windows, utilisez Anaconda Prompt ou Anaconda Powershell Prompt, disponible dans le menu Démarrer.\nTapez la commande suivante :\n\nconda --version\nVous devriez voir s’afficher un numéro de version, par exemple conda 24.x.x. Cela confirme que l’installation a réussi. Contrairement à Anaconda, aucune interface graphique ne s’ouvre : tout se passe dans le terminal."
+  },
+  {
+    "objectID": "04_anaconda_miniconda.html#pourquoi-ce-guide-recommande-miniconda",
+    "href": "04_anaconda_miniconda.html#pourquoi-ce-guide-recommande-miniconda",
+    "title": "Guide de démarrage avec Anaconda et Miniconda",
+    "section": "Pourquoi ce guide recommande Miniconda",
+    "text": "Pourquoi ce guide recommande Miniconda\nAnaconda et Miniconda installent tous les deux conda et Python, avec accès aux mêmes dépôts de modules. La différence essentielle est la quantité de modules préinstallés, ce qui a un effet direct sur l’espace disque utilisé [web:134].\n\n\n\n\n\n\n\n\nCritère\nAnaconda\nMiniconda\n\n\n\n\nEspace disque requis\nEnviron 9,7 Go\nEnviron 900 Mo [web:134]\n\n\nModules préinstallés\nPlus de 1 500 modules scientifiques\nAucun, sauf conda et Python\n\n\nInterface graphique (Anaconda Navigator)\nIncluse\nNon incluse\n\n\nTemps d’installation\nPlus long\nBeaucoup plus rapide\n\n\nContrôle sur les modules installés\nFaible au départ, tout est déjà là\nTotal : vous choisissez chaque module\n\n\n\n\n\n\n\n\n\nAstuceRecommandation de ce guide\n\n\n\nCe guide recommande Miniconda plutôt qu’Anaconda. Miniconda installe uniquement conda, Python et leurs dépendances minimales, ce qui représente environ 900 Mo contre près de 9,7 Go pour Anaconda [web:134]. Les modules dont vous avez réellement besoin (par exemple numpy, pandas ou matplotlib) s’installent ensuite en quelques secondes avec conda install, uniquement lorsque c’est nécessaire. Cela évite d’occuper plusieurs gigaoctets avec des centaines de modules qui resteront probablement inutilisés.\n\n\nSi vous avez déjà installé Anaconda à l’étape précédente et que vous souhaitez basculer vers une approche plus légère, il est possible de désinstaller Anaconda plus tard et de repartir avec Miniconda seul, sans perdre vos projets, à condition d’avoir sauvegardé le code source de vos projets séparément (par exemple avec Git)."
+  },
+  {
+    "objectID": "04_anaconda_miniconda.html#comprendre-les-environnements-conda",
+    "href": "04_anaconda_miniconda.html#comprendre-les-environnements-conda",
+    "title": "Guide de démarrage avec Anaconda et Miniconda",
+    "section": "Comprendre les environnements conda",
+    "text": "Comprendre les environnements conda\nQu’il s’agisse d’Anaconda ou de Miniconda, la logique des environnements est identique une fois l’installation terminée.\nUn environnement conda est un espace isolé, avec sa propre version de Python et ses propres modules. Travailler avec des environnements séparés évite qu’un projet n’entre en conflit avec un autre.\nPour lister les environnements existants :\nconda env list\nAprès une installation fraîche, vous devriez voir un environnement nommé base."
+  },
+  {
+    "objectID": "04_anaconda_miniconda.html#créer-et-utiliser-un-environnement",
+    "href": "04_anaconda_miniconda.html#créer-et-utiliser-un-environnement",
+    "title": "Guide de démarrage avec Anaconda et Miniconda",
+    "section": "Créer et utiliser un environnement",
+    "text": "Créer et utiliser un environnement\nIl est recommandé de ne jamais installer de modules directement dans l’environnement base, pour le garder simple et stable.\nCréez un nouvel environnement nommé mon_projet, avec une version spécifique de Python :\nconda create --name mon_projet python=3.11\nRépondez y lorsque conda demande une confirmation.\nPour l’activer :\nconda activate mon_projet\nLe nom de l’environnement actif apparaît généralement entre parenthèses au début de la ligne de commande, par exemple (mon_projet).\nPour revenir à l’environnement de base :\nconda deactivate"
+  },
+  {
+    "objectID": "04_anaconda_miniconda.html#installer-et-lister-des-modules",
+    "href": "04_anaconda_miniconda.html#installer-et-lister-des-modules",
+    "title": "Guide de démarrage avec Anaconda et Miniconda",
+    "section": "Installer et lister des modules",
+    "text": "Installer et lister des modules\nUne fois l’environnement activé, installez un module à la demande. Par exemple, pour installer numpy :\nconda install numpy\nPour voir tous les modules présents dans l’environnement actif :\nconda list"
+  },
+  {
+    "objectID": "04_anaconda_miniconda.html#supprimer-un-environnement-inutile",
+    "href": "04_anaconda_miniconda.html#supprimer-un-environnement-inutile",
+    "title": "Guide de démarrage avec Anaconda et Miniconda",
+    "section": "Supprimer un environnement inutile",
+    "text": "Supprimer un environnement inutile\nSi un environnement n’est plus nécessaire, vous pouvez le retirer pour libérer de l’espace disque :\nconda env remove --name mon_projet"
+  },
+  {
+    "objectID": "04_anaconda_miniconda.html#bonnes-pratiques-pour-débuter",
+    "href": "04_anaconda_miniconda.html#bonnes-pratiques-pour-débuter",
+    "title": "Guide de démarrage avec Anaconda et Miniconda",
+    "section": "Bonnes pratiques pour débuter",
+    "text": "Bonnes pratiques pour débuter\n\nPréférez Miniconda à Anaconda si l’espace disque ou la rapidité d’installation vous importent.\nCréez un environnement distinct pour chaque projet, plutôt que de tout installer dans base.\nDonnez des noms d’environnement clairs, liés au projet concerné.\nInstallez uniquement les modules dont vous avez besoin, plutôt que d’installer par précaution.\nUtilisez toujours conda deactivate avant de fermer un terminal, par bonne habitude.\nDocumentez les modules nécessaires à un projet avec conda list --export pour pouvoir recréer l’environnement plus tard."
+  },
+  {
+    "objectID": "04_anaconda_miniconda.html#vérification-des-acquis",
+    "href": "04_anaconda_miniconda.html#vérification-des-acquis",
+    "title": "Guide de démarrage avec Anaconda et Miniconda",
+    "section": "Vérification des acquis",
+    "text": "Vérification des acquis\nÀ ce stade, vous devriez être capable de :\n\nInstaller Anaconda et reconnaître son interface Anaconda Navigator.\nInstaller Miniconda et vérifier son installation avec conda --version.\nExpliquer la différence principale entre Anaconda et Miniconda, en particulier au niveau de l’espace disque.\nCréer, activer et désactiver un environnement conda.\nInstaller un module dans un environnement actif.\nSupprimer un environnement devenu inutile.\n\n\n\n\n\n\n\nAstuceProchaine étape\n\n\n\nCréez un environnement nommé essai_conda avec Python 3.11, activez-le, installez le module pandas, puis vérifiez qu’il apparaît bien avec la commande conda list."
+  },
+  {
+    "objectID": "02_github-codespaces.html",
+    "href": "02_github-codespaces.html",
+    "title": "Guide de démarrage avec GitHub Codespaces",
+    "section": "",
+    "text": "Ce guide explique ce qu’est GitHub Codespaces, comment créer un codespace pour un dépôt existant, et comment commencer à travailler avec. Il s’adresse aux personnes qui commencent totalement avec cet outil.\n\n\n\n\n\n\nNoteMots importants\n\n\n\n\nCodespace : un environnement de développement complet, hébergé dans le cloud par GitHub, accessible depuis un navigateur ou Visual Studio Code.\nDépôt (repository) : le dossier de projet hébergé sur GitHub, contenant le code et son historique de versions.\nConteneur : l’environnement isolé dans lequel le codespace s’exécute, avec ses propres outils déjà installés.\nDevcontainer : un fichier de configuration optionnel qui définit précisément quels outils et paramètres un codespace doit contenir.\nVS Code : l’éditeur de code qui s’affiche à l’intérieur du codespace, que ce soit dans le navigateur ou en application locale."
+  },
+  {
+    "objectID": "02_github-codespaces.html#objectif",
+    "href": "02_github-codespaces.html#objectif",
+    "title": "Guide de démarrage avec GitHub Codespaces",
+    "section": "",
+    "text": "Ce guide explique ce qu’est GitHub Codespaces, comment créer un codespace pour un dépôt existant, et comment commencer à travailler avec. Il s’adresse aux personnes qui commencent totalement avec cet outil.\n\n\n\n\n\n\nNoteMots importants\n\n\n\n\nCodespace : un environnement de développement complet, hébergé dans le cloud par GitHub, accessible depuis un navigateur ou Visual Studio Code.\nDépôt (repository) : le dossier de projet hébergé sur GitHub, contenant le code et son historique de versions.\nConteneur : l’environnement isolé dans lequel le codespace s’exécute, avec ses propres outils déjà installés.\nDevcontainer : un fichier de configuration optionnel qui définit précisément quels outils et paramètres un codespace doit contenir.\nVS Code : l’éditeur de code qui s’affiche à l’intérieur du codespace, que ce soit dans le navigateur ou en application locale."
+  },
+  {
+    "objectID": "02_github-codespaces.html#quest-ce-quun-codespace",
+    "href": "02_github-codespaces.html#quest-ce-quun-codespace",
+    "title": "Guide de démarrage avec GitHub Codespaces",
+    "section": "Qu’est-ce qu’un codespace ?",
+    "text": "Qu’est-ce qu’un codespace ?\nUn codespace est un ordinateur virtuel, préconfiguré, qui contient déjà Git, un terminal et souvent un langage de programmation comme Python. Il permet de coder sans rien installer sur son propre ordinateur : tout se passe dans le navigateur ou dans Visual Studio Code connecté à distance.\n\n\n\n\n\n\nAstuce\n\n\n\nUn codespace est particulièrement utile si votre ordinateur est peu puissant, si vous changez souvent d’appareil, ou si vous voulez essayer un projet sans configurer un environnement local complet."
+  },
+  {
+    "objectID": "02_github-codespaces.html#ce-dont-vous-avez-besoin",
+    "href": "02_github-codespaces.html#ce-dont-vous-avez-besoin",
+    "title": "Guide de démarrage avec GitHub Codespaces",
+    "section": "Ce dont vous avez besoin",
+    "text": "Ce dont vous avez besoin\n\nUn compte GitHub actif.\nUn navigateur Internet récent.\nUne connexion Internet stable pendant l’utilisation du codespace.\nOptionnel : Visual Studio Code installé localement, si vous préférez travailler depuis l’application plutôt que depuis le navigateur.\n\n\n\n\n\n\n\nImportant\n\n\n\nGitHub Codespaces offre un quota d’utilisation gratuit limité chaque mois pour les comptes personnels. Au-delà de ce quota, l’utilisation est facturée. Vérifiez votre utilisation dans les paramètres de votre compte si vous l’utilisez régulièrement."
+  },
+  {
+    "objectID": "02_github-codespaces.html#étape-1-accéder-à-un-dépôt",
+    "href": "02_github-codespaces.html#étape-1-accéder-à-un-dépôt",
+    "title": "Guide de démarrage avec GitHub Codespaces",
+    "section": "Étape 1 : accéder à un dépôt",
+    "text": "Étape 1 : accéder à un dépôt\nUn codespace se crée toujours à partir d’un dépôt GitHub existant.\n\nConnectez-vous à votre compte sur github.com.\nOuvrez le dépôt que vous voulez utiliser, ou créez-en un nouveau si nécessaire (+ &gt; New repository).\n\nSi vous n’avez pas encore de projet, GitHub propose aussi des modèles de démarrage rapide pensés spécifiquement pour Codespaces."
+  },
+  {
+    "objectID": "02_github-codespaces.html#étape-2-créer-un-codespace",
+    "href": "02_github-codespaces.html#étape-2-créer-un-codespace",
+    "title": "Guide de démarrage avec GitHub Codespaces",
+    "section": "Étape 2 : créer un codespace",
+    "text": "Étape 2 : créer un codespace\n\nSur la page principale du dépôt, cliquez sur le bouton vert Code.\nSélectionnez l’onglet Codespaces.\nCliquez sur Create codespace on main (ou le nom de la branche affichée).\n\nGitHub effectue alors quatre opérations automatiquement :\n\nUne machine virtuelle et un espace de stockage sont attribués.\nUn conteneur est créé.\nUne connexion à ce conteneur est établie.\nUne configuration finale s’exécute si le dépôt en définit une.\n\nCe processus prend généralement entre quelques secondes et une ou deux minutes.\n\n\n\n\n\n\nAstuce\n\n\n\nPour créer un dépôt et un codespace en une seule fois, comme point de départ le plus simple, allez directement sur github.com/codespaces et cliquez sur New codespace. GitHub crée alors un codespace vide sans dépôt existant, que vous pourrez publier plus tard."
+  },
+  {
+    "objectID": "02_github-codespaces.html#étape-3-découvrir-linterface",
+    "href": "02_github-codespaces.html#étape-3-découvrir-linterface",
+    "title": "Guide de démarrage avec GitHub Codespaces",
+    "section": "Étape 3 : découvrir l’interface",
+    "text": "Étape 3 : découvrir l’interface\nUne fois le codespace prêt, une interface Visual Studio Code s’ouvre, directement dans votre navigateur.\n\nExplorateur de fichiers (à gauche) : affiche tous les fichiers du dépôt.\nZone d’édition (au centre) : pour ouvrir et modifier les fichiers.\nTerminal (en bas) : une ligne de commande déjà connectée à l’environnement du codespace, avec Git préinstallé.\nBarre d’activité (tout à gauche) : icônes pour accéder à la recherche, au contrôle de version Git, aux extensions, etc.\n\nPour ouvrir le terminal s’il n’est pas visible, utilisez le menu Terminal &gt; New Terminal."
+  },
+  {
+    "objectID": "02_github-codespaces.html#étape-4-exécuter-une-première-commande",
+    "href": "02_github-codespaces.html#étape-4-exécuter-une-première-commande",
+    "title": "Guide de démarrage avec GitHub Codespaces",
+    "section": "Étape 4 : exécuter une première commande",
+    "text": "Étape 4 : exécuter une première commande\nDans le terminal, écrivez :\necho \"Bonjour depuis mon codespace\"\nAppuyez sur Entrée. Le message s’affiche directement dans le terminal, confirmant que l’environnement fonctionne.\nSi le codespace contient Python, vous pouvez aussi tester :\npython3 --version"
+  },
+  {
+    "objectID": "02_github-codespaces.html#étape-5-modifier-un-fichier-et-enregistrer-les-changements",
+    "href": "02_github-codespaces.html#étape-5-modifier-un-fichier-et-enregistrer-les-changements",
+    "title": "Guide de démarrage avec GitHub Codespaces",
+    "section": "Étape 5 : modifier un fichier et enregistrer les changements",
+    "text": "Étape 5 : modifier un fichier et enregistrer les changements\n\nDans l’explorateur de fichiers, ouvrez un fichier existant, ou créez-en un nouveau avec le bouton New File.\nFaites une petite modification, par exemple ajouter une ligne de texte.\nEnregistrez avec Ctrl + S (Windows/Linux) ou Cmd + S (Mac).\n\nLe fichier est modifié dans le codespace, mais pas encore renvoyé vers GitHub. C’est l’objectif de l’étape suivante."
+  },
+  {
+    "objectID": "02_github-codespaces.html#étape-6-enregistrer-les-changements-sur-github",
+    "href": "02_github-codespaces.html#étape-6-enregistrer-les-changements-sur-github",
+    "title": "Guide de démarrage avec GitHub Codespaces",
+    "section": "Étape 6 : enregistrer les changements sur GitHub",
+    "text": "Étape 6 : enregistrer les changements sur GitHub\nLe contrôle de version fonctionne de la même façon que sur un ordinateur local, avec Git déjà installé et configuré dans le codespace.\nDans le terminal :\ngit add .\ngit commit -m \"Premier essai dans Codespaces\"\ngit push\n\n\n\n\n\n\nNote\n\n\n\nPuisque le codespace est déjà connecté à votre compte GitHub, aucune configuration supplémentaire d’identifiants n’est généralement nécessaire pour git push, contrairement à un dépôt cloné localement."
+  },
+  {
+    "objectID": "02_github-codespaces.html#étape-7-suspendre-ou-arrêter-le-codespace",
+    "href": "02_github-codespaces.html#étape-7-suspendre-ou-arrêter-le-codespace",
+    "title": "Guide de démarrage avec GitHub Codespaces",
+    "section": "Étape 7 : suspendre ou arrêter le codespace",
+    "text": "Étape 7 : suspendre ou arrêter le codespace\nUn codespace continue de consommer des ressources tant qu’il reste actif.\n\nFermer l’onglet du navigateur met le codespace en pause automatiquement après une période d’inactivité.\nPour l’arrêter manuellement : allez sur github.com/codespaces, trouvez votre codespace dans la liste, cliquez sur les trois points …, puis choisissez Stop codespace.\n\n\n\n\n\n\n\nAstuce\n\n\n\nArrêter un codespace ne supprime pas votre travail. Vos fichiers restent disponibles au prochain démarrage, à condition que les changements aient bien été enregistrés avec git commit, ou simplement sauvegardés dans le système de fichiers du codespace."
+  },
+  {
+    "objectID": "02_github-codespaces.html#étape-8-reprendre-un-codespace-existant",
+    "href": "02_github-codespaces.html#étape-8-reprendre-un-codespace-existant",
+    "title": "Guide de démarrage avec GitHub Codespaces",
+    "section": "Étape 8 : reprendre un codespace existant",
+    "text": "Étape 8 : reprendre un codespace existant\n\nAllez sur github.com/codespaces.\nCliquez sur le nom du codespace que vous voulez reprendre.\nL’environnement se relance avec les fichiers tels que vous les aviez laissés."
+  },
+  {
+    "objectID": "02_github-codespaces.html#étape-9-supprimer-un-codespace",
+    "href": "02_github-codespaces.html#étape-9-supprimer-un-codespace",
+    "title": "Guide de démarrage avec GitHub Codespaces",
+    "section": "Étape 9 : supprimer un codespace",
+    "text": "Étape 9 : supprimer un codespace\nLorsque vous n’avez plus besoin d’un codespace, il est recommandé de le supprimer pour libérer votre quota.\n\nAllez sur github.com/codespaces.\nCliquez sur les trois points … à côté du codespace concerné.\nChoisissez Delete.\n\n\n\n\n\n\n\nImportant\n\n\n\nSupprimer un codespace efface l’environnement, mais pas le dépôt GitHub associé. Si vos changements ont déjà été envoyés avec git push, ils restent conservés dans le dépôt. Si des changements n’ont pas été envoyés, ils sont perdus définitivement."
+  },
+  {
+    "objectID": "02_github-codespaces.html#bonnes-pratiques-pour-débuter",
+    "href": "02_github-codespaces.html#bonnes-pratiques-pour-débuter",
+    "title": "Guide de démarrage avec GitHub Codespaces",
+    "section": "Bonnes pratiques pour débuter",
+    "text": "Bonnes pratiques pour débuter\n\nEnvoyez régulièrement vos changements avec git push, plutôt que de compter uniquement sur le codespace pour conserver votre travail.\nArrêtez les codespaces inutilisés pour éviter de consommer votre quota gratuit inutilement.\nDonnez un nom clair à vos dépôts avant de créer un codespace, car le nom du codespace en dépend.\nSupprimez les codespaces devenus inutiles plutôt que de les laisser s’accumuler."
+  },
+  {
+    "objectID": "02_github-codespaces.html#vérification-des-acquis",
+    "href": "02_github-codespaces.html#vérification-des-acquis",
+    "title": "Guide de démarrage avec GitHub Codespaces",
+    "section": "Vérification des acquis",
+    "text": "Vérification des acquis\nÀ ce stade, vous devriez être capable de :\n\nExpliquer ce qu’est un codespace, en une phrase simple.\nCréer un codespace à partir d’un dépôt existant.\nReconnaître les éléments principaux de l’interface Visual Studio Code dans le navigateur.\nModifier un fichier et envoyer les changements vers GitHub avec git push.\nArrêter, reprendre et supprimer un codespace.\n\n\n\n\n\n\n\nAstuceProchaine étape\n\n\n\nCréez un nouveau dépôt vide sur GitHub, ouvrez-y un codespace, créez un fichier essai.md, écrivez-y une phrase, puis envoyez ce changement vers GitHub avec git add, git commit et git push."
+  },
+  {
+    "objectID": "01_r_et_rstudio.html",
+    "href": "01_r_et_rstudio.html",
+    "title": "Guide de démarrage avec R et RStudio",
+    "section": "",
+    "text": "Ce guide explique comment installer R, installer RStudio, puis se familiariser avec l’interface pour écrire et exécuter du code. Il s’adresse aux personnes qui commencent totalement avec ces outils.\n\n\n\n\n\n\nNoteMots importants\n\n\n\n\nR : le langage de programmation et le moteur de calcul. C’est lui qui exécute réellement le code.\nRStudio : un logiciel (IDE, environnement de développement) qui rend R plus facile à utiliser, avec une interface visuelle organisée en panneaux.\nScript : un fichier texte contenant du code R, généralement avec l’extension .R.\nConsole : l’endroit où le code s’exécute et où les résultats s’affichent.\nModule ou Package : une extension qui ajoute des fonctionnalités à R, par exemple pour créer des graphiques ou analyser des données.\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nR et RStudio sont deux installations distinctes, à faire dans cet ordre précis : R d’abord, puis RStudio. RStudio ne fonctionne pas sans R déjà installé sur l’ordinateur."
+  },
+  {
+    "objectID": "01_r_et_rstudio.html#objectif",
+    "href": "01_r_et_rstudio.html#objectif",
+    "title": "Guide de démarrage avec R et RStudio",
+    "section": "",
+    "text": "Ce guide explique comment installer R, installer RStudio, puis se familiariser avec l’interface pour écrire et exécuter du code. Il s’adresse aux personnes qui commencent totalement avec ces outils.\n\n\n\n\n\n\nNoteMots importants\n\n\n\n\nR : le langage de programmation et le moteur de calcul. C’est lui qui exécute réellement le code.\nRStudio : un logiciel (IDE, environnement de développement) qui rend R plus facile à utiliser, avec une interface visuelle organisée en panneaux.\nScript : un fichier texte contenant du code R, généralement avec l’extension .R.\nConsole : l’endroit où le code s’exécute et où les résultats s’affichent.\nModule ou Package : une extension qui ajoute des fonctionnalités à R, par exemple pour créer des graphiques ou analyser des données.\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nR et RStudio sont deux installations distinctes, à faire dans cet ordre précis : R d’abord, puis RStudio. RStudio ne fonctionne pas sans R déjà installé sur l’ordinateur."
+  },
+  {
+    "objectID": "01_r_et_rstudio.html#ce-dont-vous-avez-besoin",
+    "href": "01_r_et_rstudio.html#ce-dont-vous-avez-besoin",
+    "title": "Guide de démarrage avec R et RStudio",
+    "section": "Ce dont vous avez besoin",
+    "text": "Ce dont vous avez besoin\n\nUn ordinateur (Windows, macOS ou Linux) avec les droits d’installation de logiciels.\nUne connexion Internet pour télécharger les fichiers d’installation.\nEnviron 20 minutes pour l’installation complète.\nSur Mac, connaître le type de puce de votre ordinateur (Apple Silicon comme M1, M2, M3, ou Intel), disponible dans le menu Pomme &gt; À propos de ce Mac."
+  },
+  {
+    "objectID": "01_r_et_rstudio.html#étape-1-installer-r",
+    "href": "01_r_et_rstudio.html#étape-1-installer-r",
+    "title": "Guide de démarrage avec R et RStudio",
+    "section": "Étape 1 : installer R",
+    "text": "Étape 1 : installer R\nR est distribué par le CRAN (Comprehensive R Archive Network), le site officiel du projet R.\n\nOuvrez votre navigateur et allez à l’adresse suivante : https://cran.r-project.org/\nCliquez sur le lien correspondant à votre système d’exploitation :\n\nDownload R for Windows\nDownload R for macOS\nDownload R for Linux\n\nSelon le système :\n\nWindows : cliquez sur base, puis téléchargez le fichier d’installation le plus récent (par exemple R-4.x.x-win.exe).\nmacOS : téléchargez le fichier .pkg correspondant à votre puce. Choisissez le paquet arm64 pour un Mac Apple Silicon (M1, M2, M3, la plupart des modèles depuis fin 2020), ou le paquet x86_64 pour un Mac Intel plus ancien.\n\nOuvrez le fichier téléchargé et suivez les instructions d’installation, en conservant les options par défaut à chaque étape.\nUne fois l’installation terminée, vous pouvez fermer l’assistant d’installation.\n\n\n\n\n\n\n\nAstuce\n\n\n\nIl n’est pas nécessaire d’ouvrir R directement après cette étape. RStudio s’en servira automatiquement en arrière-plan."
+  },
+  {
+    "objectID": "01_r_et_rstudio.html#étape-2-installer-rstudio",
+    "href": "01_r_et_rstudio.html#étape-2-installer-rstudio",
+    "title": "Guide de démarrage avec R et RStudio",
+    "section": "Étape 2 : installer RStudio",
+    "text": "Étape 2 : installer RStudio\nRStudio Desktop est distribué gratuitement par Posit.\n\nAllez à l’adresse suivante : https://posit.co/download/rstudio-desktop/\nFaites défiler la page jusqu’au tableau de téléchargement.\nLe site détecte habituellement votre système d’exploitation automatiquement. Cliquez sur le bouton de téléchargement recommandé, ou choisissez manuellement la version correspondant à Windows, macOS ou Linux.\nOuvrez le fichier téléchargé :\n\nWindows : lancez le fichier .exe et suivez l’assistant, en conservant les options par défaut.\nmacOS : ouvrez le fichier .dmg, puis glissez l’icône RStudio dans le dossier Applications.\n\nLancez RStudio depuis le menu Démarrer (Windows) ou le dossier Applications (macOS)."
+  },
+  {
+    "objectID": "01_r_et_rstudio.html#étape-3-découvrir-linterface-de-rstudio",
+    "href": "01_r_et_rstudio.html#étape-3-découvrir-linterface-de-rstudio",
+    "title": "Guide de démarrage avec R et RStudio",
+    "section": "Étape 3 : découvrir l’interface de RStudio",
+    "text": "Étape 3 : découvrir l’interface de RStudio\nÀ l’ouverture, RStudio affiche généralement quatre panneaux. Leur disposition peut varier légèrement, mais leur rôle reste le même.\n\nScript (en haut à gauche) : pour écrire et enregistrer du code avant de l’exécuter.\nConsole (en bas à gauche) : pour exécuter des commandes immédiatement et voir les résultats.\nEnvironnement / Historique (en haut à droite) : pour voir les objets créés pendant la session et l’historique des commandes exécutées.\nFichiers / Graphiques / Packages / Aide (en bas à droite) : pour naviguer dans les fichiers, afficher les graphiques, gérer les extensions et consulter l’aide.\n\n\n\n\n\n\n\nNote\n\n\n\nSi aucun panneau de script n’apparaît au démarrage, c’est normal : il faut d’abord créer un nouveau script, comme expliqué à l’étape suivante."
+  },
+  {
+    "objectID": "01_r_et_rstudio.html#étape-4-créer-votre-premier-script",
+    "href": "01_r_et_rstudio.html#étape-4-créer-votre-premier-script",
+    "title": "Guide de démarrage avec R et RStudio",
+    "section": "Étape 4 : créer votre premier script",
+    "text": "Étape 4 : créer votre premier script\nUn script permet de conserver et réutiliser votre code, plutôt que de le taper directement dans la console à chaque fois.\n\nDans le menu, cliquez sur File &gt; New File &gt; R Script.\nVous pouvez aussi utiliser le raccourci clavier Ctrl + Maj + N (Windows/Linux) ou Cmd + Maj + N (Mac).\nUn nouveau panneau vide apparaît en haut à gauche : c’est votre script."
+  },
+  {
+    "objectID": "01_r_et_rstudio.html#étape-5-exécuter-votre-premier-code",
+    "href": "01_r_et_rstudio.html#étape-5-exécuter-votre-premier-code",
+    "title": "Guide de démarrage avec R et RStudio",
+    "section": "Étape 5 : exécuter votre premier code",
+    "text": "Étape 5 : exécuter votre premier code\nDans le script, écrivez :\nprint(\"Bonjour, R et RStudio !\")\nPour l’exécuter :\n\nPlacez le curseur sur cette ligne.\nAppuyez sur Ctrl + Entrée (Windows/Linux) ou Cmd + Entrée (Mac).\nLe résultat s’affiche dans la console, en bas à gauche :\n\n[1] \"Bonjour, R et RStudio !\"\n\n\n\n\n\n\nAstuce\n\n\n\nLe [1] qui apparaît devant le résultat indique la position de l’élément affiché. Il ne fait pas partie du texte lui-même : ne vous en préoccupez pas pour l’instant."
+  },
+  {
+    "objectID": "01_r_et_rstudio.html#étape-6-faire-un-premier-exercice",
+    "href": "01_r_et_rstudio.html#étape-6-faire-un-premier-exercice",
+    "title": "Guide de démarrage avec R et RStudio",
+    "section": "Étape 6 : faire un premier exercice",
+    "text": "Étape 6 : faire un premier exercice\nModifiez le texte entre les guillemets pour y écrire votre prénom, puis exécutez à nouveau la ligne avec Ctrl + Entrée ou Cmd + Entrée :\nprint(\"Bonjour, je m'appelle votre_prénom !\")"
+  },
+  {
+    "objectID": "01_r_et_rstudio.html#étape-7-enregistrer-votre-script",
+    "href": "01_r_et_rstudio.html#étape-7-enregistrer-votre-script",
+    "title": "Guide de démarrage avec R et RStudio",
+    "section": "Étape 7 : enregistrer votre script",
+    "text": "Étape 7 : enregistrer votre script\n\nCliquez sur File &gt; Save As, ou utilisez le raccourci Ctrl + S (Windows/Linux) ou Cmd + S (Mac).\nChoisissez un nom clair, par exemple premiers_pas.R.\nChoisissez un dossier facile à retrouver sur votre ordinateur.\n\nUn script .R peut être réouvert et modifié à tout moment depuis RStudio, en cliquant sur File &gt; Open File."
+  },
+  {
+    "objectID": "01_r_et_rstudio.html#étape-8-organiser-son-travail-avec-un-projet-rstudio",
+    "href": "01_r_et_rstudio.html#étape-8-organiser-son-travail-avec-un-projet-rstudio",
+    "title": "Guide de démarrage avec R et RStudio",
+    "section": "Étape 8 : organiser son travail avec un projet RStudio",
+    "text": "Étape 8 : organiser son travail avec un projet RStudio\nUn projet RStudio regroupe vos scripts, données et résultats dans un même dossier, ce qui facilite grandement l’organisation, surtout pour un travail de recherche.\n\nCliquez sur File &gt; New Project.\nChoisissez New Directory.\nSélectionnez New Project.\nDonnez un nom au dossier, par exemple mon_premier_projet.\nChoisissez l’emplacement où créer ce dossier.\nCliquez sur Create Project.\n\nRStudio se relance alors avec ce dossier comme espace de travail. Tous les scripts créés par la suite peuvent y être enregistrés.\n\n\n\n\n\n\nImportant\n\n\n\nTravailler à l’intérieur d’un projet RStudio évite les problèmes fréquents liés au chemin des fichiers, notamment lorsqu’un script cherche à charger un fichier de données."
+  },
+  {
+    "objectID": "01_r_et_rstudio.html#étape-9-installer-un-premier-module",
+    "href": "01_r_et_rstudio.html#étape-9-installer-un-premier-module",
+    "title": "Guide de démarrage avec R et RStudio",
+    "section": "Étape 9 : installer un premier module",
+    "text": "Étape 9 : installer un premier module\nUn module ajoute des fonctionnalités à R. Par exemple, le module ggplot2 sert à créer des graphiques.\nDans la console, écrivez la commande suivante, puis appuyez sur Entrée :\ninstall.packages(\"ggplot2\")\nL’installation peut prendre quelques secondes à quelques minutes selon la connexion Internet. Une fois terminée, le module doit être chargé avant chaque utilisation, dans un script ou dans la console :\nlibrary(ggplot2)\n\n\n\n\n\n\nNote\n\n\n\ninstall.packages() ne s’exécute généralement qu’une seule fois par ordinateur. library(), en revanche, doit être exécuté à chaque nouvelle session de travail où le module est nécessaire."
+  },
+  {
+    "objectID": "01_r_et_rstudio.html#bonnes-pratiques-pour-débuter",
+    "href": "01_r_et_rstudio.html#bonnes-pratiques-pour-débuter",
+    "title": "Guide de démarrage avec R et RStudio",
+    "section": "Bonnes pratiques pour débuter",
+    "text": "Bonnes pratiques pour débuter\n\nTravaillez toujours à l’intérieur d’un projet RStudio plutôt que dans des fichiers dispersés.\nÉcrivez votre code dans un script, pas seulement dans la console, pour pouvoir le réutiliser.\nEnregistrez votre script régulièrement.\nLisez attentivement les messages d’erreur en rouge dans la console : ils indiquent souvent la ligne concernée et la nature du problème.\nAjoutez des commentaires dans votre code à l’aide du symbole #, par exemple : # Ceci est un commentaire.\nÉvitez d’utiliser des accents ou des espaces dans les noms de fichiers et de dossiers de votre projet."
+  },
+  {
+    "objectID": "01_r_et_rstudio.html#vérification-des-acquis",
+    "href": "01_r_et_rstudio.html#vérification-des-acquis",
+    "title": "Guide de démarrage avec R et RStudio",
+    "section": "Vérification des acquis",
+    "text": "Vérification des acquis\nÀ ce stade, vous devriez être capable de :\n\nInstaller R, puis RStudio, dans le bon ordre.\nReconnaître les quatre panneaux principaux de RStudio.\nCréer, exécuter et enregistrer un script R.\nCréer un projet RStudio pour organiser votre travail.\nInstaller et charger un module.\n\n\n\n\n\n\n\nAstuceProchaine étape\n\n\n\nEssayez de créer un nouveau projet RStudio, d’y créer un script nommé essai_r.R, d’installer le module ggplot2, puis d’exécuter une ligne de code qui affiche une phrase de votre choix."
   },
   {
     "objectID": "03_google_colab.html",
@@ -140,290 +427,115 @@
     "text": "Vérification des acquis\nÀ ce stade, vous devriez être capable de :\n\nCréer ou utiliser un compte Google.\nAccéder à Google Colab.\nCréer et renommer un notebook.\nÉcrire et exécuter une cellule Python.\nAjouter une cellule de texte.\nRetrouver, télécharger et partager un notebook.\n\n\n\n\n\n\n\nAstuceProchaine étape\n\n\n\nEssayez de créer un notebook appelé essai_python.ipynb, ajoutez un titre, puis exécutez une cellule qui affiche une phrase de votre choix."
   },
   {
-    "objectID": "01_r_et_rstudio.html",
-    "href": "01_r_et_rstudio.html",
-    "title": "Guide de démarrage avec R et RStudio",
+    "objectID": "05_spyder.html",
+    "href": "05_spyder.html",
+    "title": "Guide de démarrage avec Spyder",
     "section": "",
-    "text": "Ce guide explique comment installer R, installer RStudio, puis se familiariser avec l’interface pour écrire et exécuter du code. Il s’adresse aux personnes qui commencent totalement avec ces outils.\n\n\n\n\n\n\nNoteMots importants\n\n\n\n\nR : le langage de programmation et le moteur de calcul. C’est lui qui exécute réellement le code.\nRStudio : un logiciel (IDE, environnement de développement) qui rend R plus facile à utiliser, avec une interface visuelle organisée en panneaux.\nScript : un fichier texte contenant du code R, généralement avec l’extension .R.\nConsole : l’endroit où le code s’exécute et où les résultats s’affichent.\nModule ou Package : une extension qui ajoute des fonctionnalités à R, par exemple pour créer des graphiques ou analyser des données.\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nR et RStudio sont deux installations distinctes, à faire dans cet ordre précis : R d’abord, puis RStudio. RStudio ne fonctionne pas sans R déjà installé sur l’ordinateur."
+    "text": "Ce guide explique comment installer Spyder correctement à l’aide de conda, puis comment le connecter à différents environnements de projet, sans devoir réinstaller Spyder à chaque fois. Il s’adresse aux personnes qui commencent totalement avec Spyder, mais qui ont déjà installé conda (Miniconda ou Anaconda).\n\n\n\n\n\n\nNote\n\n\n\nCe guide suppose que Miniconda ou Anaconda est déjà installé sur votre ordinateur. Si ce n’est pas le cas, consultez d’abord le guide de démarrage avec Anaconda et Miniconda.\n\n\n\n\n\n\n\n\nNoteMots importants\n\n\n\n\nSpyder : un environnement de développement (IDE) conçu pour la programmation scientifique en Python, avec un éditeur de code, une console et un explorateur de variables.\nInterpréteur Python : le programme qui exécute réellement le code Python. Chaque environnement conda possède son propre interpréteur.\nSpyder-kernels : un petit paquet qui permet à Spyder de communiquer avec l’interpréteur Python d’un environnement donné.\nEnvironnement dédié à Spyder : un environnement conda qui ne contient que Spyder lui-même, séparé des environnements utilisés pour vos projets."
   },
   {
-    "objectID": "01_r_et_rstudio.html#objectif",
-    "href": "01_r_et_rstudio.html#objectif",
-    "title": "Guide de démarrage avec R et RStudio",
+    "objectID": "05_spyder.html#objectif",
+    "href": "05_spyder.html#objectif",
+    "title": "Guide de démarrage avec Spyder",
     "section": "",
-    "text": "Ce guide explique comment installer R, installer RStudio, puis se familiariser avec l’interface pour écrire et exécuter du code. Il s’adresse aux personnes qui commencent totalement avec ces outils.\n\n\n\n\n\n\nNoteMots importants\n\n\n\n\nR : le langage de programmation et le moteur de calcul. C’est lui qui exécute réellement le code.\nRStudio : un logiciel (IDE, environnement de développement) qui rend R plus facile à utiliser, avec une interface visuelle organisée en panneaux.\nScript : un fichier texte contenant du code R, généralement avec l’extension .R.\nConsole : l’endroit où le code s’exécute et où les résultats s’affichent.\nModule ou Package : une extension qui ajoute des fonctionnalités à R, par exemple pour créer des graphiques ou analyser des données.\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nR et RStudio sont deux installations distinctes, à faire dans cet ordre précis : R d’abord, puis RStudio. RStudio ne fonctionne pas sans R déjà installé sur l’ordinateur."
+    "text": "Ce guide explique comment installer Spyder correctement à l’aide de conda, puis comment le connecter à différents environnements de projet, sans devoir réinstaller Spyder à chaque fois. Il s’adresse aux personnes qui commencent totalement avec Spyder, mais qui ont déjà installé conda (Miniconda ou Anaconda).\n\n\n\n\n\n\nNote\n\n\n\nCe guide suppose que Miniconda ou Anaconda est déjà installé sur votre ordinateur. Si ce n’est pas le cas, consultez d’abord le guide de démarrage avec Anaconda et Miniconda.\n\n\n\n\n\n\n\n\nNoteMots importants\n\n\n\n\nSpyder : un environnement de développement (IDE) conçu pour la programmation scientifique en Python, avec un éditeur de code, une console et un explorateur de variables.\nInterpréteur Python : le programme qui exécute réellement le code Python. Chaque environnement conda possède son propre interpréteur.\nSpyder-kernels : un petit paquet qui permet à Spyder de communiquer avec l’interpréteur Python d’un environnement donné.\nEnvironnement dédié à Spyder : un environnement conda qui ne contient que Spyder lui-même, séparé des environnements utilisés pour vos projets."
   },
   {
-    "objectID": "01_r_et_rstudio.html#ce-dont-vous-avez-besoin",
-    "href": "01_r_et_rstudio.html#ce-dont-vous-avez-besoin",
-    "title": "Guide de démarrage avec R et RStudio",
+    "objectID": "05_spyder.html#pourquoi-installer-spyder-dans-son-propre-environnement",
+    "href": "05_spyder.html#pourquoi-installer-spyder-dans-son-propre-environnement",
+    "title": "Guide de démarrage avec Spyder",
+    "section": "Pourquoi installer Spyder dans son propre environnement",
+    "text": "Pourquoi installer Spyder dans son propre environnement\nIl est tentant d’installer Spyder directement dans l’environnement base, ou dans chaque environnement de projet créé. Ce n’est cependant pas la méthode recommandée par l’équipe de Spyder elle-même.\n\n\n\n\n\n\nImportant\n\n\n\nN’installez jamais Spyder dans l’environnement base, et éviter de le réinstaller dans chaque environnement de projet. Installer Spyder à répétition consomme beaucoup d’espace disque et de temps, et peut provoquer des conflits entre paquets d’un environnement à l’autre.\n\n\nLa bonne pratique consiste à :\n\nCréer un seul environnement dédié à Spyder, par exemple nommé spyder-env.\nInstaller uniquement le petit paquet spyder-kernels dans chacun de vos environnements de projet.\nLancer Spyder depuis spyder-env, puis lui indiquer, à l’intérieur de l’interface, quel environnement de projet utiliser pour exécuter le code.\n\nCette approche permet de toujours lancer Spyder de la même façon, peu importe le projet sur lequel vous travaillez, tout en gardant vos environnements de projet légers et isolés."
+  },
+  {
+    "objectID": "05_spyder.html#ce-dont-vous-avez-besoin",
+    "href": "05_spyder.html#ce-dont-vous-avez-besoin",
+    "title": "Guide de démarrage avec Spyder",
     "section": "Ce dont vous avez besoin",
-    "text": "Ce dont vous avez besoin\n\nUn ordinateur (Windows, macOS ou Linux) avec les droits d’installation de logiciels.\nUne connexion Internet pour télécharger les fichiers d’installation.\nEnviron 20 minutes pour l’installation complète.\nSur Mac, connaître le type de puce de votre ordinateur (Apple Silicon comme M1, M2, M3, ou Intel), disponible dans le menu Pomme &gt; À propos de ce Mac."
+    "text": "Ce dont vous avez besoin\n\nMiniconda ou Anaconda déjà installé sur votre ordinateur.\nUn terminal (ou Anaconda Prompt sur Windows).\nUne connexion Internet pour télécharger Spyder et ses dépendances.\nEnviron 10 minutes pour l’installation initiale."
   },
   {
-    "objectID": "01_r_et_rstudio.html#étape-1-installer-r",
-    "href": "01_r_et_rstudio.html#étape-1-installer-r",
-    "title": "Guide de démarrage avec R et RStudio",
-    "section": "Étape 1 : installer R",
-    "text": "Étape 1 : installer R\nR est distribué par le CRAN (Comprehensive R Archive Network), le site officiel du projet R.\n\nOuvrez votre navigateur et allez à l’adresse suivante : https://cran.r-project.org/\nCliquez sur le lien correspondant à votre système d’exploitation :\n\nDownload R for Windows\nDownload R for macOS\nDownload R for Linux\n\nSelon le système :\n\nWindows : cliquez sur base, puis téléchargez le fichier d’installation le plus récent (par exemple R-4.x.x-win.exe).\nmacOS : téléchargez le fichier .pkg correspondant à votre puce. Choisissez le paquet arm64 pour un Mac Apple Silicon (M1, M2, M3, la plupart des modèles depuis fin 2020), ou le paquet x86_64 pour un Mac Intel plus ancien.\n\nOuvrez le fichier téléchargé et suivez les instructions d’installation, en conservant les options par défaut à chaque étape.\nUne fois l’installation terminée, vous pouvez fermer l’assistant d’installation.\n\n\n\n\n\n\n\nAstuce\n\n\n\nIl n’est pas nécessaire d’ouvrir R directement après cette étape. RStudio s’en servira automatiquement en arrière-plan."
+    "objectID": "05_spyder.html#étape-1-créer-lenvironnement-dédié-à-spyder",
+    "href": "05_spyder.html#étape-1-créer-lenvironnement-dédié-à-spyder",
+    "title": "Guide de démarrage avec Spyder",
+    "section": "Étape 1 : créer l’environnement dédié à Spyder",
+    "text": "Étape 1 : créer l’environnement dédié à Spyder\nOuvrez un terminal (ou Anaconda Prompt sur Windows) et exécutez :\nconda create -c conda-forge -n spyder-env spyder\nCette commande crée un nouvel environnement nommé spyder-env, en installant Spyder depuis le canal conda-forge, généralement plus à jour.\n\n\n\n\n\n\nAstuce\n\n\n\nSi vous voulez aussi que Spyder reconnaisse automatiquement des paquets scientifiques courants (numpy, scipy, pandas, matplotlib, sympy, cython) directement dans son propre environnement, utilisez plutôt :\nconda create -c conda-forge -n spyder-env spyder numpy scipy pandas matplotlib sympy cython\nCe n’est toutefois pas obligatoire : ces paquets peuvent tout aussi bien vivre uniquement dans vos environnements de projet.\n\n\nRépondez y lorsque conda demande une confirmation."
   },
   {
-    "objectID": "01_r_et_rstudio.html#étape-2-installer-rstudio",
-    "href": "01_r_et_rstudio.html#étape-2-installer-rstudio",
-    "title": "Guide de démarrage avec R et RStudio",
-    "section": "Étape 2 : installer RStudio",
-    "text": "Étape 2 : installer RStudio\nRStudio Desktop est distribué gratuitement par Posit.\n\nAllez à l’adresse suivante : https://posit.co/download/rstudio-desktop/\nFaites défiler la page jusqu’au tableau de téléchargement.\nLe site détecte habituellement votre système d’exploitation automatiquement. Cliquez sur le bouton de téléchargement recommandé, ou choisissez manuellement la version correspondant à Windows, macOS ou Linux.\nOuvrez le fichier téléchargé :\n\nWindows : lancez le fichier .exe et suivez l’assistant, en conservant les options par défaut.\nmacOS : ouvrez le fichier .dmg, puis glissez l’icône RStudio dans le dossier Applications.\n\nLancez RStudio depuis le menu Démarrer (Windows) ou le dossier Applications (macOS)."
+    "objectID": "05_spyder.html#étape-2-configurer-le-canal-conda-forge-par-défaut-recommandé",
+    "href": "05_spyder.html#étape-2-configurer-le-canal-conda-forge-par-défaut-recommandé",
+    "title": "Guide de démarrage avec Spyder",
+    "section": "Étape 2 : configurer le canal conda-forge par défaut (recommandé)",
+    "text": "Étape 2 : configurer le canal conda-forge par défaut (recommandé)\nPour que les futures mises à jour de Spyder restent cohérentes avec le canal utilisé à l’installation, activez l’environnement puis configurez-le :\nconda activate spyder-env\nconda config --env --add channels conda-forge\nconda config --env --set channel_priority strict\nCette étape n’est pas obligatoire pour démarrer, mais elle évite des conflits de paquets lors de mises à jour futures."
   },
   {
-    "objectID": "01_r_et_rstudio.html#étape-3-découvrir-linterface-de-rstudio",
-    "href": "01_r_et_rstudio.html#étape-3-découvrir-linterface-de-rstudio",
-    "title": "Guide de démarrage avec R et RStudio",
-    "section": "Étape 3 : découvrir l’interface de RStudio",
-    "text": "Étape 3 : découvrir l’interface de RStudio\nÀ l’ouverture, RStudio affiche généralement quatre panneaux. Leur disposition peut varier légèrement, mais leur rôle reste le même.\n\nScript (en haut à gauche) : pour écrire et enregistrer du code avant de l’exécuter.\nConsole (en bas à gauche) : pour exécuter des commandes immédiatement et voir les résultats.\nEnvironnement / Historique (en haut à droite) : pour voir les objets créés pendant la session et l’historique des commandes exécutées.\nFichiers / Graphiques / Packages / Aide (en bas à droite) : pour naviguer dans les fichiers, afficher les graphiques, gérer les extensions et consulter l’aide.\n\n\n\n\n\n\n\nNote\n\n\n\nSi aucun panneau de script n’apparaît au démarrage, c’est normal : il faut d’abord créer un nouveau script, comme expliqué à l’étape suivante."
+    "objectID": "05_spyder.html#étape-3-ouvrir-spyder",
+    "href": "05_spyder.html#étape-3-ouvrir-spyder",
+    "title": "Guide de démarrage avec Spyder",
+    "section": "Étape 3 : ouvrir Spyder",
+    "text": "Étape 3 : ouvrir Spyder\nLorsque vous installez Spyder par conda, un raccourci est créé automatiquement dans le menu Démarrer de Windows (ou le lanceur d’applications sur macOS/Linux). Vous n’avez donc rien à construire vous-même pour ouvrir Spyder normalement.\n\nMéthode recommandée : utiliser le raccourci créé automatiquement\n\nOuvrez le menu Démarrer.\nCherchez “Spyder”.\nRepérez le raccourci dont le nom contient (spyder-env), par exemple Spyder (spyder-env).\nCliquez sur ce raccourci pour lancer Spyder directement, sans passer par un terminal.\n\n\n\n\n\n\n\nImportant\n\n\n\nSi plusieurs raccourcis Spyder apparaissent (par exemple parce que Spyder a aussi été installé via l’installateur standalone ou une autre méthode), assurez-vous toujours de choisir celui qui contient (spyder-env) dans son nom. Cela garantit que Spyder démarre bien depuis l’environnement que vous avez préparé à l’étape 1.\n\n\n\n\n\n\n\n\nAstuce\n\n\n\nPour un accès encore plus rapide, faites un clic droit sur ce raccourci, puis choisissez Épingler à la barre des tâches ou Épingler au menu Démarrer.\n\n\n\n\nMéthode alternative : lancer Spyder depuis un terminal\nSi vous préférez démarrer Spyder depuis un terminal plutôt que depuis le menu Démarrer, activez d’abord l’environnement, puis lancez la commande :\nconda activate spyder-env\nspyder\nCette méthode est équivalente au raccourci automatique, mais utile si vous êtes déjà dans un terminal pour une autre raison.\n\n\nCréer un raccourci personnalisé (optionnel, avancé)\nIl est possible de créer manuellement un raccourci Windows qui active un environnement précis avant de lancer une commande, par exemple si vous voulez démarrer directement dans un environnement de projet particulier plutôt que dans spyder-env.\n\nFaites un clic droit sur le bureau, puis choisissez Nouveau &gt; Raccourci.\nDans le champ d’emplacement, entrez une ligne semblable à celle-ci, en adaptant le chemin à votre installation :\n\n%windir%\\System32\\cmd.exe /K C:\\Users\\votre_nom\\miniconda3\\Scripts\\activate.bat spyder-env\n\nCliquez sur Suivant, donnez un nom clair au raccourci, puis Terminer.\n\n\n\n\n\n\n\nNote\n\n\n\nCette méthode manuelle n’est généralement pas nécessaire, puisque le raccourci automatique créé à l’installation suffit pour la grande majorité des utilisations. Réservez-la à des cas particuliers, par exemple si vous gérez plusieurs environnements Spyder distincts sur le même ordinateur."
   },
   {
-    "objectID": "01_r_et_rstudio.html#étape-4-créer-votre-premier-script",
-    "href": "01_r_et_rstudio.html#étape-4-créer-votre-premier-script",
-    "title": "Guide de démarrage avec R et RStudio",
-    "section": "Étape 4 : créer votre premier script",
-    "text": "Étape 4 : créer votre premier script\nUn script permet de conserver et réutiliser votre code, plutôt que de le taper directement dans la console à chaque fois.\n\nDans le menu, cliquez sur File &gt; New File &gt; R Script.\nVous pouvez aussi utiliser le raccourci clavier Ctrl + Maj + N (Windows/Linux) ou Cmd + Maj + N (Mac).\nUn nouveau panneau vide apparaît en haut à gauche : c’est votre script."
+    "objectID": "05_spyder.html#étape-4-préparer-un-environnement-de-projet",
+    "href": "05_spyder.html#étape-4-préparer-un-environnement-de-projet",
+    "title": "Guide de démarrage avec Spyder",
+    "section": "Étape 4 : préparer un environnement de projet",
+    "text": "Étape 4 : préparer un environnement de projet\nSpyder ne doit pas exécuter votre code directement depuis spyder-env. Créez plutôt un environnement séparé pour chaque projet, comme recommandé dans le guide Anaconda et Miniconda.\nDans un nouveau terminal (sans nécessairement fermer Spyder) :\nconda create -n mon_projet python=3.11\nconda activate mon_projet"
   },
   {
-    "objectID": "01_r_et_rstudio.html#étape-5-exécuter-votre-premier-code",
-    "href": "01_r_et_rstudio.html#étape-5-exécuter-votre-premier-code",
-    "title": "Guide de démarrage avec R et RStudio",
-    "section": "Étape 5 : exécuter votre premier code",
-    "text": "Étape 5 : exécuter votre premier code\nDans le script, écrivez :\nprint(\"Bonjour, R et RStudio !\")\nPour l’exécuter :\n\nPlacez le curseur sur cette ligne.\nAppuyez sur Ctrl + Entrée (Windows/Linux) ou Cmd + Entrée (Mac).\nLe résultat s’affiche dans la console, en bas à gauche :\n\n[1] \"Bonjour, R et RStudio !\"\n\n\n\n\n\n\nAstuce\n\n\n\nLe [1] qui apparaît devant le résultat indique la position de l’élément affiché. Il ne fait pas partie du texte lui-même : ne vous en préoccupez pas pour l’instant."
+    "objectID": "05_spyder.html#étape-5-installer-spyder-kernels-dans-lenvironnement-de-projet",
+    "href": "05_spyder.html#étape-5-installer-spyder-kernels-dans-lenvironnement-de-projet",
+    "title": "Guide de démarrage avec Spyder",
+    "section": "Étape 5 : installer spyder-kernels dans l’environnement de projet",
+    "text": "Étape 5 : installer spyder-kernels dans l’environnement de projet\nPour que Spyder puisse se connecter à cet environnement, installez-y le paquet spyder-kernels :\nconda install -c conda-forge spyder-kernels\n\n\n\n\n\n\nImportant\n\n\n\nN’installez jamais Spyder lui-même (le paquet complet) dans un environnement de projet. Seul spyder-kernels est nécessaire pour que Spyder puisse s’y connecter."
   },
   {
-    "objectID": "01_r_et_rstudio.html#étape-6-faire-un-premier-exercice",
-    "href": "01_r_et_rstudio.html#étape-6-faire-un-premier-exercice",
-    "title": "Guide de démarrage avec R et RStudio",
-    "section": "Étape 6 : faire un premier exercice",
-    "text": "Étape 6 : faire un premier exercice\nModifiez le texte entre les guillemets pour y écrire votre prénom, puis exécutez à nouveau la ligne avec Ctrl + Entrée ou Cmd + Entrée :\nprint(\"Bonjour, je m'appelle votre_prénom !\")"
+    "objectID": "05_spyder.html#étape-6-trouver-le-chemin-de-linterpréteur-python-de-lenvironnement",
+    "href": "05_spyder.html#étape-6-trouver-le-chemin-de-linterpréteur-python-de-lenvironnement",
+    "title": "Guide de démarrage avec Spyder",
+    "section": "Étape 6 : trouver le chemin de l’interpréteur Python de l’environnement",
+    "text": "Étape 6 : trouver le chemin de l’interpréteur Python de l’environnement\nToujours avec mon_projet activé dans le terminal, exécutez :\npython -c \"import sys; print(sys.executable)\"\nCette commande affiche le chemin complet vers l’interpréteur Python de cet environnement, par exemple :\n\nSur Windows : C:\\Users\\votre_nom\\miniconda3\\envs\\mon_projet\\python.exe\nSur macOS/Linux : /home/votre_nom/miniconda3/envs/mon_projet/bin/python\n\nCopiez ce chemin, il sera nécessaire à l’étape suivante."
   },
   {
-    "objectID": "01_r_et_rstudio.html#étape-7-enregistrer-votre-script",
-    "href": "01_r_et_rstudio.html#étape-7-enregistrer-votre-script",
-    "title": "Guide de démarrage avec R et RStudio",
-    "section": "Étape 7 : enregistrer votre script",
-    "text": "Étape 7 : enregistrer votre script\n\nCliquez sur File &gt; Save As, ou utilisez le raccourci Ctrl + S (Windows/Linux) ou Cmd + S (Mac).\nChoisissez un nom clair, par exemple premiers_pas.R.\nChoisissez un dossier facile à retrouver sur votre ordinateur.\n\nUn script .R peut être réouvert et modifié à tout moment depuis RStudio, en cliquant sur File &gt; Open File."
+    "objectID": "05_spyder.html#étape-7-choisir-lenvironnement-à-utiliser-dans-spyder",
+    "href": "05_spyder.html#étape-7-choisir-lenvironnement-à-utiliser-dans-spyder",
+    "title": "Guide de démarrage avec Spyder",
+    "section": "Étape 7 : choisir l’environnement à utiliser dans Spyder",
+    "text": "Étape 7 : choisir l’environnement à utiliser dans Spyder\n\nDans Spyder, cliquez sur le nom de l’environnement actuellement affiché dans la barre d’état, en bas de la fenêtre.\nCliquez sur Change default environment in Preferences… (ou ouvrez directement Tools &gt; Preferences &gt; Python interpreter).\nDans la section Python interpreter, sélectionnez l’option Select interpreter, puis choisissez votre environnement dans la liste déroulante si celui-ci y apparaît automatiquement.\nS’il n’apparaît pas dans la liste, utilisez le bouton Select file, ou collez directement le chemin copié à l’étape précédente dans le champ de texte prévu.\nCliquez sur OK ou Apply pour valider."
   },
   {
-    "objectID": "01_r_et_rstudio.html#étape-8-organiser-son-travail-avec-un-projet-rstudio",
-    "href": "01_r_et_rstudio.html#étape-8-organiser-son-travail-avec-un-projet-rstudio",
-    "title": "Guide de démarrage avec R et RStudio",
-    "section": "Étape 8 : organiser son travail avec un projet RStudio",
-    "text": "Étape 8 : organiser son travail avec un projet RStudio\nUn projet RStudio regroupe vos scripts, données et résultats dans un même dossier, ce qui facilite grandement l’organisation, surtout pour un travail de recherche.\n\nCliquez sur File &gt; New Project.\nChoisissez New Directory.\nSélectionnez New Project.\nDonnez un nom au dossier, par exemple mon_premier_projet.\nChoisissez l’emplacement où créer ce dossier.\nCliquez sur Create Project.\n\nRStudio se relance alors avec ce dossier comme espace de travail. Tous les scripts créés par la suite peuvent y être enregistrés.\n\n\n\n\n\n\nImportant\n\n\n\nTravailler à l’intérieur d’un projet RStudio évite les problèmes fréquents liés au chemin des fichiers, notamment lorsqu’un script cherche à charger un fichier de données."
+    "objectID": "05_spyder.html#étape-8-redémarrer-la-console-pour-appliquer-le-changement",
+    "href": "05_spyder.html#étape-8-redémarrer-la-console-pour-appliquer-le-changement",
+    "title": "Guide de démarrage avec Spyder",
+    "section": "Étape 8 : redémarrer la console pour appliquer le changement",
+    "text": "Étape 8 : redémarrer la console pour appliquer le changement\nPour que Spyder utilise réellement le nouvel interpréteur :\n\nAllez dans le menu Consoles.\nCliquez sur Restart kernel.\n\nUne nouvelle console s’ouvre, connectée à l’environnement mon_projet. Vous pouvez vérifier que le changement a fonctionné en tapant dans la console :\nimport sys\nprint(sys.executable)\nLe chemin affiché doit correspondre à celui copié à l’étape 6."
   },
   {
-    "objectID": "01_r_et_rstudio.html#étape-9-installer-un-premier-module",
-    "href": "01_r_et_rstudio.html#étape-9-installer-un-premier-module",
-    "title": "Guide de démarrage avec R et RStudio",
-    "section": "Étape 9 : installer un premier module",
-    "text": "Étape 9 : installer un premier module\nUn module ajoute des fonctionnalités à R. Par exemple, le module ggplot2 sert à créer des graphiques.\nDans la console, écrivez la commande suivante, puis appuyez sur Entrée :\ninstall.packages(\"ggplot2\")\nL’installation peut prendre quelques secondes à quelques minutes selon la connexion Internet. Une fois terminée, le module doit être chargé avant chaque utilisation, dans un script ou dans la console :\nlibrary(ggplot2)\n\n\n\n\n\n\nNote\n\n\n\ninstall.packages() ne s’exécute généralement qu’une seule fois par ordinateur. library(), en revanche, doit être exécuté à chaque nouvelle session de travail où le module est nécessaire."
+    "objectID": "05_spyder.html#étape-9-ajouter-dautres-environnements-de-projet-plus-tard",
+    "href": "05_spyder.html#étape-9-ajouter-dautres-environnements-de-projet-plus-tard",
+    "title": "Guide de démarrage avec Spyder",
+    "section": "Étape 9 : ajouter d’autres environnements de projet plus tard",
+    "text": "Étape 9 : ajouter d’autres environnements de projet plus tard\nPour chaque nouveau projet, répétez uniquement les étapes 4 à 8 :\n\nCréer un nouvel environnement conda pour ce projet.\nY installer spyder-kernels.\nRécupérer le chemin de son interpréteur.\nLe sélectionner dans les préférences de Spyder.\nRedémarrer la console.\n\nSpyder lui-même n’a besoin d’être installé qu’une seule fois, dans spyder-env, peu importe le nombre de projets créés par la suite.\n\n\n\n\n\n\nAstuce\n\n\n\nUne fois plusieurs environnements ajoutés, ils restent généralement visibles dans la liste déroulante des interpréteurs, ce qui permet de basculer d’un projet à l’autre sans avoir à retrouver le chemin complet chaque fois."
   },
   {
-    "objectID": "01_r_et_rstudio.html#bonnes-pratiques-pour-débuter",
-    "href": "01_r_et_rstudio.html#bonnes-pratiques-pour-débuter",
-    "title": "Guide de démarrage avec R et RStudio",
+    "objectID": "05_spyder.html#configurations-requises-à-connaître",
+    "href": "05_spyder.html#configurations-requises-à-connaître",
+    "title": "Guide de démarrage avec Spyder",
+    "section": "Configurations requises à connaître",
+    "text": "Configurations requises à connaître\n\nLa version de spyder-kernels installée dans un environnement de projet doit être compatible avec la version de Spyder installée dans spyder-env. En cas d’incompatibilité, Spyder affiche généralement un message d’avertissement précisant la version exacte à installer.\nUn redémarrage du noyau (Restart kernel) est nécessaire à chaque changement d’interpréteur : changer l’interpréteur dans les préférences ne suffit pas seul.\nSi un environnement de projet n’apparaît pas automatiquement dans la liste déroulante des interpréteurs, cela signifie généralement que spyder-kernels n’y est pas encore installé."
+  },
+  {
+    "objectID": "05_spyder.html#bonnes-pratiques-pour-débuter",
+    "href": "05_spyder.html#bonnes-pratiques-pour-débuter",
+    "title": "Guide de démarrage avec Spyder",
     "section": "Bonnes pratiques pour débuter",
-    "text": "Bonnes pratiques pour débuter\n\nTravaillez toujours à l’intérieur d’un projet RStudio plutôt que dans des fichiers dispersés.\nÉcrivez votre code dans un script, pas seulement dans la console, pour pouvoir le réutiliser.\nEnregistrez votre script régulièrement.\nLisez attentivement les messages d’erreur en rouge dans la console : ils indiquent souvent la ligne concernée et la nature du problème.\nAjoutez des commentaires dans votre code à l’aide du symbole #, par exemple : # Ceci est un commentaire.\nÉvitez d’utiliser des accents ou des espaces dans les noms de fichiers et de dossiers de votre projet."
+    "text": "Bonnes pratiques pour débuter\n\nGardez un seul environnement dédié à Spyder (spyder-env), jamais réinstallé ailleurs.\nInstallez uniquement spyder-kernels, jamais Spyder au complet, dans vos environnements de projet.\nLancez toujours Spyder depuis le raccourci contenant (spyder-env), plutôt que d’en créer un nouveau sans nécessité.\nRedémarrez toujours la console après avoir changé d’interpréteur.\nDonnez des noms d’environnement clairs, correspondant à chaque projet.\nVérifiez régulièrement, avec sys.executable, que Spyder utilise bien l’environnement attendu avant de lancer un script important."
   },
   {
-    "objectID": "01_r_et_rstudio.html#vérification-des-acquis",
-    "href": "01_r_et_rstudio.html#vérification-des-acquis",
-    "title": "Guide de démarrage avec R et RStudio",
+    "objectID": "05_spyder.html#vérification-des-acquis",
+    "href": "05_spyder.html#vérification-des-acquis",
+    "title": "Guide de démarrage avec Spyder",
     "section": "Vérification des acquis",
-    "text": "Vérification des acquis\nÀ ce stade, vous devriez être capable de :\n\nInstaller R, puis RStudio, dans le bon ordre.\nReconnaître les quatre panneaux principaux de RStudio.\nCréer, exécuter et enregistrer un script R.\nCréer un projet RStudio pour organiser votre travail.\nInstaller et charger un module.\n\n\n\n\n\n\n\nAstuceProchaine étape\n\n\n\nEssayez de créer un nouveau projet RStudio, d’y créer un script nommé essai_r.R, d’installer le module ggplot2, puis d’exécuter une ligne de code qui affiche une phrase de votre choix."
-  },
-  {
-    "objectID": "02_github-codespaces.html",
-    "href": "02_github-codespaces.html",
-    "title": "Guide de démarrage avec GitHub Codespaces",
-    "section": "",
-    "text": "Ce guide explique ce qu’est GitHub Codespaces, comment créer un codespace pour un dépôt existant, et comment commencer à travailler avec. Il s’adresse aux personnes qui commencent totalement avec cet outil.\n\n\n\n\n\n\nNoteMots importants\n\n\n\n\nCodespace : un environnement de développement complet, hébergé dans le cloud par GitHub, accessible depuis un navigateur ou Visual Studio Code.\nDépôt (repository) : le dossier de projet hébergé sur GitHub, contenant le code et son historique de versions.\nConteneur : l’environnement isolé dans lequel le codespace s’exécute, avec ses propres outils déjà installés.\nDevcontainer : un fichier de configuration optionnel qui définit précisément quels outils et paramètres un codespace doit contenir.\nVS Code : l’éditeur de code qui s’affiche à l’intérieur du codespace, que ce soit dans le navigateur ou en application locale."
-  },
-  {
-    "objectID": "02_github-codespaces.html#objectif",
-    "href": "02_github-codespaces.html#objectif",
-    "title": "Guide de démarrage avec GitHub Codespaces",
-    "section": "",
-    "text": "Ce guide explique ce qu’est GitHub Codespaces, comment créer un codespace pour un dépôt existant, et comment commencer à travailler avec. Il s’adresse aux personnes qui commencent totalement avec cet outil.\n\n\n\n\n\n\nNoteMots importants\n\n\n\n\nCodespace : un environnement de développement complet, hébergé dans le cloud par GitHub, accessible depuis un navigateur ou Visual Studio Code.\nDépôt (repository) : le dossier de projet hébergé sur GitHub, contenant le code et son historique de versions.\nConteneur : l’environnement isolé dans lequel le codespace s’exécute, avec ses propres outils déjà installés.\nDevcontainer : un fichier de configuration optionnel qui définit précisément quels outils et paramètres un codespace doit contenir.\nVS Code : l’éditeur de code qui s’affiche à l’intérieur du codespace, que ce soit dans le navigateur ou en application locale."
-  },
-  {
-    "objectID": "02_github-codespaces.html#quest-ce-quun-codespace",
-    "href": "02_github-codespaces.html#quest-ce-quun-codespace",
-    "title": "Guide de démarrage avec GitHub Codespaces",
-    "section": "Qu’est-ce qu’un codespace ?",
-    "text": "Qu’est-ce qu’un codespace ?\nUn codespace est un ordinateur virtuel, préconfiguré, qui contient déjà Git, un terminal et souvent un langage de programmation comme Python. Il permet de coder sans rien installer sur son propre ordinateur : tout se passe dans le navigateur ou dans Visual Studio Code connecté à distance.\n\n\n\n\n\n\nAstuce\n\n\n\nUn codespace est particulièrement utile si votre ordinateur est peu puissant, si vous changez souvent d’appareil, ou si vous voulez essayer un projet sans configurer un environnement local complet."
-  },
-  {
-    "objectID": "02_github-codespaces.html#ce-dont-vous-avez-besoin",
-    "href": "02_github-codespaces.html#ce-dont-vous-avez-besoin",
-    "title": "Guide de démarrage avec GitHub Codespaces",
-    "section": "Ce dont vous avez besoin",
-    "text": "Ce dont vous avez besoin\n\nUn compte GitHub actif.\nUn navigateur Internet récent.\nUne connexion Internet stable pendant l’utilisation du codespace.\nOptionnel : Visual Studio Code installé localement, si vous préférez travailler depuis l’application plutôt que depuis le navigateur.\n\n\n\n\n\n\n\nImportant\n\n\n\nGitHub Codespaces offre un quota d’utilisation gratuit limité chaque mois pour les comptes personnels. Au-delà de ce quota, l’utilisation est facturée. Vérifiez votre utilisation dans les paramètres de votre compte si vous l’utilisez régulièrement."
-  },
-  {
-    "objectID": "02_github-codespaces.html#étape-1-accéder-à-un-dépôt",
-    "href": "02_github-codespaces.html#étape-1-accéder-à-un-dépôt",
-    "title": "Guide de démarrage avec GitHub Codespaces",
-    "section": "Étape 1 : accéder à un dépôt",
-    "text": "Étape 1 : accéder à un dépôt\nUn codespace se crée toujours à partir d’un dépôt GitHub existant.\n\nConnectez-vous à votre compte sur github.com.\nOuvrez le dépôt que vous voulez utiliser, ou créez-en un nouveau si nécessaire (+ &gt; New repository).\n\nSi vous n’avez pas encore de projet, GitHub propose aussi des modèles de démarrage rapide pensés spécifiquement pour Codespaces."
-  },
-  {
-    "objectID": "02_github-codespaces.html#étape-2-créer-un-codespace",
-    "href": "02_github-codespaces.html#étape-2-créer-un-codespace",
-    "title": "Guide de démarrage avec GitHub Codespaces",
-    "section": "Étape 2 : créer un codespace",
-    "text": "Étape 2 : créer un codespace\n\nSur la page principale du dépôt, cliquez sur le bouton vert Code.\nSélectionnez l’onglet Codespaces.\nCliquez sur Create codespace on main (ou le nom de la branche affichée).\n\nGitHub effectue alors quatre opérations automatiquement :\n\nUne machine virtuelle et un espace de stockage sont attribués.\nUn conteneur est créé.\nUne connexion à ce conteneur est établie.\nUne configuration finale s’exécute si le dépôt en définit une.\n\nCe processus prend généralement entre quelques secondes et une ou deux minutes.\n\n\n\n\n\n\nAstuce\n\n\n\nPour créer un dépôt et un codespace en une seule fois, comme point de départ le plus simple, allez directement sur github.com/codespaces et cliquez sur New codespace. GitHub crée alors un codespace vide sans dépôt existant, que vous pourrez publier plus tard."
-  },
-  {
-    "objectID": "02_github-codespaces.html#étape-3-découvrir-linterface",
-    "href": "02_github-codespaces.html#étape-3-découvrir-linterface",
-    "title": "Guide de démarrage avec GitHub Codespaces",
-    "section": "Étape 3 : découvrir l’interface",
-    "text": "Étape 3 : découvrir l’interface\nUne fois le codespace prêt, une interface Visual Studio Code s’ouvre, directement dans votre navigateur.\n\nExplorateur de fichiers (à gauche) : affiche tous les fichiers du dépôt.\nZone d’édition (au centre) : pour ouvrir et modifier les fichiers.\nTerminal (en bas) : une ligne de commande déjà connectée à l’environnement du codespace, avec Git préinstallé.\nBarre d’activité (tout à gauche) : icônes pour accéder à la recherche, au contrôle de version Git, aux extensions, etc.\n\nPour ouvrir le terminal s’il n’est pas visible, utilisez le menu Terminal &gt; New Terminal."
-  },
-  {
-    "objectID": "02_github-codespaces.html#étape-4-exécuter-une-première-commande",
-    "href": "02_github-codespaces.html#étape-4-exécuter-une-première-commande",
-    "title": "Guide de démarrage avec GitHub Codespaces",
-    "section": "Étape 4 : exécuter une première commande",
-    "text": "Étape 4 : exécuter une première commande\nDans le terminal, écrivez :\necho \"Bonjour depuis mon codespace\"\nAppuyez sur Entrée. Le message s’affiche directement dans le terminal, confirmant que l’environnement fonctionne.\nSi le codespace contient Python, vous pouvez aussi tester :\npython3 --version"
-  },
-  {
-    "objectID": "02_github-codespaces.html#étape-5-modifier-un-fichier-et-enregistrer-les-changements",
-    "href": "02_github-codespaces.html#étape-5-modifier-un-fichier-et-enregistrer-les-changements",
-    "title": "Guide de démarrage avec GitHub Codespaces",
-    "section": "Étape 5 : modifier un fichier et enregistrer les changements",
-    "text": "Étape 5 : modifier un fichier et enregistrer les changements\n\nDans l’explorateur de fichiers, ouvrez un fichier existant, ou créez-en un nouveau avec le bouton New File.\nFaites une petite modification, par exemple ajouter une ligne de texte.\nEnregistrez avec Ctrl + S (Windows/Linux) ou Cmd + S (Mac).\n\nLe fichier est modifié dans le codespace, mais pas encore renvoyé vers GitHub. C’est l’objectif de l’étape suivante."
-  },
-  {
-    "objectID": "02_github-codespaces.html#étape-6-enregistrer-les-changements-sur-github",
-    "href": "02_github-codespaces.html#étape-6-enregistrer-les-changements-sur-github",
-    "title": "Guide de démarrage avec GitHub Codespaces",
-    "section": "Étape 6 : enregistrer les changements sur GitHub",
-    "text": "Étape 6 : enregistrer les changements sur GitHub\nLe contrôle de version fonctionne de la même façon que sur un ordinateur local, avec Git déjà installé et configuré dans le codespace.\nDans le terminal :\ngit add .\ngit commit -m \"Premier essai dans Codespaces\"\ngit push\n\n\n\n\n\n\nNote\n\n\n\nPuisque le codespace est déjà connecté à votre compte GitHub, aucune configuration supplémentaire d’identifiants n’est généralement nécessaire pour git push, contrairement à un dépôt cloné localement."
-  },
-  {
-    "objectID": "02_github-codespaces.html#étape-7-suspendre-ou-arrêter-le-codespace",
-    "href": "02_github-codespaces.html#étape-7-suspendre-ou-arrêter-le-codespace",
-    "title": "Guide de démarrage avec GitHub Codespaces",
-    "section": "Étape 7 : suspendre ou arrêter le codespace",
-    "text": "Étape 7 : suspendre ou arrêter le codespace\nUn codespace continue de consommer des ressources tant qu’il reste actif.\n\nFermer l’onglet du navigateur met le codespace en pause automatiquement après une période d’inactivité.\nPour l’arrêter manuellement : allez sur github.com/codespaces, trouvez votre codespace dans la liste, cliquez sur les trois points …, puis choisissez Stop codespace.\n\n\n\n\n\n\n\nAstuce\n\n\n\nArrêter un codespace ne supprime pas votre travail. Vos fichiers restent disponibles au prochain démarrage, à condition que les changements aient bien été enregistrés avec git commit, ou simplement sauvegardés dans le système de fichiers du codespace."
-  },
-  {
-    "objectID": "02_github-codespaces.html#étape-8-reprendre-un-codespace-existant",
-    "href": "02_github-codespaces.html#étape-8-reprendre-un-codespace-existant",
-    "title": "Guide de démarrage avec GitHub Codespaces",
-    "section": "Étape 8 : reprendre un codespace existant",
-    "text": "Étape 8 : reprendre un codespace existant\n\nAllez sur github.com/codespaces.\nCliquez sur le nom du codespace que vous voulez reprendre.\nL’environnement se relance avec les fichiers tels que vous les aviez laissés."
-  },
-  {
-    "objectID": "02_github-codespaces.html#étape-9-supprimer-un-codespace",
-    "href": "02_github-codespaces.html#étape-9-supprimer-un-codespace",
-    "title": "Guide de démarrage avec GitHub Codespaces",
-    "section": "Étape 9 : supprimer un codespace",
-    "text": "Étape 9 : supprimer un codespace\nLorsque vous n’avez plus besoin d’un codespace, il est recommandé de le supprimer pour libérer votre quota.\n\nAllez sur github.com/codespaces.\nCliquez sur les trois points … à côté du codespace concerné.\nChoisissez Delete.\n\n\n\n\n\n\n\nImportant\n\n\n\nSupprimer un codespace efface l’environnement, mais pas le dépôt GitHub associé. Si vos changements ont déjà été envoyés avec git push, ils restent conservés dans le dépôt. Si des changements n’ont pas été envoyés, ils sont perdus définitivement."
-  },
-  {
-    "objectID": "02_github-codespaces.html#bonnes-pratiques-pour-débuter",
-    "href": "02_github-codespaces.html#bonnes-pratiques-pour-débuter",
-    "title": "Guide de démarrage avec GitHub Codespaces",
-    "section": "Bonnes pratiques pour débuter",
-    "text": "Bonnes pratiques pour débuter\n\nEnvoyez régulièrement vos changements avec git push, plutôt que de compter uniquement sur le codespace pour conserver votre travail.\nArrêtez les codespaces inutilisés pour éviter de consommer votre quota gratuit inutilement.\nDonnez un nom clair à vos dépôts avant de créer un codespace, car le nom du codespace en dépend.\nSupprimez les codespaces devenus inutiles plutôt que de les laisser s’accumuler."
-  },
-  {
-    "objectID": "02_github-codespaces.html#vérification-des-acquis",
-    "href": "02_github-codespaces.html#vérification-des-acquis",
-    "title": "Guide de démarrage avec GitHub Codespaces",
-    "section": "Vérification des acquis",
-    "text": "Vérification des acquis\nÀ ce stade, vous devriez être capable de :\n\nExpliquer ce qu’est un codespace, en une phrase simple.\nCréer un codespace à partir d’un dépôt existant.\nReconnaître les éléments principaux de l’interface Visual Studio Code dans le navigateur.\nModifier un fichier et envoyer les changements vers GitHub avec git push.\nArrêter, reprendre et supprimer un codespace.\n\n\n\n\n\n\n\nAstuceProchaine étape\n\n\n\nCréez un nouveau dépôt vide sur GitHub, ouvrez-y un codespace, créez un fichier essai.md, écrivez-y une phrase, puis envoyez ce changement vers GitHub avec git add, git commit et git push."
-  },
-  {
-    "objectID": "04_anaconda_miniconda.html",
-    "href": "04_anaconda_miniconda.html",
-    "title": "Guide de démarrage avec Anaconda et Miniconda",
-    "section": "",
-    "text": "Ce guide explique ce que sont Anaconda et Miniconda, comment installer chacun d’eux, puis pourquoi ce guide recommande finalement Miniconda pour la plupart des usages. Il s’adresse aux personnes qui commencent totalement avec ces outils.\n\n\n\n\n\n\nNoteMots importants\n\n\n\n\nConda : un gestionnaire de paquets et d’environnements, capable d’installer Python lui-même ainsi que des milliers de bibliothèques scientifiques.\nEnvironnement : un espace isolé contenant une version de Python et des paquets spécifiques, séparé des autres environnements sur le même ordinateur.\nPaquet (package) : une bibliothèque ajoutant des fonctionnalités à Python, par exemple pour l’analyse de données ou les graphiques.\nDistribution : un ensemble regroupant Python, conda et, parfois, des paquets préinstallés.\nTerminal : la ligne de commande utilisée pour lancer les commandes conda."
-  },
-  {
-    "objectID": "04_anaconda_miniconda.html#objectif",
-    "href": "04_anaconda_miniconda.html#objectif",
-    "title": "Guide de démarrage avec Anaconda et Miniconda",
-    "section": "",
-    "text": "Ce guide explique ce que sont Anaconda et Miniconda, comment installer chacun d’eux, puis pourquoi ce guide recommande finalement Miniconda pour la plupart des usages. Il s’adresse aux personnes qui commencent totalement avec ces outils.\n\n\n\n\n\n\nNoteMots importants\n\n\n\n\nConda : un gestionnaire de paquets et d’environnements, capable d’installer Python lui-même ainsi que des milliers de bibliothèques scientifiques.\nEnvironnement : un espace isolé contenant une version de Python et des paquets spécifiques, séparé des autres environnements sur le même ordinateur.\nPaquet (package) : une bibliothèque ajoutant des fonctionnalités à Python, par exemple pour l’analyse de données ou les graphiques.\nDistribution : un ensemble regroupant Python, conda et, parfois, des paquets préinstallés.\nTerminal : la ligne de commande utilisée pour lancer les commandes conda."
-  },
-  {
-    "objectID": "04_anaconda_miniconda.html#ce-dont-vous-avez-besoin",
-    "href": "04_anaconda_miniconda.html#ce-dont-vous-avez-besoin",
-    "title": "Guide de démarrage avec Anaconda et Miniconda",
-    "section": "Ce dont vous avez besoin",
-    "text": "Ce dont vous avez besoin\n\nUn ordinateur avec Windows, macOS ou Linux.\nUne connexion Internet pour le téléchargement.\nAu moins 10 Go d’espace disque libre si vous installez Anaconda, ou environ 1 Go pour Miniconda.\nEnviron 15 à 20 minutes pour l’installation d’Anaconda, ou environ 10 minutes pour Miniconda."
-  },
-  {
-    "objectID": "04_anaconda_miniconda.html#partie-1-installer-anaconda",
-    "href": "04_anaconda_miniconda.html#partie-1-installer-anaconda",
-    "title": "Guide de démarrage avec Anaconda et Miniconda",
-    "section": "Partie 1 : installer Anaconda",
-    "text": "Partie 1 : installer Anaconda\nAnaconda Distribution est une installation complète, qui inclut conda, Python et plus de 1 500 paquets scientifiques préinstallés, ainsi qu’une interface graphique appelée Anaconda Navigator.\n\nÉtape 1 : télécharger Anaconda\n\nOuvrez votre navigateur et allez à l’adresse suivante : https://www.anaconda.com/docs/getting-started/installation\nSélectionnez votre système d’exploitation (Windows, macOS ou Linux).\nChoisissez Anaconda Distribution dans la liste des installateurs.\nSur Mac, vérifiez le type de puce de votre ordinateur avant de télécharger :\n\nApple Silicon (M1, M2, M3, la plupart des modèles depuis fin 2020) : choisissez la version arm64.\nIntel (modèles plus anciens) : choisissez la version x86_64.\n\nTéléchargez l’installateur graphique correspondant à votre système.\n\n\n\nÉtape 2 : installer Anaconda\n\nSur Windows\n\nDouble-cliquez sur le fichier .exe téléchargé.\nCliquez sur Next, acceptez les termes de la licence.\nChoisissez Just Me (recommended) plutôt que All Users.\nConservez le dossier d’installation proposé par défaut.\nCliquez sur Install. Cette étape peut prendre plusieurs minutes, puisque plus de 1 500 paquets sont installés.\nCliquez sur Finish une fois terminé.\n\n\n\nSur macOS\n\nDouble-cliquez sur le fichier .pkg téléchargé.\nCliquez sur Continue, acceptez les termes de la licence.\nConservez l’emplacement d’installation proposé par défaut.\nAttendez la fin de l’installation, ce qui peut prendre plusieurs minutes, puis cliquez sur Close.\n\n\n\nSur Linux\nDans un terminal, exécutez :\nbash ~/Anaconda3-latest-Linux-x86_64.sh\nSuivez les instructions affichées, en acceptant les valeurs par défaut si vous n’êtes pas certain d’un réglage.\n\n\n\nÉtape 3 : vérifier l’installation d’Anaconda\n\nOuvrez Anaconda Navigator depuis le menu Démarrer (Windows) ou le dossier Applications (macOS).\nL’interface graphique d’Anaconda Navigator devrait s’afficher, avec une liste d’applications comme Jupyter Notebook, Spyder et JupyterLab déjà installées.\n\n\n\n\nAnaconda navigator. Source :\n\n\n\n\n\n\n\n\nNote\n\n\n\nL’image ci-dessus montre l’interface d’Anaconda Navigator telle qu’elle apparaît après une installation réussie. Si vous obtenez un écran similaire, l’installation a fonctionné correctement."
-  },
-  {
-    "objectID": "04_anaconda_miniconda.html#partie-2-installer-miniconda",
-    "href": "04_anaconda_miniconda.html#partie-2-installer-miniconda",
-    "title": "Guide de démarrage avec Anaconda et Miniconda",
-    "section": "Partie 2 : installer Miniconda",
-    "text": "Partie 2 : installer Miniconda\nMiniconda installe uniquement conda et Python, sans paquet préinstallé ni interface graphique. Chaque paquet est ensuite ajouté à la demande, selon les besoins réels du projet.\n\nÉtape 1 : télécharger Miniconda\n\nOuvrez votre navigateur et allez à l’adresse suivante : https://www.anaconda.com/docs/getting-started/installation\nSélectionnez votre système d’exploitation (Windows, macOS ou Linux).\nChoisissez Miniconda plutôt qu’Anaconda Distribution dans la liste des installateurs.\nSur Mac, choisissez la version correspondant à votre puce, arm64 ou x86_64, comme pour Anaconda.\nTéléchargez l’installateur graphique correspondant à votre système.\n\n\n\nÉtape 2 : installer Miniconda\n\nSur Windows\n\nDouble-cliquez sur le fichier .exe téléchargé.\nCliquez sur Next, acceptez les termes de la licence.\nChoisissez Just Me (recommended) plutôt que All Users.\nConservez le dossier d’installation proposé par défaut.\nDans les options avancées, cochez Add Miniconda3 to my PATH environment variable si vous voulez utiliser conda directement depuis n’importe quel terminal.\nCliquez sur Install, puis sur Finish une fois terminé.\n\n\n\nSur macOS\n\nDouble-cliquez sur le fichier .pkg téléchargé.\nCliquez sur Continue, acceptez les termes de la licence.\nConservez l’emplacement d’installation proposé par défaut (install for me only).\nAttendez la fin de l’installation, puis cliquez sur Close.\n\n\n\nSur Linux\nDans un terminal, exécutez :\nbash ~/Miniconda3-latest-Linux-x86_64.sh\nSuivez les instructions affichées, en acceptant les valeurs par défaut si vous n’êtes pas certain d’un réglage.\n\n\n\nÉtape 3 : vérifier l’installation de Miniconda\n\nOuvrez un nouveau terminal (fermez l’ancien s’il était déjà ouvert avant l’installation).\nSur Windows, utilisez Anaconda Prompt ou Anaconda Powershell Prompt, disponible dans le menu Démarrer.\nTapez la commande suivante :\n\nconda --version\nVous devriez voir s’afficher un numéro de version, par exemple conda 24.x.x. Cela confirme que l’installation a réussi. Contrairement à Anaconda, aucune interface graphique ne s’ouvre : tout se passe dans le terminal.\n\n\n\n\n\n\nImportant\n\n\n\nN’installez pas Anaconda et Miniconda en même temps sur le même ordinateur, sauf si vous savez précisément gérer plusieurs installations de conda en parallèle. Pour la suite de ce guide, une seule des deux installations est nécessaire."
-  },
-  {
-    "objectID": "04_anaconda_miniconda.html#pourquoi-ce-guide-recommande-miniconda",
-    "href": "04_anaconda_miniconda.html#pourquoi-ce-guide-recommande-miniconda",
-    "title": "Guide de démarrage avec Anaconda et Miniconda",
-    "section": "Pourquoi ce guide recommande Miniconda",
-    "text": "Pourquoi ce guide recommande Miniconda\nAnaconda et Miniconda installent tous les deux conda et Python, avec accès aux mêmes dépôts de paquets. La différence essentielle est la quantité de paquets préinstallés, ce qui a un effet direct sur l’espace disque utilisé.\n\n\n\n\n\n\n\n\nCritère\nAnaconda\nMiniconda\n\n\n\n\nEspace disque requis\nEnviron 9,7 Go\nEnviron 900 Mo\n\n\nPaquets préinstallés\nPlus de 1 500 paquets scientifiques\nAucun, sauf conda et Python\n\n\nInterface graphique (Anaconda Navigator)\nIncluse\nNon incluse\n\n\nTemps d’installation\nPlus long\nBeaucoup plus rapide\n\n\nContrôle sur les paquets installés\nFaible au départ, tout est déjà là\nTotal : vous choisissez chaque paquet\n\n\n\n\n\n\n\n\n\nAstuceRecommandation de ce guide\n\n\n\nCe guide recommande Miniconda plutôt qu’Anaconda. Miniconda installe uniquement conda, Python et leurs dépendances minimales, ce qui représente environ 900 Mo contre près de 9,7 Go pour Anaconda. Les paquets dont vous avez réellement besoin (par exemple numpy, pandas ou matplotlib) s’installent ensuite en quelques secondes avec conda install, uniquement lorsque c’est nécessaire. Cela évite d’occuper plusieurs gigaoctets avec des centaines de paquets qui resteront probablement inutilisés.\n\n\nSi vous avez déjà installé Anaconda à l’étape précédente et que vous souhaitez basculer vers une approche plus légère, il est possible de désinstaller Anaconda plus tard et de repartir avec Miniconda seul, sans perdre vos projets, à condition d’avoir sauvegardé le code source de vos projets séparément (par exemple avec Git)."
-  },
-  {
-    "objectID": "04_anaconda_miniconda.html#comprendre-les-environnements-conda",
-    "href": "04_anaconda_miniconda.html#comprendre-les-environnements-conda",
-    "title": "Guide de démarrage avec Anaconda et Miniconda",
-    "section": "Comprendre les environnements conda",
-    "text": "Comprendre les environnements conda\nQu’il s’agisse d’Anaconda ou de Miniconda, la logique des environnements est identique une fois l’installation terminée.\nUn environnement conda est un espace isolé, avec sa propre version de Python et ses propres paquets. Travailler avec des environnements séparés évite qu’un projet n’entre en conflit avec un autre.\nPour lister les environnements existants :\nconda env list\nAprès une installation fraîche, vous devriez voir un environnement nommé base."
-  },
-  {
-    "objectID": "04_anaconda_miniconda.html#créer-et-utiliser-un-environnement",
-    "href": "04_anaconda_miniconda.html#créer-et-utiliser-un-environnement",
-    "title": "Guide de démarrage avec Anaconda et Miniconda",
-    "section": "Créer et utiliser un environnement",
-    "text": "Créer et utiliser un environnement\nIl est recommandé de ne jamais installer de paquets directement dans l’environnement base, pour le garder simple et stable.\nCréez un nouvel environnement nommé mon_projet, avec une version spécifique de Python :\nconda create --name mon_projet python=3.11\nRépondez y lorsque conda demande une confirmation.\nPour l’activer :\nconda activate mon_projet\nLe nom de l’environnement actif apparaît généralement entre parenthèses au début de la ligne de commande, par exemple (mon_projet).\nPour revenir à l’environnement de base :\nconda deactivate"
-  },
-  {
-    "objectID": "04_anaconda_miniconda.html#installer-et-lister-des-paquets",
-    "href": "04_anaconda_miniconda.html#installer-et-lister-des-paquets",
-    "title": "Guide de démarrage avec Anaconda et Miniconda",
-    "section": "Installer et lister des paquets",
-    "text": "Installer et lister des paquets\nUne fois l’environnement activé, installez un paquet à la demande. Par exemple, pour installer numpy :\nconda install numpy\nPour voir tous les paquets présents dans l’environnement actif :\nconda list"
-  },
-  {
-    "objectID": "04_anaconda_miniconda.html#supprimer-un-environnement-inutile",
-    "href": "04_anaconda_miniconda.html#supprimer-un-environnement-inutile",
-    "title": "Guide de démarrage avec Anaconda et Miniconda",
-    "section": "Supprimer un environnement inutile",
-    "text": "Supprimer un environnement inutile\nSi un environnement n’est plus nécessaire, vous pouvez le retirer pour libérer de l’espace disque :\nconda env remove --name mon_projet"
-  },
-  {
-    "objectID": "04_anaconda_miniconda.html#bonnes-pratiques-pour-débuter",
-    "href": "04_anaconda_miniconda.html#bonnes-pratiques-pour-débuter",
-    "title": "Guide de démarrage avec Anaconda et Miniconda",
-    "section": "Bonnes pratiques pour débuter",
-    "text": "Bonnes pratiques pour débuter\n\nPréférez Miniconda à Anaconda si l’espace disque ou la rapidité d’installation vous importent.\nCréez un environnement distinct pour chaque projet, plutôt que de tout installer dans base.\nDonnez des noms d’environnement clairs, liés au projet concerné.\nInstallez uniquement les paquets dont vous avez besoin, plutôt que d’installer par précaution.\nUtilisez toujours conda deactivate avant de fermer un terminal, par bonne habitude.\nDocumentez les paquets nécessaires à un projet avec conda list --export pour pouvoir recréer l’environnement plus tard."
-  },
-  {
-    "objectID": "04_anaconda_miniconda.html#vérification-des-acquis",
-    "href": "04_anaconda_miniconda.html#vérification-des-acquis",
-    "title": "Guide de démarrage avec Anaconda et Miniconda",
-    "section": "Vérification des acquis",
-    "text": "Vérification des acquis\nÀ ce stade, vous devriez être capable de :\n\nInstaller Anaconda et reconnaître son interface Anaconda Navigator.\nInstaller Miniconda et vérifier son installation avec conda --version.\nExpliquer la différence principale entre Anaconda et Miniconda, en particulier au niveau de l’espace disque.\nCréer, activer et désactiver un environnement conda.\nInstaller un paquet dans un environnement actif.\nSupprimer un environnement devenu inutile.\n\n\n\n\n\n\n\nAstuceProchaine étape\n\n\n\nCréez un environnement nommé essai_conda avec Python 3.11, activez-le, installez le paquet pandas, puis vérifiez qu’il apparaît bien avec la commande conda list."
+    "text": "Vérification des acquis\nÀ ce stade, vous devriez être capable de :\n\nExpliquer pourquoi Spyder doit être installé dans son propre environnement conda.\nCréer l’environnement spyder-env et l’ouvrir avec le raccourci créé automatiquement.\nInstaller spyder-kernels dans un environnement de projet.\nTrouver le chemin de l’interpréteur d’un environnement conda.\nSélectionner cet interpréteur dans les préférences de Spyder et redémarrer la console.\n\n\n\n\n\n\n\nAstuceProchaine étape\n\n\n\nCréez un second environnement de projet nommé essai_spyder, installez-y spyder-kernels et pandas, puis connectez Spyder à cet environnement en suivant les étapes 6 à 8 de ce guide."
   }
 ]

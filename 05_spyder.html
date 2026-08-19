@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Guide de démarrage avec Anaconda et Miniconda – Guides de démarrage</title>
+<title>Guide de démarrage avec Spyder – Guides de démarrage</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -309,11 +309,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Google Colab</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./04_anaconda_miniconda.html" aria-current="page"> 
+    <a class="nav-link" href="./04_anaconda_miniconda.html"> 
 <span class="menu-text">Anaconda et Miniconda</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./05_spyder.html"> 
+    <a class="nav-link active" href="./05_spyder.html" aria-current="page"> 
 <span class="menu-text">Spyder</span></a>
   </li>  
 </ul>
@@ -334,24 +334,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#objectif" id="toc-objectif" class="nav-link active" data-scroll-target="#objectif">Objectif</a></li>
+  <li><a href="#pourquoi-installer-spyder-dans-son-propre-environnement" id="toc-pourquoi-installer-spyder-dans-son-propre-environnement" class="nav-link" data-scroll-target="#pourquoi-installer-spyder-dans-son-propre-environnement">Pourquoi installer Spyder dans son propre environnement</a></li>
   <li><a href="#ce-dont-vous-avez-besoin" id="toc-ce-dont-vous-avez-besoin" class="nav-link" data-scroll-target="#ce-dont-vous-avez-besoin">Ce dont vous avez besoin</a></li>
-  <li><a href="#partie-1-installer-anaconda" id="toc-partie-1-installer-anaconda" class="nav-link" data-scroll-target="#partie-1-installer-anaconda">Partie 1 : installer Anaconda</a>
+  <li><a href="#étape-1-créer-lenvironnement-dédié-à-spyder" id="toc-étape-1-créer-lenvironnement-dédié-à-spyder" class="nav-link" data-scroll-target="#étape-1-créer-lenvironnement-dédié-à-spyder">Étape 1 : créer l’environnement dédié à Spyder</a></li>
+  <li><a href="#étape-2-configurer-le-canal-conda-forge-par-défaut-recommandé" id="toc-étape-2-configurer-le-canal-conda-forge-par-défaut-recommandé" class="nav-link" data-scroll-target="#étape-2-configurer-le-canal-conda-forge-par-défaut-recommandé">Étape 2 : configurer le canal conda-forge par défaut (recommandé)</a></li>
+  <li><a href="#étape-3-ouvrir-spyder" id="toc-étape-3-ouvrir-spyder" class="nav-link" data-scroll-target="#étape-3-ouvrir-spyder">Étape 3 : ouvrir Spyder</a>
   <ul class="collapse">
-  <li><a href="#étape-1-télécharger-anaconda" id="toc-étape-1-télécharger-anaconda" class="nav-link" data-scroll-target="#étape-1-télécharger-anaconda">Étape 1 : télécharger Anaconda</a></li>
-  <li><a href="#étape-2-installer-anaconda" id="toc-étape-2-installer-anaconda" class="nav-link" data-scroll-target="#étape-2-installer-anaconda">Étape 2 : installer Anaconda</a></li>
-  <li><a href="#étape-3-vérifier-linstallation-danaconda" id="toc-étape-3-vérifier-linstallation-danaconda" class="nav-link" data-scroll-target="#étape-3-vérifier-linstallation-danaconda">Étape 3 : vérifier l’installation d’Anaconda</a></li>
+  <li><a href="#méthode-recommandée-utiliser-le-raccourci-créé-automatiquement" id="toc-méthode-recommandée-utiliser-le-raccourci-créé-automatiquement" class="nav-link" data-scroll-target="#méthode-recommandée-utiliser-le-raccourci-créé-automatiquement">Méthode recommandée : utiliser le raccourci créé automatiquement</a></li>
+  <li><a href="#méthode-alternative-lancer-spyder-depuis-un-terminal" id="toc-méthode-alternative-lancer-spyder-depuis-un-terminal" class="nav-link" data-scroll-target="#méthode-alternative-lancer-spyder-depuis-un-terminal">Méthode alternative : lancer Spyder depuis un terminal</a></li>
+  <li><a href="#créer-un-raccourci-personnalisé-optionnel-avancé" id="toc-créer-un-raccourci-personnalisé-optionnel-avancé" class="nav-link" data-scroll-target="#créer-un-raccourci-personnalisé-optionnel-avancé">Créer un raccourci personnalisé (optionnel, avancé)</a></li>
   </ul></li>
-  <li><a href="#partie-2-installer-miniconda" id="toc-partie-2-installer-miniconda" class="nav-link" data-scroll-target="#partie-2-installer-miniconda">Partie 2 : installer Miniconda</a>
-  <ul class="collapse">
-  <li><a href="#étape-1-télécharger-miniconda" id="toc-étape-1-télécharger-miniconda" class="nav-link" data-scroll-target="#étape-1-télécharger-miniconda">Étape 1 : télécharger Miniconda</a></li>
-  <li><a href="#étape-2-installer-miniconda" id="toc-étape-2-installer-miniconda" class="nav-link" data-scroll-target="#étape-2-installer-miniconda">Étape 2 : installer Miniconda</a></li>
-  <li><a href="#étape-3-vérifier-linstallation-de-miniconda" id="toc-étape-3-vérifier-linstallation-de-miniconda" class="nav-link" data-scroll-target="#étape-3-vérifier-linstallation-de-miniconda">Étape 3 : vérifier l’installation de Miniconda</a></li>
-  </ul></li>
-  <li><a href="#pourquoi-ce-guide-recommande-miniconda" id="toc-pourquoi-ce-guide-recommande-miniconda" class="nav-link" data-scroll-target="#pourquoi-ce-guide-recommande-miniconda">Pourquoi ce guide recommande Miniconda</a></li>
-  <li><a href="#comprendre-les-environnements-conda" id="toc-comprendre-les-environnements-conda" class="nav-link" data-scroll-target="#comprendre-les-environnements-conda">Comprendre les environnements conda</a></li>
-  <li><a href="#créer-et-utiliser-un-environnement" id="toc-créer-et-utiliser-un-environnement" class="nav-link" data-scroll-target="#créer-et-utiliser-un-environnement">Créer et utiliser un environnement</a></li>
-  <li><a href="#installer-et-lister-des-modules" id="toc-installer-et-lister-des-modules" class="nav-link" data-scroll-target="#installer-et-lister-des-modules">Installer et lister des modules</a></li>
-  <li><a href="#supprimer-un-environnement-inutile" id="toc-supprimer-un-environnement-inutile" class="nav-link" data-scroll-target="#supprimer-un-environnement-inutile">Supprimer un environnement inutile</a></li>
+  <li><a href="#étape-4-préparer-un-environnement-de-projet" id="toc-étape-4-préparer-un-environnement-de-projet" class="nav-link" data-scroll-target="#étape-4-préparer-un-environnement-de-projet">Étape 4 : préparer un environnement de projet</a></li>
+  <li><a href="#étape-5-installer-spyder-kernels-dans-lenvironnement-de-projet" id="toc-étape-5-installer-spyder-kernels-dans-lenvironnement-de-projet" class="nav-link" data-scroll-target="#étape-5-installer-spyder-kernels-dans-lenvironnement-de-projet">Étape 5 : installer spyder-kernels dans l’environnement de projet</a></li>
+  <li><a href="#étape-6-trouver-le-chemin-de-linterpréteur-python-de-lenvironnement" id="toc-étape-6-trouver-le-chemin-de-linterpréteur-python-de-lenvironnement" class="nav-link" data-scroll-target="#étape-6-trouver-le-chemin-de-linterpréteur-python-de-lenvironnement">Étape 6 : trouver le chemin de l’interpréteur Python de l’environnement</a></li>
+  <li><a href="#étape-7-choisir-lenvironnement-à-utiliser-dans-spyder" id="toc-étape-7-choisir-lenvironnement-à-utiliser-dans-spyder" class="nav-link" data-scroll-target="#étape-7-choisir-lenvironnement-à-utiliser-dans-spyder">Étape 7 : choisir l’environnement à utiliser dans Spyder</a></li>
+  <li><a href="#étape-8-redémarrer-la-console-pour-appliquer-le-changement" id="toc-étape-8-redémarrer-la-console-pour-appliquer-le-changement" class="nav-link" data-scroll-target="#étape-8-redémarrer-la-console-pour-appliquer-le-changement">Étape 8 : redémarrer la console pour appliquer le changement</a></li>
+  <li><a href="#étape-9-ajouter-dautres-environnements-de-projet-plus-tard" id="toc-étape-9-ajouter-dautres-environnements-de-projet-plus-tard" class="nav-link" data-scroll-target="#étape-9-ajouter-dautres-environnements-de-projet-plus-tard">Étape 9 : ajouter d’autres environnements de projet plus tard</a></li>
+  <li><a href="#configurations-requises-à-connaître" id="toc-configurations-requises-à-connaître" class="nav-link" data-scroll-target="#configurations-requises-à-connaître">Configurations requises à connaître</a></li>
   <li><a href="#bonnes-pratiques-pour-débuter" id="toc-bonnes-pratiques-pour-débuter" class="nav-link" data-scroll-target="#bonnes-pratiques-pour-débuter">Bonnes pratiques pour débuter</a></li>
   <li><a href="#vérification-des-acquis" id="toc-vérification-des-acquis" class="nav-link" data-scroll-target="#vérification-des-acquis">Vérification des acquis</a></li>
   </ul>
@@ -363,8 +362,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Guide de démarrage avec Anaconda et Miniconda</h1>
-<p class="subtitle lead">Installer un environnement Python scientifique avec conda</p>
+<h1 class="title">Guide de démarrage avec Spyder</h1>
+<p class="subtitle lead">Installer Spyder dans son propre environnement et l’utiliser avec plusieurs environnements conda</p>
 </div>
 
 
@@ -383,18 +382,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="objectif" class="level2">
 <h2 class="anchored" data-anchor-id="objectif">Objectif</h2>
-<p>Ce guide explique ce que sont Anaconda et Miniconda, comment installer chacun d’eux, puis pourquoi ce guide recommande finalement Miniconda pour la plupart des usages.</p>
-<div class="callout callout-style-default callout-important callout-titled">
+<p>Ce guide explique comment installer Spyder correctement à l’aide de conda, puis comment le connecter à différents environnements de projet, sans devoir réinstaller Spyder à chaque fois. Il s’adresse aux personnes qui commencent totalement avec Spyder, mais qui ont déjà installé conda (Miniconda ou Anaconda).</p>
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Important
+Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Si vous êtes débutant et que c’est la première fois que vous travaillez avec ces outils, il est fortement recommandé d’installer <strong>seulement un des deux</strong>, Anaconda <strong>ou</strong> Miniconda, et non les deux à la fois. Installer les deux en parallèle peut créer des conflits entre les installations de conda et compliquer inutilement vos premiers pas. Choisissez l’option qui correspond le mieux à vos besoins, en vous référant à la comparaison présentée plus bas dans ce guide, puis suivez uniquement les étapes correspondantes.</p>
+<p>Ce guide suppose que Miniconda ou Anaconda est déjà installé sur votre ordinateur. Si ce n’est pas le cas, consultez d’abord le guide de démarrage avec Anaconda et Miniconda.</p>
 </div>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -408,82 +407,133 @@ Important
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li><strong>Conda</strong> : un gestionnaire de modules et d’environnements, capable d’installer Python lui-même ainsi que des milliers de bibliothèques scientifiques.</li>
-<li><strong>Environnement</strong> : un espace isolé contenant une version de Python et des modules spécifiques, séparé des autres environnements sur le même ordinateur.</li>
-<li><strong>Module (package)</strong> : une bibliothèque ajoutant des fonctionnalités à Python, par exemple pour l’analyse de données ou les graphiques.</li>
-<li><strong>Distribution</strong> : un ensemble regroupant Python, conda et, parfois, des modules préinstallés.</li>
-<li><strong>Terminal</strong> : la ligne de commande utilisée pour lancer les commandes <code>conda</code>.</li>
+<li><strong>Spyder</strong> : un environnement de développement (IDE) conçu pour la programmation scientifique en Python, avec un éditeur de code, une console et un explorateur de variables.</li>
+<li><strong>Interpréteur Python</strong> : le programme qui exécute réellement le code Python. Chaque environnement conda possède son propre interpréteur.</li>
+<li><strong>Spyder-kernels</strong> : un petit paquet qui permet à Spyder de communiquer avec l’interpréteur Python d’un environnement donné.</li>
+<li><strong>Environnement dédié à Spyder</strong> : un environnement conda qui ne contient que Spyder lui-même, séparé des environnements utilisés pour vos projets.</li>
 </ul>
 </div>
 </div>
+</section>
+<section id="pourquoi-installer-spyder-dans-son-propre-environnement" class="level2">
+<h2 class="anchored" data-anchor-id="pourquoi-installer-spyder-dans-son-propre-environnement">Pourquoi installer Spyder dans son propre environnement</h2>
+<p>Il est tentant d’installer Spyder directement dans l’environnement <code>base</code>, ou dans chaque environnement de projet créé. Ce n’est cependant pas la méthode recommandée par l’équipe de Spyder elle-même.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>N’installez jamais Spyder dans l’environnement <code>base</code>, et éviter de le réinstaller dans chaque environnement de projet. Installer Spyder à répétition consomme beaucoup d’espace disque et de temps, et peut provoquer des conflits entre paquets d’un environnement à l’autre.</p>
+</div>
+</div>
+<p>La bonne pratique consiste à :</p>
+<ol type="1">
+<li>Créer <strong>un seul environnement dédié</strong> à Spyder, par exemple nommé <code>spyder-env</code>.</li>
+<li>Installer uniquement le petit paquet <code>spyder-kernels</code> dans chacun de vos environnements de projet.</li>
+<li>Lancer Spyder depuis <code>spyder-env</code>, puis lui indiquer, à l’intérieur de l’interface, quel environnement de projet utiliser pour exécuter le code.</li>
+</ol>
+<p>Cette approche permet de toujours lancer Spyder de la même façon, peu importe le projet sur lequel vous travaillez, tout en gardant vos environnements de projet légers et isolés.</p>
 </section>
 <section id="ce-dont-vous-avez-besoin" class="level2">
 <h2 class="anchored" data-anchor-id="ce-dont-vous-avez-besoin">Ce dont vous avez besoin</h2>
 <ul>
-<li>Un ordinateur avec Windows, macOS ou Linux.</li>
-<li>Une connexion Internet pour le téléchargement.</li>
-<li>Au moins 10 Go d’espace disque libre si vous installez Anaconda, ou environ 1 Go pour Miniconda.</li>
-<li>Environ 15 à 20 minutes pour l’installation d’Anaconda, ou environ 10 minutes pour Miniconda.</li>
+<li>Miniconda ou Anaconda déjà installé sur votre ordinateur.</li>
+<li>Un terminal (ou Anaconda Prompt sur Windows).</li>
+<li>Une connexion Internet pour télécharger Spyder et ses dépendances.</li>
+<li>Environ 10 minutes pour l’installation initiale.</li>
 </ul>
 </section>
-<section id="partie-1-installer-anaconda" class="level2">
-<h2 class="anchored" data-anchor-id="partie-1-installer-anaconda">Partie 1 : installer Anaconda</h2>
-<p>Anaconda Distribution est une installation complète, qui inclut conda, Python et plus de 1 500 modules scientifiques préinstallés, ainsi qu’une interface graphique appelée Anaconda Navigator [web:134][web:142].</p>
-<section id="étape-1-télécharger-anaconda" class="level3">
-<h3 class="anchored" data-anchor-id="étape-1-télécharger-anaconda">Étape 1 : télécharger Anaconda</h3>
-<ol type="1">
-<li>Ouvrez votre navigateur et allez à l’adresse suivante : <a href="https://www.anaconda.com/docs/getting-started/installation" class="uri">https://www.anaconda.com/docs/getting-started/installation</a></li>
-<li>Sélectionnez votre système d’exploitation (Windows, macOS ou Linux).</li>
-<li>Choisissez <strong>Anaconda Distribution</strong> dans la liste des installateurs.</li>
-<li>Sur Mac, vérifiez le type de puce de votre ordinateur avant de télécharger :
-<ul>
-<li><strong>Apple Silicon</strong> (M1, M2, M3, la plupart des modèles depuis fin 2020) : choisissez la version <strong>arm64</strong>.</li>
-<li><strong>Intel</strong> (modèles plus anciens) : choisissez la version <strong>x86_64</strong>.</li>
-</ul></li>
-<li>Téléchargez l’installateur graphique correspondant à votre système.</li>
-</ol>
-</section>
-<section id="étape-2-installer-anaconda" class="level3">
-<h3 class="anchored" data-anchor-id="étape-2-installer-anaconda">Étape 2 : installer Anaconda</h3>
-<section id="sur-windows" class="level4">
-<h4 class="anchored" data-anchor-id="sur-windows">Sur Windows</h4>
-<ol type="1">
-<li>Double-cliquez sur le fichier <code>.exe</code> téléchargé.</li>
-<li>Cliquez sur <strong>Next</strong>, acceptez les termes de la licence.</li>
-<li>Choisissez <strong>Just Me (recommended)</strong> plutôt que <strong>All Users</strong>.</li>
-<li>Conservez le dossier d’installation proposé par défaut.</li>
-<li>Cliquez sur <strong>Install</strong>. Cette étape peut prendre plusieurs minutes, puisque plus de 1 500 modules sont installés.</li>
-<li>Cliquez sur <strong>Finish</strong> une fois terminé.</li>
-</ol>
-</section>
-<section id="sur-macos" class="level4">
-<h4 class="anchored" data-anchor-id="sur-macos">Sur macOS</h4>
-<ol type="1">
-<li>Double-cliquez sur le fichier <code>.pkg</code> téléchargé.</li>
-<li>Cliquez sur <strong>Continue</strong>, acceptez les termes de la licence.</li>
-<li>Conservez l’emplacement d’installation proposé par défaut.</li>
-<li>Attendez la fin de l’installation, ce qui peut prendre plusieurs minutes, puis cliquez sur <strong>Close</strong>.</li>
-</ol>
-</section>
-<section id="sur-linux" class="level4">
-<h4 class="anchored" data-anchor-id="sur-linux">Sur Linux</h4>
-<p>Dans un terminal, exécutez :</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">bash</span> ~/Anaconda3-latest-Linux-x86_64.sh</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Suivez les instructions affichées, en acceptant les valeurs par défaut si vous n’êtes pas certain d’un réglage.</p>
-</section>
-</section>
-<section id="étape-3-vérifier-linstallation-danaconda" class="level3">
-<h3 class="anchored" data-anchor-id="étape-3-vérifier-linstallation-danaconda">Étape 3 : vérifier l’installation d’Anaconda</h3>
-<ol type="1">
-<li>Ouvrez <strong>Anaconda Navigator</strong> depuis le menu Démarrer (Windows) ou le dossier Applications (macOS).</li>
-<li>L’interface graphique d’Anaconda Navigator devrait s’afficher, avec une liste d’applications comme Jupyter Notebook, Spyder et JupyterLab déjà installées.</li>
-</ol>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/conda_navigator.webp" class="img-fluid figure-img" style="width:80.0%"></p>
-<figcaption>Anaconda navigator. Source :<a href="https://www.anaconda.com/docs/legacy/anaconda-navigator/main">Site web Anaconda</a></figcaption>
-</figure>
+<section id="étape-1-créer-lenvironnement-dédié-à-spyder" class="level2">
+<h2 class="anchored" data-anchor-id="étape-1-créer-lenvironnement-dédié-à-spyder">Étape 1 : créer l’environnement dédié à Spyder</h2>
+<p>Ouvrez un terminal (ou Anaconda Prompt sur Windows) et exécutez :</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> create <span class="at">-c</span> conda-forge <span class="at">-n</span> spyder-env spyder</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Cette commande crée un nouvel environnement nommé <code>spyder-env</code>, en installant Spyder depuis le canal <code>conda-forge</code>, généralement plus à jour.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
+<div class="callout-title-container flex-fill">
+Astuce
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Si vous voulez aussi que Spyder reconnaisse automatiquement des paquets scientifiques courants (<code>numpy</code>, <code>scipy</code>, <code>pandas</code>, <code>matplotlib</code>, <code>sympy</code>, <code>cython</code>) directement dans son propre environnement, utilisez plutôt :</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> create <span class="at">-c</span> conda-forge <span class="at">-n</span> spyder-env spyder numpy scipy pandas matplotlib sympy cython</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Ce n’est toutefois pas obligatoire : ces paquets peuvent tout aussi bien vivre uniquement dans vos environnements de projet.</p>
+</div>
+</div>
+<p>Répondez <code>y</code> lorsque conda demande une confirmation.</p>
+</section>
+<section id="étape-2-configurer-le-canal-conda-forge-par-défaut-recommandé" class="level2">
+<h2 class="anchored" data-anchor-id="étape-2-configurer-le-canal-conda-forge-par-défaut-recommandé">Étape 2 : configurer le canal conda-forge par défaut (recommandé)</h2>
+<p>Pour que les futures mises à jour de Spyder restent cohérentes avec le canal utilisé à l’installation, activez l’environnement puis configurez-le :</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate spyder-env</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> config <span class="at">--env</span> <span class="at">--add</span> channels conda-forge</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> config <span class="at">--env</span> <span class="at">--set</span> channel_priority strict</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Cette étape n’est pas obligatoire pour démarrer, mais elle évite des conflits de paquets lors de mises à jour futures.</p>
+</section>
+<section id="étape-3-ouvrir-spyder" class="level2">
+<h2 class="anchored" data-anchor-id="étape-3-ouvrir-spyder">Étape 3 : ouvrir Spyder</h2>
+<p>Lorsque vous installez Spyder par conda, un raccourci est créé <strong>automatiquement</strong> dans le menu Démarrer de Windows (ou le lanceur d’applications sur macOS/Linux). Vous n’avez donc rien à construire vous-même pour ouvrir Spyder normalement.</p>
+<section id="méthode-recommandée-utiliser-le-raccourci-créé-automatiquement" class="level3">
+<h3 class="anchored" data-anchor-id="méthode-recommandée-utiliser-le-raccourci-créé-automatiquement">Méthode recommandée : utiliser le raccourci créé automatiquement</h3>
+<ol type="1">
+<li>Ouvrez le menu Démarrer.</li>
+<li>Cherchez “Spyder”.</li>
+<li>Repérez le raccourci dont le nom contient <strong><code>(spyder-env)</code></strong>, par exemple <code>Spyder (spyder-env)</code>.</li>
+<li>Cliquez sur ce raccourci pour lancer Spyder directement, sans passer par un terminal.</li>
+</ol>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Si plusieurs raccourcis Spyder apparaissent (par exemple parce que Spyder a aussi été installé via l’installateur standalone ou une autre méthode), assurez-vous toujours de choisir celui qui contient <code>(spyder-env)</code> dans son nom. Cela garantit que Spyder démarre bien depuis l’environnement que vous avez préparé à l’étape 1.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Astuce
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Pour un accès encore plus rapide, faites un clic droit sur ce raccourci, puis choisissez <strong>Épingler à la barre des tâches</strong> ou <strong>Épingler au menu Démarrer</strong>.</p>
+</div>
+</div>
+</section>
+<section id="méthode-alternative-lancer-spyder-depuis-un-terminal" class="level3">
+<h3 class="anchored" data-anchor-id="méthode-alternative-lancer-spyder-depuis-un-terminal">Méthode alternative : lancer Spyder depuis un terminal</h3>
+<p>Si vous préférez démarrer Spyder depuis un terminal plutôt que depuis le menu Démarrer, activez d’abord l’environnement, puis lancez la commande :</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate spyder-env</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">spyder</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Cette méthode est équivalente au raccourci automatique, mais utile si vous êtes déjà dans un terminal pour une autre raison.</p>
+</section>
+<section id="créer-un-raccourci-personnalisé-optionnel-avancé" class="level3">
+<h3 class="anchored" data-anchor-id="créer-un-raccourci-personnalisé-optionnel-avancé">Créer un raccourci personnalisé (optionnel, avancé)</h3>
+<p>Il est possible de créer manuellement un raccourci Windows qui active un environnement précis avant de lancer une commande, par exemple si vous voulez démarrer directement dans un environnement de projet particulier plutôt que dans <code>spyder-env</code>.</p>
+<ol type="1">
+<li>Faites un clic droit sur le bureau, puis choisissez <strong>Nouveau &gt; Raccourci</strong>.</li>
+<li>Dans le champ d’emplacement, entrez une ligne semblable à celle-ci, en adaptant le chemin à votre installation :</li>
+</ol>
+<pre><code>%windir%\System32\cmd.exe /K C:\Users\votre_nom\miniconda3\Scripts\activate.bat spyder-env</code></pre>
+<ol start="3" type="1">
+<li>Cliquez sur <strong>Suivant</strong>, donnez un nom clair au raccourci, puis <strong>Terminer</strong>.</li>
+</ol>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -494,176 +544,122 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>L’image ci-dessus montre l’interface d’Anaconda Navigator telle qu’elle apparaît après une installation réussie. Si vous obtenez un écran similaire, l’installation a fonctionné correctement.</p>
+<p>Cette méthode manuelle n’est généralement pas nécessaire, puisque le raccourci automatique créé à l’installation suffit pour la grande majorité des utilisations. Réservez-la à des cas particuliers, par exemple si vous gérez plusieurs environnements Spyder distincts sur le même ordinateur.</p>
 </div>
 </div>
 </section>
 </section>
-<section id="partie-2-installer-miniconda" class="level2">
-<h2 class="anchored" data-anchor-id="partie-2-installer-miniconda">Partie 2 : installer Miniconda</h2>
-<p>Miniconda installe uniquement conda et Python, sans module préinstallé ni interface graphique. Chaque module est ensuite ajouté à la demande, selon les besoins réels du projet [web:146].</p>
-<section id="étape-1-télécharger-miniconda" class="level3">
-<h3 class="anchored" data-anchor-id="étape-1-télécharger-miniconda">Étape 1 : télécharger Miniconda</h3>
+<section id="étape-4-préparer-un-environnement-de-projet" class="level2">
+<h2 class="anchored" data-anchor-id="étape-4-préparer-un-environnement-de-projet">Étape 4 : préparer un environnement de projet</h2>
+<p>Spyder ne doit pas exécuter votre code directement depuis <code>spyder-env</code>. Créez plutôt un environnement séparé pour chaque projet, comme recommandé dans le guide Anaconda et Miniconda.</p>
+<p>Dans un nouveau terminal (sans nécessairement fermer Spyder) :</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> create <span class="at">-n</span> mon_projet python=3.11</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate mon_projet</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="étape-5-installer-spyder-kernels-dans-lenvironnement-de-projet" class="level2">
+<h2 class="anchored" data-anchor-id="étape-5-installer-spyder-kernels-dans-lenvironnement-de-projet">Étape 5 : installer spyder-kernels dans l’environnement de projet</h2>
+<p>Pour que Spyder puisse se connecter à cet environnement, installez-y le paquet <code>spyder-kernels</code> :</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> install <span class="at">-c</span> conda-forge spyder-kernels</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>N’installez jamais Spyder lui-même (le paquet complet) dans un environnement de projet. Seul <code>spyder-kernels</code> est nécessaire pour que Spyder puisse s’y connecter.</p>
+</div>
+</div>
+</section>
+<section id="étape-6-trouver-le-chemin-de-linterpréteur-python-de-lenvironnement" class="level2">
+<h2 class="anchored" data-anchor-id="étape-6-trouver-le-chemin-de-linterpréteur-python-de-lenvironnement">Étape 6 : trouver le chemin de l’interpréteur Python de l’environnement</h2>
+<p>Toujours avec <code>mon_projet</code> activé dans le terminal, exécutez :</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-c</span> <span class="st">"import sys; print(sys.executable)"</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Cette commande affiche le chemin complet vers l’interpréteur Python de cet environnement, par exemple :</p>
+<ul>
+<li>Sur Windows : <code>C:\Users\votre_nom\miniconda3\envs\mon_projet\python.exe</code></li>
+<li>Sur macOS/Linux : <code>/home/votre_nom/miniconda3/envs/mon_projet/bin/python</code></li>
+</ul>
+<p>Copiez ce chemin, il sera nécessaire à l’étape suivante.</p>
+</section>
+<section id="étape-7-choisir-lenvironnement-à-utiliser-dans-spyder" class="level2">
+<h2 class="anchored" data-anchor-id="étape-7-choisir-lenvironnement-à-utiliser-dans-spyder">Étape 7 : choisir l’environnement à utiliser dans Spyder</h2>
 <ol type="1">
-<li>Ouvrez votre navigateur et allez à l’adresse suivante : <a href="https://www.anaconda.com/docs/getting-started/installation" class="uri">https://www.anaconda.com/docs/getting-started/installation</a></li>
-<li>Sélectionnez votre système d’exploitation (Windows, macOS ou Linux).</li>
-<li>Choisissez <strong>Miniconda</strong> plutôt qu’Anaconda Distribution dans la liste des installateurs.</li>
-<li>Sur Mac, choisissez la version correspondant à votre puce, <strong>arm64</strong> ou <strong>x86_64</strong>, comme pour Anaconda.</li>
-<li>Téléchargez l’installateur graphique correspondant à votre système.</li>
+<li>Dans Spyder, cliquez sur le nom de l’environnement actuellement affiché dans la barre d’état, en bas de la fenêtre.</li>
+<li>Cliquez sur <strong>Change default environment in Preferences…</strong> (ou ouvrez directement <strong>Tools &gt; Preferences &gt; Python interpreter</strong>).</li>
+<li>Dans la section <strong>Python interpreter</strong>, sélectionnez l’option <strong>Select interpreter</strong>, puis choisissez votre environnement dans la liste déroulante si celui-ci y apparaît automatiquement.</li>
+<li>S’il n’apparaît pas dans la liste, utilisez le bouton <strong>Select file</strong>, ou collez directement le chemin copié à l’étape précédente dans le champ de texte prévu.</li>
+<li>Cliquez sur <strong>OK</strong> ou <strong>Apply</strong> pour valider.</li>
 </ol>
 </section>
-<section id="étape-2-installer-miniconda" class="level3">
-<h3 class="anchored" data-anchor-id="étape-2-installer-miniconda">Étape 2 : installer Miniconda</h3>
-<section id="sur-windows-1" class="level4">
-<h4 class="anchored" data-anchor-id="sur-windows-1">Sur Windows</h4>
+<section id="étape-8-redémarrer-la-console-pour-appliquer-le-changement" class="level2">
+<h2 class="anchored" data-anchor-id="étape-8-redémarrer-la-console-pour-appliquer-le-changement">Étape 8 : redémarrer la console pour appliquer le changement</h2>
+<p>Pour que Spyder utilise réellement le nouvel interpréteur :</p>
 <ol type="1">
-<li>Double-cliquez sur le fichier <code>.exe</code> téléchargé.</li>
-<li>Cliquez sur <strong>Next</strong>, acceptez les termes de la licence.</li>
-<li>Choisissez <strong>Just Me (recommended)</strong> plutôt que <strong>All Users</strong>.</li>
-<li>Conservez le dossier d’installation proposé par défaut.</li>
-<li>Dans les options avancées, cochez <strong>Add Miniconda3 to my PATH environment variable</strong> si vous voulez utiliser <code>conda</code> directement depuis n’importe quel terminal [web:146].</li>
-<li>Cliquez sur <strong>Install</strong>, puis sur <strong>Finish</strong> une fois terminé.</li>
+<li>Allez dans le menu <strong>Consoles</strong>.</li>
+<li>Cliquez sur <strong>Restart kernel</strong>.</li>
 </ol>
+<p>Une nouvelle console s’ouvre, connectée à l’environnement <code>mon_projet</code>. Vous pouvez vérifier que le changement a fonctionné en tapant dans la console :</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sys.executable)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Le chemin affiché doit correspondre à celui copié à l’étape 6.</p>
 </section>
-<section id="sur-macos-1" class="level4">
-<h4 class="anchored" data-anchor-id="sur-macos-1">Sur macOS</h4>
+<section id="étape-9-ajouter-dautres-environnements-de-projet-plus-tard" class="level2">
+<h2 class="anchored" data-anchor-id="étape-9-ajouter-dautres-environnements-de-projet-plus-tard">Étape 9 : ajouter d’autres environnements de projet plus tard</h2>
+<p>Pour chaque nouveau projet, répétez uniquement les étapes 4 à 8 :</p>
 <ol type="1">
-<li>Double-cliquez sur le fichier <code>.pkg</code> téléchargé.</li>
-<li>Cliquez sur <strong>Continue</strong>, acceptez les termes de la licence.</li>
-<li>Conservez l’emplacement d’installation proposé par défaut (<strong>install for me only</strong>).</li>
-<li>Attendez la fin de l’installation, puis cliquez sur <strong>Close</strong>.</li>
+<li>Créer un nouvel environnement conda pour ce projet.</li>
+<li>Y installer <code>spyder-kernels</code>.</li>
+<li>Récupérer le chemin de son interpréteur.</li>
+<li>Le sélectionner dans les préférences de Spyder.</li>
+<li>Redémarrer la console.</li>
 </ol>
-</section>
-<section id="sur-linux-1" class="level4">
-<h4 class="anchored" data-anchor-id="sur-linux-1">Sur Linux</h4>
-<p>Dans un terminal, exécutez :</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">bash</span> ~/Miniconda3-latest-Linux-x86_64.sh</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Suivez les instructions affichées, en acceptant les valeurs par défaut si vous n’êtes pas certain d’un réglage.</p>
-</section>
-</section>
-<section id="étape-3-vérifier-linstallation-de-miniconda" class="level3">
-<h3 class="anchored" data-anchor-id="étape-3-vérifier-linstallation-de-miniconda">Étape 3 : vérifier l’installation de Miniconda</h3>
-<ol type="1">
-<li>Ouvrez un nouveau terminal (fermez l’ancien s’il était déjà ouvert avant l’installation).</li>
-<li>Sur Windows, utilisez <strong>Anaconda Prompt</strong> ou <strong>Anaconda Powershell Prompt</strong>, disponible dans le menu Démarrer.</li>
-<li>Tapez la commande suivante :</li>
-</ol>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> <span class="at">--version</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Vous devriez voir s’afficher un numéro de version, par exemple <code>conda 24.x.x</code>. Cela confirme que l’installation a réussi. Contrairement à Anaconda, aucune interface graphique ne s’ouvre : tout se passe dans le terminal.</p>
-</section>
-</section>
-<section id="pourquoi-ce-guide-recommande-miniconda" class="level2">
-<h2 class="anchored" data-anchor-id="pourquoi-ce-guide-recommande-miniconda">Pourquoi ce guide recommande Miniconda</h2>
-<p>Anaconda et Miniconda installent tous les deux conda et Python, avec accès aux mêmes dépôts de modules. La différence essentielle est la quantité de modules préinstallés, ce qui a un effet direct sur l’espace disque utilisé [web:134].</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Critère</th>
-<th>Anaconda</th>
-<th>Miniconda</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Espace disque requis</td>
-<td>Environ 9,7 Go</td>
-<td>Environ 900 Mo [web:134]</td>
-</tr>
-<tr class="even">
-<td>Modules préinstallés</td>
-<td>Plus de 1 500 modules scientifiques</td>
-<td>Aucun, sauf conda et Python</td>
-</tr>
-<tr class="odd">
-<td>Interface graphique (Anaconda Navigator)</td>
-<td>Incluse</td>
-<td>Non incluse</td>
-</tr>
-<tr class="even">
-<td>Temps d’installation</td>
-<td>Plus long</td>
-<td>Beaucoup plus rapide</td>
-</tr>
-<tr class="odd">
-<td>Contrôle sur les modules installés</td>
-<td>Faible au départ, tout est déjà là</td>
-<td>Total : vous choisissez chaque module</td>
-</tr>
-</tbody>
-</table>
+<p>Spyder lui-même n’a besoin d’être installé qu’une seule fois, dans <code>spyder-env</code>, peu importe le nombre de projets créés par la suite.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Astuce</span>Recommandation de ce guide
+Astuce
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Ce guide recommande <strong>Miniconda</strong> plutôt qu’Anaconda. Miniconda installe uniquement conda, Python et leurs dépendances minimales, ce qui représente environ 900 Mo contre près de 9,7 Go pour Anaconda [web:134]. Les modules dont vous avez réellement besoin (par exemple <code>numpy</code>, <code>pandas</code> ou <code>matplotlib</code>) s’installent ensuite en quelques secondes avec <code>conda install</code>, uniquement lorsque c’est nécessaire. Cela évite d’occuper plusieurs gigaoctets avec des centaines de modules qui resteront probablement inutilisés.</p>
+<p>Une fois plusieurs environnements ajoutés, ils restent généralement visibles dans la liste déroulante des interpréteurs, ce qui permet de basculer d’un projet à l’autre sans avoir à retrouver le chemin complet chaque fois.</p>
 </div>
 </div>
-<p>Si vous avez déjà installé Anaconda à l’étape précédente et que vous souhaitez basculer vers une approche plus légère, il est possible de désinstaller Anaconda plus tard et de repartir avec Miniconda seul, sans perdre vos projets, à condition d’avoir sauvegardé le code source de vos projets séparément (par exemple avec Git).</p>
 </section>
-<section id="comprendre-les-environnements-conda" class="level2">
-<h2 class="anchored" data-anchor-id="comprendre-les-environnements-conda">Comprendre les environnements conda</h2>
-<p>Qu’il s’agisse d’Anaconda ou de Miniconda, la logique des environnements est identique une fois l’installation terminée.</p>
-<p>Un <strong>environnement</strong> conda est un espace isolé, avec sa propre version de Python et ses propres modules. Travailler avec des environnements séparés évite qu’un projet n’entre en conflit avec un autre.</p>
-<p>Pour lister les environnements existants :</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> env list</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Après une installation fraîche, vous devriez voir un environnement nommé <code>base</code>.</p>
-</section>
-<section id="créer-et-utiliser-un-environnement" class="level2">
-<h2 class="anchored" data-anchor-id="créer-et-utiliser-un-environnement">Créer et utiliser un environnement</h2>
-<p>Il est recommandé de ne jamais installer de modules directement dans l’environnement <code>base</code>, pour le garder simple et stable.</p>
-<p>Créez un nouvel environnement nommé <code>mon_projet</code>, avec une version spécifique de Python :</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> create <span class="at">--name</span> mon_projet python=3.11</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Répondez <code>y</code> lorsque conda demande une confirmation.</p>
-<p>Pour l’activer :</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate mon_projet</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Le nom de l’environnement actif apparaît généralement entre parenthèses au début de la ligne de commande, par exemple <code>(mon_projet)</code>.</p>
-<p>Pour revenir à l’environnement de base :</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> deactivate</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-<section id="installer-et-lister-des-modules" class="level2">
-<h2 class="anchored" data-anchor-id="installer-et-lister-des-modules">Installer et lister des modules</h2>
-<p>Une fois l’environnement activé, installez un module à la demande. Par exemple, pour installer <code>numpy</code> :</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> install numpy</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Pour voir tous les modules présents dans l’environnement actif :</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> list</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-<section id="supprimer-un-environnement-inutile" class="level2">
-<h2 class="anchored" data-anchor-id="supprimer-un-environnement-inutile">Supprimer un environnement inutile</h2>
-<p>Si un environnement n’est plus nécessaire, vous pouvez le retirer pour libérer de l’espace disque :</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> env remove <span class="at">--name</span> mon_projet</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="configurations-requises-à-connaître" class="level2">
+<h2 class="anchored" data-anchor-id="configurations-requises-à-connaître">Configurations requises à connaître</h2>
+<ul>
+<li>La version de <code>spyder-kernels</code> installée dans un environnement de projet doit être compatible avec la version de Spyder installée dans <code>spyder-env</code>. En cas d’incompatibilité, Spyder affiche généralement un message d’avertissement précisant la version exacte à installer.</li>
+<li>Un redémarrage du noyau (<strong>Restart kernel</strong>) est nécessaire à chaque changement d’interpréteur : changer l’interpréteur dans les préférences ne suffit pas seul.</li>
+<li>Si un environnement de projet n’apparaît pas automatiquement dans la liste déroulante des interpréteurs, cela signifie généralement que <code>spyder-kernels</code> n’y est pas encore installé.</li>
+</ul>
 </section>
 <section id="bonnes-pratiques-pour-débuter" class="level2">
 <h2 class="anchored" data-anchor-id="bonnes-pratiques-pour-débuter">Bonnes pratiques pour débuter</h2>
 <ul>
-<li>Préférez Miniconda à Anaconda si l’espace disque ou la rapidité d’installation vous importent.</li>
-<li>Créez un environnement distinct pour chaque projet, plutôt que de tout installer dans <code>base</code>.</li>
-<li>Donnez des noms d’environnement clairs, liés au projet concerné.</li>
-<li>Installez uniquement les modules dont vous avez besoin, plutôt que d’installer par précaution.</li>
-<li>Utilisez toujours <code>conda deactivate</code> avant de fermer un terminal, par bonne habitude.</li>
-<li>Documentez les modules nécessaires à un projet avec <code>conda list --export</code> pour pouvoir recréer l’environnement plus tard.</li>
+<li>Gardez un seul environnement dédié à Spyder (<code>spyder-env</code>), jamais réinstallé ailleurs.</li>
+<li>Installez uniquement <code>spyder-kernels</code>, jamais Spyder au complet, dans vos environnements de projet.</li>
+<li>Lancez toujours Spyder depuis le raccourci contenant <code>(spyder-env)</code>, plutôt que d’en créer un nouveau sans nécessité.</li>
+<li>Redémarrez toujours la console après avoir changé d’interpréteur.</li>
+<li>Donnez des noms d’environnement clairs, correspondant à chaque projet.</li>
+<li>Vérifiez régulièrement, avec <code>sys.executable</code>, que Spyder utilise bien l’environnement attendu avant de lancer un script important.</li>
 </ul>
 </section>
 <section id="vérification-des-acquis" class="level2">
 <h2 class="anchored" data-anchor-id="vérification-des-acquis">Vérification des acquis</h2>
 <p>À ce stade, vous devriez être capable de :</p>
 <ul>
-<li>Installer Anaconda et reconnaître son interface Anaconda Navigator.</li>
-<li>Installer Miniconda et vérifier son installation avec <code>conda --version</code>.</li>
-<li>Expliquer la différence principale entre Anaconda et Miniconda, en particulier au niveau de l’espace disque.</li>
-<li>Créer, activer et désactiver un environnement conda.</li>
-<li>Installer un module dans un environnement actif.</li>
-<li>Supprimer un environnement devenu inutile.</li>
+<li>Expliquer pourquoi Spyder doit être installé dans son propre environnement conda.</li>
+<li>Créer l’environnement <code>spyder-env</code> et l’ouvrir avec le raccourci créé automatiquement.</li>
+<li>Installer <code>spyder-kernels</code> dans un environnement de projet.</li>
+<li>Trouver le chemin de l’interpréteur d’un environnement conda.</li>
+<li>Sélectionner cet interpréteur dans les préférences de Spyder et redémarrer la console.</li>
 </ul>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -675,7 +671,7 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Créez un environnement nommé <code>essai_conda</code> avec Python 3.11, activez-le, installez le module <code>pandas</code>, puis vérifiez qu’il apparaît bien avec la commande <code>conda list</code>.</p>
+<p>Créez un second environnement de projet nommé <code>essai_spyder</code>, installez-y <code>spyder-kernels</code> et <code>pandas</code>, puis connectez Spyder à cet environnement en suivant les étapes 6 à 8 de ce guide.</p>
 </div>
 </div>
 
