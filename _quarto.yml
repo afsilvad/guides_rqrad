@@ -15,3 +15,4 @@ format:
     theme: cosmo
     toc: true
     lang: fr
+    link-external-newwindow: true
