@@ -1,0 +1,142 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Guides de démarrage",
+    "section": "",
+    "text": "Cette page regroupe des guides de démarrage simples pour les outils utilisés dans le cadre de la formation du RQRAD sur la gestion et le traitement des données agricoles (24–26 août 2026). Chaque guide est pensé pour des personnes qui commencent totalement avec l’outil concerné : aucune expérience préalable n’est requise."
+  },
+  {
+    "objectID": "index.html#bienvenue",
+    "href": "index.html#bienvenue",
+    "title": "Guides de démarrage",
+    "section": "",
+    "text": "Cette page regroupe des guides de démarrage simples pour les outils utilisés dans le cadre de la formation du RQRAD sur la gestion et le traitement des données agricoles (24–26 août 2026). Chaque guide est pensé pour des personnes qui commencent totalement avec l’outil concerné : aucune expérience préalable n’est requise."
+  },
+  {
+    "objectID": "index.html#liste-des-guides",
+    "href": "index.html#liste-des-guides",
+    "title": "Guides de démarrage",
+    "section": "Liste des guides",
+    "text": "Liste des guides\n\nGoogle Colab — créer un compte Google et exécuter un premier programme en Python dans le navigateur. &lt;!–\nOutil 2 — à compléter.\nOutil 3 — à compléter.\nOutil 4 — à compléter.\nOutil 5 — à compléter. –&gt;"
+  },
+  {
+    "objectID": "index.html#comment-utiliser-ces-guides",
+    "href": "index.html#comment-utiliser-ces-guides",
+    "title": "Guides de démarrage",
+    "section": "Comment utiliser ces guides",
+    "text": "Comment utiliser ces guides\n\nCliquez sur le nom de l’outil qui vous intéresse dans la liste ci-dessus ou dans le menu de navigation, en haut de la page.\nSuivez les étapes dans l’ordre, sans en sauter.\nSi un terme n’est pas clair, il est généralement expliqué dès sa première apparition dans le guide.\nEn cas de problème, notez l’étape où vous êtes bloqué avant de demander de l’aide.\n\n\n\n\n\n\n\nAstuce\n\n\n\nCes guides sont mis à jour au besoin. Le lien de cette page reste toujours le même, même après une mise à jour du contenu."
+  },
+  {
+    "objectID": "03_google_colab.html",
+    "href": "03_google_colab.html",
+    "title": "Guide de démarrage avec Google Colab",
+    "section": "",
+    "text": "Ce guide explique comment créer un compte Google, ouvrir Google Colab et exécuter un premier programme en Python. Il s’adresse aux personnes qui commencent totalement en programmation."
+  },
+  {
+    "objectID": "03_google_colab.html#objectif",
+    "href": "03_google_colab.html#objectif",
+    "title": "Guide de démarrage avec Google Colab",
+    "section": "",
+    "text": "Ce guide explique comment créer un compte Google, ouvrir Google Colab et exécuter un premier programme en Python. Il s’adresse aux personnes qui commencent totalement en programmation."
+  },
+  {
+    "objectID": "03_google_colab.html#quest-ce-que-google-colab",
+    "href": "03_google_colab.html#quest-ce-que-google-colab",
+    "title": "Guide de démarrage avec Google Colab",
+    "section": "Qu’est-ce que Google Colab ?",
+    "text": "Qu’est-ce que Google Colab ?\nGoogle Colab, aussi appelé Colaboratory, est un outil en ligne qui permet d’écrire et d’exécuter du code Python directement dans un navigateur Internet.\nAucune installation de Python n’est nécessaire sur votre ordinateur. Les fichiers créés dans Colab sont appelés des notebooks et sont enregistrés dans Google Drive, au format .ipynb.\n\n\n\n\n\n\nNoteMots importants\n\n\n\n\nNavigateur : application pour accéder à Internet, par exemple Google Chrome, Firefox, Edge ou Safari.\nCompte Google : compte utilisé notamment pour Gmail, Google Drive et Google Colab.\nNotebook : document de travail qui peut contenir du texte, du code et des résultats.\nCellule : petite zone dans un notebook. Une cellule peut contenir du code ou du texte.\nPython : langage de programmation couramment utilisé pour l’analyse de données, l’automatisation et l’intelligence artificielle."
+  },
+  {
+    "objectID": "03_google_colab.html#ce-dont-vous-avez-besoin",
+    "href": "03_google_colab.html#ce-dont-vous-avez-besoin",
+    "title": "Guide de démarrage avec Google Colab",
+    "section": "Ce dont vous avez besoin",
+    "text": "Ce dont vous avez besoin\nAvant de commencer, vérifiez que vous avez :\n\nUn ordinateur connecté à Internet.\nUn navigateur Internet récent.\nUne adresse courriel ou un numéro de téléphone pour créer un compte Google, si nécessaire.\nEnviron 15 minutes pour effectuer les premières étapes.\n\n\n\n\n\n\n\nAvertissement\n\n\n\nNe communiquez jamais votre mot de passe à une autre personne."
+  },
+  {
+    "objectID": "03_google_colab.html#créer-un-compte-google",
+    "href": "03_google_colab.html#créer-un-compte-google",
+    "title": "Guide de démarrage avec Google Colab",
+    "section": "Créer un compte Google",
+    "text": "Créer un compte Google\nSi vous possédez déjà une adresse Gmail ou un compte Google professionnel ou institutionnel, passez directement à la section suivante.\n\nOuvrez votre navigateur Internet.\nAccédez à l’adresse suivante : accounts.google.com/signup\nEntrez votre prénom et votre nom.\nChoisissez un nom d’utilisateur. Il formera généralement votre adresse Gmail.\nCréez un mot de passe robuste et conservez-le dans un endroit sûr.\nSuivez les étapes de vérification demandées par Google.\nUne fois le compte créé, connectez-vous à ce compte dans votre navigateur."
+  },
+  {
+    "objectID": "03_google_colab.html#ouvrir-google-colab",
+    "href": "03_google_colab.html#ouvrir-google-colab",
+    "title": "Guide de démarrage avec Google Colab",
+    "section": "Ouvrir Google Colab",
+    "text": "Ouvrir Google Colab\n\nDans votre navigateur, ouvrez le lien suivant : colab.research.google.com\nConnectez-vous avec votre compte Google si Google le demande.\nLa page d’accueil de Colab s’affiche.\nCliquez sur Nouveau notebook.\n\nUn nouveau document s’ouvre dans un nouvel onglet du navigateur.\n\n\n\n\n\n\nAstuce\n\n\n\nUn notebook Colab est un fichier de travail. Il peut être recherché dans Google Drive, partagé comme un document Google et téléchargé depuis le menu Fichier."
+  },
+  {
+    "objectID": "03_google_colab.html#renommer-le-notebook",
+    "href": "03_google_colab.html#renommer-le-notebook",
+    "title": "Guide de démarrage avec Google Colab",
+    "section": "Renommer le notebook",
+    "text": "Renommer le notebook\nIl est recommandé de donner un nom clair à chaque notebook.\n\nEn haut à gauche de la page, cliquez sur le nom par défaut, par exemple Untitled0.ipynb.\nRemplacez-le par un nom significatif, par exemple : premiers_pas_colab.ipynb\nAppuyez sur la touche Entrée.\n\nLe notebook est enregistré dans Google Drive."
+  },
+  {
+    "objectID": "03_google_colab.html#comprendre-lécran",
+    "href": "03_google_colab.html#comprendre-lécran",
+    "title": "Guide de démarrage avec Google Colab",
+    "section": "Comprendre l’écran",
+    "text": "Comprendre l’écran\nUn notebook contient plusieurs cellules.\n\nCellule de code\nUne cellule de code sert à écrire des instructions en Python. Elle possède habituellement un bouton triangulaire à gauche. Ce bouton permet d’exécuter le code.\n\n\nCellule de texte\nUne cellule de texte sert à ajouter des titres, des explications ou des notes. Pour ajouter une cellule de texte, cliquez sur le bouton + Texte situé dans la partie supérieure de la page.\n\n\nAjouter une cellule de code\nPour ajouter une nouvelle cellule de code, cliquez sur le bouton + Code."
+  },
+  {
+    "objectID": "03_google_colab.html#exécuter-votre-premier-programme",
+    "href": "03_google_colab.html#exécuter-votre-premier-programme",
+    "title": "Guide de démarrage avec Google Colab",
+    "section": "Exécuter votre premier programme",
+    "text": "Exécuter votre premier programme\nDans la première cellule de code, écrivez :\nprint(\"Bonjour, Google Colab !\")\nEnsuite :\n\nCliquez sur le bouton triangulaire situé à gauche de la cellule.\nAttendez quelques secondes.\nLe résultat apparaît sous la cellule.\n\nVous devriez voir :\nBonjour, Google Colab !\nVous venez d’exécuter votre premier programme Python.\n\n\n\n\n\n\nAstuce\n\n\n\nVous pouvez aussi exécuter une cellule avec le raccourci clavier Maj + Entrée. Pour débuter, utilisez d’abord le bouton triangulaire : il est plus facile à identifier."
+  },
+  {
+    "objectID": "03_google_colab.html#faire-un-premier-exercice",
+    "href": "03_google_colab.html#faire-un-premier-exercice",
+    "title": "Guide de démarrage avec Google Colab",
+    "section": "Faire un premier exercice",
+    "text": "Faire un premier exercice\nModifiez le texte entre les guillemets pour y écrire votre prénom :\nprint(\"Bonjour, je m'appelle votre_prénom !\")\nPar exemple :\nprint(\"Bonjour, je m'appelle Léa !\")\nExécutez de nouveau la cellule avec le bouton triangulaire."
+  },
+  {
+    "objectID": "03_google_colab.html#ajouter-du-texte-explicatif",
+    "href": "03_google_colab.html#ajouter-du-texte-explicatif",
+    "title": "Guide de démarrage avec Google Colab",
+    "section": "Ajouter du texte explicatif",
+    "text": "Ajouter du texte explicatif\nUn bon notebook contient du code, mais aussi des explications.\n\nCliquez sur + Texte.\nÉcrivez un titre, par exemple :\n\n# Mon premier notebook\n\nCe notebook contient mes premiers essais avec Python.\n\nCliquez en dehors de la cellule ou utilisez le bouton d’exécution pour afficher le texte mis en forme.\n\nLe symbole # crée un titre principal dans une cellule de texte."
+  },
+  {
+    "objectID": "03_google_colab.html#enregistrer-et-retrouver-son-travail",
+    "href": "03_google_colab.html#enregistrer-et-retrouver-son-travail",
+    "title": "Guide de démarrage avec Google Colab",
+    "section": "Enregistrer et retrouver son travail",
+    "text": "Enregistrer et retrouver son travail\nColab enregistre habituellement les modifications dans Google Drive.\nPour retrouver un notebook plus tard :\n\nOuvrez Google Drive : drive.google.com\nUtilisez la barre de recherche et saisissez le nom de votre notebook.\nVous pouvez aussi ouvrir Colab, puis utiliser Fichier &gt; Ouvrir le notebook ou Fichier &gt; Rechercher des notebooks dans Drive."
+  },
+  {
+    "objectID": "03_google_colab.html#télécharger-une-copie",
+    "href": "03_google_colab.html#télécharger-une-copie",
+    "title": "Guide de démarrage avec Google Colab",
+    "section": "Télécharger une copie",
+    "text": "Télécharger une copie\nIl est utile de conserver une copie de son travail sur son ordinateur.\n\nDans Colab, cliquez sur Fichier.\nChoisissez l’option pour télécharger le notebook.\nEnregistrez le fichier sur votre ordinateur.\n\nLe fichier téléchargé aura généralement l’extension .ipynb, qui est le format standard des notebooks Jupyter."
+  },
+  {
+    "objectID": "03_google_colab.html#partager-un-notebook",
+    "href": "03_google_colab.html#partager-un-notebook",
+    "title": "Guide de démarrage avec Google Colab",
+    "section": "Partager un notebook",
+    "text": "Partager un notebook\nUn notebook Colab peut être partagé de façon similaire à un document Google.\n\nCliquez sur le bouton Partager, en haut à droite.\nAjoutez l’adresse courriel des personnes concernées.\nChoisissez leur niveau d’accès :\n\nLecteur : peut consulter le notebook.\nCommentateur : peut consulter et ajouter des commentaires.\nÉditeur : peut modifier le notebook.\n\nCliquez sur Envoyer.\n\n\n\n\n\n\n\nImportant\n\n\n\nVérifiez toujours que vous partagez le bon fichier et avec les bonnes personnes."
+  },
+  {
+    "objectID": "03_google_colab.html#bonnes-pratiques-pour-débuter",
+    "href": "03_google_colab.html#bonnes-pratiques-pour-débuter",
+    "title": "Guide de démarrage avec Google Colab",
+    "section": "Bonnes pratiques pour débuter",
+    "text": "Bonnes pratiques pour débuter\n\nDonnez un nom clair à chaque notebook.\nAjoutez un titre et une courte explication au début du document.\nExécutez les cellules de code dans l’ordre, de haut en bas.\nLisez attentivement les messages d’erreur : ils indiquent souvent la ligne à corriger.\nConservez une copie importante de votre notebook sur votre ordinateur.\nÉvitez de partager des données personnelles, confidentielles ou sensibles.\nFermez les onglets Colab inutilisés lorsque vous avez terminé."
+  },
+  {
+    "objectID": "03_google_colab.html#vérification-des-acquis",
+    "href": "03_google_colab.html#vérification-des-acquis",
+    "title": "Guide de démarrage avec Google Colab",
+    "section": "Vérification des acquis",
+    "text": "Vérification des acquis\nÀ ce stade, vous devriez être capable de :\n\nCréer ou utiliser un compte Google.\nAccéder à Google Colab.\nCréer et renommer un notebook.\nÉcrire et exécuter une cellule Python.\nAjouter une cellule de texte.\nRetrouver, télécharger et partager un notebook.\n\n\n\n\n\n\n\nAstuceProchaine étape\n\n\n\nEssayez de créer un notebook appelé essai_python.ipynb, ajoutez un titre, puis exécutez une cellule qui affiche une phrase de votre choix."
+  }
+]
