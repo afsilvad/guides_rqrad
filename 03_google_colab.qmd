@@ -36,9 +36,9 @@ Avant de commencer, vérifiez que vous avez :
 Ne communiquez jamais votre mot de passe à une autre personne.
 :::
 
-## Créer un compte Google
+## Étape 1 : créer un compte Google
 
-Si vous possédez déjà une adresse Gmail ou un compte Google professionnel ou institutionnel, passez directement à la section suivante.
+Si vous possédez déjà une adresse Gmail ou un compte Google professionnel ou institutionnel, passez directement à l'étape suivante.
 
 1. Ouvrez votre navigateur Internet.
 2. Accédez à l'adresse suivante : [accounts.google.com/signup](https://accounts.google.com/signup)
@@ -48,7 +48,7 @@ Si vous possédez déjà une adresse Gmail ou un compte Google professionnel ou 
 6. Suivez les étapes de vérification demandées par Google.
 7. Une fois le compte créé, connectez-vous à ce compte dans votre navigateur.
 
-## Ouvrir Google Colab
+## Étape 2 : ouvrir Google Colab
 
 1. Dans votre navigateur, ouvrez le lien suivant : [colab.research.google.com](https://colab.research.google.com/)
 2. Connectez-vous avec votre compte Google si Google le demande.
@@ -61,7 +61,7 @@ Un nouveau document s'ouvre dans un nouvel onglet du navigateur.
 Un notebook Colab est un fichier de travail. Il peut être recherché dans Google Drive, partagé comme un document Google et téléchargé depuis le menu **Fichier**.
 :::
 
-## Renommer le notebook
+## Étape 3 : renommer le notebook
 
 Il est recommandé de donner un nom clair à chaque notebook.
 
@@ -71,7 +71,7 @@ Il est recommandé de donner un nom clair à chaque notebook.
 
 Le notebook est enregistré dans Google Drive.
 
-## Comprendre l'écran
+## Étape 4 : comprendre l'écran
 
 Un notebook contient plusieurs **cellules**.
 
@@ -87,7 +87,7 @@ Une cellule de texte sert à ajouter des titres, des explications ou des notes. 
 
 Pour ajouter une nouvelle cellule de code, cliquez sur le bouton **+ Code**.
 
-## Exécuter votre premier programme
+## Étape 5 : exécuter votre premier programme
 
 Dans la première cellule de code, écrivez :
 
@@ -113,7 +113,7 @@ Vous venez d'exécuter votre premier programme Python.
 Vous pouvez aussi exécuter une cellule avec le raccourci clavier **Maj + Entrée**. Pour débuter, utilisez d'abord le bouton triangulaire : il est plus facile à identifier.
 :::
 
-## Faire un premier exercice
+## Étape 6 : faire un premier exercice
 
 Modifiez le texte entre les guillemets pour y écrire votre prénom :
 
@@ -129,7 +129,7 @@ print("Bonjour, je m'appelle Léa !")
 
 Exécutez de nouveau la cellule avec le bouton triangulaire.
 
-## Ajouter du texte explicatif
+## Étape 7 : ajouter du texte explicatif
 
 Un bon notebook contient du code, mais aussi des explications.
 
@@ -146,7 +146,7 @@ Ce notebook contient mes premiers essais avec Python.
 
 Le symbole `#` crée un titre principal dans une cellule de texte.
 
-## Enregistrer et retrouver son travail
+## Étape 8 : enregistrer et retrouver son travail
 
 Colab enregistre habituellement les modifications dans Google Drive.
 
@@ -156,7 +156,7 @@ Pour retrouver un notebook plus tard :
 2. Utilisez la barre de recherche et saisissez le nom de votre notebook.
 3. Vous pouvez aussi ouvrir Colab, puis utiliser **Fichier > Ouvrir le notebook** ou **Fichier > Rechercher des notebooks dans Drive**.
 
-## Télécharger une copie
+## Étape 9 : télécharger une copie
 
 Il est utile de conserver une copie de son travail sur son ordinateur.
 
@@ -166,7 +166,7 @@ Il est utile de conserver une copie de son travail sur son ordinateur.
 
 Le fichier téléchargé aura généralement l'extension `.ipynb`, qui est le format standard des notebooks Jupyter.
 
-## Partager un notebook
+## Étape 10 : partager un notebook
 
 Un notebook Colab peut être partagé de façon similaire à un document Google.
 

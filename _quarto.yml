@@ -13,6 +13,8 @@ website:
         text: GitHub Codespaces
       - href: 03_google_colab.qmd
         text: Google Colab
+      - href: 04_anaconda_miniconda.qmd
+        text: Anaconda et Miniconda
 
 format:
   html:

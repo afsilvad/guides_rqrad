@@ -19,7 +19,7 @@ Ce guide explique ce qu'est GitHub Codespaces, comment créer un codespace pour 
 
 ## Qu'est-ce qu'un codespace ?
 
-Un codespace est un ordinateur virtuel, préconfiguré, qui contient déjà Git, un terminal et souvent un langage de programmation comme Python. Il permet de coder sans rien installer sur son propre ordinateur : tout se passe dans le navigateur ou dans Visual Studio Code connecté à distance [web:118][web:128].
+Un codespace est un ordinateur virtuel, préconfiguré, qui contient déjà Git, un terminal et souvent un langage de programmation comme Python. Il permet de coder sans rien installer sur son propre ordinateur : tout se passe dans le navigateur ou dans Visual Studio Code connecté à distance.
 
 ::: {.callout-tip}
 Un codespace est particulièrement utile si votre ordinateur est peu puissant, si vous changez souvent d'appareil, ou si vous voulez essayer un projet sans configurer un environnement local complet.
@@ -43,7 +43,7 @@ Un codespace se crée toujours à partir d'un dépôt GitHub existant.
 1. Connectez-vous à votre compte sur [github.com](https://github.com).
 2. Ouvrez le dépôt que vous voulez utiliser, ou créez-en un nouveau si nécessaire (**+ > New repository**).
 
-Si vous n'avez pas encore de projet, GitHub propose aussi des modèles de démarrage rapide pensés spécifiquement pour Codespaces [web:116].
+Si vous n'avez pas encore de projet, GitHub propose aussi des modèles de démarrage rapide pensés spécifiquement pour Codespaces.
 
 ## Étape 2 : créer un codespace
 
@@ -51,7 +51,7 @@ Si vous n'avez pas encore de projet, GitHub propose aussi des modèles de démar
 2. Sélectionnez l'onglet **Codespaces**.
 3. Cliquez sur **Create codespace on main** (ou le nom de la branche affichée).
 
-GitHub effectue alors quatre opérations automatiquement [web:124] :
+GitHub effectue alors quatre opérations automatiquement :
 
 1. Une machine virtuelle et un espace de stockage sont attribués.
 2. Un conteneur est créé.
@@ -61,7 +61,7 @@ GitHub effectue alors quatre opérations automatiquement [web:124] :
 Ce processus prend généralement entre quelques secondes et une ou deux minutes.
 
 ::: {.callout-tip}
-Pour créer un dépôt et un codespace en une seule fois, comme point de départ le plus simple, allez directement sur [github.com/codespaces](https://github.com/codespaces) et cliquez sur **New codespace**. GitHub crée alors un codespace vide sans dépôt existant, que vous pourrez publier plus tard [web:121].
+Pour créer un dépôt et un codespace en une seule fois, comme point de départ le plus simple, allez directement sur [github.com/codespaces](https://github.com/codespaces) et cliquez sur **New codespace**. GitHub crée alors un codespace vide sans dépôt existant, que vous pourrez publier plus tard.
 :::
 
 ## Étape 3 : découvrir l'interface
