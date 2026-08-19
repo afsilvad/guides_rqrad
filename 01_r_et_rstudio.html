@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Guides de démarrage</title>
+<title>Guide de démarrage avec R et RStudio – Guides de démarrage</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -22,6 +22,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -92,7 +127,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Accueil</span></a>
   </li>  
   <li class="nav-item">
@@ -115,9 +150,19 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Sur cette page</h2>
    
   <ul>
-  <li><a href="#bienvenue" id="toc-bienvenue" class="nav-link active" data-scroll-target="#bienvenue">Bienvenue</a></li>
-  <li><a href="#liste-des-guides" id="toc-liste-des-guides" class="nav-link" data-scroll-target="#liste-des-guides">Liste des guides</a></li>
-  <li><a href="#comment-utiliser-ces-guides" id="toc-comment-utiliser-ces-guides" class="nav-link" data-scroll-target="#comment-utiliser-ces-guides">Comment utiliser ces guides</a></li>
+  <li><a href="#objectif" id="toc-objectif" class="nav-link active" data-scroll-target="#objectif">Objectif</a></li>
+  <li><a href="#ce-dont-vous-avez-besoin" id="toc-ce-dont-vous-avez-besoin" class="nav-link" data-scroll-target="#ce-dont-vous-avez-besoin">Ce dont vous avez besoin</a></li>
+  <li><a href="#étape-1-installer-r" id="toc-étape-1-installer-r" class="nav-link" data-scroll-target="#étape-1-installer-r">Étape 1 : installer R</a></li>
+  <li><a href="#étape-2-installer-rstudio" id="toc-étape-2-installer-rstudio" class="nav-link" data-scroll-target="#étape-2-installer-rstudio">Étape 2 : installer RStudio</a></li>
+  <li><a href="#étape-3-découvrir-linterface-de-rstudio" id="toc-étape-3-découvrir-linterface-de-rstudio" class="nav-link" data-scroll-target="#étape-3-découvrir-linterface-de-rstudio">Étape 3 : découvrir l’interface de RStudio</a></li>
+  <li><a href="#étape-4-créer-votre-premier-script" id="toc-étape-4-créer-votre-premier-script" class="nav-link" data-scroll-target="#étape-4-créer-votre-premier-script">Étape 4 : créer votre premier script</a></li>
+  <li><a href="#étape-5-exécuter-votre-premier-code" id="toc-étape-5-exécuter-votre-premier-code" class="nav-link" data-scroll-target="#étape-5-exécuter-votre-premier-code">Étape 5 : exécuter votre premier code</a></li>
+  <li><a href="#étape-6-faire-un-premier-exercice" id="toc-étape-6-faire-un-premier-exercice" class="nav-link" data-scroll-target="#étape-6-faire-un-premier-exercice">Étape 6 : faire un premier exercice</a></li>
+  <li><a href="#étape-7-enregistrer-votre-script" id="toc-étape-7-enregistrer-votre-script" class="nav-link" data-scroll-target="#étape-7-enregistrer-votre-script">Étape 7 : enregistrer votre script</a></li>
+  <li><a href="#étape-8-organiser-son-travail-avec-un-projet-rstudio" id="toc-étape-8-organiser-son-travail-avec-un-projet-rstudio" class="nav-link" data-scroll-target="#étape-8-organiser-son-travail-avec-un-projet-rstudio">Étape 8 : organiser son travail avec un projet RStudio</a></li>
+  <li><a href="#étape-9-installer-un-premier-module" id="toc-étape-9-installer-un-premier-module" class="nav-link" data-scroll-target="#étape-9-installer-un-premier-module">Étape 9 : installer un premier module</a></li>
+  <li><a href="#bonnes-pratiques-pour-débuter" id="toc-bonnes-pratiques-pour-débuter" class="nav-link" data-scroll-target="#bonnes-pratiques-pour-débuter">Bonnes pratiques pour débuter</a></li>
+  <li><a href="#vérification-des-acquis" id="toc-vérification-des-acquis" class="nav-link" data-scroll-target="#vérification-des-acquis">Vérification des acquis</a></li>
   </ul>
 </nav>
     </div>
@@ -126,7 +171,8 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Guides de démarrage</h1>
+<h1 class="title">Guide de démarrage avec R et RStudio</h1>
+<p class="subtitle lead">Installer R, installer RStudio et faire ses premiers pas</p>
 </div>
 
 
@@ -143,27 +189,69 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="bienvenue" class="level2">
-<h2 class="anchored" data-anchor-id="bienvenue">Bienvenue</h2>
-<p>Cette page regroupe des guides de démarrage simples pour les outils utilisés dans le cadre de la formation du RQRAD sur la gestion et le traitement des données agricoles (24–26 août 2026). Chaque guide est pensé pour des personnes qui commencent totalement avec l’outil concerné : aucune expérience préalable n’est requise.</p>
-</section>
-<section id="liste-des-guides" class="level2">
-<h2 class="anchored" data-anchor-id="liste-des-guides">Liste des guides</h2>
+<section id="objectif" class="level2">
+<h2 class="anchored" data-anchor-id="objectif">Objectif</h2>
+<p>Ce guide explique comment installer R, installer RStudio, puis se familiariser avec l’interface pour écrire et exécuter du code. Il s’adresse aux personnes qui commencent totalement avec ces outils.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Mots importants
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <ul>
-<li><a href="./03_google_colab.html">Google Colab</a> — créer un compte Google et exécuter un premier programme en Python dans le navigateur. &lt;!–</li>
-<li><a href="outil2.qmd">Outil 2</a> — à compléter.</li>
-<li><a href="outil3.qmd">Outil 3</a> — à compléter.</li>
-<li><a href="outil4.qmd">Outil 4</a> — à compléter.</li>
-<li><a href="outil5.qmd">Outil 5</a> — à compléter. –&gt;</li>
+<li><strong>R</strong> : le langage de programmation et le moteur de calcul. C’est lui qui exécute réellement le code.</li>
+<li><strong>RStudio</strong> : un logiciel (IDE, environnement de développement) qui rend R plus facile à utiliser, avec une interface visuelle organisée en panneaux.</li>
+<li><strong>Script</strong> : un fichier texte contenant du code R, généralement avec l’extension <code>.R</code>.</li>
+<li><strong>Console</strong> : l’endroit où le code s’exécute et où les résultats s’affichent.</li>
+<li><strong>Module ou Package</strong> : une extension qui ajoute des fonctionnalités à R, par exemple pour créer des graphiques ou analyser des données.</li>
+</ul>
+</div>
+</div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>R et RStudio sont deux installations distinctes, à faire dans cet ordre précis : <strong>R d’abord</strong>, puis <strong>RStudio</strong>. RStudio ne fonctionne pas sans R déjà installé sur l’ordinateur.</p>
+</div>
+</div>
+</section>
+<section id="ce-dont-vous-avez-besoin" class="level2">
+<h2 class="anchored" data-anchor-id="ce-dont-vous-avez-besoin">Ce dont vous avez besoin</h2>
+<ul>
+<li>Un ordinateur (Windows, macOS ou Linux) avec les droits d’installation de logiciels.</li>
+<li>Une connexion Internet pour télécharger les fichiers d’installation.</li>
+<li>Environ 20 minutes pour l’installation complète.</li>
+<li>Sur Mac, connaître le type de puce de votre ordinateur (Apple Silicon comme M1, M2, M3, ou Intel), disponible dans le menu <strong>Pomme &gt; À propos de ce Mac</strong>.</li>
 </ul>
 </section>
-<section id="comment-utiliser-ces-guides" class="level2">
-<h2 class="anchored" data-anchor-id="comment-utiliser-ces-guides">Comment utiliser ces guides</h2>
+<section id="étape-1-installer-r" class="level2">
+<h2 class="anchored" data-anchor-id="étape-1-installer-r">Étape 1 : installer R</h2>
+<p>R est distribué par le <strong>CRAN</strong> (Comprehensive R Archive Network), le site officiel du projet R.</p>
 <ol type="1">
-<li>Cliquez sur le nom de l’outil qui vous intéresse dans la liste ci-dessus ou dans le menu de navigation, en haut de la page.</li>
-<li>Suivez les étapes dans l’ordre, sans en sauter.</li>
-<li>Si un terme n’est pas clair, il est généralement expliqué dès sa première apparition dans le guide.</li>
-<li>En cas de problème, notez l’étape où vous êtes bloqué avant de demander de l’aide.</li>
+<li>Ouvrez votre navigateur et allez à l’adresse suivante : <a href="https://cran.r-project.org/" class="uri">https://cran.r-project.org/</a></li>
+<li>Cliquez sur le lien correspondant à votre système d’exploitation :
+<ul>
+<li><strong>Download R for Windows</strong></li>
+<li><strong>Download R for macOS</strong></li>
+<li><strong>Download R for Linux</strong></li>
+</ul></li>
+<li>Selon le système :
+<ul>
+<li><strong>Windows</strong> : cliquez sur <strong>base</strong>, puis téléchargez le fichier d’installation le plus récent (par exemple <code>R-4.x.x-win.exe</code>).</li>
+<li><strong>macOS</strong> : téléchargez le fichier <code>.pkg</code> correspondant à votre puce. Choisissez le paquet <strong>arm64</strong> pour un Mac Apple Silicon (M1, M2, M3, la plupart des modèles depuis fin 2020), ou le paquet <strong>x86_64</strong> pour un Mac Intel plus ancien.</li>
+</ul></li>
+<li>Ouvrez le fichier téléchargé et suivez les instructions d’installation, en conservant les options par défaut à chaque étape.</li>
+<li>Une fois l’installation terminée, vous pouvez fermer l’assistant d’installation.</li>
 </ol>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -175,7 +263,175 @@ Astuce
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Ces guides sont mis à jour au besoin. Le lien de cette page reste toujours le même, même après une mise à jour du contenu.</p>
+<p>Il n’est pas nécessaire d’ouvrir R directement après cette étape. RStudio s’en servira automatiquement en arrière-plan.</p>
+</div>
+</div>
+</section>
+<section id="étape-2-installer-rstudio" class="level2">
+<h2 class="anchored" data-anchor-id="étape-2-installer-rstudio">Étape 2 : installer RStudio</h2>
+<p>RStudio Desktop est distribué gratuitement par <strong>Posit</strong>.</p>
+<ol type="1">
+<li>Allez à l’adresse suivante : <a href="https://posit.co/download/rstudio-desktop/" class="uri">https://posit.co/download/rstudio-desktop/</a></li>
+<li>Faites défiler la page jusqu’au tableau de téléchargement.</li>
+<li>Le site détecte habituellement votre système d’exploitation automatiquement. Cliquez sur le bouton de téléchargement recommandé, ou choisissez manuellement la version correspondant à Windows, macOS ou Linux.</li>
+<li>Ouvrez le fichier téléchargé :
+<ul>
+<li><strong>Windows</strong> : lancez le fichier <code>.exe</code> et suivez l’assistant, en conservant les options par défaut.</li>
+<li><strong>macOS</strong> : ouvrez le fichier <code>.dmg</code>, puis glissez l’icône RStudio dans le dossier <strong>Applications</strong>.</li>
+</ul></li>
+<li>Lancez RStudio depuis le menu Démarrer (Windows) ou le dossier Applications (macOS).</li>
+</ol>
+</section>
+<section id="étape-3-découvrir-linterface-de-rstudio" class="level2">
+<h2 class="anchored" data-anchor-id="étape-3-découvrir-linterface-de-rstudio">Étape 3 : découvrir l’interface de RStudio</h2>
+<p>À l’ouverture, RStudio affiche généralement <strong>quatre panneaux</strong>. Leur disposition peut varier légèrement, mais leur rôle reste le même.</p>
+<ul>
+<li><strong>Script</strong> (en haut à gauche) : pour écrire et enregistrer du code avant de l’exécuter.</li>
+<li><strong>Console</strong> (en bas à gauche) : pour exécuter des commandes immédiatement et voir les résultats.</li>
+<li><strong>Environnement / Historique</strong> (en haut à droite) : pour voir les objets créés pendant la session et l’historique des commandes exécutées.</li>
+<li><strong>Fichiers / Graphiques / Packages / Aide</strong> (en bas à droite) : pour naviguer dans les fichiers, afficher les graphiques, gérer les extensions et consulter l’aide.</li>
+</ul>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Si aucun panneau de script n’apparaît au démarrage, c’est normal : il faut d’abord créer un nouveau script, comme expliqué à l’étape suivante.</p>
+</div>
+</div>
+</section>
+<section id="étape-4-créer-votre-premier-script" class="level2">
+<h2 class="anchored" data-anchor-id="étape-4-créer-votre-premier-script">Étape 4 : créer votre premier script</h2>
+<p>Un script permet de conserver et réutiliser votre code, plutôt que de le taper directement dans la console à chaque fois.</p>
+<ol type="1">
+<li>Dans le menu, cliquez sur <strong>File &gt; New File &gt; R Script</strong>.</li>
+<li>Vous pouvez aussi utiliser le raccourci clavier <strong>Ctrl + Maj + N</strong> (Windows/Linux) ou <strong>Cmd + Maj + N</strong> (Mac).</li>
+<li>Un nouveau panneau vide apparaît en haut à gauche : c’est votre script.</li>
+</ol>
+</section>
+<section id="étape-5-exécuter-votre-premier-code" class="level2">
+<h2 class="anchored" data-anchor-id="étape-5-exécuter-votre-premier-code">Étape 5 : exécuter votre premier code</h2>
+<p>Dans le script, écrivez :</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">"Bonjour, R et RStudio !"</span>)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Pour l’exécuter :</p>
+<ol type="1">
+<li>Placez le curseur sur cette ligne.</li>
+<li>Appuyez sur <strong>Ctrl + Entrée</strong> (Windows/Linux) ou <strong>Cmd + Entrée</strong> (Mac).</li>
+<li>Le résultat s’affiche dans la console, en bas à gauche :</li>
+</ol>
+<pre class="text"><code>[1] "Bonjour, R et RStudio !"</code></pre>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Astuce
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Le <code>[1]</code> qui apparaît devant le résultat indique la position de l’élément affiché. Il ne fait pas partie du texte lui-même : ne vous en préoccupez pas pour l’instant.</p>
+</div>
+</div>
+</section>
+<section id="étape-6-faire-un-premier-exercice" class="level2">
+<h2 class="anchored" data-anchor-id="étape-6-faire-un-premier-exercice">Étape 6 : faire un premier exercice</h2>
+<p>Modifiez le texte entre les guillemets pour y écrire votre prénom, puis exécutez à nouveau la ligne avec <strong>Ctrl + Entrée</strong> ou <strong>Cmd + Entrée</strong> :</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">"Bonjour, je m'appelle votre_prénom !"</span>)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="étape-7-enregistrer-votre-script" class="level2">
+<h2 class="anchored" data-anchor-id="étape-7-enregistrer-votre-script">Étape 7 : enregistrer votre script</h2>
+<ol type="1">
+<li>Cliquez sur <strong>File &gt; Save As</strong>, ou utilisez le raccourci <strong>Ctrl + S</strong> (Windows/Linux) ou <strong>Cmd + S</strong> (Mac).</li>
+<li>Choisissez un nom clair, par exemple <code>premiers_pas.R</code>.</li>
+<li>Choisissez un dossier facile à retrouver sur votre ordinateur.</li>
+</ol>
+<p>Un script <code>.R</code> peut être réouvert et modifié à tout moment depuis RStudio, en cliquant sur <strong>File &gt; Open File</strong>.</p>
+</section>
+<section id="étape-8-organiser-son-travail-avec-un-projet-rstudio" class="level2">
+<h2 class="anchored" data-anchor-id="étape-8-organiser-son-travail-avec-un-projet-rstudio">Étape 8 : organiser son travail avec un projet RStudio</h2>
+<p>Un <strong>projet RStudio</strong> regroupe vos scripts, données et résultats dans un même dossier, ce qui facilite grandement l’organisation, surtout pour un travail de recherche.</p>
+<ol type="1">
+<li>Cliquez sur <strong>File &gt; New Project</strong>.</li>
+<li>Choisissez <strong>New Directory</strong>.</li>
+<li>Sélectionnez <strong>New Project</strong>.</li>
+<li>Donnez un nom au dossier, par exemple <code>mon_premier_projet</code>.</li>
+<li>Choisissez l’emplacement où créer ce dossier.</li>
+<li>Cliquez sur <strong>Create Project</strong>.</li>
+</ol>
+<p>RStudio se relance alors avec ce dossier comme espace de travail. Tous les scripts créés par la suite peuvent y être enregistrés.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Travailler à l’intérieur d’un projet RStudio évite les problèmes fréquents liés au chemin des fichiers, notamment lorsqu’un script cherche à charger un fichier de données.</p>
+</div>
+</div>
+</section>
+<section id="étape-9-installer-un-premier-module" class="level2">
+<h2 class="anchored" data-anchor-id="étape-9-installer-un-premier-module">Étape 9 : installer un premier module</h2>
+<p>Un module ajoute des fonctionnalités à R. Par exemple, le module <code>ggplot2</code> sert à créer des graphiques.</p>
+<p>Dans la console, écrivez la commande suivante, puis appuyez sur <strong>Entrée</strong> :</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"ggplot2"</span>)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<p>L’installation peut prendre quelques secondes à quelques minutes selon la connexion Internet. Une fois terminée, le module doit être chargé avant chaque utilisation, dans un script ou dans la console :</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><code>install.packages()</code> ne s’exécute généralement qu’une seule fois par ordinateur. <code>library()</code>, en revanche, doit être exécuté à chaque nouvelle session de travail où le module est nécessaire.</p>
+</div>
+</div>
+</section>
+<section id="bonnes-pratiques-pour-débuter" class="level2">
+<h2 class="anchored" data-anchor-id="bonnes-pratiques-pour-débuter">Bonnes pratiques pour débuter</h2>
+<ul>
+<li>Travaillez toujours à l’intérieur d’un projet RStudio plutôt que dans des fichiers dispersés.</li>
+<li>Écrivez votre code dans un script, pas seulement dans la console, pour pouvoir le réutiliser.</li>
+<li>Enregistrez votre script régulièrement.</li>
+<li>Lisez attentivement les messages d’erreur en rouge dans la console : ils indiquent souvent la ligne concernée et la nature du problème.</li>
+<li>Ajoutez des commentaires dans votre code à l’aide du symbole <code>#</code>, par exemple : <code># Ceci est un commentaire</code>.</li>
+<li>Évitez d’utiliser des accents ou des espaces dans les noms de fichiers et de dossiers de votre projet.</li>
+</ul>
+</section>
+<section id="vérification-des-acquis" class="level2">
+<h2 class="anchored" data-anchor-id="vérification-des-acquis">Vérification des acquis</h2>
+<p>À ce stade, vous devriez être capable de :</p>
+<ul>
+<li>Installer R, puis RStudio, dans le bon ordre.</li>
+<li>Reconnaître les quatre panneaux principaux de RStudio.</li>
+<li>Créer, exécuter et enregistrer un script R.</li>
+<li>Créer un projet RStudio pour organiser votre travail.</li>
+<li>Installer et charger un module.</li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Astuce</span>Prochaine étape
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Essayez de créer un nouveau projet RStudio, d’y créer un script nommé <code>essai_r.R</code>, d’installer le module <code>ggplot2</code>, puis d’exécuter une ligne de code qui affiche une phrase de votre choix.</p>
 </div>
 </div>
 

@@ -28,6 +28,104 @@
     "text": "Comment utiliser ces guides\n\nCliquez sur le nom de l’outil qui vous intéresse dans la liste ci-dessus ou dans le menu de navigation, en haut de la page.\nSuivez les étapes dans l’ordre, sans en sauter.\nSi un terme n’est pas clair, il est généralement expliqué dès sa première apparition dans le guide.\nEn cas de problème, notez l’étape où vous êtes bloqué avant de demander de l’aide.\n\n\n\n\n\n\n\nAstuce\n\n\n\nCes guides sont mis à jour au besoin. Le lien de cette page reste toujours le même, même après une mise à jour du contenu."
   },
   {
+    "objectID": "01_r_et_rstudio.html",
+    "href": "01_r_et_rstudio.html",
+    "title": "Guide de démarrage avec R et RStudio",
+    "section": "",
+    "text": "Ce guide explique comment installer R, installer RStudio, puis se familiariser avec l’interface pour écrire et exécuter du code. Il s’adresse aux personnes qui commencent totalement avec ces outils.\n\n\n\n\n\n\nNoteMots importants\n\n\n\n\nR : le langage de programmation et le moteur de calcul. C’est lui qui exécute réellement le code.\nRStudio : un logiciel (IDE, environnement de développement) qui rend R plus facile à utiliser, avec une interface visuelle organisée en panneaux.\nScript : un fichier texte contenant du code R, généralement avec l’extension .R.\nConsole : l’endroit où le code s’exécute et où les résultats s’affichent.\nModule ou Package : une extension qui ajoute des fonctionnalités à R, par exemple pour créer des graphiques ou analyser des données.\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nR et RStudio sont deux installations distinctes, à faire dans cet ordre précis : R d’abord, puis RStudio. RStudio ne fonctionne pas sans R déjà installé sur l’ordinateur."
+  },
+  {
+    "objectID": "01_r_et_rstudio.html#objectif",
+    "href": "01_r_et_rstudio.html#objectif",
+    "title": "Guide de démarrage avec R et RStudio",
+    "section": "",
+    "text": "Ce guide explique comment installer R, installer RStudio, puis se familiariser avec l’interface pour écrire et exécuter du code. Il s’adresse aux personnes qui commencent totalement avec ces outils.\n\n\n\n\n\n\nNoteMots importants\n\n\n\n\nR : le langage de programmation et le moteur de calcul. C’est lui qui exécute réellement le code.\nRStudio : un logiciel (IDE, environnement de développement) qui rend R plus facile à utiliser, avec une interface visuelle organisée en panneaux.\nScript : un fichier texte contenant du code R, généralement avec l’extension .R.\nConsole : l’endroit où le code s’exécute et où les résultats s’affichent.\nModule ou Package : une extension qui ajoute des fonctionnalités à R, par exemple pour créer des graphiques ou analyser des données.\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nR et RStudio sont deux installations distinctes, à faire dans cet ordre précis : R d’abord, puis RStudio. RStudio ne fonctionne pas sans R déjà installé sur l’ordinateur."
+  },
+  {
+    "objectID": "01_r_et_rstudio.html#ce-dont-vous-avez-besoin",
+    "href": "01_r_et_rstudio.html#ce-dont-vous-avez-besoin",
+    "title": "Guide de démarrage avec R et RStudio",
+    "section": "Ce dont vous avez besoin",
+    "text": "Ce dont vous avez besoin\n\nUn ordinateur (Windows, macOS ou Linux) avec les droits d’installation de logiciels.\nUne connexion Internet pour télécharger les fichiers d’installation.\nEnviron 20 minutes pour l’installation complète.\nSur Mac, connaître le type de puce de votre ordinateur (Apple Silicon comme M1, M2, M3, ou Intel), disponible dans le menu Pomme &gt; À propos de ce Mac."
+  },
+  {
+    "objectID": "01_r_et_rstudio.html#étape-1-installer-r",
+    "href": "01_r_et_rstudio.html#étape-1-installer-r",
+    "title": "Guide de démarrage avec R et RStudio",
+    "section": "Étape 1 : installer R",
+    "text": "Étape 1 : installer R\nR est distribué par le CRAN (Comprehensive R Archive Network), le site officiel du projet R.\n\nOuvrez votre navigateur et allez à l’adresse suivante : https://cran.r-project.org/\nCliquez sur le lien correspondant à votre système d’exploitation :\n\nDownload R for Windows\nDownload R for macOS\nDownload R for Linux\n\nSelon le système :\n\nWindows : cliquez sur base, puis téléchargez le fichier d’installation le plus récent (par exemple R-4.x.x-win.exe).\nmacOS : téléchargez le fichier .pkg correspondant à votre puce. Choisissez le paquet arm64 pour un Mac Apple Silicon (M1, M2, M3, la plupart des modèles depuis fin 2020), ou le paquet x86_64 pour un Mac Intel plus ancien.\n\nOuvrez le fichier téléchargé et suivez les instructions d’installation, en conservant les options par défaut à chaque étape.\nUne fois l’installation terminée, vous pouvez fermer l’assistant d’installation.\n\n\n\n\n\n\n\nAstuce\n\n\n\nIl n’est pas nécessaire d’ouvrir R directement après cette étape. RStudio s’en servira automatiquement en arrière-plan."
+  },
+  {
+    "objectID": "01_r_et_rstudio.html#étape-2-installer-rstudio",
+    "href": "01_r_et_rstudio.html#étape-2-installer-rstudio",
+    "title": "Guide de démarrage avec R et RStudio",
+    "section": "Étape 2 : installer RStudio",
+    "text": "Étape 2 : installer RStudio\nRStudio Desktop est distribué gratuitement par Posit.\n\nAllez à l’adresse suivante : https://posit.co/download/rstudio-desktop/\nFaites défiler la page jusqu’au tableau de téléchargement.\nLe site détecte habituellement votre système d’exploitation automatiquement. Cliquez sur le bouton de téléchargement recommandé, ou choisissez manuellement la version correspondant à Windows, macOS ou Linux.\nOuvrez le fichier téléchargé :\n\nWindows : lancez le fichier .exe et suivez l’assistant, en conservant les options par défaut.\nmacOS : ouvrez le fichier .dmg, puis glissez l’icône RStudio dans le dossier Applications.\n\nLancez RStudio depuis le menu Démarrer (Windows) ou le dossier Applications (macOS)."
+  },
+  {
+    "objectID": "01_r_et_rstudio.html#étape-3-découvrir-linterface-de-rstudio",
+    "href": "01_r_et_rstudio.html#étape-3-découvrir-linterface-de-rstudio",
+    "title": "Guide de démarrage avec R et RStudio",
+    "section": "Étape 3 : découvrir l’interface de RStudio",
+    "text": "Étape 3 : découvrir l’interface de RStudio\nÀ l’ouverture, RStudio affiche généralement quatre panneaux. Leur disposition peut varier légèrement, mais leur rôle reste le même.\n\nScript (en haut à gauche) : pour écrire et enregistrer du code avant de l’exécuter.\nConsole (en bas à gauche) : pour exécuter des commandes immédiatement et voir les résultats.\nEnvironnement / Historique (en haut à droite) : pour voir les objets créés pendant la session et l’historique des commandes exécutées.\nFichiers / Graphiques / Packages / Aide (en bas à droite) : pour naviguer dans les fichiers, afficher les graphiques, gérer les extensions et consulter l’aide.\n\n\n\n\n\n\n\nNote\n\n\n\nSi aucun panneau de script n’apparaît au démarrage, c’est normal : il faut d’abord créer un nouveau script, comme expliqué à l’étape suivante."
+  },
+  {
+    "objectID": "01_r_et_rstudio.html#étape-4-créer-votre-premier-script",
+    "href": "01_r_et_rstudio.html#étape-4-créer-votre-premier-script",
+    "title": "Guide de démarrage avec R et RStudio",
+    "section": "Étape 4 : créer votre premier script",
+    "text": "Étape 4 : créer votre premier script\nUn script permet de conserver et réutiliser votre code, plutôt que de le taper directement dans la console à chaque fois.\n\nDans le menu, cliquez sur File &gt; New File &gt; R Script.\nVous pouvez aussi utiliser le raccourci clavier Ctrl + Maj + N (Windows/Linux) ou Cmd + Maj + N (Mac).\nUn nouveau panneau vide apparaît en haut à gauche : c’est votre script."
+  },
+  {
+    "objectID": "01_r_et_rstudio.html#étape-5-exécuter-votre-premier-code",
+    "href": "01_r_et_rstudio.html#étape-5-exécuter-votre-premier-code",
+    "title": "Guide de démarrage avec R et RStudio",
+    "section": "Étape 5 : exécuter votre premier code",
+    "text": "Étape 5 : exécuter votre premier code\nDans le script, écrivez :\nprint(\"Bonjour, R et RStudio !\")\nPour l’exécuter :\n\nPlacez le curseur sur cette ligne.\nAppuyez sur Ctrl + Entrée (Windows/Linux) ou Cmd + Entrée (Mac).\nLe résultat s’affiche dans la console, en bas à gauche :\n\n[1] \"Bonjour, R et RStudio !\"\n\n\n\n\n\n\nAstuce\n\n\n\nLe [1] qui apparaît devant le résultat indique la position de l’élément affiché. Il ne fait pas partie du texte lui-même : ne vous en préoccupez pas pour l’instant."
+  },
+  {
+    "objectID": "01_r_et_rstudio.html#étape-6-faire-un-premier-exercice",
+    "href": "01_r_et_rstudio.html#étape-6-faire-un-premier-exercice",
+    "title": "Guide de démarrage avec R et RStudio",
+    "section": "Étape 6 : faire un premier exercice",
+    "text": "Étape 6 : faire un premier exercice\nModifiez le texte entre les guillemets pour y écrire votre prénom, puis exécutez à nouveau la ligne avec Ctrl + Entrée ou Cmd + Entrée :\nprint(\"Bonjour, je m'appelle votre_prénom !\")"
+  },
+  {
+    "objectID": "01_r_et_rstudio.html#étape-7-enregistrer-votre-script",
+    "href": "01_r_et_rstudio.html#étape-7-enregistrer-votre-script",
+    "title": "Guide de démarrage avec R et RStudio",
+    "section": "Étape 7 : enregistrer votre script",
+    "text": "Étape 7 : enregistrer votre script\n\nCliquez sur File &gt; Save As, ou utilisez le raccourci Ctrl + S (Windows/Linux) ou Cmd + S (Mac).\nChoisissez un nom clair, par exemple premiers_pas.R.\nChoisissez un dossier facile à retrouver sur votre ordinateur.\n\nUn script .R peut être réouvert et modifié à tout moment depuis RStudio, en cliquant sur File &gt; Open File."
+  },
+  {
+    "objectID": "01_r_et_rstudio.html#étape-8-organiser-son-travail-avec-un-projet-rstudio",
+    "href": "01_r_et_rstudio.html#étape-8-organiser-son-travail-avec-un-projet-rstudio",
+    "title": "Guide de démarrage avec R et RStudio",
+    "section": "Étape 8 : organiser son travail avec un projet RStudio",
+    "text": "Étape 8 : organiser son travail avec un projet RStudio\nUn projet RStudio regroupe vos scripts, données et résultats dans un même dossier, ce qui facilite grandement l’organisation, surtout pour un travail de recherche.\n\nCliquez sur File &gt; New Project.\nChoisissez New Directory.\nSélectionnez New Project.\nDonnez un nom au dossier, par exemple mon_premier_projet.\nChoisissez l’emplacement où créer ce dossier.\nCliquez sur Create Project.\n\nRStudio se relance alors avec ce dossier comme espace de travail. Tous les scripts créés par la suite peuvent y être enregistrés.\n\n\n\n\n\n\nImportant\n\n\n\nTravailler à l’intérieur d’un projet RStudio évite les problèmes fréquents liés au chemin des fichiers, notamment lorsqu’un script cherche à charger un fichier de données."
+  },
+  {
+    "objectID": "01_r_et_rstudio.html#étape-9-installer-un-premier-module",
+    "href": "01_r_et_rstudio.html#étape-9-installer-un-premier-module",
+    "title": "Guide de démarrage avec R et RStudio",
+    "section": "Étape 9 : installer un premier module",
+    "text": "Étape 9 : installer un premier module\nUn module ajoute des fonctionnalités à R. Par exemple, le module ggplot2 sert à créer des graphiques.\nDans la console, écrivez la commande suivante, puis appuyez sur Entrée :\ninstall.packages(\"ggplot2\")\nL’installation peut prendre quelques secondes à quelques minutes selon la connexion Internet. Une fois terminée, le module doit être chargé avant chaque utilisation, dans un script ou dans la console :\nlibrary(ggplot2)\n\n\n\n\n\n\nNote\n\n\n\ninstall.packages() ne s’exécute généralement qu’une seule fois par ordinateur. library(), en revanche, doit être exécuté à chaque nouvelle session de travail où le module est nécessaire."
+  },
+  {
+    "objectID": "01_r_et_rstudio.html#bonnes-pratiques-pour-débuter",
+    "href": "01_r_et_rstudio.html#bonnes-pratiques-pour-débuter",
+    "title": "Guide de démarrage avec R et RStudio",
+    "section": "Bonnes pratiques pour débuter",
+    "text": "Bonnes pratiques pour débuter\n\nTravaillez toujours à l’intérieur d’un projet RStudio plutôt que dans des fichiers dispersés.\nÉcrivez votre code dans un script, pas seulement dans la console, pour pouvoir le réutiliser.\nEnregistrez votre script régulièrement.\nLisez attentivement les messages d’erreur en rouge dans la console : ils indiquent souvent la ligne concernée et la nature du problème.\nAjoutez des commentaires dans votre code à l’aide du symbole #, par exemple : # Ceci est un commentaire.\nÉvitez d’utiliser des accents ou des espaces dans les noms de fichiers et de dossiers de votre projet."
+  },
+  {
+    "objectID": "01_r_et_rstudio.html#vérification-des-acquis",
+    "href": "01_r_et_rstudio.html#vérification-des-acquis",
+    "title": "Guide de démarrage avec R et RStudio",
+    "section": "Vérification des acquis",
+    "text": "Vérification des acquis\nÀ ce stade, vous devriez être capable de :\n\nInstaller R, puis RStudio, dans le bon ordre.\nReconnaître les quatre panneaux principaux de RStudio.\nCréer, exécuter et enregistrer un script R.\nCréer un projet RStudio pour organiser votre travail.\nInstaller et charger un module.\n\n\n\n\n\n\n\nAstuceProchaine étape\n\n\n\nEssayez de créer un nouveau projet RStudio, d’y créer un script nommé essai_r.R, d’installer le module ggplot2, puis d’exécuter une ligne de code qui affiche une phrase de votre choix."
+  },
+  {
     "objectID": "03_google_colab.html",
     "href": "03_google_colab.html",
     "title": "Guide de démarrage avec Google Colab",
