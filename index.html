@@ -41,10 +41,12 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-0a6b7249c26820e032cb0bd839ff02b1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-6b423f165eeea3787de40cb4f8e821c3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/bootstrap/bootstrap-dark-e8964db687007ca8dd88d9d9ce58e3ef.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-6b423f165eeea3787de40cb4f8e821c3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -76,7 +78,7 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="nav-fixed quarto-dark"><script id="quarto-html-before-body" type="application/javascript">
+<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
     const toggleBodyColorMode = (bsSheetEl) => {
       const mode = bsSheetEl.getAttribute("data-mode");
       const bodyEl = window.document.querySelector("body");
@@ -218,8 +220,10 @@ ul.task-list li input[type="checkbox"] {
         changeGiscusTheme();
       }
     };
-    const authorPrefersDark = true;
+    const authorPrefersDark = false;
     const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
     let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
     // Dark / light mode switch
     window.quartoToggleColorScheme = () => {
@@ -260,6 +264,10 @@ ul.task-list li input[type="checkbox"] {
   <li class="nav-item">
     <a class="nav-link" href="./01_r_et_rstudio.html"> 
 <span class="menu-text">R et RStudio</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./02_github-codespaces.html"> 
+<span class="menu-text">GitHub Codespaces</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./03_google_colab.html"> 
@@ -319,8 +327,8 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="liste-des-guides">Liste des guides</h2>
 <ul>
 <li><a href="./01_r_et_rstudio.html">R et RStudio</a> — guide d’installation de R et RStudio et premiers pas d’utilisation de RStudio.</li>
-<li><a href="./03_google_colab.html">Google Colab</a> — se familiariser avec Google Colab et exécuter un premier programme en Python dans le navigateur. &lt;!–</li>
-<li><a href="outil3.qmd">Outil 3</a> — à compléter.</li>
+<li><a href="./03_google_colab.html">Google Colab</a> — se familiariser avec Google Colab et exécuter un premier programme en Python dans le navigateur.</li>
+<li><a href="./02_github-codespaces.html">GitHub Codespaces</a> — introduction à l’utilisation de GitHub Codespaces. &lt;!–</li>
 <li><a href="outil4.qmd">Outil 4</a> — à compléter.</li>
 <li><a href="outil5.qmd">Outil 5</a> — à compléter. –&gt;</li>
 </ul>

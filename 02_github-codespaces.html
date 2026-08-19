@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Guide de démarrage avec R et RStudio – Guides de démarrage</title>
+<title>Guide de démarrage avec GitHub Codespaces – Guides de démarrage</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -297,11 +297,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="menu-text">Accueil</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./01_r_et_rstudio.html" aria-current="page"> 
+    <a class="nav-link" href="./01_r_et_rstudio.html"> 
 <span class="menu-text">R et RStudio</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./02_github-codespaces.html"> 
+    <a class="nav-link active" href="./02_github-codespaces.html" aria-current="page"> 
 <span class="menu-text">GitHub Codespaces</span></a>
   </li>  
   <li class="nav-item">
@@ -326,16 +326,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#objectif" id="toc-objectif" class="nav-link active" data-scroll-target="#objectif">Objectif</a></li>
+  <li><a href="#quest-ce-quun-codespace" id="toc-quest-ce-quun-codespace" class="nav-link" data-scroll-target="#quest-ce-quun-codespace">Qu’est-ce qu’un codespace ?</a></li>
   <li><a href="#ce-dont-vous-avez-besoin" id="toc-ce-dont-vous-avez-besoin" class="nav-link" data-scroll-target="#ce-dont-vous-avez-besoin">Ce dont vous avez besoin</a></li>
-  <li><a href="#étape-1-installer-r" id="toc-étape-1-installer-r" class="nav-link" data-scroll-target="#étape-1-installer-r">Étape 1 : installer R</a></li>
-  <li><a href="#étape-2-installer-rstudio" id="toc-étape-2-installer-rstudio" class="nav-link" data-scroll-target="#étape-2-installer-rstudio">Étape 2 : installer RStudio</a></li>
-  <li><a href="#étape-3-découvrir-linterface-de-rstudio" id="toc-étape-3-découvrir-linterface-de-rstudio" class="nav-link" data-scroll-target="#étape-3-découvrir-linterface-de-rstudio">Étape 3 : découvrir l’interface de RStudio</a></li>
-  <li><a href="#étape-4-créer-votre-premier-script" id="toc-étape-4-créer-votre-premier-script" class="nav-link" data-scroll-target="#étape-4-créer-votre-premier-script">Étape 4 : créer votre premier script</a></li>
-  <li><a href="#étape-5-exécuter-votre-premier-code" id="toc-étape-5-exécuter-votre-premier-code" class="nav-link" data-scroll-target="#étape-5-exécuter-votre-premier-code">Étape 5 : exécuter votre premier code</a></li>
-  <li><a href="#étape-6-faire-un-premier-exercice" id="toc-étape-6-faire-un-premier-exercice" class="nav-link" data-scroll-target="#étape-6-faire-un-premier-exercice">Étape 6 : faire un premier exercice</a></li>
-  <li><a href="#étape-7-enregistrer-votre-script" id="toc-étape-7-enregistrer-votre-script" class="nav-link" data-scroll-target="#étape-7-enregistrer-votre-script">Étape 7 : enregistrer votre script</a></li>
-  <li><a href="#étape-8-organiser-son-travail-avec-un-projet-rstudio" id="toc-étape-8-organiser-son-travail-avec-un-projet-rstudio" class="nav-link" data-scroll-target="#étape-8-organiser-son-travail-avec-un-projet-rstudio">Étape 8 : organiser son travail avec un projet RStudio</a></li>
-  <li><a href="#étape-9-installer-un-premier-module" id="toc-étape-9-installer-un-premier-module" class="nav-link" data-scroll-target="#étape-9-installer-un-premier-module">Étape 9 : installer un premier module</a></li>
+  <li><a href="#étape-1-accéder-à-un-dépôt" id="toc-étape-1-accéder-à-un-dépôt" class="nav-link" data-scroll-target="#étape-1-accéder-à-un-dépôt">Étape 1 : accéder à un dépôt</a></li>
+  <li><a href="#étape-2-créer-un-codespace" id="toc-étape-2-créer-un-codespace" class="nav-link" data-scroll-target="#étape-2-créer-un-codespace">Étape 2 : créer un codespace</a></li>
+  <li><a href="#étape-3-découvrir-linterface" id="toc-étape-3-découvrir-linterface" class="nav-link" data-scroll-target="#étape-3-découvrir-linterface">Étape 3 : découvrir l’interface</a></li>
+  <li><a href="#étape-4-exécuter-une-première-commande" id="toc-étape-4-exécuter-une-première-commande" class="nav-link" data-scroll-target="#étape-4-exécuter-une-première-commande">Étape 4 : exécuter une première commande</a></li>
+  <li><a href="#étape-5-modifier-un-fichier-et-enregistrer-les-changements" id="toc-étape-5-modifier-un-fichier-et-enregistrer-les-changements" class="nav-link" data-scroll-target="#étape-5-modifier-un-fichier-et-enregistrer-les-changements">Étape 5 : modifier un fichier et enregistrer les changements</a></li>
+  <li><a href="#étape-6-enregistrer-les-changements-sur-github" id="toc-étape-6-enregistrer-les-changements-sur-github" class="nav-link" data-scroll-target="#étape-6-enregistrer-les-changements-sur-github">Étape 6 : enregistrer les changements sur GitHub</a></li>
+  <li><a href="#étape-7-suspendre-ou-arrêter-le-codespace" id="toc-étape-7-suspendre-ou-arrêter-le-codespace" class="nav-link" data-scroll-target="#étape-7-suspendre-ou-arrêter-le-codespace">Étape 7 : suspendre ou arrêter le codespace</a></li>
+  <li><a href="#étape-8-reprendre-un-codespace-existant" id="toc-étape-8-reprendre-un-codespace-existant" class="nav-link" data-scroll-target="#étape-8-reprendre-un-codespace-existant">Étape 8 : reprendre un codespace existant</a></li>
+  <li><a href="#étape-9-supprimer-un-codespace" id="toc-étape-9-supprimer-un-codespace" class="nav-link" data-scroll-target="#étape-9-supprimer-un-codespace">Étape 9 : supprimer un codespace</a></li>
   <li><a href="#bonnes-pratiques-pour-débuter" id="toc-bonnes-pratiques-pour-débuter" class="nav-link" data-scroll-target="#bonnes-pratiques-pour-débuter">Bonnes pratiques pour débuter</a></li>
   <li><a href="#vérification-des-acquis" id="toc-vérification-des-acquis" class="nav-link" data-scroll-target="#vérification-des-acquis">Vérification des acquis</a></li>
   </ul>
@@ -347,8 +348,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Guide de démarrage avec R et RStudio</h1>
-<p class="subtitle lead">Installer R, installer RStudio et faire ses premiers pas</p>
+<h1 class="title">Guide de démarrage avec GitHub Codespaces</h1>
+<p class="subtitle lead">Créer et utiliser un environnement de développement dans le cloud</p>
 </div>
 
 
@@ -367,7 +368,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="objectif" class="level2">
 <h2 class="anchored" data-anchor-id="objectif">Objectif</h2>
-<p>Ce guide explique comment installer R, installer RStudio, puis se familiariser avec l’interface pour écrire et exécuter du code. Il s’adresse aux personnes qui commencent totalement avec ces outils.</p>
+<p>Ce guide explique ce qu’est GitHub Codespaces, comment créer un codespace pour un dépôt existant, et comment commencer à travailler avec. Il s’adresse aux personnes qui commencent totalement avec cet outil.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -379,168 +380,40 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <div class="callout-body-container callout-body">
 <ul>
-<li><strong>R</strong> : le langage de programmation et le moteur de calcul. C’est lui qui exécute réellement le code.</li>
-<li><strong>RStudio</strong> : un logiciel (IDE, environnement de développement) qui rend R plus facile à utiliser, avec une interface visuelle organisée en panneaux.</li>
-<li><strong>Script</strong> : un fichier texte contenant du code R, généralement avec l’extension <code>.R</code>.</li>
-<li><strong>Console</strong> : l’endroit où le code s’exécute et où les résultats s’affichent.</li>
-<li><strong>Module ou Package</strong> : une extension qui ajoute des fonctionnalités à R, par exemple pour créer des graphiques ou analyser des données.</li>
+<li><strong>Codespace</strong> : un environnement de développement complet, hébergé dans le cloud par GitHub, accessible depuis un navigateur ou Visual Studio Code.</li>
+<li><strong>Dépôt (repository)</strong> : le dossier de projet hébergé sur GitHub, contenant le code et son historique de versions.</li>
+<li><strong>Conteneur</strong> : l’environnement isolé dans lequel le codespace s’exécute, avec ses propres outils déjà installés.</li>
+<li><strong>Devcontainer</strong> : un fichier de configuration optionnel qui définit précisément quels outils et paramètres un codespace doit contenir.</li>
+<li><strong>VS Code</strong> : l’éditeur de code qui s’affiche à l’intérieur du codespace, que ce soit dans le navigateur ou en application locale.</li>
 </ul>
 </div>
 </div>
-<div class="callout callout-style-default callout-important callout-titled">
+</section>
+<section id="quest-ce-quun-codespace" class="level2">
+<h2 class="anchored" data-anchor-id="quest-ce-quun-codespace">Qu’est-ce qu’un codespace ?</h2>
+<p>Un codespace est un ordinateur virtuel, préconfiguré, qui contient déjà Git, un terminal et souvent un langage de programmation comme Python. Il permet de coder sans rien installer sur son propre ordinateur : tout se passe dans le navigateur ou dans Visual Studio Code connecté à distance [web:118][web:128].</p>
+<div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Important
+Astuce
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>R et RStudio sont deux installations distinctes, à faire dans cet ordre précis : <strong>R d’abord</strong>, puis <strong>RStudio</strong>. RStudio ne fonctionne pas sans R déjà installé sur l’ordinateur.</p>
+<p>Un codespace est particulièrement utile si votre ordinateur est peu puissant, si vous changez souvent d’appareil, ou si vous voulez essayer un projet sans configurer un environnement local complet.</p>
 </div>
 </div>
 </section>
 <section id="ce-dont-vous-avez-besoin" class="level2">
 <h2 class="anchored" data-anchor-id="ce-dont-vous-avez-besoin">Ce dont vous avez besoin</h2>
 <ul>
-<li>Un ordinateur (Windows, macOS ou Linux) avec les droits d’installation de logiciels.</li>
-<li>Une connexion Internet pour télécharger les fichiers d’installation.</li>
-<li>Environ 20 minutes pour l’installation complète.</li>
-<li>Sur Mac, connaître le type de puce de votre ordinateur (Apple Silicon comme M1, M2, M3, ou Intel), disponible dans le menu <strong>Pomme &gt; À propos de ce Mac</strong>.</li>
+<li>Un compte GitHub actif.</li>
+<li>Un navigateur Internet récent.</li>
+<li>Une connexion Internet stable pendant l’utilisation du codespace.</li>
+<li>Optionnel : Visual Studio Code installé localement, si vous préférez travailler depuis l’application plutôt que depuis le navigateur.</li>
 </ul>
-</section>
-<section id="étape-1-installer-r" class="level2">
-<h2 class="anchored" data-anchor-id="étape-1-installer-r">Étape 1 : installer R</h2>
-<p>R est distribué par le <strong>CRAN</strong> (Comprehensive R Archive Network), le site officiel du projet R.</p>
-<ol type="1">
-<li>Ouvrez votre navigateur et allez à l’adresse suivante : <a href="https://cran.r-project.org/" class="uri">https://cran.r-project.org/</a></li>
-<li>Cliquez sur le lien correspondant à votre système d’exploitation :
-<ul>
-<li><strong>Download R for Windows</strong></li>
-<li><strong>Download R for macOS</strong></li>
-<li><strong>Download R for Linux</strong></li>
-</ul></li>
-<li>Selon le système :
-<ul>
-<li><strong>Windows</strong> : cliquez sur <strong>base</strong>, puis téléchargez le fichier d’installation le plus récent (par exemple <code>R-4.x.x-win.exe</code>).</li>
-<li><strong>macOS</strong> : téléchargez le fichier <code>.pkg</code> correspondant à votre puce. Choisissez le paquet <strong>arm64</strong> pour un Mac Apple Silicon (M1, M2, M3, la plupart des modèles depuis fin 2020), ou le paquet <strong>x86_64</strong> pour un Mac Intel plus ancien.</li>
-</ul></li>
-<li>Ouvrez le fichier téléchargé et suivez les instructions d’installation, en conservant les options par défaut à chaque étape.</li>
-<li>Une fois l’installation terminée, vous pouvez fermer l’assistant d’installation.</li>
-</ol>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Astuce
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Il n’est pas nécessaire d’ouvrir R directement après cette étape. RStudio s’en servira automatiquement en arrière-plan.</p>
-</div>
-</div>
-</section>
-<section id="étape-2-installer-rstudio" class="level2">
-<h2 class="anchored" data-anchor-id="étape-2-installer-rstudio">Étape 2 : installer RStudio</h2>
-<p>RStudio Desktop est distribué gratuitement par <strong>Posit</strong>.</p>
-<ol type="1">
-<li>Allez à l’adresse suivante : <a href="https://posit.co/download/rstudio-desktop/" class="uri">https://posit.co/download/rstudio-desktop/</a></li>
-<li>Faites défiler la page jusqu’au tableau de téléchargement.</li>
-<li>Le site détecte habituellement votre système d’exploitation automatiquement. Cliquez sur le bouton de téléchargement recommandé, ou choisissez manuellement la version correspondant à Windows, macOS ou Linux.</li>
-<li>Ouvrez le fichier téléchargé :
-<ul>
-<li><strong>Windows</strong> : lancez le fichier <code>.exe</code> et suivez l’assistant, en conservant les options par défaut.</li>
-<li><strong>macOS</strong> : ouvrez le fichier <code>.dmg</code>, puis glissez l’icône RStudio dans le dossier <strong>Applications</strong>.</li>
-</ul></li>
-<li>Lancez RStudio depuis le menu Démarrer (Windows) ou le dossier Applications (macOS).</li>
-</ol>
-</section>
-<section id="étape-3-découvrir-linterface-de-rstudio" class="level2">
-<h2 class="anchored" data-anchor-id="étape-3-découvrir-linterface-de-rstudio">Étape 3 : découvrir l’interface de RStudio</h2>
-<p>À l’ouverture, RStudio affiche généralement <strong>quatre panneaux</strong>. Leur disposition peut varier légèrement, mais leur rôle reste le même.</p>
-<ul>
-<li><strong>Script</strong> (en haut à gauche) : pour écrire et enregistrer du code avant de l’exécuter.</li>
-<li><strong>Console</strong> (en bas à gauche) : pour exécuter des commandes immédiatement et voir les résultats.</li>
-<li><strong>Environnement / Historique</strong> (en haut à droite) : pour voir les objets créés pendant la session et l’historique des commandes exécutées.</li>
-<li><strong>Fichiers / Graphiques / Packages / Aide</strong> (en bas à droite) : pour naviguer dans les fichiers, afficher les graphiques, gérer les extensions et consulter l’aide.</li>
-</ul>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Si aucun panneau de script n’apparaît au démarrage, c’est normal : il faut d’abord créer un nouveau script, comme expliqué à l’étape suivante.</p>
-</div>
-</div>
-</section>
-<section id="étape-4-créer-votre-premier-script" class="level2">
-<h2 class="anchored" data-anchor-id="étape-4-créer-votre-premier-script">Étape 4 : créer votre premier script</h2>
-<p>Un script permet de conserver et réutiliser votre code, plutôt que de le taper directement dans la console à chaque fois.</p>
-<ol type="1">
-<li>Dans le menu, cliquez sur <strong>File &gt; New File &gt; R Script</strong>.</li>
-<li>Vous pouvez aussi utiliser le raccourci clavier <strong>Ctrl + Maj + N</strong> (Windows/Linux) ou <strong>Cmd + Maj + N</strong> (Mac).</li>
-<li>Un nouveau panneau vide apparaît en haut à gauche : c’est votre script.</li>
-</ol>
-</section>
-<section id="étape-5-exécuter-votre-premier-code" class="level2">
-<h2 class="anchored" data-anchor-id="étape-5-exécuter-votre-premier-code">Étape 5 : exécuter votre premier code</h2>
-<p>Dans le script, écrivez :</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">"Bonjour, R et RStudio !"</span>)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Pour l’exécuter :</p>
-<ol type="1">
-<li>Placez le curseur sur cette ligne.</li>
-<li>Appuyez sur <strong>Ctrl + Entrée</strong> (Windows/Linux) ou <strong>Cmd + Entrée</strong> (Mac).</li>
-<li>Le résultat s’affiche dans la console, en bas à gauche :</li>
-</ol>
-<pre class="text"><code>[1] "Bonjour, R et RStudio !"</code></pre>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Astuce
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Le <code>[1]</code> qui apparaît devant le résultat indique la position de l’élément affiché. Il ne fait pas partie du texte lui-même : ne vous en préoccupez pas pour l’instant.</p>
-</div>
-</div>
-</section>
-<section id="étape-6-faire-un-premier-exercice" class="level2">
-<h2 class="anchored" data-anchor-id="étape-6-faire-un-premier-exercice">Étape 6 : faire un premier exercice</h2>
-<p>Modifiez le texte entre les guillemets pour y écrire votre prénom, puis exécutez à nouveau la ligne avec <strong>Ctrl + Entrée</strong> ou <strong>Cmd + Entrée</strong> :</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">"Bonjour, je m'appelle votre_prénom !"</span>)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
-</section>
-<section id="étape-7-enregistrer-votre-script" class="level2">
-<h2 class="anchored" data-anchor-id="étape-7-enregistrer-votre-script">Étape 7 : enregistrer votre script</h2>
-<ol type="1">
-<li>Cliquez sur <strong>File &gt; Save As</strong>, ou utilisez le raccourci <strong>Ctrl + S</strong> (Windows/Linux) ou <strong>Cmd + S</strong> (Mac).</li>
-<li>Choisissez un nom clair, par exemple <code>premiers_pas.R</code>.</li>
-<li>Choisissez un dossier facile à retrouver sur votre ordinateur.</li>
-</ol>
-<p>Un script <code>.R</code> peut être réouvert et modifié à tout moment depuis RStudio, en cliquant sur <strong>File &gt; Open File</strong>.</p>
-</section>
-<section id="étape-8-organiser-son-travail-avec-un-projet-rstudio" class="level2">
-<h2 class="anchored" data-anchor-id="étape-8-organiser-son-travail-avec-un-projet-rstudio">Étape 8 : organiser son travail avec un projet RStudio</h2>
-<p>Un <strong>projet RStudio</strong> regroupe vos scripts, données et résultats dans un même dossier, ce qui facilite grandement l’organisation, surtout pour un travail de recherche.</p>
-<ol type="1">
-<li>Cliquez sur <strong>File &gt; New Project</strong>.</li>
-<li>Choisissez <strong>New Directory</strong>.</li>
-<li>Sélectionnez <strong>New Project</strong>.</li>
-<li>Donnez un nom au dossier, par exemple <code>mon_premier_projet</code>.</li>
-<li>Choisissez l’emplacement où créer ce dossier.</li>
-<li>Cliquez sur <strong>Create Project</strong>.</li>
-</ol>
-<p>RStudio se relance alors avec ce dossier comme espace de travail. Tous les scripts créés par la suite peuvent y être enregistrés.</p>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -551,17 +424,83 @@ Important
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Travailler à l’intérieur d’un projet RStudio évite les problèmes fréquents liés au chemin des fichiers, notamment lorsqu’un script cherche à charger un fichier de données.</p>
+<p>GitHub Codespaces offre un quota d’utilisation gratuit limité chaque mois pour les comptes personnels. Au-delà de ce quota, l’utilisation est facturée. Vérifiez votre utilisation dans les paramètres de votre compte si vous l’utilisez régulièrement.</p>
 </div>
 </div>
 </section>
-<section id="étape-9-installer-un-premier-module" class="level2">
-<h2 class="anchored" data-anchor-id="étape-9-installer-un-premier-module">Étape 9 : installer un premier module</h2>
-<p>Un module ajoute des fonctionnalités à R. Par exemple, le module <code>ggplot2</code> sert à créer des graphiques.</p>
-<p>Dans la console, écrivez la commande suivante, puis appuyez sur <strong>Entrée</strong> :</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"ggplot2"</span>)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
-<p>L’installation peut prendre quelques secondes à quelques minutes selon la connexion Internet. Une fois terminée, le module doit être chargé avant chaque utilisation, dans un script ou dans la console :</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="étape-1-accéder-à-un-dépôt" class="level2">
+<h2 class="anchored" data-anchor-id="étape-1-accéder-à-un-dépôt">Étape 1 : accéder à un dépôt</h2>
+<p>Un codespace se crée toujours à partir d’un dépôt GitHub existant.</p>
+<ol type="1">
+<li>Connectez-vous à votre compte sur <a href="https://github.com">github.com</a>.</li>
+<li>Ouvrez le dépôt que vous voulez utiliser, ou créez-en un nouveau si nécessaire (<strong>+ &gt; New repository</strong>).</li>
+</ol>
+<p>Si vous n’avez pas encore de projet, GitHub propose aussi des modèles de démarrage rapide pensés spécifiquement pour Codespaces [web:116].</p>
+</section>
+<section id="étape-2-créer-un-codespace" class="level2">
+<h2 class="anchored" data-anchor-id="étape-2-créer-un-codespace">Étape 2 : créer un codespace</h2>
+<ol type="1">
+<li>Sur la page principale du dépôt, cliquez sur le bouton vert <strong>Code</strong>.</li>
+<li>Sélectionnez l’onglet <strong>Codespaces</strong>.</li>
+<li>Cliquez sur <strong>Create codespace on main</strong> (ou le nom de la branche affichée).</li>
+</ol>
+<p>GitHub effectue alors quatre opérations automatiquement [web:124] :</p>
+<ol type="1">
+<li>Une machine virtuelle et un espace de stockage sont attribués.</li>
+<li>Un conteneur est créé.</li>
+<li>Une connexion à ce conteneur est établie.</li>
+<li>Une configuration finale s’exécute si le dépôt en définit une.</li>
+</ol>
+<p>Ce processus prend généralement entre quelques secondes et une ou deux minutes.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Astuce
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Pour créer un dépôt et un codespace en une seule fois, comme point de départ le plus simple, allez directement sur <a href="https://github.com/codespaces">github.com/codespaces</a> et cliquez sur <strong>New codespace</strong>. GitHub crée alors un codespace vide sans dépôt existant, que vous pourrez publier plus tard [web:121].</p>
+</div>
+</div>
+</section>
+<section id="étape-3-découvrir-linterface" class="level2">
+<h2 class="anchored" data-anchor-id="étape-3-découvrir-linterface">Étape 3 : découvrir l’interface</h2>
+<p>Une fois le codespace prêt, une interface <strong>Visual Studio Code</strong> s’ouvre, directement dans votre navigateur.</p>
+<ul>
+<li><strong>Explorateur de fichiers</strong> (à gauche) : affiche tous les fichiers du dépôt.</li>
+<li><strong>Zone d’édition</strong> (au centre) : pour ouvrir et modifier les fichiers.</li>
+<li><strong>Terminal</strong> (en bas) : une ligne de commande déjà connectée à l’environnement du codespace, avec Git préinstallé.</li>
+<li><strong>Barre d’activité</strong> (tout à gauche) : icônes pour accéder à la recherche, au contrôle de version Git, aux extensions, etc.</li>
+</ul>
+<p>Pour ouvrir le terminal s’il n’est pas visible, utilisez le menu <strong>Terminal &gt; New Terminal</strong>.</p>
+</section>
+<section id="étape-4-exécuter-une-première-commande" class="level2">
+<h2 class="anchored" data-anchor-id="étape-4-exécuter-une-première-commande">Étape 4 : exécuter une première commande</h2>
+<p>Dans le terminal, écrivez :</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"Bonjour depuis mon codespace"</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Appuyez sur <strong>Entrée</strong>. Le message s’affiche directement dans le terminal, confirmant que l’environnement fonctionne.</p>
+<p>Si le codespace contient Python, vous pouvez aussi tester :</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python3</span> <span class="at">--version</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="étape-5-modifier-un-fichier-et-enregistrer-les-changements" class="level2">
+<h2 class="anchored" data-anchor-id="étape-5-modifier-un-fichier-et-enregistrer-les-changements">Étape 5 : modifier un fichier et enregistrer les changements</h2>
+<ol type="1">
+<li>Dans l’explorateur de fichiers, ouvrez un fichier existant, ou créez-en un nouveau avec le bouton <strong>New File</strong>.</li>
+<li>Faites une petite modification, par exemple ajouter une ligne de texte.</li>
+<li>Enregistrez avec <strong>Ctrl + S</strong> (Windows/Linux) ou <strong>Cmd + S</strong> (Mac).</li>
+</ol>
+<p>Le fichier est modifié dans le codespace, mais pas encore renvoyé vers GitHub. C’est l’objectif de l’étape suivante.</p>
+</section>
+<section id="étape-6-enregistrer-les-changements-sur-github" class="level2">
+<h2 class="anchored" data-anchor-id="étape-6-enregistrer-les-changements-sur-github">Étape 6 : enregistrer les changements sur GitHub</h2>
+<p>Le contrôle de version fonctionne de la même façon que sur un ordinateur local, avec Git déjà installé et configuré dans le codespace.</p>
+<p>Dans le terminal :</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Premier essai dans Codespaces"</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -572,30 +511,79 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><code>install.packages()</code> ne s’exécute généralement qu’une seule fois par ordinateur. <code>library()</code>, en revanche, doit être exécuté à chaque nouvelle session de travail où le module est nécessaire.</p>
+<p>Puisque le codespace est déjà connecté à votre compte GitHub, aucune configuration supplémentaire d’identifiants n’est généralement nécessaire pour <code>git push</code>, contrairement à un dépôt cloné localement.</p>
+</div>
+</div>
+</section>
+<section id="étape-7-suspendre-ou-arrêter-le-codespace" class="level2">
+<h2 class="anchored" data-anchor-id="étape-7-suspendre-ou-arrêter-le-codespace">Étape 7 : suspendre ou arrêter le codespace</h2>
+<p>Un codespace continue de consommer des ressources tant qu’il reste actif.</p>
+<ul>
+<li>Fermer l’onglet du navigateur met le codespace en pause automatiquement après une période d’inactivité.</li>
+<li>Pour l’arrêter manuellement : allez sur <a href="https://github.com/codespaces">github.com/codespaces</a>, trouvez votre codespace dans la liste, cliquez sur les trois points <strong>…</strong>, puis choisissez <strong>Stop codespace</strong>.</li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Astuce
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Arrêter un codespace ne supprime pas votre travail. Vos fichiers restent disponibles au prochain démarrage, à condition que les changements aient bien été enregistrés avec <code>git commit</code>, ou simplement sauvegardés dans le système de fichiers du codespace.</p>
+</div>
+</div>
+</section>
+<section id="étape-8-reprendre-un-codespace-existant" class="level2">
+<h2 class="anchored" data-anchor-id="étape-8-reprendre-un-codespace-existant">Étape 8 : reprendre un codespace existant</h2>
+<ol type="1">
+<li>Allez sur <a href="https://github.com/codespaces">github.com/codespaces</a>.</li>
+<li>Cliquez sur le nom du codespace que vous voulez reprendre.</li>
+<li>L’environnement se relance avec les fichiers tels que vous les aviez laissés.</li>
+</ol>
+</section>
+<section id="étape-9-supprimer-un-codespace" class="level2">
+<h2 class="anchored" data-anchor-id="étape-9-supprimer-un-codespace">Étape 9 : supprimer un codespace</h2>
+<p>Lorsque vous n’avez plus besoin d’un codespace, il est recommandé de le supprimer pour libérer votre quota.</p>
+<ol type="1">
+<li>Allez sur <a href="https://github.com/codespaces">github.com/codespaces</a>.</li>
+<li>Cliquez sur les trois points <strong>…</strong> à côté du codespace concerné.</li>
+<li>Choisissez <strong>Delete</strong>.</li>
+</ol>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Supprimer un codespace efface l’environnement, mais pas le dépôt GitHub associé. Si vos changements ont déjà été envoyés avec <code>git push</code>, ils restent conservés dans le dépôt. Si des changements n’ont pas été envoyés, ils sont perdus définitivement.</p>
 </div>
 </div>
 </section>
 <section id="bonnes-pratiques-pour-débuter" class="level2">
 <h2 class="anchored" data-anchor-id="bonnes-pratiques-pour-débuter">Bonnes pratiques pour débuter</h2>
 <ul>
-<li>Travaillez toujours à l’intérieur d’un projet RStudio plutôt que dans des fichiers dispersés.</li>
-<li>Écrivez votre code dans un script, pas seulement dans la console, pour pouvoir le réutiliser.</li>
-<li>Enregistrez votre script régulièrement.</li>
-<li>Lisez attentivement les messages d’erreur en rouge dans la console : ils indiquent souvent la ligne concernée et la nature du problème.</li>
-<li>Ajoutez des commentaires dans votre code à l’aide du symbole <code>#</code>, par exemple : <code># Ceci est un commentaire</code>.</li>
-<li>Évitez d’utiliser des accents ou des espaces dans les noms de fichiers et de dossiers de votre projet.</li>
+<li>Envoyez régulièrement vos changements avec <code>git push</code>, plutôt que de compter uniquement sur le codespace pour conserver votre travail.</li>
+<li>Arrêtez les codespaces inutilisés pour éviter de consommer votre quota gratuit inutilement.</li>
+<li>Donnez un nom clair à vos dépôts avant de créer un codespace, car le nom du codespace en dépend.</li>
+<li>Supprimez les codespaces devenus inutiles plutôt que de les laisser s’accumuler.</li>
 </ul>
 </section>
 <section id="vérification-des-acquis" class="level2">
 <h2 class="anchored" data-anchor-id="vérification-des-acquis">Vérification des acquis</h2>
 <p>À ce stade, vous devriez être capable de :</p>
 <ul>
-<li>Installer R, puis RStudio, dans le bon ordre.</li>
-<li>Reconnaître les quatre panneaux principaux de RStudio.</li>
-<li>Créer, exécuter et enregistrer un script R.</li>
-<li>Créer un projet RStudio pour organiser votre travail.</li>
-<li>Installer et charger un module.</li>
+<li>Expliquer ce qu’est un codespace, en une phrase simple.</li>
+<li>Créer un codespace à partir d’un dépôt existant.</li>
+<li>Reconnaître les éléments principaux de l’interface Visual Studio Code dans le navigateur.</li>
+<li>Modifier un fichier et envoyer les changements vers GitHub avec <code>git push</code>.</li>
+<li>Arrêter, reprendre et supprimer un codespace.</li>
 </ul>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -607,7 +595,7 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Essayez de créer un nouveau projet RStudio, d’y créer un script nommé <code>essai_r.R</code>, d’installer le module <code>ggplot2</code>, puis d’exécuter une ligne de code qui affiche une phrase de votre choix.</p>
+<p>Créez un nouveau dépôt vide sur GitHub, ouvrez-y un codespace, créez un fichier <code>essai.md</code>, écrivez-y une phrase, puis envoyez ce changement vers GitHub avec <code>git add</code>, <code>git commit</code> et <code>git push</code>.</p>
 </div>
 </div>
 

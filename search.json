@@ -18,7 +18,7 @@
     "href": "index.html#liste-des-guides",
     "title": "Guides de démarrage",
     "section": "Liste des guides",
-    "text": "Liste des guides\n\nR et RStudio — guide d’installation de R et RStudio et premiers pas d’utilisation de RStudio.\nGoogle Colab — se familiariser avec Google Colab et exécuter un premier programme en Python dans le navigateur. &lt;!–\nOutil 3 — à compléter.\nOutil 4 — à compléter.\nOutil 5 — à compléter. –&gt;"
+    "text": "Liste des guides\n\nR et RStudio — guide d’installation de R et RStudio et premiers pas d’utilisation de RStudio.\nGoogle Colab — se familiariser avec Google Colab et exécuter un premier programme en Python dans le navigateur.\nGitHub Codespaces — introduction à l’utilisation de GitHub Codespaces. &lt;!–\nOutil 4 — à compléter.\nOutil 5 — à compléter. –&gt;"
   },
   {
     "objectID": "index.html#comment-utiliser-ces-guides",
@@ -26,6 +26,111 @@
     "title": "Guides de démarrage",
     "section": "Comment utiliser ces guides",
     "text": "Comment utiliser ces guides\n\nCliquez sur le nom de l’outil qui vous intéresse dans la liste ci-dessus ou dans le menu de navigation, en haut de la page.\nSuivez les étapes dans l’ordre, sans en sauter.\nSi un terme n’est pas clair, il est généralement expliqué dès sa première apparition dans le guide.\nEn cas de problème, notez l’étape où vous êtes bloqué avant de demander de l’aide.\n\n\n\n\n\n\n\nAstuce\n\n\n\nCes guides sont mis à jour au besoin. Le lien de cette page reste toujours le même, même après une mise à jour du contenu."
+  },
+  {
+    "objectID": "02_github-codespaces.html",
+    "href": "02_github-codespaces.html",
+    "title": "Guide de démarrage avec GitHub Codespaces",
+    "section": "",
+    "text": "Ce guide explique ce qu’est GitHub Codespaces, comment créer un codespace pour un dépôt existant, et comment commencer à travailler avec. Il s’adresse aux personnes qui commencent totalement avec cet outil.\n\n\n\n\n\n\nNoteMots importants\n\n\n\n\nCodespace : un environnement de développement complet, hébergé dans le cloud par GitHub, accessible depuis un navigateur ou Visual Studio Code.\nDépôt (repository) : le dossier de projet hébergé sur GitHub, contenant le code et son historique de versions.\nConteneur : l’environnement isolé dans lequel le codespace s’exécute, avec ses propres outils déjà installés.\nDevcontainer : un fichier de configuration optionnel qui définit précisément quels outils et paramètres un codespace doit contenir.\nVS Code : l’éditeur de code qui s’affiche à l’intérieur du codespace, que ce soit dans le navigateur ou en application locale."
+  },
+  {
+    "objectID": "02_github-codespaces.html#objectif",
+    "href": "02_github-codespaces.html#objectif",
+    "title": "Guide de démarrage avec GitHub Codespaces",
+    "section": "",
+    "text": "Ce guide explique ce qu’est GitHub Codespaces, comment créer un codespace pour un dépôt existant, et comment commencer à travailler avec. Il s’adresse aux personnes qui commencent totalement avec cet outil.\n\n\n\n\n\n\nNoteMots importants\n\n\n\n\nCodespace : un environnement de développement complet, hébergé dans le cloud par GitHub, accessible depuis un navigateur ou Visual Studio Code.\nDépôt (repository) : le dossier de projet hébergé sur GitHub, contenant le code et son historique de versions.\nConteneur : l’environnement isolé dans lequel le codespace s’exécute, avec ses propres outils déjà installés.\nDevcontainer : un fichier de configuration optionnel qui définit précisément quels outils et paramètres un codespace doit contenir.\nVS Code : l’éditeur de code qui s’affiche à l’intérieur du codespace, que ce soit dans le navigateur ou en application locale."
+  },
+  {
+    "objectID": "02_github-codespaces.html#quest-ce-quun-codespace",
+    "href": "02_github-codespaces.html#quest-ce-quun-codespace",
+    "title": "Guide de démarrage avec GitHub Codespaces",
+    "section": "Qu’est-ce qu’un codespace ?",
+    "text": "Qu’est-ce qu’un codespace ?\nUn codespace est un ordinateur virtuel, préconfiguré, qui contient déjà Git, un terminal et souvent un langage de programmation comme Python. Il permet de coder sans rien installer sur son propre ordinateur : tout se passe dans le navigateur ou dans Visual Studio Code connecté à distance [web:118][web:128].\n\n\n\n\n\n\nAstuce\n\n\n\nUn codespace est particulièrement utile si votre ordinateur est peu puissant, si vous changez souvent d’appareil, ou si vous voulez essayer un projet sans configurer un environnement local complet."
+  },
+  {
+    "objectID": "02_github-codespaces.html#ce-dont-vous-avez-besoin",
+    "href": "02_github-codespaces.html#ce-dont-vous-avez-besoin",
+    "title": "Guide de démarrage avec GitHub Codespaces",
+    "section": "Ce dont vous avez besoin",
+    "text": "Ce dont vous avez besoin\n\nUn compte GitHub actif.\nUn navigateur Internet récent.\nUne connexion Internet stable pendant l’utilisation du codespace.\nOptionnel : Visual Studio Code installé localement, si vous préférez travailler depuis l’application plutôt que depuis le navigateur.\n\n\n\n\n\n\n\nImportant\n\n\n\nGitHub Codespaces offre un quota d’utilisation gratuit limité chaque mois pour les comptes personnels. Au-delà de ce quota, l’utilisation est facturée. Vérifiez votre utilisation dans les paramètres de votre compte si vous l’utilisez régulièrement."
+  },
+  {
+    "objectID": "02_github-codespaces.html#étape-1-accéder-à-un-dépôt",
+    "href": "02_github-codespaces.html#étape-1-accéder-à-un-dépôt",
+    "title": "Guide de démarrage avec GitHub Codespaces",
+    "section": "Étape 1 : accéder à un dépôt",
+    "text": "Étape 1 : accéder à un dépôt\nUn codespace se crée toujours à partir d’un dépôt GitHub existant.\n\nConnectez-vous à votre compte sur github.com.\nOuvrez le dépôt que vous voulez utiliser, ou créez-en un nouveau si nécessaire (+ &gt; New repository).\n\nSi vous n’avez pas encore de projet, GitHub propose aussi des modèles de démarrage rapide pensés spécifiquement pour Codespaces [web:116]."
+  },
+  {
+    "objectID": "02_github-codespaces.html#étape-2-créer-un-codespace",
+    "href": "02_github-codespaces.html#étape-2-créer-un-codespace",
+    "title": "Guide de démarrage avec GitHub Codespaces",
+    "section": "Étape 2 : créer un codespace",
+    "text": "Étape 2 : créer un codespace\n\nSur la page principale du dépôt, cliquez sur le bouton vert Code.\nSélectionnez l’onglet Codespaces.\nCliquez sur Create codespace on main (ou le nom de la branche affichée).\n\nGitHub effectue alors quatre opérations automatiquement [web:124] :\n\nUne machine virtuelle et un espace de stockage sont attribués.\nUn conteneur est créé.\nUne connexion à ce conteneur est établie.\nUne configuration finale s’exécute si le dépôt en définit une.\n\nCe processus prend généralement entre quelques secondes et une ou deux minutes.\n\n\n\n\n\n\nAstuce\n\n\n\nPour créer un dépôt et un codespace en une seule fois, comme point de départ le plus simple, allez directement sur github.com/codespaces et cliquez sur New codespace. GitHub crée alors un codespace vide sans dépôt existant, que vous pourrez publier plus tard [web:121]."
+  },
+  {
+    "objectID": "02_github-codespaces.html#étape-3-découvrir-linterface",
+    "href": "02_github-codespaces.html#étape-3-découvrir-linterface",
+    "title": "Guide de démarrage avec GitHub Codespaces",
+    "section": "Étape 3 : découvrir l’interface",
+    "text": "Étape 3 : découvrir l’interface\nUne fois le codespace prêt, une interface Visual Studio Code s’ouvre, directement dans votre navigateur.\n\nExplorateur de fichiers (à gauche) : affiche tous les fichiers du dépôt.\nZone d’édition (au centre) : pour ouvrir et modifier les fichiers.\nTerminal (en bas) : une ligne de commande déjà connectée à l’environnement du codespace, avec Git préinstallé.\nBarre d’activité (tout à gauche) : icônes pour accéder à la recherche, au contrôle de version Git, aux extensions, etc.\n\nPour ouvrir le terminal s’il n’est pas visible, utilisez le menu Terminal &gt; New Terminal."
+  },
+  {
+    "objectID": "02_github-codespaces.html#étape-4-exécuter-une-première-commande",
+    "href": "02_github-codespaces.html#étape-4-exécuter-une-première-commande",
+    "title": "Guide de démarrage avec GitHub Codespaces",
+    "section": "Étape 4 : exécuter une première commande",
+    "text": "Étape 4 : exécuter une première commande\nDans le terminal, écrivez :\necho \"Bonjour depuis mon codespace\"\nAppuyez sur Entrée. Le message s’affiche directement dans le terminal, confirmant que l’environnement fonctionne.\nSi le codespace contient Python, vous pouvez aussi tester :\npython3 --version"
+  },
+  {
+    "objectID": "02_github-codespaces.html#étape-5-modifier-un-fichier-et-enregistrer-les-changements",
+    "href": "02_github-codespaces.html#étape-5-modifier-un-fichier-et-enregistrer-les-changements",
+    "title": "Guide de démarrage avec GitHub Codespaces",
+    "section": "Étape 5 : modifier un fichier et enregistrer les changements",
+    "text": "Étape 5 : modifier un fichier et enregistrer les changements\n\nDans l’explorateur de fichiers, ouvrez un fichier existant, ou créez-en un nouveau avec le bouton New File.\nFaites une petite modification, par exemple ajouter une ligne de texte.\nEnregistrez avec Ctrl + S (Windows/Linux) ou Cmd + S (Mac).\n\nLe fichier est modifié dans le codespace, mais pas encore renvoyé vers GitHub. C’est l’objectif de l’étape suivante."
+  },
+  {
+    "objectID": "02_github-codespaces.html#étape-6-enregistrer-les-changements-sur-github",
+    "href": "02_github-codespaces.html#étape-6-enregistrer-les-changements-sur-github",
+    "title": "Guide de démarrage avec GitHub Codespaces",
+    "section": "Étape 6 : enregistrer les changements sur GitHub",
+    "text": "Étape 6 : enregistrer les changements sur GitHub\nLe contrôle de version fonctionne de la même façon que sur un ordinateur local, avec Git déjà installé et configuré dans le codespace.\nDans le terminal :\ngit add .\ngit commit -m \"Premier essai dans Codespaces\"\ngit push\n\n\n\n\n\n\nNote\n\n\n\nPuisque le codespace est déjà connecté à votre compte GitHub, aucune configuration supplémentaire d’identifiants n’est généralement nécessaire pour git push, contrairement à un dépôt cloné localement."
+  },
+  {
+    "objectID": "02_github-codespaces.html#étape-7-suspendre-ou-arrêter-le-codespace",
+    "href": "02_github-codespaces.html#étape-7-suspendre-ou-arrêter-le-codespace",
+    "title": "Guide de démarrage avec GitHub Codespaces",
+    "section": "Étape 7 : suspendre ou arrêter le codespace",
+    "text": "Étape 7 : suspendre ou arrêter le codespace\nUn codespace continue de consommer des ressources tant qu’il reste actif.\n\nFermer l’onglet du navigateur met le codespace en pause automatiquement après une période d’inactivité.\nPour l’arrêter manuellement : allez sur github.com/codespaces, trouvez votre codespace dans la liste, cliquez sur les trois points …, puis choisissez Stop codespace.\n\n\n\n\n\n\n\nAstuce\n\n\n\nArrêter un codespace ne supprime pas votre travail. Vos fichiers restent disponibles au prochain démarrage, à condition que les changements aient bien été enregistrés avec git commit, ou simplement sauvegardés dans le système de fichiers du codespace."
+  },
+  {
+    "objectID": "02_github-codespaces.html#étape-8-reprendre-un-codespace-existant",
+    "href": "02_github-codespaces.html#étape-8-reprendre-un-codespace-existant",
+    "title": "Guide de démarrage avec GitHub Codespaces",
+    "section": "Étape 8 : reprendre un codespace existant",
+    "text": "Étape 8 : reprendre un codespace existant\n\nAllez sur github.com/codespaces.\nCliquez sur le nom du codespace que vous voulez reprendre.\nL’environnement se relance avec les fichiers tels que vous les aviez laissés."
+  },
+  {
+    "objectID": "02_github-codespaces.html#étape-9-supprimer-un-codespace",
+    "href": "02_github-codespaces.html#étape-9-supprimer-un-codespace",
+    "title": "Guide de démarrage avec GitHub Codespaces",
+    "section": "Étape 9 : supprimer un codespace",
+    "text": "Étape 9 : supprimer un codespace\nLorsque vous n’avez plus besoin d’un codespace, il est recommandé de le supprimer pour libérer votre quota.\n\nAllez sur github.com/codespaces.\nCliquez sur les trois points … à côté du codespace concerné.\nChoisissez Delete.\n\n\n\n\n\n\n\nImportant\n\n\n\nSupprimer un codespace efface l’environnement, mais pas le dépôt GitHub associé. Si vos changements ont déjà été envoyés avec git push, ils restent conservés dans le dépôt. Si des changements n’ont pas été envoyés, ils sont perdus définitivement."
+  },
+  {
+    "objectID": "02_github-codespaces.html#bonnes-pratiques-pour-débuter",
+    "href": "02_github-codespaces.html#bonnes-pratiques-pour-débuter",
+    "title": "Guide de démarrage avec GitHub Codespaces",
+    "section": "Bonnes pratiques pour débuter",
+    "text": "Bonnes pratiques pour débuter\n\nEnvoyez régulièrement vos changements avec git push, plutôt que de compter uniquement sur le codespace pour conserver votre travail.\nArrêtez les codespaces inutilisés pour éviter de consommer votre quota gratuit inutilement.\nDonnez un nom clair à vos dépôts avant de créer un codespace, car le nom du codespace en dépend.\nSupprimez les codespaces devenus inutiles plutôt que de les laisser s’accumuler."
+  },
+  {
+    "objectID": "02_github-codespaces.html#vérification-des-acquis",
+    "href": "02_github-codespaces.html#vérification-des-acquis",
+    "title": "Guide de démarrage avec GitHub Codespaces",
+    "section": "Vérification des acquis",
+    "text": "Vérification des acquis\nÀ ce stade, vous devriez être capable de :\n\nExpliquer ce qu’est un codespace, en une phrase simple.\nCréer un codespace à partir d’un dépôt existant.\nReconnaître les éléments principaux de l’interface Visual Studio Code dans le navigateur.\nModifier un fichier et envoyer les changements vers GitHub avec git push.\nArrêter, reprendre et supprimer un codespace.\n\n\n\n\n\n\n\nAstuceProchaine étape\n\n\n\nCréez un nouveau dépôt vide sur GitHub, ouvrez-y un codespace, créez un fichier essai.md, écrivez-y une phrase, puis envoyez ce changement vers GitHub avec git add, git commit et git push."
   },
   {
     "objectID": "01_r_et_rstudio.html",
