@@ -7,12 +7,16 @@ website:
     left:
       - href: index.qmd
         text: Accueil
+      - href: 01_r_et_rstudio.qmd
+        text: R et RStudio
       - href: 03_google_colab.qmd
         text: Google Colab
 
 format:
   html:
-    theme: cosmo
+    theme:
+      dark: darkly
+      light: flatly
     toc: true
     lang: fr
     link-external-newwindow: true
