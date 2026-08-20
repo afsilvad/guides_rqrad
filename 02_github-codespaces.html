@@ -347,6 +347,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#étape-9-supprimer-un-codespace" id="toc-étape-9-supprimer-un-codespace" class="nav-link" data-scroll-target="#étape-9-supprimer-un-codespace">Étape 9 : supprimer un codespace</a></li>
   <li><a href="#bonnes-pratiques-pour-débuter" id="toc-bonnes-pratiques-pour-débuter" class="nav-link" data-scroll-target="#bonnes-pratiques-pour-débuter">Bonnes pratiques pour débuter</a></li>
   <li><a href="#vérification-des-acquis" id="toc-vérification-des-acquis" class="nav-link" data-scroll-target="#vérification-des-acquis">Vérification des acquis</a></li>
+  <li><a href="#références" id="toc-références" class="nav-link" data-scroll-target="#références">Références</a></li>
   </ul>
 </nav>
     </div>
@@ -392,6 +393,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><strong>Dépôt (repository)</strong> : le dossier de projet hébergé sur GitHub, contenant le code et son historique de versions.</li>
 <li><strong>Conteneur</strong> : l’environnement isolé dans lequel le codespace s’exécute, avec ses propres outils déjà installés.</li>
 <li><strong>Devcontainer</strong> : un fichier de configuration optionnel qui définit précisément quels outils et paramètres un codespace doit contenir.</li>
+<li><strong>Gabarit (template)</strong> : un point de départ préconfiguré (par exemple Django, Node.js ou Jupyter), proposé par GitHub pour créer rapidement un codespace sans dépôt existant.</li>
 <li><strong>VS Code</strong> : l’éditeur de code qui s’affiche à l’intérieur du codespace, que ce soit dans le navigateur ou en application locale.</li>
 </ul>
 </div>
@@ -399,7 +401,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="quest-ce-quun-codespace" class="level2">
 <h2 class="anchored" data-anchor-id="quest-ce-quun-codespace">Qu’est-ce qu’un codespace ?</h2>
-<p>Un codespace est un ordinateur virtuel, préconfiguré, qui contient déjà Git, un terminal et souvent un langage de programmation comme Python. Il permet de coder sans rien installer sur son propre ordinateur : tout se passe dans le navigateur ou dans Visual Studio Code connecté à distance.</p>
+<p>Un codespace est un ordinateur virtuel, préconfiguré, qui contient déjà Git, un terminal et souvent un langage de programmation comme Python. Il permet de coder sans rien installer sur son propre ordinateur : tout se passe dans le navigateur ou dans Visual Studio Code connecté à distance [<a href="#ref-1">1</a>].</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -432,18 +434,18 @@ Important
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>GitHub Codespaces offre un quota d’utilisation gratuit limité chaque mois pour les comptes personnels. Au-delà de ce quota, l’utilisation est facturée. Vérifiez votre utilisation dans les paramètres de votre compte si vous l’utilisez régulièrement.</p>
+<p>GitHub Codespaces offre un quota d’utilisation gratuit limité chaque mois pour les comptes personnels (120 heures-cœur, soit environ 60 heures sur une machine à 2 cœurs, plus 15 Go de stockage) [<a href="#ref-2">2</a>]. Au-delà de ce quota, l’utilisation est facturée. Vérifiez votre utilisation dans les paramètres de votre compte si vous l’utilisez régulièrement.</p>
 </div>
 </div>
 </section>
 <section id="étape-1-accéder-à-un-dépôt" class="level2">
 <h2 class="anchored" data-anchor-id="étape-1-accéder-à-un-dépôt">Étape 1 : accéder à un dépôt</h2>
-<p>Un codespace se crée toujours à partir d’un dépôt GitHub existant.</p>
+<p>Un codespace se crée le plus souvent à partir d’un dépôt GitHub existant.</p>
 <ol type="1">
 <li>Connectez-vous à votre compte sur <a href="https://github.com">github.com</a>.</li>
 <li>Ouvrez le dépôt que vous voulez utiliser, ou créez-en un nouveau si nécessaire (<strong>+ &gt; New repository</strong>).</li>
 </ol>
-<p>Si vous n’avez pas encore de projet, GitHub propose aussi des modèles de démarrage rapide pensés spécifiquement pour Codespaces.</p>
+<p>Si vous n’avez pas encore de projet, GitHub propose aussi des modèles de démarrage rapide pensés spécifiquement pour Codespaces [<a href="#ref-3">3</a>].</p>
 </section>
 <section id="étape-2-créer-un-codespace" class="level2">
 <h2 class="anchored" data-anchor-id="étape-2-créer-un-codespace">Étape 2 : créer un codespace</h2>
@@ -452,7 +454,13 @@ Important
 <li>Sélectionnez l’onglet <strong>Codespaces</strong>.</li>
 <li>Cliquez sur <strong>Create codespace on main</strong> (ou le nom de la branche affichée).</li>
 </ol>
-<p>GitHub effectue alors quatre opérations automatiquement :</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/02_01_codespaces_repository.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption>Menu de création d’un codespace à partir du bouton <strong>Code</strong> du dépôt</figcaption>
+</figure>
+</div>
+<p>GitHub effectue alors quatre opérations automatiquement [<a href="#ref-4">4</a>] :</p>
 <ol type="1">
 <li>Une machine virtuelle et un espace de stockage sont attribués.</li>
 <li>Un conteneur est créé.</li>
@@ -460,17 +468,45 @@ Important
 <li>Une configuration finale s’exécute si le dépôt en définit une.</li>
 </ol>
 <p>Ce processus prend généralement entre quelques secondes et une ou deux minutes.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Si le bouton vert « Code » n’apparaît pas
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Le bouton <strong>Code</strong> peut ne pas apparaître dans certains cas, par exemple immédiatement après la création d’un nouveau répertoire (dépôt) encore vide, ou selon les permissions accordées sur le dépôt. Si c’est votre cas, procédez plutôt ainsi :</p>
+<ol type="1">
+<li>Allez à l’adresse suivante : <a href="https://github.com/features/codespaces">github.com/features/codespaces</a></li>
+<li>Cliquez sur le bouton <strong>Get started for free</strong>.</li>
+<li>Une fois connecté à votre compte, cliquez sur le bouton <strong>New codespace</strong>.</li>
+<li>Sur cette page, associez le codespace au dépôt souhaité en le sélectionnant dans la liste, ou dans le champ de recherche prévu à cet effet.</li>
+<li>Choisissez la branche voulue (généralement <code>main</code>), puis confirmez la création.</li>
+</ol>
+<p>Cette méthode revient au même résultat que le bouton <strong>Code</strong>, mais fonctionne aussi lorsque ce bouton n’est pas visible sur la page du dépôt [<a href="#ref-2">2</a>].</p>
+</div>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/02_02_github_codespaces.png" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption>Tableau de bord de GitHub Codespaces et gabarits de démarrage rapide</figcaption>
+</figure>
+</div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Astuce
+<span class="screen-reader-only">Astuce</span>Créer un codespace à partir d’un gabarit (sans dépôt existant)
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Pour créer un dépôt et un codespace en une seule fois, comme point de départ le plus simple, allez directement sur <a href="https://github.com/codespaces">github.com/codespaces</a> et cliquez sur <strong>New codespace</strong>. GitHub crée alors un codespace vide sans dépôt existant, que vous pourrez publier plus tard.</p>
+<p>Sur la page <a href="https://github.com/codespaces"><strong>New codespace</strong></a>, GitHub propose aussi des <strong>gabarits (templates)</strong> prêts à l’emploi, correspondant à différents langages ou usages, par exemple Django, Node.js, ou encore <strong>Jupyter Notebook</strong>. Ces gabarits créent automatiquement un nouveau dépôt minimal déjà configuré pour l’usage choisi, ce qui permet de démarrer sans avoir à préparer un dépôt au préalable [<a href="#ref-2">2</a>].</p>
+<p>Ceci est particulièrement utile si vous voulez seulement essayer Codespaces rapidement, ou si vous cherchez un environnement Jupyter déjà prêt sans devoir configurer manuellement un dépôt Python.</p>
 </div>
 </div>
 </section>
@@ -504,7 +540,7 @@ Astuce
 </section>
 <section id="étape-6-enregistrer-les-changements-sur-github" class="level2">
 <h2 class="anchored" data-anchor-id="étape-6-enregistrer-les-changements-sur-github">Étape 6 : enregistrer les changements sur GitHub</h2>
-<p>Le contrôle de version fonctionne de la même façon que sur un ordinateur local, avec Git déjà installé et configuré dans le codespace.</p>
+<p>Si vous êtes déjà familier avec la gestion de versions dans Git, le fonctionnement est le même que sur un ordinateur local, puisque Git est déjà installé et configuré dans le Codespace.</p>
 <p>Dans le terminal :</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Premier essai dans Codespaces"</span></span>
@@ -520,6 +556,19 @@ Note
 </div>
 <div class="callout-body-container callout-body">
 <p>Puisque le codespace est déjà connecté à votre compte GitHub, aucune configuration supplémentaire d’identifiants n’est généralement nécessaire pour <code>git push</code>, contrairement à un dépôt cloné localement.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Astuce
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Si vous n’êtes pas familier avec la gestion de versions dans Git, vous pouvez vous y initier grâce aux <a href="https://docs.github.com/fr/get-started/start-your-journey/git-and-github-learning-resources#using-git">ressources d’apprentissage offertes sur GitHub</a>.</p>
 </div>
 </div>
 </section>
@@ -580,6 +629,7 @@ Important
 <li>Envoyez régulièrement vos changements avec <code>git push</code>, plutôt que de compter uniquement sur le codespace pour conserver votre travail.</li>
 <li>Arrêtez les codespaces inutilisés pour éviter de consommer votre quota gratuit inutilement.</li>
 <li>Donnez un nom clair à vos dépôts avant de créer un codespace, car le nom du codespace en dépend.</li>
+<li>Si le bouton vert <strong>Code</strong> n’apparaît pas sur un dépôt tout juste créé, utilisez plutôt la page <strong>New codespace</strong> accessible depuis <code>github.com/features/codespaces</code>.</li>
 <li>Supprimez les codespaces devenus inutiles plutôt que de les laisser s’accumuler.</li>
 </ul>
 </section>
@@ -588,7 +638,8 @@ Important
 <p>À ce stade, vous devriez être capable de :</p>
 <ul>
 <li>Expliquer ce qu’est un codespace, en une phrase simple.</li>
-<li>Créer un codespace à partir d’un dépôt existant.</li>
+<li>Créer un codespace à partir d’un dépôt existant, via le bouton <strong>Code</strong> ou via la page <strong>New codespace</strong>.</li>
+<li>Créer un codespace à partir d’un gabarit, par exemple Jupyter, sans dépôt préexistant.</li>
 <li>Reconnaître les éléments principaux de l’interface Visual Studio Code dans le navigateur.</li>
 <li>Modifier un fichier et envoyer les changements vers GitHub avec <code>git push</code>.</li>
 <li>Arrêter, reprendre et supprimer un codespace.</li>
@@ -605,6 +656,21 @@ Important
 <div class="callout-body-container callout-body">
 <p>Créez un nouveau dépôt vide sur GitHub, ouvrez-y un codespace, créez un fichier <code>essai.md</code>, écrivez-y une phrase, puis envoyez ce changement vers GitHub avec <code>git add</code>, <code>git commit</code> et <code>git push</code>.</p>
 </div>
+</div>
+</section>
+<section id="références" class="level2">
+<h2 class="anchored" data-anchor-id="références">Références</h2>
+<div id="ref-1">
+<p>1. GitHub Docs — <a href="https://docs.github.com/fr/codespaces/about-codespaces/what-are-codespaces">Qu’est-ce que GitHub Codespaces ?</a></p>
+</div>
+<div id="ref-2">
+<p>2. GitHub — <a href="https://github.com/features/codespaces">GitHub Codespaces</a></p>
+</div>
+<div id="ref-3">
+<p>3. GitHub Docs — <a href="https://docs.github.com/fr/codespaces/quickstart">Démarrage rapide pour GitHub Codespaces</a></p>
+</div>
+<div id="ref-4">
+<p>4. Microsoft Learn — <a href="https://learn.microsoft.com/fr-fr/training/modules/code-with-github-codespaces/2-codespace-lifecycle">Le cycle de vie des codespaces</a></p>
 </div>
 
 
