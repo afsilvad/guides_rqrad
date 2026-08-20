@@ -52,7 +52,7 @@ Si vous n'avez pas encore de projet, GitHub propose aussi des modèles de démar
 2. Sélectionnez l'onglet **Codespaces**.
 3. Cliquez sur **Create codespace on main** (ou le nom de la branche affichée).
 
-![Menu de création d'un codespace à partir du bouton **Code** du dépôt](images/02_01_codespaces_repository.png){width=80%}
+![Menu de création d'un codespace à partir du bouton **Code** du dépôt](images/02_01_codespaces_repository.png){width=90%}
 
 GitHub effectue alors quatre opérations automatiquement [[4](#ref-4)] :
 
@@ -77,7 +77,7 @@ Le bouton **Code** peut ne pas apparaître dans certains cas, par exemple imméd
 Cette méthode revient au même résultat que le bouton **Code**, mais fonctionne aussi lorsque ce bouton n'est pas visible sur la page du dépôt [[2](#ref-2)].
 :::
 
-![Tableau de bord de GitHub Codespaces et gabarits de démarrage rapide](images/02_02_github_codespaces.png){width=80%}
+![Tableau de bord de GitHub Codespaces et gabarits de démarrage rapide](images/02_02_github_codespaces.png){width=90%}
 
 ::: {.callout-tip}
 ## Créer un codespace à partir d'un gabarit (sans dépôt existant)
@@ -95,8 +95,11 @@ Une fois le codespace prêt, une interface **Visual Studio Code** s'ouvre, direc
 - **Zone d'édition** (au centre) : pour ouvrir et modifier les fichiers.
 - **Terminal** (en bas) : une ligne de commande déjà connectée à l'environnement du codespace, avec Git préinstallé.
 - **Barre d'activité** (tout à gauche) : icônes pour accéder à la recherche, au contrôle de version Git, aux extensions, etc.
+- **Clavardage avec un agent (Chat)** : un panneau, généralement affiché à droite, pour poser des questions sur le code ou déléguer une tâche à un agent IA (comme GitHub Copilot). Deux modes principaux sont proposés : **Ask**, pour poser une question ou obtenir une explication, et **Agent**, pour laisser l'IA modifier le code de façon autonome selon une tâche décrite [[5](#ref-5)].
 
-Pour ouvrir le terminal s'il n'est pas visible, utilisez le menu **Terminal > New Terminal**.
+Pour ouvrir le terminal s'il n'est pas visible, utilisez le menu **Terminal > New Terminal**. Pour ouvrir le clavardage, cliquez sur l'icône de conversation dans la barre d'activité, ou utilisez le raccourci **Ctrl + Alt + I** (Windows/Linux) ou **Cmd + Option + I** (Mac) [[5](#ref-5)].
+
+![Interface Visual Studio Code dans GitHub Codespaces.](images/02_03_github_codespaces){width=90%}
 
 ## Étape 4 : exécuter une première commande
 
@@ -192,7 +195,7 @@ Supprimer un codespace efface l'environnement, mais pas le dépôt GitHub associ
 - Expliquer ce qu'est un codespace, en une phrase simple.
 - Créer un codespace à partir d'un dépôt existant, via le bouton **Code** ou via la page **New codespace**.
 - Créer un codespace à partir d'un gabarit, par exemple Jupyter, sans dépôt préexistant.
-- Reconnaître les éléments principaux de l'interface Visual Studio Code dans le navigateur.
+- Reconnaître les éléments principaux de l'interface Visual Studio Code dans le navigateur, y compris le panneau de clavardage avec un agent IA.
 - Modifier un fichier et envoyer les changements vers GitHub avec `git push`.
 - Arrêter, reprendre et supprimer un codespace.
 
@@ -217,4 +220,8 @@ Créez un nouveau dépôt vide sur GitHub, ouvrez-y un codespace, créez un fich
 
 ::: {#ref-4}
 4\. Microsoft Learn — [Le cycle de vie des codespaces](https://learn.microsoft.com/fr-fr/training/modules/code-with-github-codespaces/2-codespace-lifecycle)
+:::
+
+::: {#ref-5}
+5\. Visual Studio Code — [Use chat in VS Code](https://code.visualstudio.com/docs/chat/chat-overview)
 :::
