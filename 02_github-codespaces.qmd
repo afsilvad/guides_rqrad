@@ -14,12 +14,13 @@ Ce guide explique ce qu'est GitHub Codespaces, comment créer un codespace pour 
 - **Dépôt (repository)** : le dossier de projet hébergé sur GitHub, contenant le code et son historique de versions.
 - **Conteneur** : l'environnement isolé dans lequel le codespace s'exécute, avec ses propres outils déjà installés.
 - **Devcontainer** : un fichier de configuration optionnel qui définit précisément quels outils et paramètres un codespace doit contenir.
+- **Gabarit (template)** : un point de départ préconfiguré (par exemple Django, Node.js ou Jupyter), proposé par GitHub pour créer rapidement un codespace sans dépôt existant.
 - **VS Code** : l'éditeur de code qui s'affiche à l'intérieur du codespace, que ce soit dans le navigateur ou en application locale.
 :::
 
 ## Qu'est-ce qu'un codespace ?
 
-Un codespace est un ordinateur virtuel, préconfiguré, qui contient déjà Git, un terminal et souvent un langage de programmation comme Python. Il permet de coder sans rien installer sur son propre ordinateur : tout se passe dans le navigateur ou dans Visual Studio Code connecté à distance.
+Un codespace est un ordinateur virtuel, préconfiguré, qui contient déjà Git, un terminal et souvent un langage de programmation comme Python. Il permet de coder sans rien installer sur son propre ordinateur : tout se passe dans le navigateur ou dans Visual Studio Code connecté à distance [[1](#ref-1)].
 
 ::: {.callout-tip}
 Un codespace est particulièrement utile si votre ordinateur est peu puissant, si vous changez souvent d'appareil, ou si vous voulez essayer un projet sans configurer un environnement local complet.
@@ -33,17 +34,17 @@ Un codespace est particulièrement utile si votre ordinateur est peu puissant, s
 - Optionnel : Visual Studio Code installé localement, si vous préférez travailler depuis l'application plutôt que depuis le navigateur.
 
 ::: {.callout-important}
-GitHub Codespaces offre un quota d'utilisation gratuit limité chaque mois pour les comptes personnels. Au-delà de ce quota, l'utilisation est facturée. Vérifiez votre utilisation dans les paramètres de votre compte si vous l'utilisez régulièrement.
+GitHub Codespaces offre un quota d'utilisation gratuit limité chaque mois pour les comptes personnels (120 heures-cœur, soit environ 60 heures sur une machine à 2 cœurs, plus 15 Go de stockage) [[2](#ref-2)]. Au-delà de ce quota, l'utilisation est facturée. Vérifiez votre utilisation dans les paramètres de votre compte si vous l'utilisez régulièrement.
 :::
 
 ## Étape 1 : accéder à un dépôt
 
-Un codespace se crée toujours à partir d'un dépôt GitHub existant.
+Un codespace se crée le plus souvent à partir d'un dépôt GitHub existant.
 
 1. Connectez-vous à votre compte sur [github.com](https://github.com).
 2. Ouvrez le dépôt que vous voulez utiliser, ou créez-en un nouveau si nécessaire (**+ > New repository**).
 
-Si vous n'avez pas encore de projet, GitHub propose aussi des modèles de démarrage rapide pensés spécifiquement pour Codespaces.
+Si vous n'avez pas encore de projet, GitHub propose aussi des modèles de démarrage rapide pensés spécifiquement pour Codespaces [[3](#ref-3)].
 
 ## Étape 2 : créer un codespace
 
@@ -51,7 +52,9 @@ Si vous n'avez pas encore de projet, GitHub propose aussi des modèles de démar
 2. Sélectionnez l'onglet **Codespaces**.
 3. Cliquez sur **Create codespace on main** (ou le nom de la branche affichée).
 
-GitHub effectue alors quatre opérations automatiquement :
+![Menu de création d'un codespace à partir du bouton **Code** du dépôt](images/02_01_codespaces_repository.png){width=80%}
+
+GitHub effectue alors quatre opérations automatiquement [[4](#ref-4)] :
 
 1. Une machine virtuelle et un espace de stockage sont attribués.
 2. Un conteneur est créé.
@@ -60,8 +63,28 @@ GitHub effectue alors quatre opérations automatiquement :
 
 Ce processus prend généralement entre quelques secondes et une ou deux minutes.
 
+::: {.callout-important}
+## Si le bouton vert « Code » n'apparaît pas
+
+Le bouton **Code** peut ne pas apparaître dans certains cas, par exemple immédiatement après la création d'un nouveau répertoire (dépôt) encore vide, ou selon les permissions accordées sur le dépôt. Si c'est votre cas, procédez plutôt ainsi :
+
+1. Allez à l'adresse suivante : [github.com/features/codespaces](https://github.com/features/codespaces)
+2. Cliquez sur le bouton **Get started for free**.
+3. Une fois connecté à votre compte, cliquez sur le bouton **New codespace**.
+4. Sur cette page, associez le codespace au dépôt souhaité en le sélectionnant dans la liste, ou dans le champ de recherche prévu à cet effet.
+5. Choisissez la branche voulue (généralement `main`), puis confirmez la création.
+
+Cette méthode revient au même résultat que le bouton **Code**, mais fonctionne aussi lorsque ce bouton n'est pas visible sur la page du dépôt [[2](#ref-2)].
+:::
+
+![Tableau de bord de GitHub Codespaces et gabarits de démarrage rapide](images/02_02_github_codespaces.png){width=80%}
+
 ::: {.callout-tip}
-Pour créer un dépôt et un codespace en une seule fois, comme point de départ le plus simple, allez directement sur [github.com/codespaces](https://github.com/codespaces) et cliquez sur **New codespace**. GitHub crée alors un codespace vide sans dépôt existant, que vous pourrez publier plus tard.
+## Créer un codespace à partir d'un gabarit (sans dépôt existant)
+
+Sur la page [**New codespace**](https://github.com/codespaces), GitHub propose aussi des **gabarits (templates)** prêts à l'emploi, correspondant à différents langages ou usages, par exemple Django, Node.js, ou encore **Jupyter Notebook**. Ces gabarits créent automatiquement un nouveau dépôt minimal déjà configuré pour l'usage choisi, ce qui permet de démarrer sans avoir à préparer un dépôt au préalable [[2](#ref-2)].
+
+Ceci est particulièrement utile si vous voulez seulement essayer Codespaces rapidement, ou si vous cherchez un environnement Jupyter déjà prêt sans devoir configurer manuellement un dépôt Python.
 :::
 
 ## Étape 3 : découvrir l'interface
@@ -101,7 +124,7 @@ Le fichier est modifié dans le codespace, mais pas encore renvoyé vers GitHub.
 
 ## Étape 6 : enregistrer les changements sur GitHub
 
-Le contrôle de version fonctionne de la même façon que sur un ordinateur local, avec Git déjà installé et configuré dans le codespace.
+Si vous êtes déjà familier avec la gestion de versions dans Git, le fonctionnement est le même que sur un ordinateur local, puisque Git est déjà installé et configuré dans le Codespace.
 
 Dans le terminal :
 
@@ -115,6 +138,12 @@ git push
 Puisque le codespace est déjà connecté à votre compte GitHub, aucune configuration supplémentaire d'identifiants n'est généralement nécessaire pour `git push`, contrairement à un dépôt cloné localement.
 :::
 
+:::{.callout-tip}
+
+Si vous n'êtes pas familier avec la gestion de versions dans Git, vous pouvez vous y initier grâce aux [ressources d'apprentissage offertes sur GitHub](https://docs.github.com/fr/get-started/start-your-journey/git-and-github-learning-resources#using-git).
+
+:::
+
 ## Étape 7 : suspendre ou arrêter le codespace
 
 Un codespace continue de consommer des ressources tant qu'il reste actif.
@@ -123,7 +152,9 @@ Un codespace continue de consommer des ressources tant qu'il reste actif.
 - Pour l'arrêter manuellement : allez sur [github.com/codespaces](https://github.com/codespaces), trouvez votre codespace dans la liste, cliquez sur les trois points **...**, puis choisissez **Stop codespace**.
 
 ::: {.callout-tip}
+
 Arrêter un codespace ne supprime pas votre travail. Vos fichiers restent disponibles au prochain démarrage, à condition que les changements aient bien été enregistrés avec `git commit`, ou simplement sauvegardés dans le système de fichiers du codespace.
+
 :::
 
 ## Étape 8 : reprendre un codespace existant
@@ -141,7 +172,9 @@ Lorsque vous n'avez plus besoin d'un codespace, il est recommandé de le supprim
 3. Choisissez **Delete**.
 
 ::: {.callout-important}
+
 Supprimer un codespace efface l'environnement, mais pas le dépôt GitHub associé. Si vos changements ont déjà été envoyés avec `git push`, ils restent conservés dans le dépôt. Si des changements n'ont pas été envoyés, ils sont perdus définitivement.
+
 :::
 
 ## Bonnes pratiques pour débuter
@@ -149,6 +182,7 @@ Supprimer un codespace efface l'environnement, mais pas le dépôt GitHub associ
 - Envoyez régulièrement vos changements avec `git push`, plutôt que de compter uniquement sur le codespace pour conserver votre travail.
 - Arrêtez les codespaces inutilisés pour éviter de consommer votre quota gratuit inutilement.
 - Donnez un nom clair à vos dépôts avant de créer un codespace, car le nom du codespace en dépend.
+- Si le bouton vert **Code** n'apparaît pas sur un dépôt tout juste créé, utilisez plutôt la page **New codespace** accessible depuis `github.com/features/codespaces`.
 - Supprimez les codespaces devenus inutiles plutôt que de les laisser s'accumuler.
 
 ## Vérification des acquis
@@ -156,7 +190,8 @@ Supprimer un codespace efface l'environnement, mais pas le dépôt GitHub associ
 À ce stade, vous devriez être capable de :
 
 - Expliquer ce qu'est un codespace, en une phrase simple.
-- Créer un codespace à partir d'un dépôt existant.
+- Créer un codespace à partir d'un dépôt existant, via le bouton **Code** ou via la page **New codespace**.
+- Créer un codespace à partir d'un gabarit, par exemple Jupyter, sans dépôt préexistant.
 - Reconnaître les éléments principaux de l'interface Visual Studio Code dans le navigateur.
 - Modifier un fichier et envoyer les changements vers GitHub avec `git push`.
 - Arrêter, reprendre et supprimer un codespace.
@@ -164,4 +199,22 @@ Supprimer un codespace efface l'environnement, mais pas le dépôt GitHub associ
 ::: {.callout-tip}
 ## Prochaine étape
 Créez un nouveau dépôt vide sur GitHub, ouvrez-y un codespace, créez un fichier `essai.md`, écrivez-y une phrase, puis envoyez ce changement vers GitHub avec `git add`, `git commit` et `git push`.
+:::
+
+## Références
+
+::: {#ref-1}
+1\. GitHub Docs — [Qu'est-ce que GitHub Codespaces ?](https://docs.github.com/fr/codespaces/about-codespaces/what-are-codespaces)
+:::
+
+::: {#ref-2}
+2\. GitHub — [GitHub Codespaces](https://github.com/features/codespaces)
+:::
+
+::: {#ref-3}
+3\. GitHub Docs — [Démarrage rapide pour GitHub Codespaces](https://docs.github.com/fr/codespaces/quickstart)
+:::
+
+::: {#ref-4}
+4\. Microsoft Learn — [Le cycle de vie des codespaces](https://learn.microsoft.com/fr-fr/training/modules/code-with-github-codespaces/2-codespace-lifecycle)
 :::
