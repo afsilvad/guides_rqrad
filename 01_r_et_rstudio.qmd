@@ -5,7 +5,7 @@ subtitle: "Installer R, installer RStudio et faire ses premiers pas"
 
 ## Objectif
 
-Ce guide explique comment installer R, installer RStudio, puis se familiariser avec l'interface pour écrire et exécuter du code. Il s'adresse aux personnes qui commencent totalement avec ces outils.
+Ce guide explique comment installer R, installer RStudio, puis se familiariser avec l'interface pour écrire et exécuter du code.
 
 ::: {.callout-note}
 ## Mots importants
@@ -68,7 +68,7 @@ RStudio Desktop est distribué gratuitement par **Posit** [[3](#ref-3)].
 - **Environnement / Historique** (en haut à droite) : pour voir les objets créés pendant la session et l'historique des commandes exécutées.
 - **Fichiers / Graphiques / Packages / Aide** (en bas à droite) : pour naviguer dans les fichiers, afficher les graphiques, gérer les extensions et consulter l'aide.
 
-![Interface utilisatuer de RStudio](images/01_01_rstudio_interface.png){width=90%}
+![Interface utilisateur de RStudio](images/01_01_rstudio_interface.png){width=90%}
 
 ::: {.callout-tip}
 

@@ -22,10 +22,10 @@ Ce guide suppose que Miniconda ou Anaconda est déjà installé sur votre ordina
 
 ## Pourquoi installer Spyder dans son propre environnement
 
-Il est tentant d'installer Spyder directement dans l'environnement `base`, ou dans chaque environnement de projet créé. Ce n'est cependant pas la méthode recommandée par l'équipe de Spyder elle-même.
+Il est tentant d'installer Spyder directement dans l'environnement `base`, ou dans chaque environnement de projet créé. Ce n'est cependant pas la méthode recommandée par l'équipe de Spyder elle-même [[1](#ref-1)].
 
 ::: {.callout-important}
-N'installez jamais Spyder dans l'environnement `base`, et éviter de le réinstaller dans chaque environnement de projet. Installer Spyder à répétition consomme beaucoup d'espace disque et de temps, et peut provoquer des conflits entre paquets d'un environnement à l'autre.
+N'installez jamais Spyder dans l'environnement `base`, et éviter de le réinstaller dans chaque environnement de projet. Installer Spyder à répétition consomme beaucoup d'espace disque et de temps, et peut provoquer des conflits entre paquets d'un environnement à l'autre [[2](#ref-2)].
 :::
 
 La bonne pratique consiste à :
@@ -34,7 +34,7 @@ La bonne pratique consiste à :
 2. Installer uniquement le petit paquet `spyder-kernels` dans chacun de vos environnements de projet.
 3. Lancer Spyder depuis `spyder-env`, puis lui indiquer, à l'intérieur de l'interface, quel environnement de projet utiliser pour exécuter le code.
 
-Cette approche permet de toujours lancer Spyder de la même façon, peu importe le projet sur lequel vous travaillez, tout en gardant vos environnements de projet légers et isolés.
+Cette approche permet de toujours lancer Spyder de la même façon, peu importe le projet sur lequel vous travaillez, tout en gardant vos environnements de projet légers et isolés [[3](#ref-3)].
 
 ## Ce dont vous avez besoin
 
@@ -51,7 +51,7 @@ Ouvrez un terminal (ou Anaconda Prompt sur Windows) et exécutez :
 conda create -c conda-forge -n spyder-env spyder
 ```
 
-Cette commande crée un nouvel environnement nommé `spyder-env`, en installant Spyder depuis le canal `conda-forge`, généralement plus à jour.
+Cette commande crée un nouvel environnement nommé `spyder-env`, en installant Spyder depuis le canal `conda-forge`, généralement plus à jour [[1](#ref-1)].
 
 ::: {.callout-tip}
 Si vous voulez aussi que Spyder reconnaisse automatiquement des paquets scientifiques courants (`numpy`, `scipy`, `pandas`, `matplotlib`, `sympy`, `cython`) directement dans son propre environnement, utilisez plutôt :
@@ -60,7 +60,7 @@ Si vous voulez aussi que Spyder reconnaisse automatiquement des paquets scientif
 conda create -c conda-forge -n spyder-env spyder numpy scipy pandas matplotlib sympy cython
 ```
 
-Ce n'est toutefois pas obligatoire : ces paquets peuvent tout aussi bien vivre uniquement dans vos environnements de projet.
+Ce n'est toutefois pas obligatoire : ces paquets peuvent tout aussi bien vivre uniquement dans vos environnements de projet [[1](#ref-1)].
 :::
 
 Répondez `y` lorsque conda demande une confirmation.
@@ -75,11 +75,11 @@ conda config --env --add channels conda-forge
 conda config --env --set channel_priority strict
 ```
 
-Cette étape n'est pas obligatoire pour démarrer, mais elle évite des conflits de paquets lors de mises à jour futures.
+Cette étape n'est pas obligatoire pour démarrer, mais elle évite des conflits de paquets lors de mises à jour futures [[1](#ref-1)].
 
 ## Étape 3 : ouvrir Spyder
 
-Lorsque vous installez Spyder par conda, un raccourci est créé **automatiquement** dans le menu Démarrer de Windows (ou le lanceur d'applications sur macOS/Linux). Vous n'avez donc rien à construire vous-même pour ouvrir Spyder normalement.
+Lorsque vous installez Spyder par conda, un raccourci est créé **automatiquement** dans le menu Démarrer de Windows (ou le lanceur d'applications sur macOS/Linux). Vous n'avez donc rien à construire vous-même pour ouvrir Spyder normalement [[2](#ref-2), [1](#ref-1)].
 
 ### Méthode recommandée : utiliser le raccourci créé automatiquement
 
@@ -89,7 +89,7 @@ Lorsque vous installez Spyder par conda, un raccourci est créé **automatiqueme
 4. Cliquez sur ce raccourci pour lancer Spyder directement, sans passer par un terminal.
 
 ::: {.callout-important}
-Si plusieurs raccourcis Spyder apparaissent (par exemple parce que Spyder a aussi été installé via l'installateur standalone ou une autre méthode), assurez-vous toujours de choisir celui qui contient `(spyder-env)` dans son nom. Cela garantit que Spyder démarre bien depuis l'environnement que vous avez préparé à l'étape 1.
+Si plusieurs raccourcis Spyder apparaissent (par exemple parce que Spyder a aussi été installé via l'installateur standalone ou une autre méthode), assurez-vous toujours de choisir celui qui contient `(spyder-env)` dans son nom. Cela garantit que Spyder démarre bien depuis l'environnement que vous avez préparé à l'étape 1 [[1](#ref-1)].
 :::
 
 ::: {.callout-tip}
@@ -144,7 +144,7 @@ conda install -c conda-forge spyder-kernels
 ```
 
 ::: {.callout-important}
-N'installez jamais Spyder lui-même (le paquet complet) dans un environnement de projet. Seul `spyder-kernels` est nécessaire pour que Spyder puisse s'y connecter.
+N'installez jamais Spyder lui-même (le paquet complet) dans un environnement de projet. Seul `spyder-kernels` est nécessaire pour que Spyder puisse s'y connecter [[2](#ref-2)].
 :::
 
 ## Étape 6 : trouver le chemin de l'interpréteur Python de l'environnement
@@ -165,7 +165,7 @@ Copiez ce chemin, il sera nécessaire à l'étape suivante.
 ## Étape 7 : choisir l'environnement à utiliser dans Spyder
 
 1. Dans Spyder, cliquez sur le nom de l'environnement actuellement affiché dans la barre d'état, en bas de la fenêtre.
-2. Cliquez sur **Change default environment in Preferences...** (ou ouvrez directement **Tools > Preferences > Python interpreter**).
+2. Cliquez sur **Change default environment in Preferences...** (ou ouvrez directement **Tools > Preferences > Python interpreter**) [[2](#ref-2)].
 3. Dans la section **Python interpreter**, sélectionnez l'option **Select interpreter**, puis choisissez votre environnement dans la liste déroulante si celui-ci y apparaît automatiquement.
 4. S'il n'apparaît pas dans la liste, utilisez le bouton **Select file**, ou collez directement le chemin copié à l'étape précédente dans le champ de texte prévu.
 5. Cliquez sur **OK** ou **Apply** pour valider.
@@ -196,10 +196,10 @@ Pour chaque nouveau projet, répétez uniquement les étapes 4 à 8 :
 4. Le sélectionner dans les préférences de Spyder.
 5. Redémarrer la console.
 
-Spyder lui-même n'a besoin d'être installé qu'une seule fois, dans `spyder-env`, peu importe le nombre de projets créés par la suite.
+Spyder lui-même n'a besoin d'être installé qu'une seule fois, dans `spyder-env`, peu importe le nombre de projets créés par la suite [[3](#ref-3)].
 
 ::: {.callout-tip}
-Une fois plusieurs environnements ajoutés, ils restent généralement visibles dans la liste déroulante des interpréteurs, ce qui permet de basculer d'un projet à l'autre sans avoir à retrouver le chemin complet chaque fois.
+Une fois plusieurs environnements ajoutés, ils restent généralement visibles dans la liste déroulante des interpréteurs, ce qui permet de basculer d'un projet à l'autre sans avoir à retrouver le chemin complet chaque fois [[2](#ref-2)].
 :::
 
 ## Configurations requises à connaître
@@ -230,4 +230,18 @@ Une fois plusieurs environnements ajoutés, ils restent généralement visibles 
 ::: {.callout-tip}
 ## Prochaine étape
 Créez un second environnement de projet nommé `essai_spyder`, installez-y `spyder-kernels` et `pandas`, puis connectez Spyder à cet environnement en suivant les étapes 6 à 8 de ce guide.
+:::
+
+## Références
+
+::: {#ref-1}
+1\. Spyder — [Install Guide](https://docs.spyder-ide.org/current/installation.html)
+:::
+
+::: {#ref-2}
+2\. Spyder — [Frequently Asked Questions](https://docs.spyder-ide.org/current/faq.html)
+:::
+
+::: {#ref-3}
+3\. Anaconda — [Spyder — Working with conda](https://www.anaconda.com/docs/getting-started/working-with-conda/ides/spyder)
 :::

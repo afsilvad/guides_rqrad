@@ -5,13 +5,13 @@ subtitle: "Créer un compte et faire ses premiers pas"
 
 ## Objectif
 
-Ce guide explique comment créer un compte Google, ouvrir Google Colab et exécuter un premier programme en Python. Il s'adresse aux personnes qui commencent totalement en programmation.
+Ce guide explique comment créer un compte Google, ouvrir Google Colab et exécuter un premier programme en Python.
 
 ## Qu'est-ce que Google Colab ?
 
 Google Colab, aussi appelé **Colaboratory**, est un outil en ligne qui permet d'écrire et d'exécuter du code Python directement dans un navigateur Internet.
 
-Aucune installation de Python n'est nécessaire sur votre ordinateur. Les fichiers créés dans Colab sont appelés des **notebooks** et sont enregistrés dans Google Drive, au format `.ipynb`.
+Aucune installation de Python n'est nécessaire sur votre ordinateur. Les fichiers créés dans Colab sont appelés des **notebooks** et sont enregistrés dans Google Drive, au format `.ipynb` [[1](#ref-1)].
 
 ::: {.callout-note}
 ## Mots importants
@@ -57,8 +57,10 @@ Si vous possédez déjà une adresse Gmail ou un compte Google professionnel ou 
 
 Un nouveau document s'ouvre dans un nouvel onglet du navigateur.
 
+![Interface de Google Colab à l'ouverture d'un nouveau notebook](images/03_01_interface_colab.png){width=90%}
+
 ::: {.callout-tip}
-Un notebook Colab est un fichier de travail. Il peut être recherché dans Google Drive, partagé comme un document Google et téléchargé depuis le menu **Fichier**.
+Un notebook Colab est un fichier de travail. Il peut être recherché dans Google Drive, partagé comme un document Google et téléchargé depuis le menu **Fichier** [[1](#ref-1)].
 :::
 
 ## Étape 3 : renommer le notebook
@@ -118,13 +120,13 @@ Vous pouvez aussi exécuter une cellule avec le raccourci clavier **Maj + Entré
 Modifiez le texte entre les guillemets pour y écrire votre prénom :
 
 ```python
-print("Bonjour, je m'appelle votre_prénom !")
+print("Bonjour, je m'appelle [votre_prénom] !")
 ```
 
 Par exemple :
 
 ```python
-print("Bonjour, je m'appelle Léa !")
+print("Bonjour, je m'appelle Justine !")
 ```
 
 Exécutez de nouveau la cellule avec le bouton triangulaire.
@@ -154,7 +156,7 @@ Pour retrouver un notebook plus tard :
 
 1. Ouvrez Google Drive : [drive.google.com](https://drive.google.com/)
 2. Utilisez la barre de recherche et saisissez le nom de votre notebook.
-3. Vous pouvez aussi ouvrir Colab, puis utiliser **Fichier > Ouvrir le notebook** ou **Fichier > Rechercher des notebooks dans Drive**.
+3. Vous pouvez aussi ouvrir Colab, puis utiliser **Fichier > Ouvrir le notebook** ou **Fichier > Rechercher des notebooks dans Drive** [[1](#ref-1)].
 
 ## Étape 9 : télécharger une copie
 
@@ -206,4 +208,10 @@ Vérifiez toujours que vous partagez le bon fichier et avec les bonnes personnes
 ::: {.callout-tip}
 ## Prochaine étape
 Essayez de créer un notebook appelé `essai_python.ipynb`, ajoutez un titre, puis exécutez une cellule qui affiche une phrase de votre choix.
+:::
+
+## Références
+
+::: {#ref-1}
+1\. Google Research — [Qu'est-ce que Colaboratory ?](https://research.google.com/colaboratory/faq.html?hl=fr)
 :::
