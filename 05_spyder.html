@@ -353,6 +353,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#configurations-requises-à-connaître" id="toc-configurations-requises-à-connaître" class="nav-link" data-scroll-target="#configurations-requises-à-connaître">Configurations requises à connaître</a></li>
   <li><a href="#bonnes-pratiques-pour-débuter" id="toc-bonnes-pratiques-pour-débuter" class="nav-link" data-scroll-target="#bonnes-pratiques-pour-débuter">Bonnes pratiques pour débuter</a></li>
   <li><a href="#vérification-des-acquis" id="toc-vérification-des-acquis" class="nav-link" data-scroll-target="#vérification-des-acquis">Vérification des acquis</a></li>
+  <li><a href="#références" id="toc-références" class="nav-link" data-scroll-target="#références">Références</a></li>
   </ul>
 </nav>
     </div>
@@ -417,7 +418,7 @@ Note
 </section>
 <section id="pourquoi-installer-spyder-dans-son-propre-environnement" class="level2">
 <h2 class="anchored" data-anchor-id="pourquoi-installer-spyder-dans-son-propre-environnement">Pourquoi installer Spyder dans son propre environnement</h2>
-<p>Il est tentant d’installer Spyder directement dans l’environnement <code>base</code>, ou dans chaque environnement de projet créé. Ce n’est cependant pas la méthode recommandée par l’équipe de Spyder elle-même.</p>
+<p>Il est tentant d’installer Spyder directement dans l’environnement <code>base</code>, ou dans chaque environnement de projet créé. Ce n’est cependant pas la méthode recommandée par l’équipe de Spyder elle-même [<a href="#ref-1">1</a>].</p>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -428,7 +429,7 @@ Important
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>N’installez jamais Spyder dans l’environnement <code>base</code>, et éviter de le réinstaller dans chaque environnement de projet. Installer Spyder à répétition consomme beaucoup d’espace disque et de temps, et peut provoquer des conflits entre paquets d’un environnement à l’autre.</p>
+<p>N’installez jamais Spyder dans l’environnement <code>base</code>, et éviter de le réinstaller dans chaque environnement de projet. Installer Spyder à répétition consomme beaucoup d’espace disque et de temps, et peut provoquer des conflits entre paquets d’un environnement à l’autre [<a href="#ref-2">2</a>].</p>
 </div>
 </div>
 <p>La bonne pratique consiste à :</p>
@@ -437,7 +438,7 @@ Important
 <li>Installer uniquement le petit paquet <code>spyder-kernels</code> dans chacun de vos environnements de projet.</li>
 <li>Lancer Spyder depuis <code>spyder-env</code>, puis lui indiquer, à l’intérieur de l’interface, quel environnement de projet utiliser pour exécuter le code.</li>
 </ol>
-<p>Cette approche permet de toujours lancer Spyder de la même façon, peu importe le projet sur lequel vous travaillez, tout en gardant vos environnements de projet légers et isolés.</p>
+<p>Cette approche permet de toujours lancer Spyder de la même façon, peu importe le projet sur lequel vous travaillez, tout en gardant vos environnements de projet légers et isolés [<a href="#ref-3">3</a>].</p>
 </section>
 <section id="ce-dont-vous-avez-besoin" class="level2">
 <h2 class="anchored" data-anchor-id="ce-dont-vous-avez-besoin">Ce dont vous avez besoin</h2>
@@ -452,7 +453,7 @@ Important
 <h2 class="anchored" data-anchor-id="étape-1-créer-lenvironnement-dédié-à-spyder">Étape 1 : créer l’environnement dédié à Spyder</h2>
 <p>Ouvrez un terminal (ou Anaconda Prompt sur Windows) et exécutez :</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> create <span class="at">-c</span> conda-forge <span class="at">-n</span> spyder-env spyder</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Cette commande crée un nouvel environnement nommé <code>spyder-env</code>, en installant Spyder depuis le canal <code>conda-forge</code>, généralement plus à jour.</p>
+<p>Cette commande crée un nouvel environnement nommé <code>spyder-env</code>, en installant Spyder depuis le canal <code>conda-forge</code>, généralement plus à jour [<a href="#ref-1">1</a>].</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -465,7 +466,7 @@ Astuce
 <div class="callout-body-container callout-body">
 <p>Si vous voulez aussi que Spyder reconnaisse automatiquement des paquets scientifiques courants (<code>numpy</code>, <code>scipy</code>, <code>pandas</code>, <code>matplotlib</code>, <code>sympy</code>, <code>cython</code>) directement dans son propre environnement, utilisez plutôt :</p>
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> create <span class="at">-c</span> conda-forge <span class="at">-n</span> spyder-env spyder numpy scipy pandas matplotlib sympy cython</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Ce n’est toutefois pas obligatoire : ces paquets peuvent tout aussi bien vivre uniquement dans vos environnements de projet.</p>
+<p>Ce n’est toutefois pas obligatoire : ces paquets peuvent tout aussi bien vivre uniquement dans vos environnements de projet [<a href="#ref-1">1</a>].</p>
 </div>
 </div>
 <p>Répondez <code>y</code> lorsque conda demande une confirmation.</p>
@@ -476,11 +477,11 @@ Astuce
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate spyder-env</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> config <span class="at">--env</span> <span class="at">--add</span> channels conda-forge</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> config <span class="at">--env</span> <span class="at">--set</span> channel_priority strict</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Cette étape n’est pas obligatoire pour démarrer, mais elle évite des conflits de paquets lors de mises à jour futures.</p>
+<p>Cette étape n’est pas obligatoire pour démarrer, mais elle évite des conflits de paquets lors de mises à jour futures [<a href="#ref-1">1</a>].</p>
 </section>
 <section id="étape-3-ouvrir-spyder" class="level2">
 <h2 class="anchored" data-anchor-id="étape-3-ouvrir-spyder">Étape 3 : ouvrir Spyder</h2>
-<p>Lorsque vous installez Spyder par conda, un raccourci est créé <strong>automatiquement</strong> dans le menu Démarrer de Windows (ou le lanceur d’applications sur macOS/Linux). Vous n’avez donc rien à construire vous-même pour ouvrir Spyder normalement.</p>
+<p>Lorsque vous installez Spyder par conda, un raccourci est créé <strong>automatiquement</strong> dans le menu Démarrer de Windows (ou le lanceur d’applications sur macOS/Linux). Vous n’avez donc rien à construire vous-même pour ouvrir Spyder normalement [<a href="#ref-2">2</a>, <a href="#ref-1">1</a>].</p>
 <section id="méthode-recommandée-utiliser-le-raccourci-créé-automatiquement" class="level3">
 <h3 class="anchored" data-anchor-id="méthode-recommandée-utiliser-le-raccourci-créé-automatiquement">Méthode recommandée : utiliser le raccourci créé automatiquement</h3>
 <ol type="1">
@@ -499,7 +500,7 @@ Important
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Si plusieurs raccourcis Spyder apparaissent (par exemple parce que Spyder a aussi été installé via l’installateur standalone ou une autre méthode), assurez-vous toujours de choisir celui qui contient <code>(spyder-env)</code> dans son nom. Cela garantit que Spyder démarre bien depuis l’environnement que vous avez préparé à l’étape 1.</p>
+<p>Si plusieurs raccourcis Spyder apparaissent (par exemple parce que Spyder a aussi été installé via l’installateur standalone ou une autre méthode), assurez-vous toujours de choisir celui qui contient <code>(spyder-env)</code> dans son nom. Cela garantit que Spyder démarre bien depuis l’environnement que vous avez préparé à l’étape 1 [<a href="#ref-1">1</a>].</p>
 </div>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
@@ -570,7 +571,7 @@ Important
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>N’installez jamais Spyder lui-même (le paquet complet) dans un environnement de projet. Seul <code>spyder-kernels</code> est nécessaire pour que Spyder puisse s’y connecter.</p>
+<p>N’installez jamais Spyder lui-même (le paquet complet) dans un environnement de projet. Seul <code>spyder-kernels</code> est nécessaire pour que Spyder puisse s’y connecter [<a href="#ref-2">2</a>].</p>
 </div>
 </div>
 </section>
@@ -589,7 +590,7 @@ Important
 <h2 class="anchored" data-anchor-id="étape-7-choisir-lenvironnement-à-utiliser-dans-spyder">Étape 7 : choisir l’environnement à utiliser dans Spyder</h2>
 <ol type="1">
 <li>Dans Spyder, cliquez sur le nom de l’environnement actuellement affiché dans la barre d’état, en bas de la fenêtre.</li>
-<li>Cliquez sur <strong>Change default environment in Preferences…</strong> (ou ouvrez directement <strong>Tools &gt; Preferences &gt; Python interpreter</strong>).</li>
+<li>Cliquez sur <strong>Change default environment in Preferences…</strong> (ou ouvrez directement <strong>Tools &gt; Preferences &gt; Python interpreter</strong>) [<a href="#ref-2">2</a>].</li>
 <li>Dans la section <strong>Python interpreter</strong>, sélectionnez l’option <strong>Select interpreter</strong>, puis choisissez votre environnement dans la liste déroulante si celui-ci y apparaît automatiquement.</li>
 <li>S’il n’apparaît pas dans la liste, utilisez le bouton <strong>Select file</strong>, ou collez directement le chemin copié à l’étape précédente dans le champ de texte prévu.</li>
 <li>Cliquez sur <strong>OK</strong> ou <strong>Apply</strong> pour valider.</li>
@@ -617,7 +618,7 @@ Important
 <li>Le sélectionner dans les préférences de Spyder.</li>
 <li>Redémarrer la console.</li>
 </ol>
-<p>Spyder lui-même n’a besoin d’être installé qu’une seule fois, dans <code>spyder-env</code>, peu importe le nombre de projets créés par la suite.</p>
+<p>Spyder lui-même n’a besoin d’être installé qu’une seule fois, dans <code>spyder-env</code>, peu importe le nombre de projets créés par la suite [<a href="#ref-3">3</a>].</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -628,7 +629,7 @@ Astuce
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Une fois plusieurs environnements ajoutés, ils restent généralement visibles dans la liste déroulante des interpréteurs, ce qui permet de basculer d’un projet à l’autre sans avoir à retrouver le chemin complet chaque fois.</p>
+<p>Une fois plusieurs environnements ajoutés, ils restent généralement visibles dans la liste déroulante des interpréteurs, ce qui permet de basculer d’un projet à l’autre sans avoir à retrouver le chemin complet chaque fois [<a href="#ref-2">2</a>].</p>
 </div>
 </div>
 </section>
@@ -673,6 +674,18 @@ Astuce
 <div class="callout-body-container callout-body">
 <p>Créez un second environnement de projet nommé <code>essai_spyder</code>, installez-y <code>spyder-kernels</code> et <code>pandas</code>, puis connectez Spyder à cet environnement en suivant les étapes 6 à 8 de ce guide.</p>
 </div>
+</div>
+</section>
+<section id="références" class="level2">
+<h2 class="anchored" data-anchor-id="références">Références</h2>
+<div id="ref-1">
+<p>1. Spyder — <a href="https://docs.spyder-ide.org/current/installation.html">Install Guide</a></p>
+</div>
+<div id="ref-2">
+<p>2. Spyder — <a href="https://docs.spyder-ide.org/current/faq.html">Frequently Asked Questions</a></p>
+</div>
+<div id="ref-3">
+<p>3. Anaconda — <a href="https://www.anaconda.com/docs/getting-started/working-with-conda/ides/spyder">Spyder — Working with conda</a></p>
 </div>
 
 

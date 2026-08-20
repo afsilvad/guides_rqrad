@@ -353,6 +353,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#étape-10-partager-un-notebook" id="toc-étape-10-partager-un-notebook" class="nav-link" data-scroll-target="#étape-10-partager-un-notebook">Étape 10 : partager un notebook</a></li>
   <li><a href="#bonnes-pratiques-pour-débuter" id="toc-bonnes-pratiques-pour-débuter" class="nav-link" data-scroll-target="#bonnes-pratiques-pour-débuter">Bonnes pratiques pour débuter</a></li>
   <li><a href="#vérification-des-acquis" id="toc-vérification-des-acquis" class="nav-link" data-scroll-target="#vérification-des-acquis">Vérification des acquis</a></li>
+  <li><a href="#références" id="toc-références" class="nav-link" data-scroll-target="#références">Références</a></li>
   </ul>
 </nav>
     </div>
@@ -382,12 +383,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="objectif" class="level2">
 <h2 class="anchored" data-anchor-id="objectif">Objectif</h2>
-<p>Ce guide explique comment créer un compte Google, ouvrir Google Colab et exécuter un premier programme en Python. Il s’adresse aux personnes qui commencent totalement en programmation.</p>
+<p>Ce guide explique comment créer un compte Google, ouvrir Google Colab et exécuter un premier programme en Python.</p>
 </section>
 <section id="quest-ce-que-google-colab" class="level2">
 <h2 class="anchored" data-anchor-id="quest-ce-que-google-colab">Qu’est-ce que Google Colab ?</h2>
 <p>Google Colab, aussi appelé <strong>Colaboratory</strong>, est un outil en ligne qui permet d’écrire et d’exécuter du code Python directement dans un navigateur Internet.</p>
-<p>Aucune installation de Python n’est nécessaire sur votre ordinateur. Les fichiers créés dans Colab sont appelés des <strong>notebooks</strong> et sont enregistrés dans Google Drive, au format <code>.ipynb</code>.</p>
+<p>Aucune installation de Python n’est nécessaire sur votre ordinateur. Les fichiers créés dans Colab sont appelés des <strong>notebooks</strong> et sont enregistrés dans Google Drive, au format <code>.ipynb</code> [<a href="#ref-1">1</a>].</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -453,6 +454,12 @@ Avertissement
 <li>Cliquez sur <strong>Nouveau notebook</strong>.</li>
 </ol>
 <p>Un nouveau document s’ouvre dans un nouvel onglet du navigateur.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/03_01_interface_colab.png" class="img-fluid figure-img" style="width:90.0%"></p>
+<figcaption>Interface de Google Colab à l’ouverture d’un nouveau notebook</figcaption>
+</figure>
+</div>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -463,7 +470,7 @@ Astuce
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Un notebook Colab est un fichier de travail. Il peut être recherché dans Google Drive, partagé comme un document Google et téléchargé depuis le menu <strong>Fichier</strong>.</p>
+<p>Un notebook Colab est un fichier de travail. Il peut être recherché dans Google Drive, partagé comme un document Google et téléchargé depuis le menu <strong>Fichier</strong> [<a href="#ref-1">1</a>].</p>
 </div>
 </div>
 </section>
@@ -523,9 +530,9 @@ Astuce
 <section id="étape-6-faire-un-premier-exercice" class="level2">
 <h2 class="anchored" data-anchor-id="étape-6-faire-un-premier-exercice">Étape 6 : faire un premier exercice</h2>
 <p>Modifiez le texte entre les guillemets pour y écrire votre prénom :</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Bonjour, je m'appelle votre_prénom !"</span>)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Bonjour, je m'appelle [votre_prénom] !"</span>)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Par exemple :</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Bonjour, je m'appelle Léa !"</span>)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Bonjour, je m'appelle Justine !"</span>)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Exécutez de nouveau la cellule avec le bouton triangulaire.</p>
 </section>
 <section id="étape-7-ajouter-du-texte-explicatif" class="level2">
@@ -550,7 +557,7 @@ Astuce
 <ol type="1">
 <li>Ouvrez Google Drive : <a href="https://drive.google.com/">drive.google.com</a></li>
 <li>Utilisez la barre de recherche et saisissez le nom de votre notebook.</li>
-<li>Vous pouvez aussi ouvrir Colab, puis utiliser <strong>Fichier &gt; Ouvrir le notebook</strong> ou <strong>Fichier &gt; Rechercher des notebooks dans Drive</strong>.</li>
+<li>Vous pouvez aussi ouvrir Colab, puis utiliser <strong>Fichier &gt; Ouvrir le notebook</strong> ou <strong>Fichier &gt; Rechercher des notebooks dans Drive</strong> [<a href="#ref-1">1</a>].</li>
 </ol>
 </section>
 <section id="étape-9-télécharger-une-copie" class="level2">
@@ -626,6 +633,12 @@ Important
 <div class="callout-body-container callout-body">
 <p>Essayez de créer un notebook appelé <code>essai_python.ipynb</code>, ajoutez un titre, puis exécutez une cellule qui affiche une phrase de votre choix.</p>
 </div>
+</div>
+</section>
+<section id="références" class="level2">
+<h2 class="anchored" data-anchor-id="références">Références</h2>
+<div id="ref-1">
+<p>1. Google Research — <a href="https://research.google.com/colaboratory/faq.html?hl=fr">Qu’est-ce que Colaboratory ?</a></p>
 </div>
 
 
