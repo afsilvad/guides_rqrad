@@ -68,7 +68,7 @@ RStudio Desktop est distribué gratuitement par **Posit** [[3](#ref-3)].
 - **Environnement / Historique** (en haut à droite) : pour voir les objets créés pendant la session et l'historique des commandes exécutées.
 - **Fichiers / Graphiques / Packages / Aide** (en bas à droite) : pour naviguer dans les fichiers, afficher les graphiques, gérer les extensions et consulter l'aide.
 
-![Interface utilisateur de RStudio](images/01_01_rstudio_interface){width=90%}
+![Interface utilisateur de RStudio (cliquez dessus pour l'agrandir)](images/01_01_rstudio_interface){width=90%}
 
 ::: {.callout-tip}
 

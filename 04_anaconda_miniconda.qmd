@@ -76,7 +76,7 @@ Suivez les instructions affichées, en acceptant les valeurs par défaut si vous
 1. Ouvrez **Anaconda Navigator** depuis le menu Démarrer (Windows) ou le dossier Applications (macOS).
 2. L'interface graphique d'Anaconda Navigator devrait s'afficher, avec une liste d'applications comme Jupyter Notebook, Spyder et JupyterLab déjà installées.
 
-![Anaconda navigator. Source : [Site web Anaconda](https://www.anaconda.com/docs/legacy/anaconda-navigator/main)](images/04_01_conda_navigator.webp){width=90%}
+![Anaconda navigator. Source : [Site web Anaconda (cliquez dessus pour l'agrandir)](https://www.anaconda.com/docs/legacy/anaconda-navigator/main)](images/04_01_conda_navigator.webp){width=90%}
 
 ::: {.callout-note}
 L'image ci-dessus montre l'interface d'Anaconda Navigator telle qu'elle apparaît après une installation réussie. Si vous obtenez un écran similaire, l'installation a fonctionné correctement.
@@ -134,7 +134,7 @@ conda --version
 
 Vous devriez voir s'afficher un numéro de version, par exemple `conda 26.x.x`. Cela confirme que l'installation a réussi. Contrairement à Anaconda, aucune interface graphique ne s'ouvre : tout se passe dans le terminal.
 
-![Fenêtre Anaconda Prompt, utilisée pour exécuter les commandes conda sur Windows.](images/04_02_anaconda_prompt){width=90%}
+![Fenêtre Anaconda Prompt, utilisée pour exécuter les commandes conda sur Windows (cliquez dessus pour l'agrandir)](images/04_02_anaconda_prompt){width=90%}
 
 ::: {.callout-note}
 Anaconda Prompt est l'invite de commande installée automatiquement avec Anaconda ou Miniconda sur Windows. Elle permet d'exécuter les commandes `conda` sans configuration supplémentaire.

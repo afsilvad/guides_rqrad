@@ -57,7 +57,7 @@ Si vous possédez déjà une adresse Gmail ou un compte Google professionnel ou 
 
 Un nouveau document s'ouvre dans un nouvel onglet du navigateur.
 
-![Interface de Google Colab à l'ouverture d'un nouveau notebook](images/03_01_interface_colab.png){width=90%}
+![Interface de Google Colab à l'ouverture d'un nouveau notebook (cliquez dessus pour l'agrandir)](images/03_01_interface_colab.png){width=90%}
 
 ::: {.callout-tip}
 Un notebook Colab est un fichier de travail. Il peut être recherché dans Google Drive, partagé comme un document Google et téléchargé depuis le menu **Fichier** [[1](#ref-1)].

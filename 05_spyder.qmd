@@ -112,7 +112,7 @@ Cette méthode est équivalente au raccourci automatique, mais utile si vous êt
 
 Une fois Spyder ouvert, l'interface se divise en plusieurs zones principales.
 
-![Interface de Spyder](images/05_01_spyder_interface.png){width=90%}
+![Interface de Spyder (cliquez dessus pour l'agrandir)](images/05_01_spyder_interface.png){width=90%}
 
 - **Éditeur de code** (à gauche) : c'est ici que vous écrivez et modifiez vos scripts Python. Chaque fichier ouvert apparaît dans un onglet séparé.
 - **Panneaux d'exploration** (en haut à droite) : donnent accès à l'aide (**Help**), à l'explorateur de variables (**Variable Explorer**), au débogueur (**Debugger**), au profileur (**Profiler**), aux graphiques générés (**Plots**) et à l'explorateur de fichiers (**Files**).
@@ -169,7 +169,7 @@ Copiez ce chemin, il sera nécessaire à l'étape suivante.
 4. S'il n'apparaît pas dans la liste, utilisez le bouton dossier à droite du champ, ou collez directement le chemin copié à l'étape précédente dans le champ de texte prévu.
 5. Cliquez sur **OK** ou **Apply** pour valider.
 
-![Sélection de l'interpréteur Python dans les préférences de Spyder](images/05_02_select_env.png){width=90%}
+![Sélection de l'interpréteur Python dans les préférences de Spyder (cliquez dessus pour l'agrandir)](images/05_02_select_env.png){width=90%}
 
 ::: {.callout-tip}
 Dans l'exemple ci-dessus, le champ **Selected interpreter** contient le chemin `C:\Users\...\miniconda3\envs\mon_premier_env\python.exe`, correspondant à l'environnement `mon_premier_env`. C'est exactement le chemin obtenu à l'étape 6 avec `sys.executable`, simplement collé ou sélectionné ici.
