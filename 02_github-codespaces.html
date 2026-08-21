@@ -82,6 +82,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/bootstrap/bootstrap-6b423f165eeea3787de40cb4f8e821c3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/bootstrap/bootstrap-dark-e8964db687007ca8dd88d9d9ce58e3ef.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <link href="site_libs/bootstrap/bootstrap-6b423f165eeea3787de40cb4f8e821c3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -458,8 +461,8 @@ Important
 </ol>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/02_01_codespaces_repository.png" class="img-fluid figure-img" style="width:90.0%"></p>
-<figcaption>Menu de création d’un codespace à partir du bouton <strong>Code</strong> du dépôt</figcaption>
+<p><a href="images/02_01_codespaces_repository.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Menu de création d’un codespace à partir du bouton Code du dépôt (cliquez dessus pour l’agrandir)"><img src="images/02_01_codespaces_repository.png" class="img-fluid figure-img" style="width:90.0%" alt="Menu de création d’un codespace à partir du bouton Code du dépôt (cliquez dessus pour l’agrandir)"></a></p>
+<figcaption>Menu de création d’un codespace à partir du bouton <strong>Code</strong> du dépôt (cliquez dessus pour l’agrandir)</figcaption>
 </figure>
 </div>
 <p>GitHub effectue alors quatre opérations automatiquement [<a href="#ref-4">4</a>] :</p>
@@ -493,8 +496,8 @@ Important
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/02_02_github_codespaces.png" class="img-fluid figure-img" style="width:90.0%"></p>
-<figcaption>Tableau de bord de GitHub Codespaces et gabarits de démarrage rapide</figcaption>
+<p><a href="images/02_02_github_codespaces.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Tableau de bord de GitHub Codespaces et gabarits de démarrage rapide (cliquez dessus pour l’agrandir)"><img src="images/02_02_github_codespaces.png" class="img-fluid figure-img" style="width:90.0%" alt="Tableau de bord de GitHub Codespaces et gabarits de démarrage rapide (cliquez dessus pour l’agrandir)"></a></p>
+<figcaption>Tableau de bord de GitHub Codespaces et gabarits de démarrage rapide (cliquez dessus pour l’agrandir)</figcaption>
 </figure>
 </div>
 <div class="callout callout-style-default callout-tip callout-titled">
@@ -525,8 +528,8 @@ Important
 <p>Pour ouvrir le terminal s’il n’est pas visible, utilisez le menu <strong>Terminal &gt; New Terminal</strong>. Pour ouvrir le clavardage, cliquez sur l’icône de conversation dans la barre d’activité, ou utilisez le raccourci <strong>Ctrl + Alt + I</strong> (Windows/Linux) ou <strong>Cmd + Option + I</strong> (Mac) [<a href="#ref-5">5</a>].</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/02_03_github_codespaces.png" class="img-fluid figure-img" style="width:90.0%"></p>
-<figcaption>Interface Visual Studio Code dans GitHub Codespaces.</figcaption>
+<p><a href="images/02_03_github_codespaces.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Interface Visual Studio Code dans GitHub Codespaces (cliquez dessus pour l’agrandir)"><img src="images/02_03_github_codespaces.png" class="img-fluid figure-img" style="width:90.0%" alt="Interface Visual Studio Code dans GitHub Codespaces (cliquez dessus pour l’agrandir)"></a></p>
+<figcaption>Interface Visual Studio Code dans GitHub Codespaces (cliquez dessus pour l’agrandir)</figcaption>
 </figure>
 </div>
 </section>
@@ -1108,6 +1111,38 @@ Important
   });
   </script>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 

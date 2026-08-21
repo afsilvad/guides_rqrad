@@ -82,6 +82,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/bootstrap/bootstrap-6b423f165eeea3787de40cb4f8e821c3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/bootstrap/bootstrap-dark-e8964db687007ca8dd88d9d9ce58e3ef.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <link href="site_libs/bootstrap/bootstrap-6b423f165eeea3787de40cb4f8e821c3.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -483,8 +486,8 @@ Important
 </ol>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/04_01_conda_navigator.webp" class="img-fluid figure-img" style="width:90.0%"></p>
-<figcaption>Anaconda navigator. Source : <a href="https://www.anaconda.com/docs/legacy/anaconda-navigator/main">Site web Anaconda</a></figcaption>
+<p><a href="images/04_01_conda_navigator.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Anaconda navigator. Source : Site web Anaconda (cliquez dessus pour l’agrandir)"><img src="images/04_01_conda_navigator.webp" class="img-fluid figure-img" style="width:90.0%" alt="Anaconda navigator. Source : Site web Anaconda (cliquez dessus pour l’agrandir)"></a></p>
+<figcaption>Anaconda navigator. Source : <a href="https://www.anaconda.com/docs/legacy/anaconda-navigator/main">Site web Anaconda (cliquez dessus pour l’agrandir)</a></figcaption>
 </figure>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -555,8 +558,8 @@ Note
 <p>Vous devriez voir s’afficher un numéro de version, par exemple <code>conda 26.x.x</code>. Cela confirme que l’installation a réussi. Contrairement à Anaconda, aucune interface graphique ne s’ouvre : tout se passe dans le terminal.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="images/04_02_anaconda_prompt.png" class="img-fluid figure-img" style="width:90.0%"></p>
-<figcaption>Fenêtre Anaconda Prompt, utilisée pour exécuter les commandes conda sur Windows.</figcaption>
+<p><a href="images/04_02_anaconda_prompt.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Fenêtre Anaconda Prompt, utilisée pour exécuter les commandes conda sur Windows (cliquez dessus pour l’agrandir)"><img src="images/04_02_anaconda_prompt.png" class="img-fluid figure-img" style="width:90.0%" alt="Fenêtre Anaconda Prompt, utilisée pour exécuter les commandes conda sur Windows (cliquez dessus pour l’agrandir)"></a></p>
+<figcaption>Fenêtre Anaconda Prompt, utilisée pour exécuter les commandes conda sur Windows (cliquez dessus pour l’agrandir)</figcaption>
 </figure>
 </div>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -1131,6 +1134,38 @@ Note
   });
   </script>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 
