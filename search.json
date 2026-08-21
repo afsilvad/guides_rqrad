@@ -2,30 +2,37 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Guides de démarrage",
+    "title": "Guides de démarrage 2026",
     "section": "",
-    "text": "Cette page regroupe des guides de démarrage simples pour les outils utilisés dans le cadre de la formation du RQRAD sur la gestion et le traitement des données agricoles (24–26 août 2026). Chaque guide est pensé pour des personnes qui commencent totalement avec l’outil concerné : aucune expérience préalable n’est requise."
+    "text": "Cette page regroupe des guides de démarrage simples pour les outils utilisés dans le cadre de la formation du RQRAD sur la gestion et le traitement des données agricoles (24–26 août 2026). Chaque guide est pensé pour des personnes qui commencent totalement avec l’outil concerné : aucune expérience préalable n’est requise.\n\n\n\n\n@Yegane Khoshkalam"
   },
   {
     "objectID": "index.html#bienvenue",
     "href": "index.html#bienvenue",
-    "title": "Guides de démarrage",
+    "title": "Guides de démarrage 2026",
     "section": "",
-    "text": "Cette page regroupe des guides de démarrage simples pour les outils utilisés dans le cadre de la formation du RQRAD sur la gestion et le traitement des données agricoles (24–26 août 2026). Chaque guide est pensé pour des personnes qui commencent totalement avec l’outil concerné : aucune expérience préalable n’est requise."
+    "text": "Cette page regroupe des guides de démarrage simples pour les outils utilisés dans le cadre de la formation du RQRAD sur la gestion et le traitement des données agricoles (24–26 août 2026). Chaque guide est pensé pour des personnes qui commencent totalement avec l’outil concerné : aucune expérience préalable n’est requise.\n\n\n\n\n@Yegane Khoshkalam"
   },
   {
     "objectID": "index.html#liste-des-guides",
     "href": "index.html#liste-des-guides",
-    "title": "Guides de démarrage",
+    "title": "Guides de démarrage 2026",
     "section": "Liste des guides",
-    "text": "Liste des guides\n\nR et RStudio — guide d’installation de R et RStudio et premiers pas d’utilisation de RStudio.\nGoogle Colab — se familiariser avec Google Colab et exécuter un premier programme en Python dans le navigateur.\nGitHub Codespaces — introduction à l’utilisation de GitHub Codespaces.\nAnaconda et Miniconda — à compléter.\nSpyder — à compléter."
+    "text": "Liste des guides\nVersion 1.0.0 — première publication.\n\nR et RStudio — guide d’installation de R et RStudio et premiers pas d’utilisation de RStudio.\nGitHub Codespaces — créer un codespace à partir d’un dépôt GitHub ou d’un gabarit, découvrir l’interface VS Code intégrée, exécuter des commandes dans le terminal et enregistrer ses changements avec Git.\nGoogle Colab — créer un compte Google, ouvrir Google Colab, exécuter un premier programme en Python et gérer des notebooks (renommer, enregistrer, télécharger, partager).\nAnaconda et Miniconda — installer Anaconda ou Miniconda et comprendre le fonctionnement des environnements conda.\nSpyder — installer Spyder dans son propre environnement conda et le connecter à différents environnements de projet à l’aide de spyder-kernels."
   },
   {
     "objectID": "index.html#comment-utiliser-ces-guides",
     "href": "index.html#comment-utiliser-ces-guides",
-    "title": "Guides de démarrage",
+    "title": "Guides de démarrage 2026",
     "section": "Comment utiliser ces guides",
     "text": "Comment utiliser ces guides\n\nCliquez sur le nom de l’outil qui vous intéresse dans la liste ci-dessus ou dans le menu de navigation, en haut de la page.\nSuivez les étapes dans l’ordre, sans en sauter.\nSi un terme n’est pas clair, il est généralement expliqué dès sa première apparition dans le guide.\nEn cas de problème, notez l’étape où vous êtes bloqué avant de demander de l’aide.\n\n\n\n\n\n\n\nAstuce\n\n\n\nCes guides sont mis à jour au besoin. Le lien de cette page reste toujours le même, même après une mise à jour du contenu."
+  },
+  {
+    "objectID": "index.html#transparence-sur-les-outils-utilisés",
+    "href": "index.html#transparence-sur-les-outils-utilisés",
+    "title": "Guides de démarrage 2026",
+    "section": "Transparence sur les outils utilisés",
+    "text": "Transparence sur les outils utilisés\n\n\n\n\n\n\nNoteUtilisation d’outils d’intelligence artificielle\n\n\n\nCes guides ont été élaborés avec l’appui de Perplexity, en sélectionnant le modèle Claude Sonnet 5.\nCet outil a servi à soutenir la recherche d’information, la structuration et la révision initiale du contenu. Le contenu a ensuite été vérifié, adapté et organisé pour les besoins de ces guides.\n\n\n\n Guides préparés par Andrés F. Silva-Dimaté.\nVersion 1.0 — 2026"
   },
   {
     "objectID": "04_anaconda_miniconda.html",

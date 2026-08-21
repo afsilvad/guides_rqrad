@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Guides de démarrage</title>
+<title>Guides de démarrage 2026</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -76,6 +76,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
+<link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -247,8 +248,9 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">Guides de démarrage</span>
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="./images/00_logo_rqrad.png" alt="Logo du projet" class="navbar-logo light-content">
+    <img src="./images/00_logo_rqrad.png" alt="Logo du projet" class="navbar-logo dark-content">
     </a>
   </div>
             <div id="quarto-search" class="" title="Recherche"></div>
@@ -301,6 +303,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#bienvenue" id="toc-bienvenue" class="nav-link active" data-scroll-target="#bienvenue">Bienvenue</a></li>
   <li><a href="#liste-des-guides" id="toc-liste-des-guides" class="nav-link" data-scroll-target="#liste-des-guides">Liste des guides</a></li>
   <li><a href="#comment-utiliser-ces-guides" id="toc-comment-utiliser-ces-guides" class="nav-link" data-scroll-target="#comment-utiliser-ces-guides">Comment utiliser ces guides</a></li>
+  <li><a href="#transparence-sur-les-outils-utilisés" id="toc-transparence-sur-les-outils-utilisés" class="nav-link" data-scroll-target="#transparence-sur-les-outils-utilisés">Transparence sur les outils utilisés</a></li>
   </ul>
 </nav>
     </div>
@@ -310,7 +313,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Guides de démarrage</h1>
+<h1 class="title">Guides de démarrage 2026</h1>
 </div>
 
 
@@ -329,16 +332,25 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="bienvenue" class="level2">
 <h2 class="anchored" data-anchor-id="bienvenue">Bienvenue</h2>
-<p>Cette page regroupe des guides de démarrage simples pour les outils utilisés dans le cadre de la formation du RQRAD sur la gestion et le traitement des données agricoles (24–26 août 2026). Chaque guide est pensé pour des personnes qui commencent totalement avec l’outil concerné : aucune expérience préalable n’est requise.</p>
+<p>Cette page regroupe des guides de démarrage simples pour les outils utilisés dans le cadre de la <strong>formation du RQRAD sur la gestion et le traitement des données agricoles (24–26 août 2026)</strong>. Chaque guide est pensé pour des personnes qui commencent totalement avec l’outil concerné : aucune expérience préalable n’est requise.</p>
+<div style="text-align: right;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/00_photo_formation.png" class="img-fluid figure-img" style="width:60.0%"></p>
+<figcaption><span class="citation" data-cites="Yegane">@Yegane</span> Khoshkalam</figcaption>
+</figure>
+</div>
+</div>
 </section>
 <section id="liste-des-guides" class="level2">
 <h2 class="anchored" data-anchor-id="liste-des-guides">Liste des guides</h2>
+<p><em>Version 1.0.0 — première publication.</em></p>
 <ul>
 <li><a href="./01_r_et_rstudio.html">R et RStudio</a> — guide d’installation de R et RStudio et premiers pas d’utilisation de RStudio.</li>
-<li><a href="./03_google_colab.html">Google Colab</a> — se familiariser avec Google Colab et exécuter un premier programme en Python dans le navigateur.</li>
-<li><a href="./02_github-codespaces.html">GitHub Codespaces</a> — introduction à l’utilisation de GitHub Codespaces.</li>
-<li><a href="./04_anaconda_miniconda.html">Anaconda et Miniconda</a> — à compléter.</li>
-<li><a href="./05_spyder.html">Spyder</a> — à compléter.</li>
+<li><a href="./02_github-codespaces.html">GitHub Codespaces</a> — créer un codespace à partir d’un dépôt GitHub ou d’un gabarit, découvrir l’interface VS Code intégrée, exécuter des commandes dans le terminal et enregistrer ses changements avec Git.</li>
+<li><a href="./03_google_colab.html">Google Colab</a> — créer un compte Google, ouvrir Google Colab, exécuter un premier programme en Python et gérer des notebooks (renommer, enregistrer, télécharger, partager).</li>
+<li><a href="./04_anaconda_miniconda.html">Anaconda et Miniconda</a> — installer Anaconda ou Miniconda et comprendre le fonctionnement des environnements conda.</li>
+<li><a href="./05_spyder.html">Spyder</a> — installer Spyder dans son propre environnement conda et le connecter à différents environnements de projet à l’aide de <code>spyder-kernels</code>.</li>
 </ul>
 </section>
 <section id="comment-utiliser-ces-guides" class="level2">
@@ -361,6 +373,32 @@ Astuce
 <div class="callout-body-container callout-body">
 <p>Ces guides sont mis à jour au besoin. Le lien de cette page reste toujours le même, même après une mise à jour du contenu.</p>
 </div>
+</div>
+</section>
+<section id="transparence-sur-les-outils-utilisés" class="level2">
+<h2 class="anchored" data-anchor-id="transparence-sur-les-outils-utilisés">Transparence sur les outils utilisés</h2>
+<div class="callout callout-style-default callout-note callout-titled" title="Utilisation d'outils d'intelligence artificielle">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Utilisation d’outils d’intelligence artificielle
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Ces guides ont été élaborés avec l’appui de <strong>Perplexity</strong>, en sélectionnant le modèle <strong>Claude Sonnet 5</strong>.</p>
+<p>Cet outil a servi à soutenir la recherche d’information, la structuration et la révision initiale du contenu. Le contenu a ensuite été vérifié, adapté et organisé pour les besoins de ces guides.</p>
+</div>
+</div>
+<hr>
+<p><small> Guides préparés par Andrés F. Silva-Dimaté.<br>
+<em>Version 1.0 — 2026</em> </small></p>
+<hr>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/00_logo_rqrad_2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:30.0%"></p>
+</figure>
 </div>
 
 
