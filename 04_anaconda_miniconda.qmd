@@ -1,6 +1,7 @@
 ---
 title: "Guide de démarrage avec Anaconda et Miniconda"
 subtitle: "Installer un environnement Python scientifique avec conda"
+version: "1.0.0"
 ---
 
 ## Objectif

@@ -1,6 +1,7 @@
 ---
 title: "Guide de démarrage avec Spyder"
 subtitle: "Installer Spyder dans son propre environnement et l'utiliser avec plusieurs environnements conda"
+version: "1.0.0"
 ---
 
 ## Objectif
