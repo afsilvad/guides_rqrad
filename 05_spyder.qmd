@@ -107,21 +107,19 @@ spyder
 
 Cette méthode est équivalente au raccourci automatique, mais utile si vous êtes déjà dans un terminal pour une autre raison.
 
-### Créer un raccourci personnalisé (optionnel, avancé)
+## Découvrir l'interface de Spyder
 
-Il est possible de créer manuellement un raccourci Windows qui active un environnement précis avant de lancer une commande, par exemple si vous voulez démarrer directement dans un environnement de projet particulier plutôt que dans `spyder-env`.
+Une fois Spyder ouvert, l'interface se divise en plusieurs zones principales.
 
-1. Faites un clic droit sur le bureau, puis choisissez **Nouveau > Raccourci**.
-2. Dans le champ d'emplacement, entrez une ligne semblable à celle-ci, en adaptant le chemin à votre installation :
+![Interface de Spyder](images/05_01_spyder_interface.png){width=90%}
 
-```
-%windir%\System32\cmd.exe /K C:\Users\votre_nom\miniconda3\Scripts\activate.bat spyder-env
-```
+- **Éditeur de code** (à gauche) : c'est ici que vous écrivez et modifiez vos scripts Python. Chaque fichier ouvert apparaît dans un onglet séparé.
+- **Panneaux d'exploration** (en haut à droite) : donnent accès à l'aide (**Help**), à l'explorateur de variables (**Variable Explorer**), au débogueur (**Debugger**), au profileur (**Profiler**), aux graphiques générés (**Plots**) et à l'explorateur de fichiers (**Files**).
+- **Console IPython** (en bas à droite) : exécute le code et affiche les résultats. C'est là que s'affichent les erreurs, les impressions (`print`) et les graphiques en mode texte.
+- **Barre d'état** (tout en bas) : affiche l'environnement conda actif, la version de Python utilisée et la position du curseur dans l'éditeur. C'est l'endroit à vérifier rapidement pour confirmer quel environnement Spyder utilise actuellement.
 
-3. Cliquez sur **Suivant**, donnez un nom clair au raccourci, puis **Terminer**.
-
-::: {.callout-note}
-Cette méthode manuelle n'est généralement pas nécessaire, puisque le raccourci automatique créé à l'installation suffit pour la grande majorité des utilisations. Réservez-la à des cas particuliers, par exemple si vous gérez plusieurs environnements Spyder distincts sur le même ordinateur.
+::: {.callout-tip}
+Gardez toujours un œil sur l'environnement affiché dans la barre d'état, en bas à gauche de la fenêtre (par exemple `Conda: mon_premier_env`). C'est le moyen le plus rapide de confirmer que Spyder est bien connecté à l'environnement de projet attendu, sans avoir à taper `sys.executable` dans la console.
 :::
 
 ## Étape 4 : préparer un environnement de projet
@@ -166,9 +164,15 @@ Copiez ce chemin, il sera nécessaire à l'étape suivante.
 
 1. Dans Spyder, cliquez sur le nom de l'environnement actuellement affiché dans la barre d'état, en bas de la fenêtre.
 2. Cliquez sur **Change default environment in Preferences...** (ou ouvrez directement **Tools > Preferences > Python interpreter**) [[2](#ref-2)].
-3. Dans la section **Python interpreter**, sélectionnez l'option **Select interpreter**, puis choisissez votre environnement dans la liste déroulante si celui-ci y apparaît automatiquement.
-4. S'il n'apparaît pas dans la liste, utilisez le bouton **Select file**, ou collez directement le chemin copié à l'étape précédente dans le champ de texte prévu.
+3. Dans la section **Python interpreter**, sélectionnez l'option **Selected interpreter**, puis choisissez votre environnement dans la liste déroulante si celui-ci y apparaît automatiquement.
+4. S'il n'apparaît pas dans la liste, utilisez le bouton dossier à droite du champ, ou collez directement le chemin copié à l'étape précédente dans le champ de texte prévu.
 5. Cliquez sur **OK** ou **Apply** pour valider.
+
+![Sélection de l'interpréteur Python dans les préférences de Spyder](images/05_02_select_env.png){width=90%}
+
+::: {.callout-tip}
+Dans l'exemple ci-dessus, le champ **Selected interpreter** contient le chemin `C:\Users\...\miniconda3\envs\mon_premier_env\python.exe`, correspondant à l'environnement `mon_premier_env`. C'est exactement le chemin obtenu à l'étape 6 avec `sys.executable`, simplement collé ou sélectionné ici.
+:::
 
 ## Étape 8 : redémarrer la console pour appliquer le changement
 
@@ -185,6 +189,10 @@ print(sys.executable)
 ```
 
 Le chemin affiché doit correspondre à celui copié à l'étape 6.
+
+::: {.callout-tip}
+Un moyen encore plus rapide de confirmer l'environnement actif consiste à regarder la barre d'état, tout en bas de la console IPython. Elle affiche le nom de l'environnement conda connecté (par exemple `Conda: mon_projet`), la version de Python utilisée ainsi que l'état de la console. Cela évite d'avoir à retaper `sys.executable` chaque fois que vous voulez vérifier rapidement l'environnement en cours.
+:::
 
 ## Étape 9 : ajouter d'autres environnements de projet plus tard
 
@@ -223,6 +231,7 @@ Une fois plusieurs environnements ajoutés, ils restent généralement visibles 
 
 - Expliquer pourquoi Spyder doit être installé dans son propre environnement conda.
 - Créer l'environnement `spyder-env` et l'ouvrir avec le raccourci créé automatiquement.
+- Reconnaître les principales zones de l'interface de Spyder.
 - Installer `spyder-kernels` dans un environnement de projet.
 - Trouver le chemin de l'interpréteur d'un environnement conda.
 - Sélectionner cet interpréteur dans les préférences de Spyder et redémarrer la console.
