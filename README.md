@@ -32,31 +32,6 @@ Le site rendu à partir de ces guides est publié via GitHub Pages : [**Lien ver
 
 Ce projet nécessite [Quarto](https://quarto.org/docs/get-started/) installé sur votre ordinateur.
 
-Pour prévisualiser le site en local, avec rechargement automatique :
-
-```bash
-quarto preview
-```
-
-Pour générer le site sans le prévisualiser :
-
-```bash
-quarto render
-```
-
-Les fichiers générés sont placés dans le dossier de sortie défini dans `_quarto.yml` (généralement `_site/`).
-
-## Publier une mise à jour
-
-Le site est publié sur GitHub Pages avec la commande suivante :
-
-```bash
-quarto publish gh-pages
-```
-
-> [!IMPORTANT]
-> Assurez-vous d'avoir fait un `git push` de vos changements **avant** d'exécuter `quarto publish gh-pages`, afin que le code source du dépôt reste synchronisé avec la version publiée du site.
-
 ## Transparence sur les outils utilisés
 
 Ces guides ont été élaborés avec l'appui de **Perplexity**, en sélectionnant le modèle **Claude Sonnet 5**.
@@ -72,6 +47,5 @@ Vous êtes libre de partager et d'adapter ce contenu, à condition de créditer 
 ------------------------------------------------------------------------
 
 <small>
-Guides préparés par Andrés F. Silva-Dimaté
-*Version 1.0.0 — 2026*
+Guides préparés par Andrés F. Silva-Dimaté -- Version 1.0.0 — 2026
 </small>
