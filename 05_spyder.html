@@ -342,8 +342,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#méthode-recommandée-utiliser-le-raccourci-créé-automatiquement" id="toc-méthode-recommandée-utiliser-le-raccourci-créé-automatiquement" class="nav-link" data-scroll-target="#méthode-recommandée-utiliser-le-raccourci-créé-automatiquement">Méthode recommandée : utiliser le raccourci créé automatiquement</a></li>
   <li><a href="#méthode-alternative-lancer-spyder-depuis-un-terminal" id="toc-méthode-alternative-lancer-spyder-depuis-un-terminal" class="nav-link" data-scroll-target="#méthode-alternative-lancer-spyder-depuis-un-terminal">Méthode alternative : lancer Spyder depuis un terminal</a></li>
-  <li><a href="#créer-un-raccourci-personnalisé-optionnel-avancé" id="toc-créer-un-raccourci-personnalisé-optionnel-avancé" class="nav-link" data-scroll-target="#créer-un-raccourci-personnalisé-optionnel-avancé">Créer un raccourci personnalisé (optionnel, avancé)</a></li>
   </ul></li>
+  <li><a href="#découvrir-linterface-de-spyder" id="toc-découvrir-linterface-de-spyder" class="nav-link" data-scroll-target="#découvrir-linterface-de-spyder">Découvrir l’interface de Spyder</a></li>
   <li><a href="#étape-4-préparer-un-environnement-de-projet" id="toc-étape-4-préparer-un-environnement-de-projet" class="nav-link" data-scroll-target="#étape-4-préparer-un-environnement-de-projet">Étape 4 : préparer un environnement de projet</a></li>
   <li><a href="#étape-5-installer-spyder-kernels-dans-lenvironnement-de-projet" id="toc-étape-5-installer-spyder-kernels-dans-lenvironnement-de-projet" class="nav-link" data-scroll-target="#étape-5-installer-spyder-kernels-dans-lenvironnement-de-projet">Étape 5 : installer spyder-kernels dans l’environnement de projet</a></li>
   <li><a href="#étape-6-trouver-le-chemin-de-linterpréteur-python-de-lenvironnement" id="toc-étape-6-trouver-le-chemin-de-linterpréteur-python-de-lenvironnement" class="nav-link" data-scroll-target="#étape-6-trouver-le-chemin-de-linterpréteur-python-de-lenvironnement">Étape 6 : trouver le chemin de l’interpréteur Python de l’environnement</a></li>
@@ -524,43 +524,47 @@ Astuce
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="ex">spyder</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Cette méthode est équivalente au raccourci automatique, mais utile si vous êtes déjà dans un terminal pour une autre raison.</p>
 </section>
-<section id="créer-un-raccourci-personnalisé-optionnel-avancé" class="level3">
-<h3 class="anchored" data-anchor-id="créer-un-raccourci-personnalisé-optionnel-avancé">Créer un raccourci personnalisé (optionnel, avancé)</h3>
-<p>Il est possible de créer manuellement un raccourci Windows qui active un environnement précis avant de lancer une commande, par exemple si vous voulez démarrer directement dans un environnement de projet particulier plutôt que dans <code>spyder-env</code>.</p>
-<ol type="1">
-<li>Faites un clic droit sur le bureau, puis choisissez <strong>Nouveau &gt; Raccourci</strong>.</li>
-<li>Dans le champ d’emplacement, entrez une ligne semblable à celle-ci, en adaptant le chemin à votre installation :</li>
-</ol>
-<pre><code>%windir%\System32\cmd.exe /K C:\Users\votre_nom\miniconda3\Scripts\activate.bat spyder-env</code></pre>
-<ol start="3" type="1">
-<li>Cliquez sur <strong>Suivant</strong>, donnez un nom clair au raccourci, puis <strong>Terminer</strong>.</li>
-</ol>
-<div class="callout callout-style-default callout-note callout-titled">
+</section>
+<section id="découvrir-linterface-de-spyder" class="level2">
+<h2 class="anchored" data-anchor-id="découvrir-linterface-de-spyder">Découvrir l’interface de Spyder</h2>
+<p>Une fois Spyder ouvert, l’interface se divise en plusieurs zones principales.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/05_01_spyder_interface.png" class="img-fluid figure-img" style="width:90.0%"></p>
+<figcaption>Interface de Spyder</figcaption>
+</figure>
+</div>
+<ul>
+<li><strong>Éditeur de code</strong> (à gauche) : c’est ici que vous écrivez et modifiez vos scripts Python. Chaque fichier ouvert apparaît dans un onglet séparé.</li>
+<li><strong>Panneaux d’exploration</strong> (en haut à droite) : donnent accès à l’aide (<strong>Help</strong>), à l’explorateur de variables (<strong>Variable Explorer</strong>), au débogueur (<strong>Debugger</strong>), au profileur (<strong>Profiler</strong>), aux graphiques générés (<strong>Plots</strong>) et à l’explorateur de fichiers (<strong>Files</strong>).</li>
+<li><strong>Console IPython</strong> (en bas à droite) : exécute le code et affiche les résultats. C’est là que s’affichent les erreurs, les impressions (<code>print</code>) et les graphiques en mode texte.</li>
+<li><strong>Barre d’état</strong> (tout en bas) : affiche l’environnement conda actif, la version de Python utilisée et la position du curseur dans l’éditeur. C’est l’endroit à vérifier rapidement pour confirmer quel environnement Spyder utilise actuellement.</li>
+</ul>
+<div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Note
+Astuce
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Cette méthode manuelle n’est généralement pas nécessaire, puisque le raccourci automatique créé à l’installation suffit pour la grande majorité des utilisations. Réservez-la à des cas particuliers, par exemple si vous gérez plusieurs environnements Spyder distincts sur le même ordinateur.</p>
+<p>Gardez toujours un œil sur l’environnement affiché dans la barre d’état, en bas à gauche de la fenêtre (par exemple <code>Conda: mon_premier_env</code>). C’est le moyen le plus rapide de confirmer que Spyder est bien connecté à l’environnement de projet attendu, sans avoir à taper <code>sys.executable</code> dans la console.</p>
 </div>
 </div>
-</section>
 </section>
 <section id="étape-4-préparer-un-environnement-de-projet" class="level2">
 <h2 class="anchored" data-anchor-id="étape-4-préparer-un-environnement-de-projet">Étape 4 : préparer un environnement de projet</h2>
 <p>Spyder ne doit pas exécuter votre code directement depuis <code>spyder-env</code>. Créez plutôt un environnement séparé pour chaque projet, comme recommandé dans le guide Anaconda et Miniconda.</p>
 <p>Dans un nouveau terminal (sans nécessairement fermer Spyder) :</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> create <span class="at">-n</span> mon_projet python=3.11</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate mon_projet</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> create <span class="at">-n</span> mon_projet python=3.11</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> activate mon_projet</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="étape-5-installer-spyder-kernels-dans-lenvironnement-de-projet" class="level2">
 <h2 class="anchored" data-anchor-id="étape-5-installer-spyder-kernels-dans-lenvironnement-de-projet">Étape 5 : installer spyder-kernels dans l’environnement de projet</h2>
 <p>Pour que Spyder puisse se connecter à cet environnement, installez-y le paquet <code>spyder-kernels</code> :</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> install <span class="at">-c</span> conda-forge spyder-kernels</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> install <span class="at">-c</span> conda-forge spyder-kernels</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -578,7 +582,7 @@ Important
 <section id="étape-6-trouver-le-chemin-de-linterpréteur-python-de-lenvironnement" class="level2">
 <h2 class="anchored" data-anchor-id="étape-6-trouver-le-chemin-de-linterpréteur-python-de-lenvironnement">Étape 6 : trouver le chemin de l’interpréteur Python de l’environnement</h2>
 <p>Toujours avec <code>mon_projet</code> activé dans le terminal, exécutez :</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-c</span> <span class="st">"import sys; print(sys.executable)"</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-c</span> <span class="st">"import sys; print(sys.executable)"</span></span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Cette commande affiche le chemin complet vers l’interpréteur Python de cet environnement, par exemple :</p>
 <ul>
 <li>Sur Windows : <code>C:\Users\votre_nom\miniconda3\envs\mon_projet\python.exe</code></li>
@@ -591,10 +595,29 @@ Important
 <ol type="1">
 <li>Dans Spyder, cliquez sur le nom de l’environnement actuellement affiché dans la barre d’état, en bas de la fenêtre.</li>
 <li>Cliquez sur <strong>Change default environment in Preferences…</strong> (ou ouvrez directement <strong>Tools &gt; Preferences &gt; Python interpreter</strong>) [<a href="#ref-2">2</a>].</li>
-<li>Dans la section <strong>Python interpreter</strong>, sélectionnez l’option <strong>Select interpreter</strong>, puis choisissez votre environnement dans la liste déroulante si celui-ci y apparaît automatiquement.</li>
-<li>S’il n’apparaît pas dans la liste, utilisez le bouton <strong>Select file</strong>, ou collez directement le chemin copié à l’étape précédente dans le champ de texte prévu.</li>
+<li>Dans la section <strong>Python interpreter</strong>, sélectionnez l’option <strong>Selected interpreter</strong>, puis choisissez votre environnement dans la liste déroulante si celui-ci y apparaît automatiquement.</li>
+<li>S’il n’apparaît pas dans la liste, utilisez le bouton dossier à droite du champ, ou collez directement le chemin copié à l’étape précédente dans le champ de texte prévu.</li>
 <li>Cliquez sur <strong>OK</strong> ou <strong>Apply</strong> pour valider.</li>
 </ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/05_02_select_env.png" class="img-fluid figure-img" style="width:90.0%"></p>
+<figcaption>Sélection de l’interpréteur Python dans les préférences de Spyder</figcaption>
+</figure>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Astuce
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Dans l’exemple ci-dessus, le champ <strong>Selected interpreter</strong> contient le chemin <code>C:\Users\...\miniconda3\envs\mon_premier_env\python.exe</code>, correspondant à l’environnement <code>mon_premier_env</code>. C’est exactement le chemin obtenu à l’étape 6 avec <code>sys.executable</code>, simplement collé ou sélectionné ici.</p>
+</div>
+</div>
 </section>
 <section id="étape-8-redémarrer-la-console-pour-appliquer-le-changement" class="level2">
 <h2 class="anchored" data-anchor-id="étape-8-redémarrer-la-console-pour-appliquer-le-changement">Étape 8 : redémarrer la console pour appliquer le changement</h2>
@@ -604,9 +627,22 @@ Important
 <li>Cliquez sur <strong>Restart kernel</strong>.</li>
 </ol>
 <p>Une nouvelle console s’ouvre, connectée à l’environnement <code>mon_projet</code>. Vous pouvez vérifier que le changement a fonctionné en tapant dans la console :</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sys.executable)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(sys.executable)</span></code></pre></div><button title="Copier vers le presse-papier" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Le chemin affiché doit correspondre à celui copié à l’étape 6.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Astuce
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Un moyen encore plus rapide de confirmer l’environnement actif consiste à regarder la barre d’état, tout en bas de la console IPython. Elle affiche le nom de l’environnement conda connecté (par exemple <code>Conda: mon_projet</code>), la version de Python utilisée ainsi que l’état de la console. Cela évite d’avoir à retaper <code>sys.executable</code> chaque fois que vous voulez vérifier rapidement l’environnement en cours.</p>
+</div>
+</div>
 </section>
 <section id="étape-9-ajouter-dautres-environnements-de-projet-plus-tard" class="level2">
 <h2 class="anchored" data-anchor-id="étape-9-ajouter-dautres-environnements-de-projet-plus-tard">Étape 9 : ajouter d’autres environnements de projet plus tard</h2>
@@ -658,6 +694,7 @@ Astuce
 <ul>
 <li>Expliquer pourquoi Spyder doit être installé dans son propre environnement conda.</li>
 <li>Créer l’environnement <code>spyder-env</code> et l’ouvrir avec le raccourci créé automatiquement.</li>
+<li>Reconnaître les principales zones de l’interface de Spyder.</li>
 <li>Installer <code>spyder-kernels</code> dans un environnement de projet.</li>
 <li>Trouver le chemin de l’interpréteur d’un environnement conda.</li>
 <li>Sélectionner cet interpréteur dans les préférences de Spyder et redémarrer la console.</li>
