@@ -5,7 +5,7 @@ subtitle: "Installer un environnement Python scientifique avec conda"
 
 ## Objectif
 
-Ce guide explique ce que sont Anaconda et Miniconda, comment installer chacun d'eux, puis pourquoi ce guide recommande finalement Miniconda pour la plupart des usages. Il s'adresse aux personnes qui commencent totalement avec ces outils.
+Ce guide explique ce que sont Anaconda et Miniconda, comment installer chacun d'eux, puis pourquoi ce guide recommande finalement Miniconda pour la plupart des usages.
 
 ::: {.callout-important}
 Si vous êtes débutant et que c'est la première fois que vous travaillez avec ces outils, il est fortement recommandé d'installer **seulement un des deux**, Anaconda **ou** Miniconda, et non les deux à la fois. Installer les deux en parallèle peut créer des conflits entre les installations de conda et compliquer inutilement vos premiers pas. Choisissez l'option qui correspond le mieux à vos besoins, en vous référant à la comparaison présentée plus bas dans ce guide, puis suivez uniquement les étapes correspondantes.
@@ -75,7 +75,7 @@ Suivez les instructions affichées, en acceptant les valeurs par défaut si vous
 1. Ouvrez **Anaconda Navigator** depuis le menu Démarrer (Windows) ou le dossier Applications (macOS).
 2. L'interface graphique d'Anaconda Navigator devrait s'afficher, avec une liste d'applications comme Jupyter Notebook, Spyder et JupyterLab déjà installées.
 
-![Anaconda navigator. Source :[Site web Anaconda](https://www.anaconda.com/docs/legacy/anaconda-navigator/main)](images/conda_navigator.webp){width=90%}
+![Anaconda navigator. Source : [Site web Anaconda](https://www.anaconda.com/docs/legacy/anaconda-navigator/main)](images/04_01_conda_navigator.webp){width=90%}
 
 ::: {.callout-note}
 L'image ci-dessus montre l'interface d'Anaconda Navigator telle qu'elle apparaît après une installation réussie. Si vous obtenez un écran similaire, l'installation a fonctionné correctement.
@@ -131,7 +131,13 @@ Suivez les instructions affichées, en acceptant les valeurs par défaut si vous
 conda --version
 ```
 
-Vous devriez voir s'afficher un numéro de version, par exemple `conda 24.x.x`. Cela confirme que l'installation a réussi. Contrairement à Anaconda, aucune interface graphique ne s'ouvre : tout se passe dans le terminal.
+Vous devriez voir s'afficher un numéro de version, par exemple `conda 26.x.x`. Cela confirme que l'installation a réussi. Contrairement à Anaconda, aucune interface graphique ne s'ouvre : tout se passe dans le terminal.
+
+![Fenêtre Anaconda Prompt, utilisée pour exécuter les commandes conda sur Windows.](images/04_02_anaconda_prompt){width=90%}
+
+::: {.callout-note}
+Anaconda Prompt est l'invite de commande installée automatiquement avec Anaconda ou Miniconda sur Windows. Elle permet d'exécuter les commandes `conda` sans configuration supplémentaire.
+:::
 
 ## Pourquoi ce guide recommande Miniconda
 
@@ -157,7 +163,7 @@ Si vous avez déjà installé Anaconda à l'étape précédente et que vous souh
 
 Qu'il s'agisse d'Anaconda ou de Miniconda, la logique des environnements est identique une fois l'installation terminée.
 
-Un **environnement** conda est un espace isolé, avec sa propre version de Python et ses propres paquets. Travailler avec des environnements séparés évite qu'un projet n'entre en conflit avec un autre.
+Un **environnement** conda est un espace isolé, avec sa propre version de Python et ses propres paquets. Travailler avec des environnements séparés évite qu'un projet n'entre en conflit avec un autre. Si vous voulez approfondir le concept d'environnement, vous pouvez vous référer à la [documentation officielle d'Anaconda](https://www.anaconda.com/docs/getting-started/concepts/what-is-an-environment).
 
 Pour lister les environnements existants :
 
@@ -171,10 +177,10 @@ Après une installation fraîche, vous devriez voir un environnement nommé `bas
 
 Il est recommandé de ne jamais installer de paquets directement dans l'environnement `base`, pour le garder simple et stable.
 
-Créez un nouvel environnement nommé `mon_projet`, avec une version spécifique de Python :
+Créez un nouvel environnement nommé `mon_premier_env`, avec une version spécifique de Python :
 
 ```bash
-conda create --name mon_projet python=3.11
+conda create --name mon_premier_env python=3.11
 ```
 
 Répondez `y` lorsque conda demande une confirmation.
@@ -182,10 +188,10 @@ Répondez `y` lorsque conda demande une confirmation.
 Pour l'activer :
 
 ```bash
-conda activate mon_projet
+conda activate mon_premier_env
 ```
 
-Le nom de l'environnement actif apparaît généralement entre parenthèses au début de la ligne de commande, par exemple `(mon_projet)`.
+Le nom de l'environnement actif apparaît généralement entre parenthèses au début de la ligne de commande, par exemple `(mon_premier_env)`.
 
 Pour revenir à l'environnement de base :
 
@@ -212,7 +218,7 @@ conda list
 Si un environnement n'est plus nécessaire, vous pouvez le retirer pour libérer de l'espace disque :
 
 ```bash
-conda env remove --name mon_projet
+conda env remove --name mon_premier_env
 ```
 
 ## Bonnes pratiques pour débuter
